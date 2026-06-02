@@ -1,0 +1,23 @@
+# Large binary data — never commit these
+data/masks/
+data/content_images/
+data/style_references/
+
+# Archives
+*.zip
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Logs
+logs/
+*.out
+*.err
+
+# OS
+.DS_Store
+Thumbs.db
