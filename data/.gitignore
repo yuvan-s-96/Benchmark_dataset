@@ -1,0 +1,7 @@
+data/masks/
+data/masks_click/
+data/mask_previews/
+data/mask_previews_click/
+data/test_images/
+data/annotations/dropped_records.json
+scripts/*.jpg
