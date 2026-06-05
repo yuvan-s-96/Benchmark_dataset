@@ -14,6 +14,24 @@ style image and a natural-language instruction.
 
 ---
 
+## ⚠️ Important: Save to GitHub frequently
+
+**ogg does not backup your data. If files are deleted they are gone.**
+
+After every step run:
+```bash
+cd ~/Benchmark_dataset
+git add data/annotations/
+git commit -m "step X complete"
+git push
+```
+
+The JSONs in `data/annotations/` are your progress checkpoints.
+Large binary files (masks, images) are excluded from git — keep those in ogg
+or export them with Step 5.
+
+---
+
 ## What is in this repo
 
 ```
@@ -27,28 +45,32 @@ benchmark_dataset/
 │   ├── 05_export.py              ← Package final benchmark into a zip
 │   └── download_wikiart.py       ← Download WikiArt via HuggingFace datasets
 ├── configs/
-│   └── benchmark_schema.json     ← JSON schema + example record
+│   └── benchmark_schema.json
 ├── .gitignore
-└── README_HEX.md                 ← this file
+└── README_HEX.md
 ```
 
-`data/` is created at runtime and is NOT tracked by git.
+`data/` is created at runtime and is NOT tracked by git (except `data/annotations/`).
 
 ---
 
-## Key design decisions
+## Directory structure at runtime
 
-| Decision | Detail |
-|---|---|
-| Region count | Fully dynamic — one region per click, or auto-detected via grid prompts |
-| SAM approach | Grid of 16 point prompts (4×4) with IoU deduplication — no SamAutomaticMaskGenerator needed |
-| WikiArt download | Uses `huggan/wikiart` on HuggingFace datasets — no API key, no rate limits |
-| GPU model | `sam-vit-large` — fits on ogg RTX 2080 (8 GB) comfortably |
-| Local dev | Use `sam-vit-base` on RTX 3050 (4 GB) for testing |
-| Crash safety | Step 1 writes stub JSON after every image — safe to interrupt |
-| Resume | Step 1 skips already-processed images on rerun |
-| Annotation resume | Step 4 starts from first unannotated sample automatically |
-| Export | Step 5 zips only what is needed (masks + styles + JSON) |
+```
+data/
+├── content_images/          ← COCO 2017 val (5000 images, ~1 GB) — redownload if lost
+├── content_images_filtered/ ← filtered COCO subset (500 images) — redownload if lost
+├── style_references/        ← WikiArt via HuggingFace (1000 images) — redownload if lost
+├── test_images/             ← 20-image test subset — recreate from content_images
+├── masks/                   ← SAM mask PNGs — regenerate with Step 1
+├── annotations/             ← ✅ TRACKED IN GIT — save these always
+│   ├── clicks.json
+│   ├── masks_stub.json
+│   ├── benchmark_draft.json
+│   ├── benchmark_final.json
+│   └── benchmark_annotated.json
+└── mask_previews/           ← visual previews — regenerate anytime
+```
 
 ---
 
@@ -66,7 +88,7 @@ ssh yvs23@ogg.cs.bath.ac.uk
 nvidia-smi
 ```
 
-GPU 1 and GPU 3 are usually the quietest on ogg (RTX 2080, 8 GB each).
+GPU 1 and GPU 3 are usually quietest (RTX 2080, 8 GB each).
 
 ```bash
 export CUDA_VISIBLE_DEVICES=1
@@ -80,10 +102,10 @@ git clone https://github.com/yuvan-s-96/Benchmark_dataset.git
 cd Benchmark_dataset
 ```
 
-> GitHub no longer accepts passwords. Use a Personal Access Token as the password.
-> Create one at: https://github.com/settings/tokens → Generate new token (classic) → tick `repo`
+> Use a Personal Access Token as the password (not your GitHub password).
+> Create at: https://github.com/settings/tokens → Generate new token (classic) → tick `repo`
 
-### 4. Set git identity (first time only)
+### 4. Set git identity (once only)
 
 ```bash
 git config --global user.email "your-email@bath.ac.uk"
@@ -106,7 +128,7 @@ pip install transformers pillow tqdm numpy gradio requests openai scikit-image d
 pip install git+https://github.com/facebookresearch/segment-anything.git
 ```
 
-### 7. Pre-download SAM model (once, on login node)
+### 7. Pre-download SAM model (once only)
 
 ```bash
 python3 -c "
@@ -120,6 +142,43 @@ print('Done.')
 
 ---
 
+## Recovering lost data
+
+If ogg loses your files (it has happened), here is what to recover:
+
+```bash
+# 1. Content images — redownload COCO
+mkdir -p ~/Benchmark_dataset/data/content_images
+cd ~/Benchmark_dataset/data/content_images
+wget -q --show-progress http://images.cocodataset.org/zips/val2017.zip
+unzip -q val2017.zip
+mv val2017/* .
+rm -rf val2017 val2017.zip
+cd ~/Benchmark_dataset
+
+# 2. Style references — redownload from HuggingFace
+# If ~/data/style_references still exists, copy it:
+cp -r ~/data/style_references ~/Benchmark_dataset/data/style_references
+# Otherwise rerun:
+cd scripts && python3 download_wikiart.py --output_dir ../data/style_references --max_per_style 50
+
+# 3. Test images — recreate from content_images
+mkdir -p ~/Benchmark_dataset/data/test_images
+ls ~/Benchmark_dataset/data/content_images/*.jpg | head -20 | xargs -I{} cp {} ~/Benchmark_dataset/data/test_images/
+
+# 4. Annotations — already in GitHub, pull them
+cd ~/Benchmark_dataset && git pull
+
+# 5. Masks — regenerate with Step 1 (use --resume to skip done images)
+cd scripts
+python3 01_segment_regions.py \
+    --image_dir  ../data/content_images \
+    --output_dir ../data/masks \
+    --mode auto --min_area 0.02 --max_masks 6
+```
+
+---
+
 ## Step-by-step pipeline
 
 ---
@@ -129,20 +188,56 @@ print('Done.')
 ```bash
 mkdir -p ~/Benchmark_dataset/data/content_images
 cd ~/Benchmark_dataset/data/content_images
-wget http://images.cocodataset.org/zips/val2017.zip
-unzip val2017.zip
+wget -q --show-progress http://images.cocodataset.org/zips/val2017.zip
+unzip -q val2017.zip
 mv val2017/* .
 rm -rf val2017 val2017.zip
-cd ~/Benchmark_dataset
+echo "Images: $(ls | wc -l)"
 ```
 
-Gives 5000 images (~1 GB).
+### Step 0b — Filter COCO to easier images (recommended)
 
----
+Filters to images with 2–5 large distinct objects — avoids tiny hard-to-segment
+regions like eyes.
 
-### Step 0b — Download WikiArt style references
+```bash
+# Download COCO annotations
+cd ~/Benchmark_dataset/data/content_images
+wget -q http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+unzip -q annotations_trainval2017.zip
+cd ~/Benchmark_dataset/scripts
 
-Uses HuggingFace `huggan/wikiart` dataset — no API key needed.
+python3 - << 'EOF'
+import json, shutil
+from pathlib import Path
+
+with open("../data/content_images/annotations/instances_val2017.json") as f:
+    coco = json.load(f)
+
+img_anns = {}
+for ann in coco["annotations"]:
+    img_anns.setdefault(ann["image_id"], []).append(ann)
+
+good = []
+for img in coco["images"]:
+    W, H  = img["width"], img["height"]
+    cats  = {a["category_id"] for a in img_anns.get(img["id"], [])
+             if a["area"] / (W * H) > 0.03}
+    if 2 <= len(cats) <= 5:
+        good.append(img["file_name"])
+
+out = Path("../data/content_images_filtered")
+out.mkdir(exist_ok=True)
+for fname in good[:500]:
+    src = Path("../data/content_images") / fname
+    if src.exists():
+        shutil.copy(src, out / fname)
+
+print(f"Filtered: {len(list(out.glob('*.jpg')))} images")
+EOF
+```
+
+### Step 0c — Download WikiArt style references
 
 ```bash
 cd ~/Benchmark_dataset/scripts
@@ -151,20 +246,11 @@ python3 download_wikiart.py \
     --max_per_style 50
 ```
 
-Output: 20 styles × 50 images = 1000 JPEGs.
-Runtime: ~5 min.
+Output: 20 styles × 50 images = 1000 JPEGs. Runtime ~5 min.
 
----
-
-### Step 0c — Collect click points (optional, improves quality)
-
-Click on images in your browser to mark region seeds.
-Each click = one SAM region. No limit per image.
+### Step 0d — Collect click points (optional, for test split)
 
 ```bash
-# On ogg
-source ~/benchmark_env/bin/activate
-cd ~/Benchmark_dataset/scripts
 python3 00_interactive_click.py --port 7861
 ```
 
@@ -173,18 +259,21 @@ On your laptop (new terminal):
 ssh -N -L 7861:localhost:7861 yvs23@ogg.cs.bath.ac.uk
 ```
 
-Open **http://localhost:7861**
+Open **http://localhost:7861** — click 2–4 regions per image only.
 
-- Click on the image to add region markers
-- Click **Save & Next ▶** when done
-- Use **⏩ Skip to next unannotated** to resume after a break
-- Saves to `data/annotations/clicks.json` after every navigation
+**Save to GitHub after:**
+```bash
+cd ~/Benchmark_dataset
+git add data/annotations/clicks.json
+git commit -m "clicks collected for test split"
+git push
+```
 
 ---
 
 ### Step 1 — Segment regions with SAM
 
-Run inside tmux so it survives disconnections.
+Run inside tmux:
 
 ```bash
 tmux new -s benchmark
@@ -193,7 +282,7 @@ export CUDA_VISIBLE_DEVICES=1
 cd ~/Benchmark_dataset/scripts
 
 python3 01_segment_regions.py \
-    --image_dir   ../data/content_images \
+    --image_dir   ../data/content_images_filtered \
     --output_dir  ../data/masks \
     --sam_model_id facebook/sam-vit-large \
     --mode mixed \
@@ -201,56 +290,40 @@ python3 01_segment_regions.py \
     --max_masks 6
 ```
 
-Detach tmux: **Ctrl+B then D**
-Reattach: `tmux attach -t benchmark`
+Detach: **Ctrl+B then D** | Reattach: `tmux attach -t benchmark`
 
-**How it segments:**
-- Uses a 4×4 grid of point prompts across each image
-- Deduplicates masks with IoU > 0.5
-- Click mode: one mask per click point (uses clicks.json if available)
-- Auto mode: grid prompts for all images
-- Mixed (default): clicks if available, grid otherwise
-
-**Progress check (from outside tmux):**
+**Progress check:**
 ```bash
 python3 -c "
 import json
-with open('/mnt/vurm/homes/homes/yvs23/Benchmark_dataset/data/annotations/masks_stub.json') as f:
+with open('$HOME/Benchmark_dataset/data/annotations/masks_stub.json') as f:
     d = json.load(f)
-print(f'Processed: {len(d)}/5000')
+print(f'Processed: {len(d)} images')
 print(f'Regions: min={min(r[\"num_regions\"] for r in d)}  max={max(r[\"num_regions\"] for r in d)}  mean={sum(r[\"num_regions\"] for r in d)/len(d):.1f}')
 "
 ```
 
-Expected runtime: ~7–8 s/image → ~10–11 h for 5000 images on RTX 2080.
-Output: `data/masks/<image_id>/mask_NN.png` + `data/annotations/masks_stub.json`
+**Save to GitHub after:**
+```bash
+cd ~/Benchmark_dataset
+git add data/annotations/masks_stub.json
+git commit -m "step 1 complete - SAM segmentation done"
+git push
+```
 
 ---
 
-### Step 1b — Visual preview of masks (recommended before full run)
+### Step 1b — Visual preview + pure mask saving
 
-Run on a test batch first to verify regions look sensible:
-
-```bash
-# Create 20-image test set
-mkdir -p ~/Benchmark_dataset/data/test_images
-ls ~/Benchmark_dataset/data/content_images/*.jpg | head -20 | xargs -I{} cp {} ~/Benchmark_dataset/data/test_images/
-
-# Run SAM on test set
-python3 01_segment_regions.py \
-    --image_dir  ../data/test_images \
-    --output_dir ../data/masks \
-    --mode auto \
-    --min_area 0.02 \
-    --max_masks 6 \
-    --no_resume
-```
-
-Generate colour-coded overlays:
+This generates two outputs per image as requested by supervisor:
+- **Colour overlay** — original image with coloured region overlays (for review)
+- **Pure binary masks** — black and white PNG per region (white = region, black = background)
 
 ```bash
+cd ~/Benchmark_dataset/scripts
+
 python3 - << 'EOF'
-import json, numpy as np, os
+import json, numpy as np
 from pathlib import Path
 from PIL import Image, ImageDraw
 
@@ -260,25 +333,39 @@ with open("../data/annotations/masks_stub.json") as f:
 COLOURS = [
     (255, 80,  80,  140), (80,  180, 255, 140), (80,  255, 130, 140),
     (255, 200, 50,  140), (200, 80,  255, 140), (255, 140, 0,   140),
+    (0,   210, 210, 140), (255, 100, 160, 140), (160, 255, 80,  140),
+    (80,  80,  255, 140),
 ]
 
-out_dir = Path("../data/mask_previews")
-out_dir.mkdir(parents=True, exist_ok=True)
+# Output folders
+overlay_dir = Path("../data/mask_previews")
+pure_dir    = Path("../data/pure_mask_previews")
+overlay_dir.mkdir(parents=True, exist_ok=True)
+pure_dir.mkdir(parents=True, exist_ok=True)
 
-for record in records[:5]:
-    candidates = list(Path("../data/test_images").glob(f"{record['image_id']}.*"))
+for record in records[:5]:   # change [:5] to [:] for all images
+    # Find source image
+    candidates = list(Path("../data/content_images_filtered").glob(f"{record['image_id']}.*"))
     if not candidates:
+        candidates = list(Path("../data/test_images").glob(f"{record['image_id']}.*"))
+    if not candidates:
+        print(f"  [skip] {record['image_id']}: source image not found")
         continue
+
     base    = Image.open(candidates[0]).convert("RGBA")
     overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
     draw    = ImageDraw.Draw(overlay)
+
     for i, region in enumerate(record["regions"]):
         mask_path = Path("../data") / region["mask_file"]
         if not mask_path.exists():
             continue
+
         mask   = np.array(Image.open(mask_path).convert("L")) > 127
         colour = COLOURS[i % len(COLOURS)]
-        layer  = np.zeros((*base.size[::-1], 4), dtype=np.uint8)
+
+        # ── Colour overlay ────────────────────────────────────────────────
+        layer = np.zeros((*base.size[::-1], 4), dtype=np.uint8)
         layer[mask, :3] = colour[:3]
         layer[mask, 3]  = colour[3]
         overlay = Image.alpha_composite(overlay, Image.fromarray(layer))
@@ -286,25 +373,45 @@ for record in records[:5]:
         if len(xs):
             draw.text((int(xs.mean())-8, int(ys.mean())-8),
                       str(i+1), fill=(255, 255, 255, 255))
+
+        # ── Pure binary mask (white region on black background) ───────────
+        pure = Image.fromarray((mask * 255).astype(np.uint8), mode="L")
+        pure.save(pure_dir / f"{record['image_id']}_mask_{i+1:02d}.png")
+
+    # Save colour overlay
     result = Image.alpha_composite(base, overlay).convert("RGB")
-    out_path = out_dir / f"{record['image_id']}_preview.jpg"
-    result.save(out_path, quality=90)
-    print(f"Saved: {out_path}  ({record['num_regions']} regions)")
+    result.save(overlay_dir / f"{record['image_id']}_overlay.jpg", quality=90)
+    print(f"Saved: {record['image_id']}  ({record['num_regions']} regions)")
+
+print(f"\nColour overlays : {overlay_dir}")
+print(f"Pure masks      : {pure_dir}")
 EOF
 ```
 
-Copy previews to your laptop (new terminal on laptop):
+**What you get in `pure_mask_previews/`:**
+```
+000000000139_mask_01.png   ← region 1 pure mask (white=region, black=background)
+000000000139_mask_02.png   ← region 2 pure mask
+000000000139_mask_03.png   ← region 3 pure mask
+...
+```
+
+**Copy both to your laptop** (run on your laptop, not ogg):
 ```bash
-scp "yvs23@ogg.cs.bath.ac.uk:~/Benchmark_dataset/data/mask_previews/*.jpg" "C:\Users\Yuvan Velkumar\Downloads\"
+# Colour overlays
+scp "yvs23@ogg.cs.bath.ac.uk:~/Benchmark_dataset/data/mask_previews/*.jpg" "C:/Users/Yuvan Velkumar/Downloads/"
+
+# Pure binary masks
+scp "yvs23@ogg.cs.bath.ac.uk:~/Benchmark_dataset/data/pure_mask_previews/*.png" "C:/Users/Yuvan Velkumar/Downloads/"
 ```
 
 ---
 
 ### Step 2 — Pair style references and generate instructions
 
-CPU only, runs quickly.
-
 ```bash
+cd ~/Benchmark_dataset/scripts
+
 python3 02_pair_styles.py \
     --masks_stub   ../data/annotations/masks_stub.json \
     --style_dir    ../data/style_references \
@@ -312,17 +419,13 @@ python3 02_pair_styles.py \
     --instruction_model stub
 ```
 
-To use GPT-4o for richer instructions (optional):
+**Save to GitHub after:**
 ```bash
-export OPENAI_API_KEY="sk-..."
-python3 02_pair_styles.py \
-    --masks_stub   ../data/annotations/masks_stub.json \
-    --style_dir    ../data/style_references \
-    --output_json  ../data/annotations/benchmark_draft.json \
-    --instruction_model gpt4v
+cd ~/Benchmark_dataset
+git add data/annotations/benchmark_draft.json
+git commit -m "step 2 complete - style pairing done"
+git push
 ```
-
-Output: `data/annotations/benchmark_draft.json`
 
 ---
 
@@ -335,17 +438,14 @@ python3 03_quality_control.py \
     --min_regions 2
 ```
 
-Tags corner cases:
-
-| Tag | Meaning | Target |
-|---|---|---|
-| `similar_entities` | ≥2 regions same semantic class | ~30% |
-| `encompassed` | one region ≥85% inside another | ~20% |
-| `background_heavy` | largest region > 50% of image | ~25% |
-
-Stratified 70/10/20 train/val/test split.
-
-Output: `data/annotations/benchmark_final.json` + `dropped_records.json`
+**Save to GitHub after:**
+```bash
+cd ~/Benchmark_dataset
+git add data/annotations/benchmark_final.json
+git add data/annotations/dropped_records.json
+git commit -m "step 3 complete - QC and split done"
+git push
+```
 
 ---
 
@@ -365,18 +465,13 @@ ssh -N -L 7860:localhost:7860 yvs23@ogg.cs.bath.ac.uk
 
 Open **http://localhost:7860**
 
-For each sample:
-1. Review colour-coded region overlay
-2. Fill in region labels: `Region 1: sky`, `Region 2: left giraffe`
-3. Edit instructions to be fluent and specific
-4. Set status: `approved` or `rejected`
-5. Click **Next ▶** — saves automatically
-
-Annotation priorities:
-- All 100 **test** samples: full labels + instructions + accept/reject
-- Train/val: verify labels at minimum
-
-Output: `data/annotations/benchmark_annotated.json`
+**Save to GitHub frequently during annotation:**
+```bash
+cd ~/Benchmark_dataset
+git add data/annotations/benchmark_annotated.json
+git commit -m "annotation progress - N samples done"
+git push
+```
 
 ---
 
@@ -388,56 +483,65 @@ python3 05_export.py \
     --output_zip     ../benchmark_final_export.zip
 ```
 
-Copy zip to laptop:
+Copy to laptop:
 ```bash
-# On your laptop
-scp "yvs23@ogg.cs.bath.ac.uk:~/Benchmark_dataset/benchmark_final_export.zip" "C:\Users\Yuvan Velkumar\Downloads\"
-
-# Or with rsync (resumable)
-rsync -avz --progress yvs23@ogg.cs.bath.ac.uk:~/Benchmark_dataset/benchmark_final_export.zip .
+scp "yvs23@ogg.cs.bath.ac.uk:~/Benchmark_dataset/benchmark_final_export.zip" "C:/Users/Yuvan Velkumar/Downloads/"
 ```
 
----
-
-## Saving results to GitHub
-
-`.gitignore` already excludes large binary data. Only push code and JSONs:
-
+**Final GitHub push:**
 ```bash
 cd ~/Benchmark_dataset
-git add scripts/
-git add data/annotations/benchmark_annotated.json
-git add data/annotations/benchmark_final.json
-git commit -m "updated pipeline + final benchmark"
+git add data/annotations/
+git commit -m "final benchmark complete - all steps done"
 git push
 ```
 
-Use your Personal Access Token as the password when prompted.
-
 ---
 
-## Checking results at any point
+## Cleaning up disk space
 
+Check usage first:
 ```bash
-python3 - << 'EOF'
-import json
-with open("data/annotations/benchmark_annotated.json") as f:
-    data = json.load(f)
-splits   = {}
-tags     = {}
-counts   = []
-for r in data:
-    splits[r.get("split","?")] = splits.get(r.get("split","?"),0) + 1
-    counts.append(r.get("num_regions", 0))
-    for t in r.get("corner_case_tags", []):
-        tags[t] = tags.get(t, 0) + 1
-approved = sum(1 for r in data if r.get("annotation_status") == "approved")
-print(f"Total    : {len(data)}")
-print(f"Splits   : {splits}")
-print(f"Approved : {approved}")
-print(f"Tags     : {tags}")
-print(f"Regions  : min={min(counts)} max={max(counts)} mean={sum(counts)/len(counts):.1f}")
-EOF
+du -sh ~/Benchmark_dataset/data/*/
+du -sh ~/data/
+df -h ~
+```
+
+Safe to delete (regeneratable):
+```bash
+# Remove raw COCO images (redownloadable, ~1 GB)
+rm -rf ~/Benchmark_dataset/data/content_images
+
+# Remove masks (regeneratable with Step 1, can be large)
+rm -rf ~/Benchmark_dataset/data/masks
+rm -rf ~/Benchmark_dataset/data/masks_click
+
+# Remove previews
+rm -rf ~/Benchmark_dataset/data/mask_previews
+rm -rf ~/Benchmark_dataset/data/mask_previews_click
+rm -rf ~/Benchmark_dataset/data/pure_mask_previews
+
+# Remove test images
+rm -rf ~/Benchmark_dataset/data/test_images
+
+# Remove zip after copying to laptop
+rm -f ~/Benchmark_dataset/benchmark_final_export.zip
+```
+
+**Never delete:**
+```bash
+# These are your work — keep them
+~/Benchmark_dataset/data/annotations/     # push to GitHub first
+~/Benchmark_dataset/data/style_references/ # takes 5 min to redownload
+~/benchmark_env/                           # takes 10 min to recreate
+```
+
+**Before clearing anything, always push annotations to GitHub:**
+```bash
+cd ~/Benchmark_dataset
+git add data/annotations/
+git commit -m "backup before cleanup"
+git push
 ```
 
 ---
@@ -445,21 +549,20 @@ EOF
 ## GPU selection on ogg
 
 ```bash
-nvidia-smi          # see all 6 GPUs and usage
-export CUDA_VISIBLE_DEVICES=1   # pick the quietest one
+nvidia-smi          # see all 6 GPUs
+export CUDA_VISIBLE_DEVICES=1   # pick quietest one
 ```
 
-6× RTX 2080, 8 GB VRAM each. `sam-vit-large` uses ~2.5 GB, leaving 5.5 GB headroom.
+6× RTX 2080, 8 GB VRAM. `sam-vit-large` uses ~2.5 GB.
 
 ---
 
 ## Local machine (RTX 3050, 4 GB VRAM)
 
-Use locally for: click collection, WikiArt download, annotation UI, steps 2–5.
+Use locally for: click collection, annotation UI, steps 2–5.
 Use ogg for: Step 1 SAM segmentation only.
 
 ```bash
-# Local testing with smaller model
 python3 01_segment_regions.py \
     --sam_model_id facebook/sam-vit-base \
     --mode auto \
@@ -470,34 +573,35 @@ python3 01_segment_regions.py \
 
 ## Troubleshooting
 
+**Files disappeared on ogg:**
+ogg does not backup. Always push annotations to GitHub after each step.
+Regenerate data using the Recovery section above.
+
 **CUDA out of memory:**
-Switch GPU: re-check `nvidia-smi`, pick one with < 1 GB used.
-Or use smaller model: `sam-vit-base`.
+Pick a less busy GPU: `nvidia-smi` then `export CUDA_VISIBLE_DEVICES=N`.
 
 **Gradio not loading:**
-Make sure SSH tunnel terminal is still open.
-Port must match: `ssh -N -L 7860:localhost:7860 ...`
+SSH tunnel must be open in a separate terminal:
+`ssh -N -L 7860:localhost:7860 yvs23@ogg.cs.bath.ac.uk`
 
 **Step 1 stopped halfway:**
-Just rerun — `--resume` is on by default, already-done images are skipped.
+Just rerun — `--resume` is on by default.
 
 **tmux session gone:**
-```bash
-tmux ls
-tmux attach -t benchmark
-```
+`tmux ls` then `tmux attach -t benchmark`
 
 **GitHub push rejected:**
-Use Personal Access Token not password.
+`git pull --rebase origin main` then `git push`
+
+**GitHub asks for password:**
+Use Personal Access Token not your GitHub password.
 Create at: https://github.com/settings/tokens
 
-**WikiArt download gets 0 images:**
-Do NOT use `download_wikiart.py` with the old WikiArt API — it is broken.
-The current script uses HuggingFace `huggan/wikiart` which works reliably.
+**WikiArt gets 0 images:**
+Use `download_wikiart.py` with HuggingFace only — the old WikiArt API is broken.
 
-**SAM gives only 1 region per image:**
-This was a bug in the original code (wrong post_process_masks usage).
-The current `01_segment_regions.py` uses grid point prompts and is fixed.
+**SAM gives 1 region per image:**
+Fixed in current `01_segment_regions.py` — uses grid point prompts.
 
 ---
 
@@ -510,7 +614,7 @@ The current `01_segment_regions.py` uses grid point prompts and is fixed.
 | `02_pair_styles.py` | Wk 7 |
 | `03_quality_control.py` | Wk 7–8 |
 | `04_annotate.py` | Wk 7–8 |
-| `05_export.py` + push to GitHub | Wk 12 |
+| `05_export.py` + final GitHub push | Wk 12 |
 
 ---
 
@@ -519,7 +623,7 @@ The current `01_segment_regions.py` uses grid point prompts and is fixed.
 | Property | Target |
 |---|---|
 | Total samples | ~500 |
-| Regions per sample | dynamic, mean ~4.7 (from test run) |
+| Regions per sample | dynamic, mean ~4.7 |
 | Distinct WikiArt styles | 20 |
 | `similar_entities` | ~30% |
 | `encompassed` | ~20% |
