@@ -4,111 +4,61 @@
     "image_file": "test_images/000000000139.jpg",
     "width": 640,
     "height": 426,
-    "num_regions": 8,
+    "num_regions": 6,
     "regions": [
       {
-        "mask_file": "masks_click/000000000139/mask_00.png",
-        "mask_index": 0,
-        "iou_score": 0.9332051277160645,
-        "area_fraction": 0.009683098591549295,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          437,
-          197
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000139/mask_01.png",
+        "mask_file": "masks/000000000139/mask_01.png",
         "mask_index": 1,
-        "iou_score": 0.9801732301712036,
-        "area_fraction": 0.0018302523474178405,
+        "iou_score": 0.9747107028961182,
+        "area_fraction": 0.13743031103286385,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          394,
-          194
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000139/mask_02.png",
+        "mask_file": "masks/000000000139/mask_02.png",
         "mask_index": 2,
-        "iou_score": 0.9625247120857239,
-        "area_fraction": 0.15289392605633803,
+        "iou_score": 0.9932626485824585,
+        "area_fraction": 0.05865610328638498,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          360,
-          360
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000139/mask_03.png",
+        "mask_file": "masks/000000000139/mask_03.png",
         "mask_index": 3,
-        "iou_score": 0.7433815598487854,
-        "area_fraction": 0.003403755868544601,
+        "iou_score": 1.001196026802063,
+        "area_fraction": 0.0399831279342723,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          579,
-          334
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000139/mask_04.png",
+        "mask_file": "masks/000000000139/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.9865844249725342,
+        "area_fraction": 0.03914319248826291,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000000139/mask_04.png",
         "mask_index": 4,
-        "iou_score": 1.01284658908844,
-        "area_fraction": 0.047135416666666666,
+        "iou_score": 0.9494259357452393,
+        "area_fraction": 0.029295041079812206,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          35,
-          220
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000139/mask_05.png",
+        "mask_file": "masks/000000000139/mask_05.png",
         "mask_index": 5,
-        "iou_score": 0.9848642945289612,
-        "area_fraction": 0.14895466549295774,
+        "iou_score": 0.9876630902290344,
+        "area_fraction": 0.02312206572769953,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          145,
-          351
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000139/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9919840097427368,
-        "area_fraction": 0.018317194835680752,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          264,
-          250
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000139/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 0.9934083819389343,
-        "area_fraction": 0.008659771126760564,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          119,
-          110
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -117,59 +67,25 @@
     "image_file": "test_images/000000000285.jpg",
     "width": 586,
     "height": 640,
-    "num_regions": 4,
+    "num_regions": 2,
     "regions": [
       {
-        "mask_file": "masks_click/000000000285/mask_00.png",
-        "mask_index": 0,
-        "iou_score": 1.0219382047653198,
-        "area_fraction": 0.7377319752559727,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          397,
-          331
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000285/mask_01.png",
+        "mask_file": "masks/000000000285/mask_01.png",
         "mask_index": 1,
-        "iou_score": 0.9945901036262512,
-        "area_fraction": 0.24854148890784983,
+        "iou_score": 1.0306553840637207,
+        "area_fraction": 0.7378013011945392,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          528,
-          137
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000285/mask_02.png",
-        "mask_index": 2,
-        "iou_score": 0.9635663628578186,
-        "area_fraction": 0.7373026877133105,
+        "mask_file": "masks/000000000285/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 1.001631736755371,
+        "area_fraction": 0.24803754266211603,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          304,
-          302
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000285/mask_03.png",
-        "mask_index": 3,
-        "iou_score": 0.9736731648445129,
-        "area_fraction": 0.7376786476109215,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          182,
-          297
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -178,150 +94,61 @@
     "image_file": "test_images/000000000632.jpg",
     "width": 640,
     "height": 483,
-    "num_regions": 11,
+    "num_regions": 6,
     "regions": [
       {
-        "mask_file": "masks_click/000000000632/mask_00.png",
-        "mask_index": 0,
-        "iou_score": 0.980335533618927,
-        "area_fraction": 0.026061076604554867,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          159,
-          151
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000632/mask_01.png",
-        "mask_index": 1,
-        "iou_score": 0.9723172187805176,
-        "area_fraction": 0.00537008281573499,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          161,
-          267
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000632/mask_02.png",
-        "mask_index": 2,
-        "iou_score": 0.9813992381095886,
-        "area_fraction": 0.011574792960662526,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          190,
-          416
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000632/mask_03.png",
-        "mask_index": 3,
-        "iou_score": 0.9824348092079163,
-        "area_fraction": 0.008527432712215321,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          305,
-          254
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000632/mask_04.png",
-        "mask_index": 4,
-        "iou_score": 0.9800285696983337,
-        "area_fraction": 0.1260934265010352,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          188,
-          46
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000632/mask_05.png",
+        "mask_file": "masks/000000000632/mask_05.png",
         "mask_index": 5,
-        "iou_score": 0.9912719130516052,
-        "area_fraction": 0.004215191511387164,
+        "iou_score": 0.9433501362800598,
+        "area_fraction": 0.21751746894409937,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          32,
-          165
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000632/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9913469552993774,
-        "area_fraction": 0.003328804347826087,
+        "mask_file": "masks/000000000632/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.9811422824859619,
+        "area_fraction": 0.1254593685300207,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          194,
-          103
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000632/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 0.9833687543869019,
-        "area_fraction": 0.014282479296066252,
+        "mask_file": "masks/000000000632/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9645941257476807,
+        "area_fraction": 0.05165631469979296,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          503,
-          333
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000632/mask_08.png",
-        "mask_index": 8,
-        "iou_score": 0.9758794903755188,
-        "area_fraction": 0.025779632505175985,
+        "mask_file": "masks/000000000632/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 0.8279255628585815,
+        "area_fraction": 0.05120988612836439,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          569,
-          159
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000632/mask_09.png",
-        "mask_index": 9,
-        "iou_score": 0.9985354542732239,
-        "area_fraction": 0.06784096790890269,
+        "mask_file": "masks/000000000632/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.9140337109565735,
+        "area_fraction": 0.027911490683229814,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          473,
-          408
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000632/mask_10.png",
-        "mask_index": 10,
-        "iou_score": 0.983005166053772,
-        "area_fraction": 0.0030408902691511385,
+        "mask_file": "masks/000000000632/mask_04.png",
+        "mask_index": 4,
+        "iou_score": 0.9600880146026611,
+        "area_fraction": 0.020752458592132504,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          388,
-          328
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -330,124 +157,61 @@
     "image_file": "test_images/000000000724.jpg",
     "width": 375,
     "height": 500,
-    "num_regions": 9,
+    "num_regions": 6,
     "regions": [
       {
-        "mask_file": "masks_click/000000000724/mask_00.png",
+        "mask_file": "masks/000000000724/mask_04.png",
+        "mask_index": 4,
+        "iou_score": 0.855209469795227,
+        "area_fraction": 0.21609066666666665,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000000724/mask_00.png",
         "mask_index": 0,
-        "iou_score": 1.0052270889282227,
+        "iou_score": 0.9856760501861572,
+        "area_fraction": 0.179968,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000000724/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 1.0047194957733154,
         "area_fraction": 0.08628266666666666,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          187,
-          199
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000724/mask_01.png",
-        "mask_index": 1,
-        "iou_score": 0.9506422877311707,
-        "area_fraction": 0.208144,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          126,
-          429
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000724/mask_02.png",
-        "mask_index": 2,
-        "iou_score": 0.9563178420066833,
-        "area_fraction": 0.027632,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          114,
-          472
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000724/mask_03.png",
+        "mask_file": "masks/000000000724/mask_03.png",
         "mask_index": 3,
-        "iou_score": 0.9293079376220703,
-        "area_fraction": 0.002192,
+        "iou_score": 0.9752804040908813,
+        "area_fraction": 0.072912,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          134,
-          293
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000724/mask_04.png",
-        "mask_index": 4,
-        "iou_score": 0.9449152946472168,
-        "area_fraction": 0.014229333333333333,
+        "mask_file": "masks/000000000724/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 1.0073655843734741,
+        "area_fraction": 0.07013866666666667,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          279,
-          259
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000724/mask_05.png",
+        "mask_file": "masks/000000000724/mask_05.png",
         "mask_index": 5,
-        "iou_score": 0.978221595287323,
-        "area_fraction": 0.08256,
+        "iou_score": 0.942585825920105,
+        "area_fraction": 0.04680533333333333,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          333,
-          174
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000724/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9872188568115234,
-        "area_fraction": 0.17842666666666668,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          68,
-          90
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000724/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 0.9663742780685425,
-        "area_fraction": 0.047744,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          276,
-          463
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000724/mask_08.png",
-        "mask_index": 8,
-        "iou_score": 0.9513736963272095,
-        "area_fraction": 0.002624,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          209,
-          274
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -456,163 +220,61 @@
     "image_file": "test_images/000000000776.jpg",
     "width": 428,
     "height": 640,
-    "num_regions": 12,
+    "num_regions": 6,
     "regions": [
       {
-        "mask_file": "masks_click/000000000776/mask_00.png",
-        "mask_index": 0,
-        "iou_score": 0.9982049465179443,
-        "area_fraction": 0.1809688960280374,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          108,
-          443
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000776/mask_01.png",
+        "mask_file": "masks/000000000776/mask_01.png",
         "mask_index": 1,
-        "iou_score": 0.9783986806869507,
-        "area_fraction": 0.024196845794392522,
+        "iou_score": 0.9389420747756958,
+        "area_fraction": 0.35183630257009346,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          60,
-          122
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000776/mask_02.png",
+        "mask_file": "masks/000000000776/mask_02.png",
         "mask_index": 2,
-        "iou_score": 0.9480466842651367,
-        "area_fraction": 0.15792567172897196,
+        "iou_score": 0.9621284008026123,
+        "area_fraction": 0.15867041471962617,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          324,
-          111
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000776/mask_03.png",
+        "mask_file": "masks/000000000776/mask_03.png",
         "mask_index": 3,
-        "iou_score": 0.9873479604721069,
-        "area_fraction": 0.0024715245327102805,
+        "iou_score": 0.9892541170120239,
+        "area_fraction": 0.1412273656542056,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          135,
-          277
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000776/mask_04.png",
+        "mask_file": "masks/000000000776/mask_04.png",
         "mask_index": 4,
-        "iou_score": 0.9751430749893188,
-        "area_fraction": 0.000540303738317757,
+        "iou_score": 0.9884753823280334,
+        "area_fraction": 0.10063522196261682,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          67,
-          253
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000776/mask_05.png",
+        "mask_file": "masks/000000000776/mask_05.png",
         "mask_index": 5,
-        "iou_score": 0.9726171493530273,
-        "area_fraction": 0.0009272780373831775,
+        "iou_score": 0.9468700289726257,
+        "area_fraction": 0.030713346962616822,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          130,
-          197
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000776/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9636901021003723,
-        "area_fraction": 0.0005220502336448598,
+        "mask_file": "masks/000000000776/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.9491692781448364,
+        "area_fraction": 0.024058119158878503,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          261,
-          145
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000776/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 0.9835993647575378,
-        "area_fraction": 0.001055052570093458,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          229,
-          211
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000776/mask_08.png",
-        "mask_index": 8,
-        "iou_score": 0.9855535626411438,
-        "area_fraction": 0.0009747371495327103,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          76,
-          467
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000776/mask_09.png",
-        "mask_index": 9,
-        "iou_score": 0.9935057163238525,
-        "area_fraction": 0.10081410630841121,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          284,
-          408
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000776/mask_10.png",
-        "mask_index": 10,
-        "iou_score": 0.84950190782547,
-        "area_fraction": 0.023276869158878506,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          412,
-          298
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000776/mask_11.png",
-        "mask_index": 11,
-        "iou_score": 0.9447956681251526,
-        "area_fraction": 0.053884345794392524,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          258,
-          599
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -621,124 +283,52 @@
     "image_file": "test_images/000000000785.jpg",
     "width": 640,
     "height": 425,
-    "num_regions": 9,
+    "num_regions": 5,
     "regions": [
       {
-        "mask_file": "masks_click/000000000785/mask_00.png",
-        "mask_index": 0,
-        "iou_score": 1.0073689222335815,
-        "area_fraction": 0.03520220588235294,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          393,
-          155
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000785/mask_01.png",
-        "mask_index": 1,
-        "iou_score": 0.9670014977455139,
-        "area_fraction": 0.09970955882352942,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          365,
-          63
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000785/mask_02.png",
+        "mask_file": "masks/000000000785/mask_02.png",
         "mask_index": 2,
-        "iou_score": 0.9778671264648438,
-        "area_fraction": 0.002161764705882353,
+        "iou_score": 1.01203453540802,
+        "area_fraction": 0.5980110294117648,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          300,
-          186
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000785/mask_03.png",
-        "mask_index": 3,
-        "iou_score": 0.9618911743164062,
-        "area_fraction": 0.002400735294117647,
+        "mask_file": "masks/000000000785/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.9726608991622925,
+        "area_fraction": 0.14561029411764706,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          455,
-          181
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000785/mask_04.png",
+        "mask_file": "masks/000000000785/mask_04.png",
         "mask_index": 4,
-        "iou_score": 0.9915245771408081,
-        "area_fraction": 0.04023529411764706,
+        "iou_score": 1.0024042129516602,
+        "area_fraction": 0.09979044117647058,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          463,
-          342
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000785/mask_05.png",
-        "mask_index": 5,
-        "iou_score": 0.9411479234695435,
-        "area_fraction": 0.005319852941176471,
+        "mask_file": "masks/000000000785/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 1.0058060884475708,
+        "area_fraction": 0.09189705882352942,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          450,
-          374
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000785/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9865509271621704,
-        "area_fraction": 0.09888970588235294,
+        "mask_file": "masks/000000000785/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.9969855546951294,
+        "area_fraction": 0.03530882352941177,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          377,
-          355
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000785/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 1.0021659135818481,
-        "area_fraction": 0.0996764705882353,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          372,
-          264
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000785/mask_08.png",
-        "mask_index": 8,
-        "iou_score": 1.0007638931274414,
-        "area_fraction": 0.5980625,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          192,
-          237
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -747,124 +337,52 @@
     "image_file": "test_images/000000000802.jpg",
     "width": 424,
     "height": 640,
-    "num_regions": 9,
+    "num_regions": 5,
     "regions": [
       {
-        "mask_file": "masks_click/000000000802/mask_00.png",
-        "mask_index": 0,
-        "iou_score": 0.994924783706665,
-        "area_fraction": 0.03970739976415094,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          189,
-          165
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000802/mask_01.png",
+        "mask_file": "masks/000000000802/mask_01.png",
         "mask_index": 1,
-        "iou_score": 0.9671406745910645,
-        "area_fraction": 0.016649469339622643,
+        "iou_score": 0.9946540594100952,
+        "area_fraction": 0.1961490271226415,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          296,
-          151
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000802/mask_02.png",
-        "mask_index": 2,
-        "iou_score": 1.0164681673049927,
-        "area_fraction": 0.09463074882075471,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          368,
-          326
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000802/mask_03.png",
-        "mask_index": 3,
-        "iou_score": 0.9849150776863098,
-        "area_fraction": 0.012183077830188679,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          232,
-          587
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000802/mask_04.png",
+        "mask_file": "masks/000000000802/mask_04.png",
         "mask_index": 4,
-        "iou_score": 0.9365022778511047,
-        "area_fraction": 0.03807119693396226,
+        "iou_score": 0.9728864431381226,
+        "area_fraction": 0.14168263561320754,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          122,
-          442
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000802/mask_05.png",
-        "mask_index": 5,
-        "iou_score": 0.9469872713088989,
-        "area_fraction": 0.09306456367924529,
+        "mask_file": "masks/000000000802/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 1.013519287109375,
+        "area_fraction": 0.0946823408018868,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          86,
-          341
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000802/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9566501379013062,
-        "area_fraction": 0.014652122641509434,
+        "mask_file": "masks/000000000802/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 1.0067604780197144,
+        "area_fraction": 0.08413915094339623,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          97,
-          155
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000802/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 0.993800163269043,
-        "area_fraction": 0.010134139150943397,
+        "mask_file": "masks/000000000802/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.9902792572975159,
+        "area_fraction": 0.02955852004716981,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          190,
-          340
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000802/mask_08.png",
-        "mask_index": 8,
-        "iou_score": 0.9618247747421265,
-        "area_fraction": 0.01685215212264151,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          210,
-          429
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -873,176 +391,61 @@
     "image_file": "test_images/000000000872.jpg",
     "width": 621,
     "height": 640,
-    "num_regions": 13,
+    "num_regions": 6,
     "regions": [
       {
-        "mask_file": "masks_click/000000000872/mask_00.png",
+        "mask_file": "masks/000000000872/mask_00.png",
         "mask_index": 0,
-        "iou_score": 1.0036756992340088,
-        "area_fraction": 0.016704408212560386,
+        "iou_score": 0.9991855025291443,
+        "area_fraction": 0.4583660426731079,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          343,
-          209
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000872/mask_01.png",
-        "mask_index": 1,
-        "iou_score": 1.0088869333267212,
-        "area_fraction": 0.030505233494363928,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          276,
-          277
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000872/mask_02.png",
-        "mask_index": 2,
-        "iou_score": 1.0002946853637695,
-        "area_fraction": 0.11509661835748793,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          301,
-          458
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000872/mask_03.png",
-        "mask_index": 3,
-        "iou_score": 0.9293918013572693,
-        "area_fraction": 0.041208735909822866,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          347,
-          349
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000872/mask_04.png",
-        "mask_index": 4,
-        "iou_score": 0.9401962161064148,
-        "area_fraction": 0.003248289049919485,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          393,
-          174
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000872/mask_05.png",
+        "mask_file": "masks/000000000872/mask_05.png",
         "mask_index": 5,
-        "iou_score": 1.0004992485046387,
-        "area_fraction": 0.4617678140096618,
+        "iou_score": 1.000767469406128,
+        "area_fraction": 0.18264392109500804,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          165,
-          127
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000872/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9829948544502258,
-        "area_fraction": 0.14169937600644122,
+        "mask_file": "masks/000000000872/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9746512174606323,
+        "area_fraction": 0.1433449074074074,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          418,
-          85
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000872/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 0.9808511137962341,
-        "area_fraction": 0.06071859903381643,
+        "mask_file": "masks/000000000872/mask_04.png",
+        "mask_index": 4,
+        "iou_score": 0.9868918657302856,
+        "area_fraction": 0.11569796698872786,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          111,
-          418
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000872/mask_08.png",
-        "mask_index": 8,
-        "iou_score": 0.9927668571472168,
-        "area_fraction": 0.18283011272141708,
+        "mask_file": "masks/000000000872/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.9826197028160095,
+        "area_fraction": 0.060723631239935585,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          102,
-          555
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000872/mask_09.png",
-        "mask_index": 9,
-        "iou_score": 0.9599145650863647,
-        "area_fraction": 0.004274859098228664,
+        "mask_file": "masks/000000000872/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 1.0033533573150635,
+        "area_fraction": 0.0301454307568438,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          236,
-          597
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000872/mask_10.png",
-        "mask_index": 10,
-        "iou_score": 0.9607676863670349,
-        "area_fraction": 0.004300020128824477,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          170,
-          508
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000872/mask_11.png",
-        "mask_index": 11,
-        "iou_score": 0.9587762355804443,
-        "area_fraction": 0.004367954911433172,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          397,
-          432
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000872/mask_12.png",
-        "mask_index": 12,
-        "iou_score": 0.9628157019615173,
-        "area_fraction": 0.0029815821256038645,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          313,
-          547
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -1051,137 +454,25 @@
     "image_file": "test_images/000000000885.jpg",
     "width": 640,
     "height": 427,
-    "num_regions": 10,
+    "num_regions": 2,
     "regions": [
       {
-        "mask_file": "masks_click/000000000885/mask_00.png",
+        "mask_file": "masks/000000000885/mask_00.png",
         "mask_index": 0,
-        "iou_score": 1.0063703060150146,
-        "area_fraction": 0.4534945843091335,
+        "iou_score": 1.0088095664978027,
+        "area_fraction": 0.4532860070257611,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          189,
-          143
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000000885/mask_01.png",
+        "mask_file": "masks/000000000885/mask_01.png",
         "mask_index": 1,
-        "iou_score": 0.9486530423164368,
-        "area_fraction": 0.005591334894613583,
+        "iou_score": 0.994971513748169,
+        "area_fraction": 0.2869694086651054,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          351,
-          141
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000885/mask_02.png",
-        "mask_index": 2,
-        "iou_score": 0.9614219665527344,
-        "area_fraction": 0.022903249414519905,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          373,
-          116
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000885/mask_03.png",
-        "mask_index": 3,
-        "iou_score": 0.9320411682128906,
-        "area_fraction": 0.011054596018735364,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          330,
-          238
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000885/mask_04.png",
-        "mask_index": 4,
-        "iou_score": 0.9509760737419128,
-        "area_fraction": 0.004746048009367681,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          300,
-          261
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000885/mask_05.png",
-        "mask_index": 5,
-        "iou_score": 0.9729301333427429,
-        "area_fraction": 0.0010026346604215457,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          327,
-          357
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000885/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9921362400054932,
-        "area_fraction": 0.001719847775175644,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          367,
-          200
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000885/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 0.9997448921203613,
-        "area_fraction": 0.02336065573770492,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          615,
-          129
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000885/mask_08.png",
-        "mask_index": 8,
-        "iou_score": 0.9968969821929932,
-        "area_fraction": 0.0938963700234192,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          503,
-          416
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000000885/mask_09.png",
-        "mask_index": 9,
-        "iou_score": 0.9994423389434814,
-        "area_fraction": 0.28688158665105384,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          506,
-          320
-        ]
+        "instruction": ""
       }
     ]
   },
@@ -1190,410 +481,538 @@
     "image_file": "test_images/000000001000.jpg",
     "width": 640,
     "height": 480,
-    "num_regions": 31,
+    "num_regions": 6,
     "regions": [
       {
-        "mask_file": "masks_click/000000001000/mask_00.png",
+        "mask_file": "masks/000000001000/mask_00.png",
         "mask_index": 0,
-        "iou_score": 1.0139697790145874,
-        "area_fraction": 0.03216145833333333,
+        "iou_score": 0.9425901770591736,
+        "area_fraction": 0.163154296875,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          458,
-          323
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_01.png",
-        "mask_index": 1,
-        "iou_score": 1.013526439666748,
-        "area_fraction": 0.03484700520833333,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          535,
-          312
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000001000/mask_02.png",
-        "mask_index": 2,
-        "iou_score": 0.9972664713859558,
-        "area_fraction": 0.07003255208333334,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          549,
-          413
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000001000/mask_03.png",
-        "mask_index": 3,
-        "iou_score": 0.9988884329795837,
-        "area_fraction": 0.006630859375,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          360,
-          310
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000001000/mask_04.png",
-        "mask_index": 4,
-        "iou_score": 1.0111689567565918,
-        "area_fraction": 0.011149088541666666,
-        "region_label": "",
-        "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          363,
-          250
-        ]
-      },
-      {
-        "mask_file": "masks_click/000000001000/mask_05.png",
+        "mask_file": "masks/000000001000/mask_05.png",
         "mask_index": 5,
-        "iou_score": 0.9869210720062256,
-        "area_fraction": 0.016097005208333334,
+        "iou_score": 0.9845575094223022,
+        "area_fraction": 0.127041015625,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          420,
-          264
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_06.png",
-        "mask_index": 6,
-        "iou_score": 0.9664539098739624,
-        "area_fraction": 0.0017513020833333332,
+        "mask_file": "masks/000000001000/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9943369626998901,
+        "area_fraction": 0.09607096354166667,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          356,
-          442
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_07.png",
-        "mask_index": 7,
-        "iou_score": 0.9807466268539429,
-        "area_fraction": 0.0014973958333333334,
+        "mask_file": "masks/000000001000/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 0.9702751040458679,
+        "area_fraction": 0.05039713541666667,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          240,
-          400
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_08.png",
-        "mask_index": 8,
-        "iou_score": 0.9754495620727539,
-        "area_fraction": 0.0018196614583333333,
+        "mask_file": "masks/000000001000/mask_04.png",
+        "mask_index": 4,
+        "iou_score": 1.016546607017517,
+        "area_fraction": 0.034794921875,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          320,
-          387
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_09.png",
-        "mask_index": 9,
-        "iou_score": 0.9870688319206238,
-        "area_fraction": 0.004153645833333333,
+        "mask_file": "masks/000000001000/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.9161958694458008,
+        "area_fraction": 0.03150065104166667,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          466,
-          177
-        ]
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001268",
+    "image_file": "test_images/000000001268.jpg",
+    "width": 640,
+    "height": 427,
+    "num_regions": 6,
+    "regions": [
+      {
+        "mask_file": "masks/000000001268/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 1.0151244401931763,
+        "area_fraction": 0.1977422423887588,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_10.png",
-        "mask_index": 10,
-        "iou_score": 0.997343122959137,
-        "area_fraction": 0.0030794270833333333,
+        "mask_file": "masks/000000001268/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9926002025604248,
+        "area_fraction": 0.1775175644028103,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          434,
-          180
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_11.png",
-        "mask_index": 11,
-        "iou_score": 1.0039273500442505,
-        "area_fraction": 0.004847005208333333,
+        "mask_file": "masks/000000001268/mask_04.png",
+        "mask_index": 4,
+        "iou_score": 0.998072624206543,
+        "area_fraction": 0.152850556206089,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          561,
-          208
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_12.png",
-        "mask_index": 12,
-        "iou_score": 0.9496593475341797,
-        "area_fraction": 0.005572916666666667,
+        "mask_file": "masks/000000001268/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 0.9700502157211304,
+        "area_fraction": 0.03675717213114754,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          427,
-          416
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_13.png",
-        "mask_index": 13,
-        "iou_score": 0.9940040707588196,
-        "area_fraction": 0.0015462239583333333,
+        "mask_file": "masks/000000001268/mask_05.png",
+        "mask_index": 5,
+        "iou_score": 0.9803215265274048,
+        "area_fraction": 0.03359923887587822,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          422,
-          136
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_14.png",
-        "mask_index": 14,
-        "iou_score": 0.9682725667953491,
-        "area_fraction": 0.050348307291666665,
+        "mask_file": "masks/000000001268/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.9540382027626038,
+        "area_fraction": 0.02802620023419204,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          382,
-          164
-        ]
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001296",
+    "image_file": "test_images/000000001296.jpg",
+    "width": 427,
+    "height": 640,
+    "num_regions": 4,
+    "regions": [
+      {
+        "mask_file": "masks/000000001296/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.999986469745636,
+        "area_fraction": 0.663422131147541,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_15.png",
-        "mask_index": 15,
-        "iou_score": 0.9493867754936218,
-        "area_fraction": 0.0021809895833333334,
+        "mask_file": "masks/000000001296/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9931644797325134,
+        "area_fraction": 0.1301668618266979,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          374,
-          133
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_16.png",
-        "mask_index": 16,
-        "iou_score": 0.8963265419006348,
-        "area_fraction": 0.00337890625,
+        "mask_file": "masks/000000001296/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.9534530639648438,
+        "area_fraction": 0.1083467505854801,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          305,
-          190
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_17.png",
-        "mask_index": 17,
-        "iou_score": 0.9933528900146484,
-        "area_fraction": 0.020651041666666668,
+        "mask_file": "masks/000000001296/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 0.9923602342605591,
+        "area_fraction": 0.0429230093676815,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          287,
-          174
-        ]
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001353",
+    "image_file": "test_images/000000001353.jpg",
+    "width": 375,
+    "height": 500,
+    "num_regions": 6,
+    "regions": [
+      {
+        "mask_file": "masks/000000001353/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 1.016377568244934,
+        "area_fraction": 0.33626133333333336,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_18.png",
-        "mask_index": 18,
-        "iou_score": 0.9271249175071716,
-        "area_fraction": 0.0010872395833333333,
+        "mask_file": "masks/000000001353/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9730979800224304,
+        "area_fraction": 0.20642666666666667,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          241,
-          185
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_19.png",
-        "mask_index": 19,
-        "iou_score": 0.9504747986793518,
-        "area_fraction": 0.0010611979166666667,
+        "mask_file": "masks/000000001353/mask_05.png",
+        "mask_index": 5,
+        "iou_score": 0.9762899875640869,
+        "area_fraction": 0.08434666666666667,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          241,
-          132
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_20.png",
-        "mask_index": 20,
-        "iou_score": 0.980131983757019,
-        "area_fraction": 0.0009244791666666667,
+        "mask_file": "masks/000000001353/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 1.0024614334106445,
+        "area_fraction": 0.073376,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          173,
-          160
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_21.png",
-        "mask_index": 21,
-        "iou_score": 0.9879605770111084,
-        "area_fraction": 0.011901041666666667,
+        "mask_file": "masks/000000001353/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.9606668949127197,
+        "area_fraction": 0.056885333333333336,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          169,
-          225
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_22.png",
-        "mask_index": 22,
-        "iou_score": 1.002709984779358,
-        "area_fraction": 0.004749348958333333,
+        "mask_file": "masks/000000001353/mask_04.png",
+        "mask_index": 4,
+        "iou_score": 0.9889774322509766,
+        "area_fraction": 0.023877333333333334,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          158,
-          284
-        ]
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001425",
+    "image_file": "test_images/000000001425.jpg",
+    "width": 640,
+    "height": 512,
+    "num_regions": 6,
+    "regions": [
+      {
+        "mask_file": "masks/000000001425/mask_04.png",
+        "mask_index": 4,
+        "iou_score": 0.9116801023483276,
+        "area_fraction": 0.2274261474609375,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_23.png",
-        "mask_index": 23,
-        "iou_score": 0.9705180525779724,
-        "area_fraction": 0.0013509114583333333,
+        "mask_file": "masks/000000001425/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9764366745948792,
+        "area_fraction": 0.1663482666015625,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          77,
-          199
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_24.png",
-        "mask_index": 24,
-        "iou_score": 0.9571536183357239,
-        "area_fraction": 0.006197916666666667,
+        "mask_file": "masks/000000001425/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.9577597379684448,
+        "area_fraction": 0.148797607421875,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          89,
-          265
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_25.png",
-        "mask_index": 25,
-        "iou_score": 0.9441576600074768,
-        "area_fraction": 0.00216796875,
+        "mask_file": "masks/000000001425/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.991708517074585,
+        "area_fraction": 0.0993408203125,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          102,
-          296
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_26.png",
-        "mask_index": 26,
-        "iou_score": 0.9790194034576416,
-        "area_fraction": 0.1167578125,
+        "mask_file": "masks/000000001425/mask_05.png",
+        "mask_index": 5,
+        "iou_score": 0.9515783190727234,
+        "area_fraction": 0.069488525390625,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          113,
-          368
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_27.png",
-        "mask_index": 27,
-        "iou_score": 0.9724491834640503,
-        "area_fraction": 0.0064876302083333335,
+        "mask_file": "masks/000000001425/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 0.96364426612854,
+        "area_fraction": 0.027764892578125,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          53,
-          311
-        ]
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001490",
+    "image_file": "test_images/000000001490.jpg",
+    "width": 640,
+    "height": 315,
+    "num_regions": 2,
+    "regions": [
+      {
+        "mask_file": "masks/000000001490/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 1.0044375658035278,
+        "area_fraction": 0.714186507936508,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_28.png",
-        "mask_index": 28,
-        "iou_score": 0.9927215576171875,
-        "area_fraction": 0.125498046875,
+        "mask_file": "masks/000000001490/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 1.0074836015701294,
+        "area_fraction": 0.20539682539682538,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          179,
-          428
-        ]
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001503",
+    "image_file": "test_images/000000001503.jpg",
+    "width": 320,
+    "height": 240,
+    "num_regions": 6,
+    "regions": [
+      {
+        "mask_file": "masks/000000001503/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9906574487686157,
+        "area_fraction": 0.1971875,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_29.png",
-        "mask_index": 29,
-        "iou_score": 0.9841086864471436,
-        "area_fraction": 0.09587239583333333,
+        "mask_file": "masks/000000001503/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 1.004090428352356,
+        "area_fraction": 0.114296875,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          529,
-          142
-        ]
+        "instruction": ""
       },
       {
-        "mask_file": "masks_click/000000001000/mask_30.png",
-        "mask_index": 30,
-        "iou_score": 1.0043604373931885,
-        "area_fraction": 0.0396875,
+        "mask_file": "masks/000000001503/mask_05.png",
+        "mask_index": 5,
+        "iou_score": 0.9651464223861694,
+        "area_fraction": 0.06348958333333334,
         "region_label": "",
         "style_reference": "",
-        "instruction": "",
-        "click_point": [
-          603,
-          64
-        ]
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001503/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.9651919603347778,
+        "area_fraction": 0.05408854166666666,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001503/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 1.0036821365356445,
+        "area_fraction": 0.04928385416666667,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001503/mask_04.png",
+        "mask_index": 4,
+        "iou_score": 0.9926778078079224,
+        "area_fraction": 0.031549479166666665,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001532",
+    "image_file": "test_images/000000001532.jpg",
+    "width": 640,
+    "height": 480,
+    "num_regions": 4,
+    "regions": [
+      {
+        "mask_file": "masks/000000001532/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 1.0120799541473389,
+        "area_fraction": 0.32110677083333333,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001532/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9227005243301392,
+        "area_fraction": 0.17798502604166666,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001532/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 0.9451119899749756,
+        "area_fraction": 0.06498697916666667,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001532/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 1.023049235343933,
+        "area_fraction": 0.033125,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001584",
+    "image_file": "test_images/000000001584.jpg",
+    "width": 612,
+    "height": 612,
+    "num_regions": 4,
+    "regions": [
+      {
+        "mask_file": "masks/000000001584/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 1.035048007965088,
+        "area_fraction": 0.3781211286257422,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001584/mask_03.png",
+        "mask_index": 3,
+        "iou_score": 1.006268858909607,
+        "area_fraction": 0.22342635311205092,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001584/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 1.0035480260849,
+        "area_fraction": 0.1558641975308642,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001584/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9837238788604736,
+        "area_fraction": 0.07675199709513435,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001675",
+    "image_file": "test_images/000000001675.jpg",
+    "width": 640,
+    "height": 480,
+    "num_regions": 3,
+    "regions": [
+      {
+        "mask_file": "masks/000000001675/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 0.978308916091919,
+        "area_fraction": 0.47771809895833334,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001675/mask_02.png",
+        "mask_index": 2,
+        "iou_score": 0.9154884815216064,
+        "area_fraction": 0.19204427083333334,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001675/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 1.0012710094451904,
+        "area_fraction": 0.152470703125,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      }
+    ]
+  },
+  {
+    "image_id": "000000001761",
+    "image_file": "test_images/000000001761.jpg",
+    "width": 427,
+    "height": 640,
+    "num_regions": 2,
+    "regions": [
+      {
+        "mask_file": "masks/000000001761/mask_00.png",
+        "mask_index": 0,
+        "iou_score": 1.0151400566101074,
+        "area_fraction": 0.7472811768149883,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
+      },
+      {
+        "mask_file": "masks/000000001761/mask_01.png",
+        "mask_index": 1,
+        "iou_score": 0.9823387861251831,
+        "area_fraction": 0.1510465456674473,
+        "region_label": "",
+        "style_reference": "",
+        "instruction": ""
       }
     ]
   }
