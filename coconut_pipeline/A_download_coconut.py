@@ -1,41 +1,97 @@
 """
-Step A: Download COCONut-PanCap Subset
-=======================================
-Downloads a small subset from COCONut-PanCap on HuggingFace.
-Saves content images, masks (decoded from panoptic segmentation),
-and region captions for each sample.
+Step A: Download COCONut-PanCap Subset (fixed parser)
+======================================================
+Parses the narrative text format: <id: region label> embedded in captions.
+Downloads content images from COCO and extracts region descriptions.
 
-This is part of the HYBRID PIPELINE (COCONut track).
-Do NOT modify the original scripts/ directory.
+Since COCONut-PanCap does not provide separate mask images in this format,
+we use the region labels from the narrative and generate masks using SAM2.
+The captions provide rich region descriptions which is the key value-add.
 
 Usage:
     python3 A_download_coconut.py \
         --output_dir  ../data/coconut_subset \
         --num_samples 50
-
-Dependencies:
-    pip install datasets pillow tqdm numpy pycocotools
 """
 
 import argparse
 import json
+import re
+import requests
 from pathlib import Path
 
-import numpy as np
 from PIL import Image
 from tqdm import tqdm
 
 
-def decode_panoptic_mask(pan_seg, seg_id):
-    pan_arr    = np.array(pan_seg.convert("RGB"))
-    pan_id_arr = (pan_arr[:, :, 0].astype(np.int32) +
-                  pan_arr[:, :, 1].astype(np.int32) * 256 +
-                  pan_arr[:, :, 2].astype(np.int32) * 256 * 256)
-    return (pan_id_arr == seg_id).astype(bool)
+# ─────────────────────────────────────────────────────────────────────────────
+# Parse COCONut-PanCap narrative format
+# ─────────────────────────────────────────────────────────────────────────────
+
+def parse_narrative(txt):
+    """
+    Extract regions from narrative text.
+    Format: <id: label> or <id1,id2: label> embedded in sentence.
+    
+    Returns list of dicts: {ids, label, context_sentence}
+    """
+    regions = []
+    seen_labels = set()
+    
+    # Find all <...> tags
+    pattern = r"<([\d,]+):\s*([^>]+)>"
+    
+    # Split text into sentences for context
+    sentences = re.split(r"(?<=[.!?])\s+", txt)
+    
+    for sentence in sentences:
+        for match in re.finditer(pattern, sentence):
+            ids_str = match.group(1)
+            label   = match.group(2).strip().lower()
+            
+            if label in seen_labels:
+                continue
+            seen_labels.add(label)
+            
+            ids = [int(x) for x in ids_str.split(",") if x.strip().isdigit()]
+            
+            # Use the sentence as the region caption
+            # Strip all <> tags from the sentence for clean caption
+            clean_sentence = re.sub(r"<[\d,]+:\s*([^>]+)>", r"\1", sentence).strip()
+            
+            regions.append({
+                "ids":     ids,
+                "label":   label,
+                "caption": clean_sentence,
+            })
+    
+    return regions
 
 
-def mask_area_fraction(mask):
-    return float(mask.sum()) / float(mask.size)
+def download_coco_image(image_id, dest_path, session):
+    """Download a COCO image by its ID."""
+    # COCO val2017 image URL format
+    fname = f"{int(image_id):012d}.jpg"
+    url   = f"http://images.cocodataset.org/val2017/{fname}"
+    try:
+        r = session.get(url, timeout=20)
+        if r.status_code == 200 and "image" in r.headers.get("content-type", ""):
+            img = Image.open(__import__("io").BytesIO(r.content)).convert("RGB")
+            img.save(dest_path, quality=90)
+            return True
+    except Exception:
+        pass
+    # Try train2017
+    url = f"http://images.cocodataset.org/train2017/{fname}"
+    try:
+        r = session.get(url, timeout=20)
+        if r.status_code == 200 and "image" in r.headers.get("content-type", ""):
+            img = Image.open(__import__("io").BytesIO(r.content)).convert("RGB")
+            img.save(dest_path, quality=90)
+            return True
+    except Exception:
+        pass
+    return False
 
 
 def run(args):
@@ -43,19 +99,20 @@ def run(args):
 
     out_root = Path(args.output_dir)
     img_dir  = out_root / "images"
-    mask_dir = out_root / "masks"
     ann_dir  = out_root / "annotations"
-    for d in [img_dir, mask_dir, ann_dir]:
-        d.mkdir(parents=True, exist_ok=True)
+    img_dir.mkdir(parents=True, exist_ok=True)
+    ann_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Loading COCONut-PanCap from HuggingFace (streaming)...")
+    print("Loading COCONut-PanCap from HuggingFace (streaming)...")
     print(f"Target: {args.num_samples} samples\n")
-    ds = load_dataset("xdeng77/coconut_pancap", split="train", streaming=True)
+    ds      = load_dataset("xdeng77/coconut_pancap", split="train", streaming=True)
+    session = requests.Session()
+    session.headers["User-Agent"] = "benchmark-research/1.0 (bath.ac.uk)"
 
     records = []
     skipped = 0
     count   = 0
-    pbar    = tqdm(ds, desc="Downloading", total=args.num_samples * 4)
+    pbar    = tqdm(ds, desc="Processing", total=args.num_samples * 5)
 
     for item in pbar:
         if count >= args.num_samples:
@@ -64,67 +121,62 @@ def run(args):
         pbar.set_postfix({"saved": count, "skipped": skipped})
 
         try:
-            image    = item["image"].convert("RGB")
-            W, H     = image.size
-            image_id = str(item.get("image_id", f"coconut_{count:05d}"))
-            caption  = item.get("caption", "")
-            segments = item.get("segments_info", [])
-            pan_seg  = item.get("panoptic_seg", None)
+            txt      = item.get("txt", "")
+            key      = item.get("__key__", "")
+            # key format: caption_train2017/000000208220
+            image_id = key.split("/")[-1].lstrip("0") or "0"
+            if not image_id:
+                image_id = "0"
 
-            if pan_seg is None or not segments or len(segments) < 2:
+            if not txt or not image_id:
                 skipped += 1
                 continue
 
-            min_pixels = int(0.02 * W * H)
-            valid_segs = [s for s in segments if s.get("area", 0) >= min_pixels]
-            if len(valid_segs) < 2:
+            # Parse regions from narrative
+            regions = parse_narrative(txt)
+            
+            # Need at least 2 distinct regions
+            if len(regions) < 2:
                 skipped += 1
                 continue
 
+            # Download COCO image
             img_path = img_dir / f"{image_id}.jpg"
-            image.save(img_path, quality=90)
-
-            img_mask_dir = mask_dir / image_id
-            img_mask_dir.mkdir(exist_ok=True)
-
-            saved_regions = []
-            for i, seg in enumerate(valid_segs[:6]):
-                seg_id    = seg["id"]
-                seg_label = seg.get("category_name", seg.get("label", f"region_{i}"))
-                mask      = decode_panoptic_mask(pan_seg, seg_id)
-                area      = mask_area_fraction(mask)
-                if area < 0.02:
+            if not img_path.exists():
+                ok = download_coco_image(image_id, img_path, session)
+                if not ok:
+                    skipped += 1
                     continue
 
-                mask_fname = f"mask_{i:02d}.png"
-                mask_path  = img_mask_dir / mask_fname
-                Image.fromarray((mask * 255).astype(np.uint8)).save(mask_path)
+            # Get image dimensions
+            try:
+                img = Image.open(img_path)
+                W, H = img.size
+            except Exception:
+                skipped += 1
+                continue
 
-                region_caption = (seg.get("caption") or
-                                  seg.get("description") or
-                                  caption[:200] or "")
-
+            # Build region records (no masks yet — SAM2 will generate them)
+            saved_regions = []
+            for i, reg in enumerate(regions[:6]):
                 saved_regions.append({
                     "mask_index":       i,
-                    "mask_file":        str(mask_path.relative_to(out_root)),
-                    "region_label":     seg_label,
-                    "region_caption":   region_caption,
-                    "area_fraction":    float(area),
-                    "iou_score":        1.0,
+                    "mask_file":        "",   # filled by SAM2 step
+                    "region_label":     reg["label"],
+                    "region_caption":   reg["caption"],
+                    "region_ids":       reg["ids"],
+                    "area_fraction":    0.0,
+                    "iou_score":        0.0,
                     "style_name":       "",
                     "style_reference":  "",
                     "instruction_text": "",
                     "instruction_ref":  "",
                 })
 
-            if len(saved_regions) < 2:
-                skipped += 1
-                img_path.unlink(missing_ok=True)
-                continue
-
             records.append({
                 "image_id":    image_id,
                 "image_file":  str(img_path.relative_to(out_root)),
+                "narrative":   txt,
                 "width":       W,
                 "height":      H,
                 "source":      "coconut_pancap",
@@ -133,15 +185,17 @@ def run(args):
             })
             count += 1
 
+            # Incremental save
             stub_path = ann_dir / "coconut_stub.json"
             with open(stub_path, "w") as f:
                 json.dump(records, f, indent=2)
 
-        except Exception:
+        except Exception as e:
             skipped += 1
             continue
 
     pbar.close()
+
     stub_path = ann_dir / "coconut_stub.json"
     with open(stub_path, "w") as f:
         json.dump(records, f, indent=2)
@@ -152,7 +206,21 @@ def run(args):
     if counts:
         print(f"Regions : min={min(counts)}  max={max(counts)}  mean={sum(counts)/len(counts):.1f}")
     print(f"Stub    : {stub_path}")
-    print(f"\nNext: python3 B_build_subset.py --stub {stub_path}")
+    
+    if records:
+        print(f"\nSample:")
+        r = records[0]
+        print(f"  image_id : {r['image_id']}")
+        for reg in r["regions"][:3]:
+            print(f"  region   : {reg['region_label']}")
+            print(f"    caption: {reg['region_caption'][:80]}")
+
+    print(f"\nNote: mask_file fields are empty.")
+    print(f"Next: run SAM2 segmentation to generate masks, then B_build_subset.py")
+    print(f"  python3 ../scripts/01_segment_regions_sam2.py \\")
+    print(f"      --image_dir  {img_dir} \\")
+    print(f"      --output_dir {out_root}/masks \\")
+    print(f"      --mode auto --no_resume")
 
 
 def parse_args():
