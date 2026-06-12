@@ -35,3 +35,15 @@ data/masks/
 data/content_images/
 data/content_images_filtered/
 data/style_references/
+
+# COCONut pipeline binary data
+data/coconut_subset/images/
+data/coconut_subset/masks/
+data/masks_sam2/
+data/masks_sam2_click/
+data/mask_previews*/
+data/pure_mask*/
+data/test_images/
+data/paired_previews/
+data/previews*/
+checkpoints/
