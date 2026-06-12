@@ -76,9 +76,14 @@ def sample_style(style_index, exclude=None, seed=None):
     return name, rng.choice(style_index[name])
 
 
-def make_instruction_ref(region_label):
+def make_instruction_ref(region_label, style_name=""):
     label = region_label.strip() or "this region"
     return f"Render {label} using the style of the reference image."
+
+def make_instruction_ref_named(region_label, style_name):
+    label = region_label.strip() or "this region"
+    style = style_name.replace("-", " ").replace("_", " ").strip() or "the given"
+    return f"Render {label} using the {style} style of the reference image."
 
 
 def make_instruction_stub(region_label, style_name):
@@ -121,7 +126,8 @@ def run(args):
             label   = region.get("region_label",   "this region")
             caption = region.get("region_caption", "")
 
-            region["instruction_ref"] = make_instruction_ref(label)
+            region["instruction_ref"]       = make_instruction_ref(label)
+            region["instruction_ref_named"] = make_instruction_ref_named(label, style_name)
 
             prompt = PROMPT_TEMPLATE.format(
                 label=label,
@@ -145,6 +151,8 @@ def run(args):
             r["instruction_text"] for r in record["regions"])
         record["composite_instruction_ref"] = " ".join(
             r["instruction_ref"] for r in record["regions"])
+        record["composite_instruction_ref_named"] = " ".join(
+            r["instruction_ref_named"] for r in record["regions"])
         record["num_regions"] = len(record["regions"])
 
         # Incremental save
