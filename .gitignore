@@ -47,3 +47,7 @@ data/test_images/
 data/paired_previews/
 data/previews*/
 checkpoints/
+data/coconut_subset/images/
+data/coconut_subset/masks_auto/
+data/coconut_subset/masks_click/
+data/masks_sam1/
