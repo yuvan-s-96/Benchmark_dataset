@@ -6,115 +6,76 @@
 
 ## What this is
 
-A **separate pipeline** from the original SAM2 track in `scripts/`.
+A separate pipeline from the original SAM2 track in `scripts/`.
 Builds the benchmark using COCONut-PanCap as the foundation for rich
-region descriptions, paired with WikiArt style references and dual
-instruction formats.
+region descriptions, paired with WikiArt style references and three
+instruction formats per region.
 
-> **The original `scripts/` directory is not modified.**
-> All new code lives in `coconut_pipeline/`.
-
----
-
-## Why COCONut instead of SAM2 from scratch
-
-| What we need | SAM2 from scratch | COCONut hybrid |
-|---|---|---|
-| Mask quality | Good (SAM2) | SAM2 + guided by captions |
-| Region descriptions | Auto-generated stubs | Human-edited, 203 words avg |
-| Scale | ~10h GPU for 500 images | 143K to sample from |
-| Instruction generation | Template only | Template or API |
-| Corner case tagging | 3 tags | 5 tags (adds small_object, cluttered_scene) |
+The original `scripts/` directory is not modified.
+All new code lives in `coconut_pipeline/`.
 
 ---
 
-## Dual instruction format (per Yudi's suggestion)
-
-Each region gets two instructions supporting two evaluation paradigms:
+## Three instruction formats per region
 
 ```json
 {
   "region_label": "clear blue sky",
   "style_name": "impressionism",
   "style_reference": "data/style_references/impressionism/image_0016.jpg",
-  "instruction_text": "Render clear blue sky in impressionist brushstrokes with soft colours and light.",
-  "instruction_ref":  "Render clear blue sky using the style of the reference image."
+  "instruction_text":      "Apply impressionist brushstrokes to the clear blue sky, using soft pastel tones to capture the shifting afternoon light.",
+  "instruction_ref":       "Render clear blue sky using the style of the reference image.",
+  "instruction_ref_named": "Render clear blue sky using the impressionism style of the reference image."
 }
 ```
 
-- `instruction_text` — for **text-based** style transfer models
-- `instruction_ref`  — for **reference image-based** models (MAST, InST, etc.)
+| Field | Use for | Available in |
+|---|---|---|
+| `instruction_text` | Text-guided style transfer models | All 4 archives |
+| `instruction_ref` | Pure image-guided models (MAST) — no text bias | All 4 archives |
+| `instruction_ref_named` | Multimodal models (GPT-4V, LLaVA) — image + style name hint | GGUF archives only |
+
+---
+
+## Four export archives
+
+| Archive | Segmentation | Instructions | ref_named | Regions | Best for |
+|---|---|---|---|---|---|
+| `coconut_auto_export.zip` | SAM2 auto grid | Template (stub) | No | 229 | Quick baseline test |
+| `coconut_click_export.zip` | SAM2 label-guided | Template (stub) | No | 256 | Corner case diversity |
+| `coconut_auto_gguf_export.zip` | SAM2 auto grid | Mistral-7B GGUF | Yes | 229 | **Primary benchmark ✅** |
+| `coconut_click_gguf_export.zip` | SAM2 label-guided | Mistral-7B GGUF | Yes | 256 | Corner cases + rich |
+
+**Recommended:** `coconut_auto_gguf_export.zip` as primary. `coconut_click_gguf_export.zip` for encompassed/small_object corner cases.
+
+---
+
+## Instruction generation modes
+
+| Mode | Script | Quality | Notes |
+|---|---|---|---|
+| stub | `B_build_subset.py --model stub` | Basic templates | No model needed |
+| GGUF/local ✅ | `B_build_subset_gguf.py` | Rich, specific | Mistral-7B on ogg GPU |
+| OpenRouter | `B_build_subset_openrouter.py` | Good | Blocked on ogg (no outbound HTTP) |
+
+**Use GGUF mode** — runs on ogg GPU, no internet needed, best quality.
+Model: `mistral-7b-instruct-v0.2.Q4_K_M.gguf` at `~/Benchmark_dataset/models/`
 
 ---
 
 ## Two segmentation tracks
 
-Both tracks use the same 50 COCONut-PanCap images and captions.
-They differ only in how SAM2 receives its prompts:
-
-### Track 1 — Auto Grid
-- SAM2 prompted with a uniform 4×4 grid across each image
-- No prior knowledge of region locations
-- Output: `data/coconut_subset/masks_auto/`
-- JSON: `subset_auto_final.json`
-
-### Track 2 — Label-Guided Clicks
-- SAM2 prompted with click coordinates from COCO instance annotation centroids
-- 63/256 regions matched to COCO categories; remainder use grid fallback
-- Better alignment between captions and masks
-- Output: `data/coconut_subset/masks_click/`
-- JSON: `subset_click_final.json`
-
----
-
-## 50-sample subset results
-
 | Property | Track 1 — Auto | Track 2 — Click |
 |---|---|---|
+| SAM2 prompts | 4×4 uniform grid | COCO annotation centroids |
 | Samples | 50 | 50 |
-| Train/Val/Test | 33/2/15 | 33/2/15 |
 | Total regions | 229 | 256 |
-| Mean regions/image | 4.6 | 5.1 |
-| `similar_entities` | 0 | 0 |
-| `encompassed` | 12 | 37 |
+| Mean regions/img | 4.6 | 5.1 |
+| `encompassed` | 12 | **37** |
 | `background_heavy` | 10 | 5 |
-| `small_object` | 21 | 38 |
+| `small_object` | 21 | **38** |
 | `cluttered_scene` | 31 | 36 |
-| Missing files | 0 | 0 |
-| Instruction coverage | 229/229 (100%) | 256/256 (100%) |
-
-**Recommendation:** Use Track 1 as primary benchmark. Use Track 2 to
-source `encompassed` and `small_object` corner cases specifically.
-
----
-
-## Directory structure
-
-```
-coconut_pipeline/
-├── A_download_coconut.py     ← download images + parse captions from narrative
-├── A2_merge_masks.py         ← merge SAM2 mask paths into COCONut stub
-├── A3_extract_clicks.py      ← extract COCO annotation centroids as click prompts
-├── B_build_subset.py         ← style pairing + dual instruction generation
-├── C_quality_control.py      ← QC, 5-tag corner case tagging, 70/10/20 split
-├── D_export_subset.py        ← zip archive for supervisor baseline testing
-└── README_COCONUT.md         ← this file
-
-data/coconut_subset/          ← created at runtime (not in git except annotations/)
-├── images/                   ← COCO train2017 content images
-├── masks_auto/               ← Track 1 SAM2 masks
-├── masks_click/              ← Track 2 SAM2 masks
-└── annotations/              ← ✅ tracked in git
-    ├── coconut_stub.json
-    ├── coconut_stub_merged_auto.json
-    ├── coconut_stub_merged_click.json
-    ├── clicks_coconut.json
-    ├── subset_auto_draft.json
-    ├── subset_auto_final.json    ← Track 1 main deliverable
-    ├── subset_click_draft.json
-    ├── subset_click_final.json   ← Track 2 main deliverable
-    └── dropped_records.json
-```
+| Instruction coverage | 229/229 ✅ | 256/256 ✅ |
 
 ---
 
@@ -130,24 +91,71 @@ data/coconut_subset/          ← created at runtime (not in git except annotati
 
 ---
 
-## Setup (one time)
+## Scripts
 
-```bash
-source ~/benchmark_env/bin/activate
-pip install pycocotools google-generativeai
 ```
-
-Ensure WikiArt styles are downloaded:
-```bash
-ls ~/Benchmark_dataset/data/style_references/ | wc -l   # should show 20
+coconut_pipeline/
+├── A_download_coconut.py        ← download images + parse captions from narrative
+├── A2_merge_masks.py            ← merge SAM2 mask paths into COCONut stub
+├── A3_extract_clicks.py         ← extract COCO annotation centroids as click prompts
+├── B_build_subset.py            ← style pairing + stub instructions
+├── B_build_subset_gguf.py       ← style pairing + Mistral-7B GGUF instructions ✅
+├── B_build_subset_openrouter.py ← style pairing + OpenRouter API (blocked on ogg)
+├── C_quality_control.py         ← QC, 5-tag corner case tagging, 70/10/20 split
+├── D_export_subset.py           ← zip archive for supervisor baseline testing
+└── README_COCONUT.md
 ```
 
 ---
 
-## Step-by-step pipeline
+## Directory structure
+
+```
+data/coconut_subset/
+├── images/                              ← COCO train2017 content images
+├── masks_auto/                          ← Track 1 SAM2 masks
+├── masks_click/                         ← Track 2 SAM2 masks
+└── annotations/                         ← ✅ tracked in git
+    ├── coconut_stub.json
+    ├── coconut_stub_merged_auto.json
+    ├── coconut_stub_merged_click.json
+    ├── clicks_coconut.json
+    ├── subset_auto_final_gguf.json      ← Track 1 GGUF ✅ primary deliverable
+    └── subset_click_final_gguf.json     ← Track 2 GGUF ✅
+
+models/
+└── mistral-7b-instruct-v0.2.Q4_K_M.gguf  ← local LLM (~4 GB, not in git)
+```
+
+---
+
+## Setup (one time)
+
+```bash
+source ~/benchmark_env/bin/activate
+
+# Install dependencies
+pip install pycocotools
+pip install llama-cpp-python \
+    --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu121
+
+# Download Mistral-7B GGUF (~4 GB)
+python3 -c "
+from huggingface_hub import hf_hub_download
+hf_hub_download(
+    repo_id='TheBloke/Mistral-7B-Instruct-v0.2-GGUF',
+    filename='mistral-7b-instruct-v0.2.Q4_K_M.gguf',
+    local_dir='/homes/yvs23/Benchmark_dataset/models'
+)
+print('Done.')
+"
+```
+
+---
+
+## Full pipeline commands
 
 ### Step A — Download COCONut subset
-
 ```bash
 cd ~/Benchmark_dataset/coconut_pipeline
 
@@ -156,17 +164,16 @@ python3 A_download_coconut.py \
     --num_samples 50
 ```
 
-**Save to GitHub after:**
+**Save to GitHub:**
 ```bash
 cd ~/Benchmark_dataset
 git add data/coconut_subset/annotations/coconut_stub.json
-git commit -m "step A - coconut subset downloaded"
-git push
+git commit -m "step A - coconut downloaded" && git push
 ```
 
 ---
 
-### Step A3 — Extract click coordinates for Track 2
+### Step A3 — Extract click coordinates (Track 2 only)
 
 Requires COCO train annotations:
 ```bash
@@ -185,8 +192,7 @@ python3 A3_extract_clicks.py \
 
 ---
 
-### SAM2 segmentation — Track 1 (auto)
-
+### SAM2 — Track 1 (auto grid)
 ```bash
 export CUDA_VISIBLE_DEVICES=1
 
@@ -195,16 +201,12 @@ python3 ../scripts/01_segment_regions_sam2.py \
     --output_dir  ../data/coconut_subset/masks_auto \
     --checkpoint  ../checkpoints/sam2.1_hiera_large.pt \
     --config      configs/sam2.1/sam2.1_hiera_l.yaml \
-    --mode auto \
-    --min_area 0.02 \
-    --max_masks 6 \
-    --no_resume
+    --mode auto --min_area 0.02 --max_masks 6 --no_resume
 ```
 
 ---
 
-### SAM2 segmentation — Track 2 (click)
-
+### SAM2 — Track 2 (label-guided clicks)
 ```bash
 python3 ../scripts/01_segment_regions_sam2.py \
     --image_dir   ../data/coconut_subset/images \
@@ -212,22 +214,22 @@ python3 ../scripts/01_segment_regions_sam2.py \
     --checkpoint  ../checkpoints/sam2.1_hiera_large.pt \
     --config      configs/sam2.1/sam2.1_hiera_l.yaml \
     --clicks_json ../data/coconut_subset/annotations/clicks_coconut.json \
-    --mode click \
-    --no_resume
+    --mode click --no_resume
 ```
 
 ---
 
 ### Step A2 — Merge masks into stub
 
+Run once per track immediately after each SAM2 run:
 ```bash
-# Track 1
+# Track 1 — run after masks_auto SAM2
 python3 A2_merge_masks.py \
     --stub      ../data/coconut_subset/annotations/coconut_stub.json \
     --sam2_stub ../data/coconut_subset/annotations/masks_stub_sam2.json \
     --output    ../data/coconut_subset/annotations/coconut_stub_merged_auto.json
 
-# Track 2 (rerun SAM2 click first, then merge)
+# Track 2 — run after masks_click SAM2
 python3 A2_merge_masks.py \
     --stub      ../data/coconut_subset/annotations/coconut_stub.json \
     --sam2_stub ../data/coconut_subset/annotations/masks_stub_sam2.json \
@@ -236,144 +238,146 @@ python3 A2_merge_masks.py \
 
 ---
 
-### Step B — Style pairing + dual instructions
-
+### Step B — Style pairing + GGUF instructions ✅
 ```bash
+export CUDA_VISIBLE_DEVICES=1
+
 # Track 1
-python3 B_build_subset.py \
+python3 B_build_subset_gguf.py \
     --stub        ../data/coconut_subset/annotations/coconut_stub_merged_auto.json \
     --style_dir   ../data/style_references \
-    --output_json ../data/coconut_subset/annotations/subset_auto_draft.json \
-    --model stub   # change to gemini for richer instructions
+    --output_json ../data/coconut_subset/annotations/subset_auto_draft_gguf.json
 
 # Track 2
-python3 B_build_subset.py \
+python3 B_build_subset_gguf.py \
     --stub        ../data/coconut_subset/annotations/coconut_stub_merged_click.json \
     --style_dir   ../data/style_references \
-    --output_json ../data/coconut_subset/annotations/subset_click_draft.json \
-    --model stub
+    --output_json ../data/coconut_subset/annotations/subset_click_draft_gguf.json
 ```
 
-For Gemini (free, recommended):
-```bash
-export GEMINI_API_KEY="your-key"   # https://aistudio.google.com/app/apikey
-python3 B_build_subset.py ... --model gemini
-```
-
-**Save to GitHub after:**
+**Save to GitHub:**
 ```bash
 cd ~/Benchmark_dataset
 git add data/coconut_subset/annotations/
-git commit -m "step B - style pairing done"
-git push
+git commit -m "step B - GGUF instructions generated" && git push
 ```
 
 ---
 
 ### Step C — Quality control and split
-
 ```bash
 # Track 1
 python3 C_quality_control.py \
-    --draft_json  ../data/coconut_subset/annotations/subset_auto_draft.json \
-    --output_json ../data/coconut_subset/annotations/subset_auto_final.json
+    --draft_json  ../data/coconut_subset/annotations/subset_auto_draft_gguf.json \
+    --output_json ../data/coconut_subset/annotations/subset_auto_final_gguf.json
 
 # Track 2
 python3 C_quality_control.py \
-    --draft_json  ../data/coconut_subset/annotations/subset_click_draft.json \
-    --output_json ../data/coconut_subset/annotations/subset_click_final.json
+    --draft_json  ../data/coconut_subset/annotations/subset_click_draft_gguf.json \
+    --output_json ../data/coconut_subset/annotations/subset_click_final_gguf.json
 ```
 
-**Save to GitHub after:**
+**Save to GitHub:**
 ```bash
 cd ~/Benchmark_dataset
 git add data/coconut_subset/annotations/
-git commit -m "step C - QC and split done"
-git push
+git commit -m "step C - QC and split done" && git push
 ```
 
 ---
 
 ### Step D — Export zips
-
 ```bash
 python3 D_export_subset.py \
-    --annotated_json ../data/coconut_subset/annotations/subset_auto_final.json \
-    --output_zip     ../coconut_auto_export.zip
+    --annotated_json ../data/coconut_subset/annotations/subset_auto_final_gguf.json \
+    --output_zip     ../coconut_auto_gguf_export.zip
 
 python3 D_export_subset.py \
-    --annotated_json ../data/coconut_subset/annotations/subset_click_final.json \
-    --output_zip     ../coconut_click_export.zip
+    --annotated_json ../data/coconut_subset/annotations/subset_click_final_gguf.json \
+    --output_zip     ../coconut_click_gguf_export.zip
 ```
 
 Copy to laptop:
 ```powershell
-scp "yvs23@ogg.cs.bath.ac.uk:/mnt/vurm/homes/homes/yvs23/Benchmark_dataset/coconut_auto_export.zip" "C:/Users/Yuvan Velkumar/Downloads/"
-scp "yvs23@ogg.cs.bath.ac.uk:/mnt/vurm/homes/homes/yvs23/Benchmark_dataset/coconut_click_export.zip" "C:/Users/Yuvan Velkumar/Downloads/"
+scp "yvs23@ogg.cs.bath.ac.uk:/mnt/vurm/homes/homes/yvs23/Benchmark_dataset/coconut_auto_gguf_export.zip" "C:/Users/Yuvan Velkumar/Downloads/"
+scp "yvs23@ogg.cs.bath.ac.uk:/mnt/vurm/homes/homes/yvs23/Benchmark_dataset/coconut_click_gguf_export.zip" "C:/Users/Yuvan Velkumar/Downloads/"
 ```
 
-Delete zips after copying to save disk space:
+Delete after copying:
 ```bash
-rm ~/Benchmark_dataset/coconut_auto_export.zip
-rm ~/Benchmark_dataset/coconut_click_export.zip
+rm ~/Benchmark_dataset/coconut_auto_gguf_export.zip
+rm ~/Benchmark_dataset/coconut_click_gguf_export.zip
 ```
 
 ---
 
-### Verification
+### Verify before sending
 
 ```bash
-cd ~/Benchmark_dataset/coconut_pipeline
-
 python3 - << 'EOF'
 import json
-from pathlib import Path
-
-for track, json_path in [
-    ("AUTO ", "../data/coconut_subset/annotations/subset_auto_final.json"),
-    ("CLICK", "../data/coconut_subset/annotations/subset_click_final.json"),
+for track, jfile in [
+    ("AUTO ", "../data/coconut_subset/annotations/subset_auto_final_gguf.json"),
+    ("CLICK", "../data/coconut_subset/annotations/subset_click_final_gguf.json"),
 ]:
-    with open(json_path) as f:
+    with open(jfile) as f:
         records = json.load(f)
-    root = Path(json_path).parent.parent
-    missing = sum(1 for r in records for reg in r["regions"]
-                  if not (root / reg["mask_file"]).exists())
-    total   = sum(r["num_regions"] for r in records)
-    instr   = sum(1 for r in records for reg in r["regions"]
-                  if reg.get("instruction_text","").strip())
-    print(f"{track}: {len(records)} samples, {total} regions, "
-          f"missing={missing}, instr={instr}/{total}")
+    total = sum(r["num_regions"] for r in records)
+    t_ok  = sum(1 for r in records for reg in r["regions"] if reg.get("instruction_text","").strip())
+    r_ok  = sum(1 for r in records for reg in r["regions"] if reg.get("instruction_ref","").strip())
+    rn_ok = sum(1 for r in records for reg in r["regions"] if reg.get("instruction_ref_named","").strip())
+    reg   = records[0]["regions"][0]
+    print(f"\n{track}: {len(records)} samples, {total} regions")
+    print(f"  instruction_text      : {t_ok}/{total}")
+    print(f"  instruction_ref       : {r_ok}/{total}")
+    print(f"  instruction_ref_named : {rn_ok}/{total}")
+    print(f"  Example ref_named: {reg['instruction_ref_named']}")
 EOF
 ```
 
 ---
 
-## Troubleshooting
+## Disk space management
 
-**Step A downloads 0 samples:**
-The dataset has only `txt`, `__key__`, `__url__` fields.
-The current script parses the narrative text format correctly.
-Check field names with: `print(next(iter(ds)).keys())`
-
-**0 regions matched in A3:**
-Make sure you're using `instances_train2017.json` not `instances_val2017.json`
-— COCONut images come from train2017.
-
-**SAM2 config not found:**
-Run from `coconut_pipeline/` directory, not from `scripts/`.
-The config path `configs/sam2.1/sam2.1_hiera_l.yaml` is relative to
-`~/Benchmark_dataset/`.
-
-**GitHub push rejected:**
+Check usage:
 ```bash
-git pull --rebase origin main && git push
+quota -s
+du -sh ~/Benchmark_dataset/data/*/
+du -sh ~/Benchmark_dataset/models/
+du -sh ~/benchmark_env/
+```
+
+Safe to delete (regeneratable):
+```bash
+rm -rf ~/Benchmark_dataset/data/content_images/      # 1.8 GB, redownloadable
+rm -rf ~/Benchmark_dataset/data/mask_previews*/       # preview images
+rm -rf ~/Benchmark_dataset/data/previews*/            # preview images
+rm -rf ~/Benchmark_dataset/data/masks_sam1/           # test run masks
+rm -rf ~/Benchmark_dataset/data/masks_sam2/           # test run masks
+rm -rf ~/Benchmark_dataset/data/test_images/          # 20-image test set
+rm -f  ~/Benchmark_dataset/*.zip                      # after copying to laptop
+rm -rf ~/.cache/huggingface/hub/datasets--*/          # dataset cache
+```
+
+Never delete:
+```bash
+~/Benchmark_dataset/models/                    # Mistral GGUF, slow to redownload
+~/Benchmark_dataset/data/coconut_subset/       # push to GitHub first
+~/Benchmark_dataset/data/style_references/     # 5 min to redownload
+~/benchmark_env/                               # 10 min to recreate
+~/Benchmark_dataset/checkpoints/              # SAM2 weights
+```
+
+Always push before clearing:
+```bash
+cd ~/Benchmark_dataset
+git add data/coconut_subset/annotations/
+git commit -m "backup before cleanup" && git push
 ```
 
 ---
 
-## Scaling up to 500 samples
-
-
+## Scaling to 500 samples
 
 ```bash
 python3 A_download_coconut.py \
@@ -381,5 +385,51 @@ python3 A_download_coconut.py \
     --num_samples 500
 ```
 
-Then rerun SAM2, A2, B, C, D with the same commands above.
-Expected time: ~8 min for SAM2 on 500 images.
+Then rerun SAM2, A2, B (GGUF), C, D with same commands.
+Expected times for 500 samples:
+- SAM2 auto: ~8 min
+- Mistral-7B GGUF: ~25 min (500 images × ~3s/region × 4.6 regions)
+- Total: ~35 min
+
+---
+
+## GitHub workflow
+
+```bash
+cd ~/Benchmark_dataset
+git pull --rebase origin main
+git add coconut_pipeline/
+git add data/coconut_subset/annotations/
+git commit -m "description"
+git push
+```
+
+---
+
+## Troubleshooting
+
+**Git push rejected:**
+```bash
+git pull --rebase origin main && git push
+```
+
+**Disk quota exceeded:**
+Delete content images, zips, preview folders. See Disk space management above.
+
+**SAM2 config not found:**
+Run from `coconut_pipeline/` directory.
+Config path is relative to `~/Benchmark_dataset/`.
+
+**0 regions matched in A3:**
+Use `instances_train2017.json` not `instances_val2017.json`.
+COCONut uses COCO train2017 images.
+
+**llama-cpp-python install fails:**
+```bash
+pip install llama-cpp-python \
+    --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu121
+```
+
+**instruction_ref_named missing in older exports:**
+Only GGUF archives (subset_auto_final_gguf.json, subset_click_final_gguf.json) have
+this field. Stub archives do not. Rerun B_build_subset_gguf.py to regenerate.
