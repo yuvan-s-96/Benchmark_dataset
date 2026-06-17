@@ -383,3 +383,52 @@ python3 A_download_coconut.py \
 
 Then rerun SAM2, A2, B, C, D with the same commands above.
 Expected time: ~8 min for SAM2 on 500 images.
+
+---
+
+## Step E — Mask quality IoU evaluation
+
+Evaluates SAM2 mask quality against COCONut panoptic ground truth.
+Run this before scaling to 500 samples.
+
+### Setup
+
+```bash
+cd ~/Benchmark_dataset/data/content_images/annotations
+wget -q --show-progress http://images.cocodataset.org/annotations/panoptic_train2017.zip
+unzip -q panoptic_train2017.zip
+```
+
+### Run
+
+```bash
+cd ~/Benchmark_dataset/coconut_pipeline
+
+python3 E_mask_quality_iou.py \
+    --stub        ../data/coconut_subset/annotations/coconut_stub.json \
+    --pan_json    ../data/content_images/annotations/panoptic_train2017.json \
+    --pan_dir     ../data/content_images/annotations/panoptic_train2017 \
+    --masks_auto  ../data/coconut_subset/masks_auto \
+    --masks_click ../data/coconut_subset/masks_click \
+    --output      ../data/coconut_subset/annotations/mask_quality_iou.json
+```
+
+### Output fields per region
+
+| Field | Description |
+|---|---|
+| `iou` | Intersection over Union vs COCONut ground truth |
+| `precision` | Fraction of predicted pixels that are correct |
+| `recall` | Fraction of ground truth pixels captured |
+| `gt_area` | Ground truth region area as fraction of image |
+
+### Interpreting results
+
+| IoU | Quality |
+|---|---|
+| >= 0.75 | Good — mask boundary is accurate |
+| 0.50–0.75 | Acceptable — some boundary error |
+| < 0.50 | Poor — mask misaligned with ground truth |
+
+Track 2 (click-guided) is expected to score higher than Track 1 (auto grid)
+because click prompts are derived from COCO annotation centroids.
