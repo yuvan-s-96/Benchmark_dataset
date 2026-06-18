@@ -103,6 +103,7 @@ coconut_pipeline/
 ├── B_build_subset_openrouter.py ← style pairing + OpenRouter API (blocked on ogg)
 ├── C_quality_control.py         ← QC, 5-tag corner case tagging, 70/10/20 split
 ├── D_export_subset.py           ← zip archive for supervisor baseline testing
+├── E_mask_quality_iou.py        ← mask quality evaluation vs COCONut ground truth
 └── README_COCONUT.md
 ```
 
@@ -121,7 +122,12 @@ data/coconut_subset/
     ├── coconut_stub_merged_click.json
     ├── clicks_coconut.json
     ├── subset_auto_final_gguf.json      ← Track 1 GGUF ✅ primary deliverable
-    └── subset_click_final_gguf.json     ← Track 2 GGUF ✅
+    ├── subset_click_final_gguf.json     ← Track 2 GGUF ✅
+    └── mask_quality_iou.json            ← IoU evaluation results (Step E)
+
+data/content_images/annotations/
+    ├── instances_train2017.json         ← COCO instance annotations (for A3)
+    └── panoptic_train2017.json          ← COCONut panoptic GT (for Step E)
 
 models/
 └── mistral-7b-instruct-v0.2.Q4_K_M.gguf  ← local LLM (~4 GB, not in git)
@@ -177,11 +183,15 @@ git commit -m "step A - coconut downloaded" && git push
 
 Requires COCO train annotations:
 ```bash
-cd ~/Benchmark_dataset/data/content_images
-wget -q --show-progress http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+cd ~/Benchmark_dataset/data/content_images/annotations
+curl -L -o annotations_trainval2017.zip \
+    http://images.cocodataset.org/annotations/annotations_trainval2017.zip
 unzip -q annotations_trainval2017.zip
+rm annotations_trainval2017.zip
 cd ~/Benchmark_dataset/coconut_pipeline
 ```
+
+Note: use `curl -L` not `wget` — wget silently fails on ogg for this URL.
 
 ```bash
 python3 A3_extract_clicks.py \
@@ -311,6 +321,65 @@ rm ~/Benchmark_dataset/coconut_click_gguf_export.zip
 
 ---
 
+### Step E — Mask quality IoU evaluation
+
+Evaluates SAM2 mask quality against COCONut panoptic ground truth.
+Run before scaling to 500 samples to confirm mask accuracy.
+
+#### Setup — panoptic annotations
+
+Note: panoptic annotations are in a separate zip from the standard annotations:
+```bash
+cd ~/Benchmark_dataset/data/content_images/annotations
+curl -L -o panoptic_annotations_trainval2017.zip \
+    http://images.cocodataset.org/annotations/panoptic_annotations_trainval2017.zip
+unzip -q panoptic_annotations_trainval2017.zip
+rm panoptic_annotations_trainval2017.zip
+ls panoptic_train2017.json
+```
+
+#### Run
+```bash
+cd ~/Benchmark_dataset/coconut_pipeline
+
+python3 E_mask_quality_iou.py \
+    --stub        ../data/coconut_subset/annotations/coconut_stub.json \
+    --pan_json    ../data/content_images/annotations/panoptic_train2017.json \
+    --pan_dir     ../data/content_images/annotations/panoptic_train2017 \
+    --masks_auto  ../data/coconut_subset/masks_auto \
+    --masks_click ../data/coconut_subset/masks_click \
+    --output      ../data/coconut_subset/annotations/mask_quality_iou.json
+```
+
+#### Output fields per region
+
+| Field | Description |
+|---|---|
+| `iou` | Intersection over Union vs COCONut ground truth (0.0–1.0) |
+| `precision` | Fraction of predicted pixels that are correct |
+| `recall` | Fraction of ground truth pixels captured by SAM2 |
+| `gt_area` | Ground truth region area as fraction of image |
+
+#### Interpreting results
+
+| IoU range | Quality | Action |
+|---|---|---|
+| >= 0.75 | Good — boundary is accurate | Safe to scale up |
+| 0.50–0.75 | Acceptable — some boundary error | Review samples visually |
+| < 0.50 | Poor — mask misaligned | Investigate before scaling |
+
+Track 2 (click-guided) expected to score higher than Track 1 (auto grid)
+because click prompts are derived from COCO annotation centroids.
+
+**Save to GitHub after running:**
+```bash
+cd ~/Benchmark_dataset
+git add data/coconut_subset/annotations/mask_quality_iou.json
+git commit -m "step E - mask quality IoU results" && git push
+```
+
+---
+
 ### Verify before sending
 
 ```bash
@@ -331,7 +400,7 @@ for track, jfile in [
     print(f"  instruction_text      : {t_ok}/{total}")
     print(f"  instruction_ref       : {r_ok}/{total}")
     print(f"  instruction_ref_named : {rn_ok}/{total}")
-    print(f"  Example ref_named: {reg['instruction_ref_named']}")
+    print(f"  Example ref_named     : {reg['instruction_ref_named']}")
 EOF
 ```
 
@@ -354,9 +423,12 @@ rm -rf ~/Benchmark_dataset/data/mask_previews*/       # preview images
 rm -rf ~/Benchmark_dataset/data/previews*/            # preview images
 rm -rf ~/Benchmark_dataset/data/masks_sam1/           # test run masks
 rm -rf ~/Benchmark_dataset/data/masks_sam2/           # test run masks
+rm -rf ~/Benchmark_dataset/data/masks_sam2_click/     # test run masks
 rm -rf ~/Benchmark_dataset/data/test_images/          # 20-image test set
 rm -f  ~/Benchmark_dataset/*.zip                      # after copying to laptop
 rm -rf ~/.cache/huggingface/hub/datasets--*/          # dataset cache
+# Delete annotation zips after unzipping
+rm -f ~/Benchmark_dataset/data/content_images/annotations/*.zip
 ```
 
 Never delete:
@@ -365,7 +437,7 @@ Never delete:
 ~/Benchmark_dataset/data/coconut_subset/       # push to GitHub first
 ~/Benchmark_dataset/data/style_references/     # 5 min to redownload
 ~/benchmark_env/                               # 10 min to recreate
-~/Benchmark_dataset/checkpoints/              # SAM2 weights
+~/Benchmark_dataset/checkpoints/               # SAM2 weights
 ```
 
 Always push before clearing:
@@ -379,6 +451,10 @@ git commit -m "backup before cleanup" && git push
 
 ## Scaling to 500 samples
 
+Target: minimum 50 samples per corner case category before stopping.
+Categories: similar_entities, encompassed, background_heavy, small_object, cluttered_scene.
+Expected total: ~250–400 samples with natural overlap.
+
 ```bash
 python3 A_download_coconut.py \
     --output_dir  ../data/coconut_subset \
@@ -391,16 +467,25 @@ Expected times for 500 samples:
 - Mistral-7B GGUF: ~25 min (500 images × ~3s/region × 4.6 regions)
 - Total: ~35 min
 
+Run E (mask quality IoU) again after scaling to confirm quality holds.
+
 ---
 
 ## GitHub workflow
 
 ```bash
 cd ~/Benchmark_dataset
-git pull --rebase origin main
+git pull origin main --no-rebase
 git add coconut_pipeline/
 git add data/coconut_subset/annotations/
 git commit -m "description"
+git push
+```
+
+Note: if merge conflict in README_COCONUT.md:
+```bash
+git checkout coconut_pipeline/README_COCONUT.md
+git pull origin main --no-rebase
 git push
 ```
 
@@ -410,7 +495,14 @@ git push
 
 **Git push rejected:**
 ```bash
-git pull --rebase origin main && git push
+git pull origin main --no-rebase && git push
+```
+
+**Git merge conflict in README:**
+```bash
+git checkout coconut_pipeline/README_COCONUT.md
+git pull origin main --no-rebase
+git push
 ```
 
 **Disk quota exceeded:**
@@ -424,6 +516,17 @@ Config path is relative to `~/Benchmark_dataset/`.
 Use `instances_train2017.json` not `instances_val2017.json`.
 COCONut uses COCO train2017 images.
 
+**panoptic_train2017.json not found (Step E):**
+It is NOT in `annotations_trainval2017.zip`. Download separately:
+```bash
+curl -L -o panoptic_annotations_trainval2017.zip \
+    http://images.cocodataset.org/annotations/panoptic_annotations_trainval2017.zip
+unzip -q panoptic_annotations_trainval2017.zip
+```
+
+**wget silently downloads 325-byte error file:**
+Use `curl -L` instead of `wget` for COCO downloads on ogg.
+
 **llama-cpp-python install fails:**
 ```bash
 pip install llama-cpp-python \
@@ -431,5 +534,4 @@ pip install llama-cpp-python \
 ```
 
 **instruction_ref_named missing in older exports:**
-Only GGUF archives (subset_auto_final_gguf.json, subset_click_final_gguf.json) have
-this field. Stub archives do not. Rerun B_build_subset_gguf.py to regenerate.
+Only GGUF archives have this field. Rerun B_build_subset_gguf.py to regenerate.
