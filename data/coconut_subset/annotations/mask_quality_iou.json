@@ -1,0 +1,4797 @@
+{
+  "auto": {
+    "summary": {
+      "n": 229,
+      "mean_iou": 0.5808,
+      "median_iou": 0.6324,
+      "min_iou": 0.0,
+      "max_iou": 0.9875,
+      "above_0.5": 137,
+      "above_0.75": 101,
+      "no_mask": 0,
+      "no_panoptic": 0
+    },
+    "per_image": {
+      "208220": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "clear blue sky",
+            "best_match_iou": 0.9763,
+            "precision": 1.0,
+            "recall": 0.9763,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.5684400134048258
+          },
+          {
+            "mask_index": 1,
+            "region_label": "green trees",
+            "best_match_iou": 0.9473,
+            "precision": 0.9569,
+            "recall": 0.9895,
+            "matched_category": "platform",
+            "area_fraction": 0.10893096514745308
+          },
+          {
+            "mask_index": 2,
+            "region_label": "tan building",
+            "best_match_iou": 0.4041,
+            "precision": 0.9891,
+            "recall": 0.4059,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.059714309651474534
+          },
+          {
+            "mask_index": 3,
+            "region_label": "grey asphalt ground",
+            "best_match_iou": 0.4664,
+            "precision": 0.9828,
+            "recall": 0.4703,
+            "matched_category": "road",
+            "area_fraction": 0.037814175603217155
+          },
+          {
+            "mask_index": 4,
+            "region_label": "green grass",
+            "best_match_iou": 0.1332,
+            "precision": 0.9574,
+            "recall": 0.134,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.020362768096514744
+          }
+        ]
+      },
+      "175831": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "pale, overcast sky",
+            "best_match_iou": 0.8547,
+            "precision": 0.9411,
+            "recall": 0.903,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.34055733267716537
+          },
+          {
+            "mask_index": 1,
+            "region_label": "expansive tan building",
+            "best_match_iou": 0.9744,
+            "precision": 1.0,
+            "recall": 0.9744,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.2006951279527559
+          },
+          {
+            "mask_index": 2,
+            "region_label": "grey-tiled roof",
+            "best_match_iou": 0.9106,
+            "precision": 0.9749,
+            "recall": 0.9325,
+            "matched_category": "road",
+            "area_fraction": 0.19115711122047244
+          },
+          {
+            "mask_index": 3,
+            "region_label": "red flag with a yellow star",
+            "best_match_iou": 0.6184,
+            "precision": 0.6833,
+            "recall": 0.8668,
+            "matched_category": "motorcycle",
+            "area_fraction": 0.05618233267716535
+          },
+          {
+            "mask_index": 4,
+            "region_label": "stairs",
+            "best_match_iou": 0.387,
+            "precision": 0.9792,
+            "recall": 0.3902,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.04495570866141732
+          },
+          {
+            "mask_index": 5,
+            "region_label": "green trees",
+            "best_match_iou": 0.211,
+            "precision": 0.9844,
+            "recall": 0.2117,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.024264886811023623
+          }
+        ]
+      },
+      "51342": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "dark brown wall",
+            "best_match_iou": 0.7143,
+            "precision": 0.9424,
+            "recall": 0.7469,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.2717090707964602
+          },
+          {
+            "mask_index": 1,
+            "region_label": "barred window",
+            "best_match_iou": 0.0017,
+            "precision": 0.0029,
+            "recall": 0.0043,
+            "matched_category": "pavement-merged",
+            "area_fraction": 0.23121197455752213
+          },
+          {
+            "mask_index": 2,
+            "region_label": "wet grey pavement",
+            "best_match_iou": 0.7634,
+            "precision": 0.9888,
+            "recall": 0.77,
+            "matched_category": "pavement-merged",
+            "area_fraction": 0.11996335730088496
+          },
+          {
+            "mask_index": 3,
+            "region_label": "person",
+            "best_match_iou": 0.3004,
+            "precision": 0.9507,
+            "recall": 0.3051,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.11001451880530974
+          },
+          {
+            "mask_index": 4,
+            "region_label": "black umbrella",
+            "best_match_iou": 0.7009,
+            "precision": 0.744,
+            "recall": 0.9237,
+            "matched_category": "person",
+            "area_fraction": 0.028640071902654867
+          }
+        ]
+      },
+      "448648": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "gray asphalt road",
+            "best_match_iou": 0.9417,
+            "precision": 0.994,
+            "recall": 0.947,
+            "matched_category": "road",
+            "area_fraction": 0.38239908854166665
+          },
+          {
+            "mask_index": 1,
+            "region_label": "light blue sky",
+            "best_match_iou": 0.7405,
+            "precision": 0.9912,
+            "recall": 0.7454,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.158642578125
+          },
+          {
+            "mask_index": 2,
+            "region_label": "multi-story buildings",
+            "best_match_iou": 0.5363,
+            "precision": 0.5493,
+            "recall": 0.9578,
+            "matched_category": "bicycle",
+            "area_fraction": 0.03227213541666667
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green leafy trees",
+            "best_match_iou": 0.5009,
+            "precision": 0.8615,
+            "recall": 0.5448,
+            "matched_category": "pavement-merged",
+            "area_fraction": 0.021315104166666668
+          }
+        ]
+      },
+      "442861": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "clear blue sky",
+            "best_match_iou": 0.954,
+            "precision": 0.9861,
+            "recall": 0.967,
+            "matched_category": "playingfield",
+            "area_fraction": 0.46289431014150945
+          },
+          {
+            "mask_index": 1,
+            "region_label": "vibrant green grass playing field",
+            "best_match_iou": 0.08,
+            "precision": 0.1215,
+            "recall": 0.1897,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.1221145341981132
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark green tennis net and perimeter fencing",
+            "best_match_iou": 0.8961,
+            "precision": 0.9603,
+            "recall": 0.9306,
+            "matched_category": "person",
+            "area_fraction": 0.05944870283018868
+          },
+          {
+            "mask_index": 3,
+            "region_label": "man wearing a white polo shirt and white shorts",
+            "best_match_iou": 0.4962,
+            "precision": 0.9596,
+            "recall": 0.5067,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.035952240566037734
+          },
+          {
+            "mask_index": 4,
+            "region_label": "silver-rimmed tennis racket",
+            "best_match_iou": 0.5559,
+            "precision": 0.9995,
+            "recall": 0.556,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.033649027122641506
+          }
+        ]
+      },
+      "252186": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "silver mirror",
+            "best_match_iou": 0.9842,
+            "precision": 0.9974,
+            "recall": 0.9867,
+            "matched_category": "wall-tile",
+            "area_fraction": 0.7882737016908212
+          },
+          {
+            "mask_index": 1,
+            "region_label": "gray porcelain wall",
+            "best_match_iou": 0.2404,
+            "precision": 0.9996,
+            "recall": 0.2404,
+            "matched_category": "mirror-stuff",
+            "area_fraction": 0.04698822463768116
+          },
+          {
+            "mask_index": 2,
+            "region_label": "black suitcase",
+            "best_match_iou": 0.2357,
+            "precision": 1.0,
+            "recall": 0.2357,
+            "matched_category": "mirror-stuff",
+            "area_fraction": 0.04604091183574879
+          }
+        ]
+      },
+      "265596": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "brown dining table",
+            "best_match_iou": 0.0145,
+            "precision": 0.0161,
+            "recall": 0.1301,
+            "matched_category": "cake",
+            "area_fraction": 0.25822998046875
+          },
+          {
+            "mask_index": 1,
+            "region_label": "white cup with brown, brown, and blue patterns",
+            "best_match_iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "matched_category": "no_match",
+            "area_fraction": 0.24439697265625
+          }
+        ]
+      },
+      "316583": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "indoor floor",
+            "best_match_iou": 0.9297,
+            "precision": 0.945,
+            "recall": 0.9829,
+            "matched_category": "cell phone",
+            "area_fraction": 0.23342933333333332
+          },
+          {
+            "mask_index": 1,
+            "region_label": "wall",
+            "best_match_iou": 0.9735,
+            "precision": 0.9922,
+            "recall": 0.981,
+            "matched_category": "cell phone",
+            "area_fraction": 0.19882666666666668
+          },
+          {
+            "mask_index": 2,
+            "region_label": "ceiling",
+            "best_match_iou": 0.9112,
+            "precision": 0.9516,
+            "recall": 0.9554,
+            "matched_category": "person",
+            "area_fraction": 0.168432
+          },
+          {
+            "mask_index": 3,
+            "region_label": "window",
+            "best_match_iou": 0.0099,
+            "precision": 0.0172,
+            "recall": 0.023,
+            "matched_category": "floor-other-merged",
+            "area_fraction": 0.09057066666666666
+          },
+          {
+            "mask_index": 4,
+            "region_label": "overhead light",
+            "best_match_iou": 0.0013,
+            "precision": 0.0018,
+            "recall": 0.0047,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.05927466666666667
+          },
+          {
+            "mask_index": 5,
+            "region_label": "hands of a person",
+            "best_match_iou": 0.5328,
+            "precision": 0.9326,
+            "recall": 0.5542,
+            "matched_category": "window-other",
+            "area_fraction": 0.029269333333333335
+          }
+        ]
+      },
+      "119384": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "the fire hydrant is red, with light brown stains on it",
+            "best_match_iou": 0.7712,
+            "precision": 0.7824,
+            "recall": 0.9818,
+            "matched_category": "car",
+            "area_fraction": 0.6140853333333334
+          },
+          {
+            "mask_index": 1,
+            "region_label": "gray car",
+            "best_match_iou": 0.2352,
+            "precision": 0.9889,
+            "recall": 0.2359,
+            "matched_category": "car",
+            "area_fraction": 0.116736
+          },
+          {
+            "mask_index": 2,
+            "region_label": "person wearing white pants",
+            "best_match_iou": 0.6903,
+            "precision": 0.9963,
+            "recall": 0.692,
+            "matched_category": "fire hydrant",
+            "area_fraction": 0.08261333333333333
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green grass",
+            "best_match_iou": 0.1103,
+            "precision": 0.9854,
+            "recall": 0.1105,
+            "matched_category": "car",
+            "area_fraction": 0.054890666666666664
+          },
+          {
+            "mask_index": 4,
+            "region_label": "a white sky",
+            "best_match_iou": 0.1051,
+            "precision": 0.9567,
+            "recall": 0.1056,
+            "matched_category": "car",
+            "area_fraction": 0.054016
+          },
+          {
+            "mask_index": 5,
+            "region_label": "leaves from green trees",
+            "best_match_iou": 0.0956,
+            "precision": 0.9519,
+            "recall": 0.0961,
+            "matched_category": "car",
+            "area_fraction": 0.049392
+          }
+        ]
+      },
+      "241934": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white cardboard box",
+            "best_match_iou": 0.4664,
+            "precision": 0.6999,
+            "recall": 0.583,
+            "matched_category": "paper-merged",
+            "area_fraction": 0.1400289418599684
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a colorful assortment of donuts",
+            "best_match_iou": 0.9667,
+            "precision": 0.9919,
+            "recall": 0.9744,
+            "matched_category": "donut",
+            "area_fraction": 0.08097846981930026
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a donut heavily dusted with white powdered sugar",
+            "best_match_iou": 0.9546,
+            "precision": 0.9848,
+            "recall": 0.9688,
+            "matched_category": "donut",
+            "area_fraction": 0.07621000469904737
+          },
+          {
+            "mask_index": 3,
+            "region_label": "a vibrant pink-glazed donut featuring a white swirl pattern",
+            "best_match_iou": 0.9728,
+            "precision": 0.9844,
+            "recall": 0.988,
+            "matched_category": "donut",
+            "area_fraction": 0.0721677559912854
+          },
+          {
+            "mask_index": 4,
+            "region_label": "a light-brown donut with a speckled, grainy texture",
+            "best_match_iou": 0.9246,
+            "precision": 0.9957,
+            "recall": 0.9284,
+            "matched_category": "donut",
+            "area_fraction": 0.07130537400145243
+          },
+          {
+            "mask_index": 5,
+            "region_label": "a donut topped with green icing and sliced almonds",
+            "best_match_iou": 0.975,
+            "precision": 0.9956,
+            "recall": 0.9791,
+            "matched_category": "donut",
+            "area_fraction": 0.06382427698748344
+          }
+        ]
+      },
+      "565258": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "brown wooden floor featuring a parquet-style pattern",
+            "best_match_iou": 0.9714,
+            "precision": 0.9986,
+            "recall": 0.9727,
+            "matched_category": "floor-wood",
+            "area_fraction": 0.5721613219895288
+          },
+          {
+            "mask_index": 1,
+            "region_label": "black and white cat",
+            "best_match_iou": 0.892,
+            "precision": 0.972,
+            "recall": 0.9155,
+            "matched_category": "backpack",
+            "area_fraction": 0.25724803664921464
+          },
+          {
+            "mask_index": 2,
+            "region_label": "black fabric backpack",
+            "best_match_iou": 0.9191,
+            "precision": 0.9636,
+            "recall": 0.9522,
+            "matched_category": "cat",
+            "area_fraction": 0.1303255890052356
+          }
+        ]
+      },
+      "545334": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "green grass playing field",
+            "best_match_iou": 0.6132,
+            "precision": 0.9885,
+            "recall": 0.6176,
+            "matched_category": "playingfield",
+            "area_fraction": 0.21748046875
+          },
+          {
+            "mask_index": 1,
+            "region_label": "reddish-brown dirt",
+            "best_match_iou": 0.4341,
+            "precision": 0.9904,
+            "recall": 0.436,
+            "matched_category": "dirt-merged",
+            "area_fraction": 0.1658984375
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a baseball pitcher",
+            "best_match_iou": 0.3871,
+            "precision": 0.9911,
+            "recall": 0.3885,
+            "matched_category": "dirt-merged",
+            "area_fraction": 0.14773111979166667
+          },
+          {
+            "mask_index": 3,
+            "region_label": "another baseball player",
+            "best_match_iou": 0.1547,
+            "precision": 0.9973,
+            "recall": 0.1548,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.020589192708333332
+          },
+          {
+            "mask_index": 4,
+            "region_label": "white sports ball",
+            "best_match_iou": 0.153,
+            "precision": 0.9965,
+            "recall": 0.1531,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.020387369791666665
+          }
+        ]
+      },
+      "477029": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "off-white walls equipped with various pipes, conduits, and safety markings",
+            "best_match_iou": 0.8963,
+            "precision": 0.9856,
+            "recall": 0.9082,
+            "matched_category": "airplane",
+            "area_fraction": 0.33881876740947076
+          },
+          {
+            "mask_index": 1,
+            "region_label": "complex ceiling structure consisting of metal beams and overhead lighting components",
+            "best_match_iou": 0.0009,
+            "precision": 0.0025,
+            "recall": 0.0013,
+            "matched_category": "airplane",
+            "area_fraction": 0.1863683844011142
+          },
+          {
+            "mask_index": 2,
+            "region_label": "small rectangular window",
+            "best_match_iou": 0.4065,
+            "precision": 0.9796,
+            "recall": 0.41,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.11932886490250696
+          },
+          {
+            "mask_index": 3,
+            "region_label": "dark doorway",
+            "best_match_iou": 0.8141,
+            "precision": 0.8874,
+            "recall": 0.9078,
+            "matched_category": "ceiling-merged",
+            "area_fraction": 0.08876653899721448
+          },
+          {
+            "mask_index": 4,
+            "region_label": "bright yellow vintage military aircraft, featuring a prominent black propeller, a star-and-bar insignia, and the numerical identifier '186' on its fuselage",
+            "best_match_iou": 0.0848,
+            "precision": 0.9978,
+            "recall": 0.0848,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.02422092618384401
+          }
+        ]
+      },
+      "21215": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "blue sky",
+            "best_match_iou": 0.9851,
+            "precision": 0.9998,
+            "recall": 0.9853,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.8275093333333333
+          },
+          {
+            "mask_index": 1,
+            "region_label": "person wearing a pinkish-orange top",
+            "best_match_iou": 0.9397,
+            "precision": 0.968,
+            "recall": 0.9698,
+            "matched_category": "person",
+            "area_fraction": 0.15433066666666667
+          }
+        ]
+      },
+      "302885": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white ceramic plate",
+            "best_match_iou": 0.1984,
+            "precision": 0.9987,
+            "recall": 0.1984,
+            "matched_category": "fruit",
+            "area_fraction": 0.055530666666666666
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dark-toned, patterned dining table",
+            "best_match_iou": 0.0837,
+            "precision": 0.0837,
+            "recall": 0.9909,
+            "matched_category": "fork",
+            "area_fraction": 0.03465066666666667
+          },
+          {
+            "mask_index": 2,
+            "region_label": "triangular slices of watermelon",
+            "best_match_iou": 0.7303,
+            "precision": 0.986,
+            "recall": 0.7379,
+            "matched_category": "orange",
+            "area_fraction": 0.03168
+          },
+          {
+            "mask_index": 3,
+            "region_label": "yellow-skinned pear slices",
+            "best_match_iou": 0.0977,
+            "precision": 0.9928,
+            "recall": 0.0978,
+            "matched_category": "fruit",
+            "area_fraction": 0.027525333333333332
+          },
+          {
+            "mask_index": 4,
+            "region_label": "crisp green apple slices",
+            "best_match_iou": 0.5826,
+            "precision": 0.5826,
+            "recall": 1.0,
+            "matched_category": "dining table",
+            "area_fraction": 0.02296
+          },
+          {
+            "mask_index": 5,
+            "region_label": "thick, half-moon orange slices",
+            "best_match_iou": 0.2427,
+            "precision": 0.9783,
+            "recall": 0.2441,
+            "matched_category": "orange",
+            "area_fraction": 0.021349333333333335
+          }
+        ]
+      },
+      "216036": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white sky",
+            "best_match_iou": 0.9776,
+            "precision": 0.987,
+            "recall": 0.9903,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.8741503309572302
+          },
+          {
+            "mask_index": 1,
+            "region_label": "one yellow airplane",
+            "best_match_iou": 0.8,
+            "precision": 0.9703,
+            "recall": 0.8201,
+            "matched_category": "airplane",
+            "area_fraction": 0.10800980142566191
+          }
+        ]
+      },
+      "301684": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "blue sky",
+            "best_match_iou": 0.6932,
+            "precision": 0.8602,
+            "recall": 0.7812,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.24404947916666667
+          },
+          {
+            "mask_index": 1,
+            "region_label": "brown walls",
+            "best_match_iou": 0.5851,
+            "precision": 0.6284,
+            "recall": 0.8947,
+            "matched_category": "dirt-merged",
+            "area_fraction": 0.230009765625
+          },
+          {
+            "mask_index": 2,
+            "region_label": "light brown fence",
+            "best_match_iou": 0.9407,
+            "precision": 0.9952,
+            "recall": 0.945,
+            "matched_category": "elephant",
+            "area_fraction": 0.17771158854166666
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green trees",
+            "best_match_iou": 0.9446,
+            "precision": 0.9702,
+            "recall": 0.9728,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.07652018229166667
+          },
+          {
+            "mask_index": 4,
+            "region_label": "brown wooden door",
+            "best_match_iou": 0.2405,
+            "precision": 0.8938,
+            "recall": 0.2476,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.07443359375
+          }
+        ]
+      },
+      "65705": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "dark sky",
+            "best_match_iou": 0.5765,
+            "precision": 0.5888,
+            "recall": 0.9652,
+            "matched_category": "floor-other-merged",
+            "area_fraction": 0.5073342517835021
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dim silhouettes of buildings",
+            "best_match_iou": 0.9249,
+            "precision": 0.9323,
+            "recall": 0.9914,
+            "matched_category": "bus",
+            "area_fraction": 0.26822215814430345
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark asphalt road",
+            "best_match_iou": 0.5924,
+            "precision": 0.6109,
+            "recall": 0.9515,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.08722606689734717
+          },
+          {
+            "mask_index": 3,
+            "region_label": "low dark fence",
+            "best_match_iou": 0.0005,
+            "precision": 0.0042,
+            "recall": 0.0006,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.028949869708231876
+          }
+        ]
+      },
+      "353653": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "blue playing field",
+            "best_match_iou": 0.8768,
+            "precision": 0.9894,
+            "recall": 0.885,
+            "matched_category": "playingfield",
+            "area_fraction": 0.194619140625
+          },
+          {
+            "mask_index": 1,
+            "region_label": "black tennis net",
+            "best_match_iou": 0.7593,
+            "precision": 0.9556,
+            "recall": 0.787,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.119541015625
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark green mesh fence",
+            "best_match_iou": 0.3901,
+            "precision": 0.9481,
+            "recall": 0.3986,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.08489583333333334
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green grass",
+            "best_match_iou": 0.3796,
+            "precision": 0.9686,
+            "recall": 0.3844,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.08012369791666667
+          },
+          {
+            "mask_index": 4,
+            "region_label": "lush green trees",
+            "best_match_iou": 0.887,
+            "precision": 0.9575,
+            "recall": 0.9233,
+            "matched_category": "person",
+            "area_fraction": 0.045559895833333336
+          },
+          {
+            "mask_index": 5,
+            "region_label": "man on the far left wearing a dark blue tank top, black shorts, and sunglasses",
+            "best_match_iou": 0.921,
+            "precision": 0.9725,
+            "recall": 0.9456,
+            "matched_category": "person",
+            "area_fraction": 0.037353515625
+          }
+        ]
+      },
+      "362152": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "clear blue sky",
+            "best_match_iou": 0.9744,
+            "precision": 0.9981,
+            "recall": 0.9762,
+            "matched_category": "sea",
+            "area_fraction": 0.40037967914438505
+          },
+          {
+            "mask_index": 1,
+            "region_label": "expansive, flat-topped mountains",
+            "best_match_iou": 0.9869,
+            "precision": 0.9998,
+            "recall": 0.987,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.2842673796791444
+          },
+          {
+            "mask_index": 2,
+            "region_label": "multi-story buildings and urban structures",
+            "best_match_iou": 0.909,
+            "precision": 0.9849,
+            "recall": 0.9219,
+            "matched_category": "mountain-merged",
+            "area_fraction": 0.13881283422459892
+          }
+        ]
+      },
+      "193465": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "the laptop is entirely gray in color",
+            "best_match_iou": 0.9069,
+            "precision": 0.9939,
+            "recall": 0.912,
+            "matched_category": "laptop",
+            "area_fraction": 0.5621048009367682
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a gray mouse with blue parts on its surface",
+            "best_match_iou": 0.1312,
+            "precision": 1.0,
+            "recall": 0.1312,
+            "matched_category": "laptop",
+            "area_fraction": 0.08037909836065574
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a gray stone",
+            "best_match_iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "matched_category": "no_match",
+            "area_fraction": 0.06075087822014052
+          }
+        ]
+      },
+      "12108": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "bright, hazy sky",
+            "best_match_iou": 0.9492,
+            "precision": 0.9782,
+            "recall": 0.9697,
+            "matched_category": "person",
+            "area_fraction": 0.23857831325301204
+          },
+          {
+            "mask_index": 1,
+            "region_label": "wide asphalt road",
+            "best_match_iou": 0.7698,
+            "precision": 0.9715,
+            "recall": 0.7875,
+            "matched_category": "grass-merged",
+            "area_fraction": 0.21490361445783132
+          },
+          {
+            "mask_index": 2,
+            "region_label": "textured grass",
+            "best_match_iou": 0.8952,
+            "precision": 0.9074,
+            "recall": 0.9851,
+            "matched_category": "fire hydrant",
+            "area_fraction": 0.10736144578313253
+          },
+          {
+            "mask_index": 3,
+            "region_label": "light-colored concrete pavement",
+            "best_match_iou": 0.8327,
+            "precision": 0.9952,
+            "recall": 0.836,
+            "matched_category": "pavement-merged",
+            "area_fraction": 0.0923132530120482
+          },
+          {
+            "mask_index": 4,
+            "region_label": "young child",
+            "best_match_iou": 0.828,
+            "precision": 0.9885,
+            "recall": 0.8361,
+            "matched_category": "road",
+            "area_fraction": 0.07481927710843374
+          },
+          {
+            "mask_index": 5,
+            "region_label": "large, dark fire hydrant",
+            "best_match_iou": 0.6113,
+            "precision": 0.9725,
+            "recall": 0.6221,
+            "matched_category": "house",
+            "area_fraction": 0.033036144578313255
+          }
+        ]
+      },
+      "539632": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "blue and white walls and a ceiling",
+            "best_match_iou": 0.9652,
+            "precision": 0.9852,
+            "recall": 0.9794,
+            "matched_category": "paper-merged",
+            "area_fraction": 0.3679069010416667
+          },
+          {
+            "mask_index": 1,
+            "region_label": "two people",
+            "best_match_iou": 0.9547,
+            "precision": 0.9761,
+            "recall": 0.9775,
+            "matched_category": "ceiling-merged",
+            "area_fraction": 0.102802734375
+          },
+          {
+            "mask_index": 2,
+            "region_label": "white paper with blue patterns",
+            "best_match_iou": 0.4251,
+            "precision": 0.9949,
+            "recall": 0.426,
+            "matched_category": "food-other-merged",
+            "area_fraction": 0.07009114583333333
+          },
+          {
+            "mask_index": 3,
+            "region_label": "large, golden-brown breaded food item",
+            "best_match_iou": 0.7833,
+            "precision": 0.8655,
+            "recall": 0.8918,
+            "matched_category": "person",
+            "area_fraction": 0.05213541666666666
+          },
+          {
+            "mask_index": 4,
+            "region_label": "green broccoli florets",
+            "best_match_iou": 0.8167,
+            "precision": 0.9429,
+            "recall": 0.8591,
+            "matched_category": "person",
+            "area_fraction": 0.047454427083333334
+          },
+          {
+            "mask_index": 5,
+            "region_label": "bright orange carrot sticks",
+            "best_match_iou": 0.3594,
+            "precision": 0.9803,
+            "recall": 0.3621,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.042682291666666664
+          }
+        ]
+      },
+      "394974": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "light brown soil",
+            "best_match_iou": 0.8091,
+            "precision": 0.9357,
+            "recall": 0.8567,
+            "matched_category": "dirt-merged",
+            "area_fraction": 0.3530985915492958
+          },
+          {
+            "mask_index": 1,
+            "region_label": "grayish-black rocks",
+            "best_match_iou": 0.7741,
+            "precision": 0.9986,
+            "recall": 0.7749,
+            "matched_category": "rock-merged",
+            "area_fraction": 0.23096830985915492
+          },
+          {
+            "mask_index": 2,
+            "region_label": "some dry, brown branches",
+            "best_match_iou": 0.8508,
+            "precision": 0.9073,
+            "recall": 0.9317,
+            "matched_category": "zebra",
+            "area_fraction": 0.14777288732394367
+          }
+        ]
+      },
+      "487357": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white wall",
+            "best_match_iou": 0.9147,
+            "precision": 0.9812,
+            "recall": 0.931,
+            "matched_category": "curtain",
+            "area_fraction": 0.3733001781472684
+          },
+          {
+            "mask_index": 1,
+            "region_label": "blue curtains",
+            "best_match_iou": 0.4038,
+            "precision": 0.973,
+            "recall": 0.4084,
+            "matched_category": "person",
+            "area_fraction": 0.21760688836104514
+          }
+        ]
+      },
+      "420210": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "yellow blanket",
+            "best_match_iou": 0.88,
+            "precision": 0.9722,
+            "recall": 0.9027,
+            "matched_category": "cat",
+            "area_fraction": 0.326484375
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a light orange cat",
+            "best_match_iou": 0.7445,
+            "precision": 0.7845,
+            "recall": 0.936,
+            "matched_category": "couch",
+            "area_fraction": 0.2408203125
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a green teddy bear",
+            "best_match_iou": 0.9105,
+            "precision": 0.9585,
+            "recall": 0.9478,
+            "matched_category": "couch",
+            "area_fraction": 0.21096028645833334
+          }
+        ]
+      },
+      "2752": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "gray carpet",
+            "best_match_iou": 0.4147,
+            "precision": 0.9579,
+            "recall": 0.4224,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.13924266666666665
+          },
+          {
+            "mask_index": 1,
+            "region_label": "red wall",
+            "best_match_iou": 0.4107,
+            "precision": 0.9963,
+            "recall": 0.4113,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.13035733333333333
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a woman wearing black clothing",
+            "best_match_iou": 0.2877,
+            "precision": 0.9795,
+            "recall": 0.2894,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.09328533333333333
+          },
+          {
+            "mask_index": 3,
+            "region_label": "a woman wearing dark red clothing",
+            "best_match_iou": 0.9244,
+            "precision": 0.9958,
+            "recall": 0.928,
+            "matched_category": "door-stuff",
+            "area_fraction": 0.039536
+          },
+          {
+            "mask_index": 4,
+            "region_label": "deep purple sofa",
+            "best_match_iou": 0.7305,
+            "precision": 0.9495,
+            "recall": 0.76,
+            "matched_category": "ceiling-merged",
+            "area_fraction": 0.033568
+          },
+          {
+            "mask_index": 5,
+            "region_label": "brown chair",
+            "best_match_iou": 0.8777,
+            "precision": 0.9758,
+            "recall": 0.8972,
+            "matched_category": "cabinet-merged",
+            "area_fraction": 0.025770666666666667
+          }
+        ]
+      },
+      "55199": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "large expanse of dry, patchy grass",
+            "best_match_iou": 0.8654,
+            "precision": 0.9992,
+            "recall": 0.8661,
+            "matched_category": "grass-merged",
+            "area_fraction": 0.35659517426273457
+          },
+          {
+            "mask_index": 1,
+            "region_label": "wide, light-colored corrugated metal roof",
+            "best_match_iou": 0.3865,
+            "precision": 0.62,
+            "recall": 0.5064,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.13110991957104556
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark, vertical wooden support posts",
+            "best_match_iou": 0.8486,
+            "precision": 0.9544,
+            "recall": 0.8845,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.11431635388739947
+          },
+          {
+            "mask_index": 3,
+            "region_label": "group of sturdy work horses",
+            "best_match_iou": 0.4266,
+            "precision": 0.9676,
+            "recall": 0.4328,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.07534048257372654
+          },
+          {
+            "mask_index": 4,
+            "region_label": "person wearing a hat",
+            "best_match_iou": 0.1666,
+            "precision": 0.9617,
+            "recall": 0.1677,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.02937265415549598
+          },
+          {
+            "mask_index": 5,
+            "region_label": "wooden fence or interior partition",
+            "best_match_iou": 0.1298,
+            "precision": 0.9273,
+            "recall": 0.1311,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.023812332439678285
+          }
+        ]
+      },
+      "374734": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "grayish-white snowfield",
+            "best_match_iou": 0.9511,
+            "precision": 0.99,
+            "recall": 0.9603,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.46837309718969555
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a person wearing a black jacket, blue jeans, and black-and-green shoes",
+            "best_match_iou": 0.9636,
+            "precision": 1.0,
+            "recall": 0.9636,
+            "matched_category": "snow",
+            "area_fraction": 0.42458650468384074
+          }
+        ]
+      },
+      "242615": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "smooth tan walls",
+            "best_match_iou": 0.5257,
+            "precision": 0.9941,
+            "recall": 0.5274,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.17072533333333334
+          },
+          {
+            "mask_index": 1,
+            "region_label": "textured beige ceiling",
+            "best_match_iou": 0.9875,
+            "precision": 0.9948,
+            "recall": 0.9926,
+            "matched_category": "ceiling-merged",
+            "area_fraction": 0.123968
+          },
+          {
+            "mask_index": 2,
+            "region_label": "two beds",
+            "best_match_iou": 0.3669,
+            "precision": 0.9784,
+            "recall": 0.3699,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.121664
+          },
+          {
+            "mask_index": 3,
+            "region_label": "black suitcase",
+            "best_match_iou": 0.9748,
+            "precision": 0.9842,
+            "recall": 0.9903,
+            "matched_category": "suitcase",
+            "area_fraction": 0.067824
+          },
+          {
+            "mask_index": 4,
+            "region_label": "dark wood bedside cabinet",
+            "best_match_iou": 0.2929,
+            "precision": 0.9978,
+            "recall": 0.2931,
+            "matched_category": "bed",
+            "area_fraction": 0.04565866666666667
+          },
+          {
+            "mask_index": 5,
+            "region_label": "lamp with a white lampshade and a textured metallic base",
+            "best_match_iou": 0.2742,
+            "precision": 1.0,
+            "recall": 0.2742,
+            "matched_category": "bed",
+            "area_fraction": 0.042618666666666666
+          }
+        ]
+      },
+      "382655": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "light-colored walls",
+            "best_match_iou": 0.529,
+            "precision": 0.5378,
+            "recall": 0.97,
+            "matched_category": "ceiling-merged",
+            "area_fraction": 0.08707345545977012
+          },
+          {
+            "mask_index": 1,
+            "region_label": "white ceiling",
+            "best_match_iou": 0.3399,
+            "precision": 0.9847,
+            "recall": 0.3417,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.07727191091954023
+          },
+          {
+            "mask_index": 2,
+            "region_label": "wooden floor",
+            "best_match_iou": 0.5339,
+            "precision": 0.9907,
+            "recall": 0.5366,
+            "matched_category": "curtain",
+            "area_fraction": 0.07497755028735632
+          },
+          {
+            "mask_index": 3,
+            "region_label": "several long curtains",
+            "best_match_iou": 0.6079,
+            "precision": 0.9449,
+            "recall": 0.6302,
+            "matched_category": "person",
+            "area_fraction": 0.024124461206896552
+          },
+          {
+            "mask_index": 4,
+            "region_label": "windows and doorways",
+            "best_match_iou": 0.4034,
+            "precision": 0.4094,
+            "recall": 0.965,
+            "matched_category": "person",
+            "area_fraction": 0.023886494252873564
+          },
+          {
+            "mask_index": 5,
+            "region_label": "mirror",
+            "best_match_iou": 0.5817,
+            "precision": 0.7939,
+            "recall": 0.6851,
+            "matched_category": "dining table",
+            "area_fraction": 0.022436242816091953
+          }
+        ]
+      },
+      "473896": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "the white clock has black hands and numbers",
+            "best_match_iou": 0.9347,
+            "precision": 0.9422,
+            "recall": 0.9916,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.46791203161592504
+          },
+          {
+            "mask_index": 1,
+            "region_label": "gray building",
+            "best_match_iou": 0.7392,
+            "precision": 1.0,
+            "recall": 0.7392,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.4044789227166276
+          },
+          {
+            "mask_index": 2,
+            "region_label": "grayish-white sky",
+            "best_match_iou": 0.0667,
+            "precision": 0.9622,
+            "recall": 0.0669,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.038052546838407496
+          }
+        ]
+      },
+      "10909": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white, textured ceiling",
+            "best_match_iou": 0.9207,
+            "precision": 0.9741,
+            "recall": 0.9438,
+            "matched_category": "oven",
+            "area_fraction": 0.17975911458333332
+          },
+          {
+            "mask_index": 1,
+            "region_label": "light orange wall",
+            "best_match_iou": 0.9553,
+            "precision": 0.9833,
+            "recall": 0.971,
+            "matched_category": "microwave",
+            "area_fraction": 0.08267578125
+          },
+          {
+            "mask_index": 2,
+            "region_label": "brown wooden cabinets",
+            "best_match_iou": 0.1541,
+            "precision": 1.0,
+            "recall": 0.1541,
+            "matched_category": "cabinet-merged",
+            "area_fraction": 0.054619140625
+          },
+          {
+            "mask_index": 3,
+            "region_label": "white countertop",
+            "best_match_iou": 0.1526,
+            "precision": 0.9999,
+            "recall": 0.1526,
+            "matched_category": "cabinet-merged",
+            "area_fraction": 0.054108072916666666
+          },
+          {
+            "mask_index": 4,
+            "region_label": "black microwave",
+            "best_match_iou": 0.2157,
+            "precision": 0.966,
+            "recall": 0.2174,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.032900390625
+          },
+          {
+            "mask_index": 5,
+            "region_label": "black gas stove and oven",
+            "best_match_iou": 0.0814,
+            "precision": 0.9993,
+            "recall": 0.0814,
+            "matched_category": "cabinet-merged",
+            "area_fraction": 0.028876953125
+          }
+        ]
+      },
+      "548209": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white snow",
+            "best_match_iou": 0.9423,
+            "precision": 0.9954,
+            "recall": 0.9464,
+            "matched_category": "snow",
+            "area_fraction": 0.7786293333333333
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dark wooden building",
+            "best_match_iou": 0.0478,
+            "precision": 1.0,
+            "recall": 0.0478,
+            "matched_category": "snow",
+            "area_fraction": 0.039141333333333334
+          },
+          {
+            "mask_index": 2,
+            "region_label": "adult in a red jacket and black pants",
+            "best_match_iou": 0.005,
+            "precision": 0.0135,
+            "recall": 0.008,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.034021333333333334
+          }
+        ]
+      },
+      "294002": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "dark blue sky",
+            "best_match_iou": 0.0361,
+            "precision": 0.0405,
+            "recall": 0.2498,
+            "matched_category": "road",
+            "area_fraction": 0.317470703125
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dark gray buildings with white signs",
+            "best_match_iou": 0.9178,
+            "precision": 0.9999,
+            "recall": 0.9178,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.17585611979166665
+          },
+          {
+            "mask_index": 2,
+            "region_label": "gray road marked with white lines",
+            "best_match_iou": 0.3846,
+            "precision": 0.9744,
+            "recall": 0.3885,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.10430013020833333
+          },
+          {
+            "mask_index": 3,
+            "region_label": "tall green trees",
+            "best_match_iou": 0.3496,
+            "precision": 0.9659,
+            "recall": 0.3539,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.09586263020833333
+          },
+          {
+            "mask_index": 4,
+            "region_label": "blue car",
+            "best_match_iou": 0.6918,
+            "precision": 0.9726,
+            "recall": 0.7055,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.06690104166666666
+          },
+          {
+            "mask_index": 5,
+            "region_label": "one black traffic light",
+            "best_match_iou": 0.937,
+            "precision": 0.9734,
+            "recall": 0.9616,
+            "matched_category": "car",
+            "area_fraction": 0.055891927083333334
+          }
+        ]
+      },
+      "70380": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "light brown wooden dining table",
+            "best_match_iou": 0.9334,
+            "precision": 0.952,
+            "recall": 0.9795,
+            "matched_category": "cake",
+            "area_fraction": 0.43578015222482436
+          },
+          {
+            "mask_index": 1,
+            "region_label": "round chocolate cake",
+            "best_match_iou": 0.4653,
+            "precision": 0.9328,
+            "recall": 0.4815,
+            "matched_category": "dining table",
+            "area_fraction": 0.17475483021077284
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark metal knife",
+            "best_match_iou": 0.2691,
+            "precision": 0.8822,
+            "recall": 0.2791,
+            "matched_category": "cake",
+            "area_fraction": 0.13397980093676815
+          },
+          {
+            "mask_index": 3,
+            "region_label": "glass wine glasses",
+            "best_match_iou": 0.2027,
+            "precision": 0.9781,
+            "recall": 0.2036,
+            "matched_category": "dining table",
+            "area_fraction": 0.07048082552693208
+          },
+          {
+            "mask_index": 4,
+            "region_label": "cups",
+            "best_match_iou": 0.702,
+            "precision": 0.9401,
+            "recall": 0.7349,
+            "matched_category": "person",
+            "area_fraction": 0.05884440866510539
+          },
+          {
+            "mask_index": 5,
+            "region_label": "person",
+            "best_match_iou": 0.9117,
+            "precision": 0.9348,
+            "recall": 0.9737,
+            "matched_category": "cup",
+            "area_fraction": 0.04731045081967213
+          }
+        ]
+      },
+      "38027": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "paved sidewalk",
+            "best_match_iou": 0.9366,
+            "precision": 0.9944,
+            "recall": 0.9415,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.26178843896713616
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dark dirt or mulch",
+            "best_match_iou": 0.9267,
+            "precision": 0.9968,
+            "recall": 0.9294,
+            "matched_category": "wall-brick",
+            "area_fraction": 0.1908193955399061
+          },
+          {
+            "mask_index": 2,
+            "region_label": "sky",
+            "best_match_iou": 0.8548,
+            "precision": 0.9971,
+            "recall": 0.857,
+            "matched_category": "pavement-merged",
+            "area_fraction": 0.18419894366197184
+          },
+          {
+            "mask_index": 3,
+            "region_label": "dark-toned yamaha enduro 100 motorcycle",
+            "best_match_iou": 0.8543,
+            "precision": 0.9426,
+            "recall": 0.9011,
+            "matched_category": "motorcycle",
+            "area_fraction": 0.13748166079812207
+          },
+          {
+            "mask_index": 4,
+            "region_label": "textured brick wall",
+            "best_match_iou": 0.3786,
+            "precision": 0.6237,
+            "recall": 0.4907,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.043434565727699534
+          },
+          {
+            "mask_index": 5,
+            "region_label": "large multi-story buildings",
+            "best_match_iou": 0.1943,
+            "precision": 0.9968,
+            "recall": 0.1944,
+            "matched_category": "pavement-merged",
+            "area_fraction": 0.041806044600938966
+          }
+        ]
+      },
+      "343734": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "lush green trees",
+            "best_match_iou": 0.3735,
+            "precision": 0.3748,
+            "recall": 0.9905,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.6299518072289156
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a dark brown short-sleeved shirt and blue pants, along with a black helmet adorned with a red strap",
+            "best_match_iou": 0.0003,
+            "precision": 0.0005,
+            "recall": 0.0006,
+            "matched_category": "person",
+            "area_fraction": 0.21778915662650603
+          },
+          {
+            "mask_index": 2,
+            "region_label": "black deck and yellow wheels",
+            "best_match_iou": 0.8363,
+            "precision": 0.937,
+            "recall": 0.8861,
+            "matched_category": "person",
+            "area_fraction": 0.17771686746987952
+          },
+          {
+            "mask_index": 3,
+            "region_label": "gray-brown road",
+            "best_match_iou": 0.5874,
+            "precision": 0.9968,
+            "recall": 0.5885,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.14072289156626505
+          }
+        ]
+      },
+      "211867": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "wide asphalt street",
+            "best_match_iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "matched_category": "no_match",
+            "area_fraction": 0.24375
+          },
+          {
+            "mask_index": 1,
+            "region_label": "tall, multi-story buildings",
+            "best_match_iou": 0.0064,
+            "precision": 0.0108,
+            "recall": 0.0155,
+            "matched_category": "truck",
+            "area_fraction": 0.20965073529411765
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a large vintage semi-truck with a long flatbed trailer",
+            "best_match_iou": 0.8085,
+            "precision": 0.9638,
+            "recall": 0.8338,
+            "matched_category": "truck",
+            "area_fraction": 0.1265061669829222
+          },
+          {
+            "mask_index": 3,
+            "region_label": "group of people, several of whom are in uniform",
+            "best_match_iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "matched_category": "no_match",
+            "area_fraction": 0.07521050759013283
+          },
+          {
+            "mask_index": 4,
+            "region_label": "various onlookers",
+            "best_match_iou": 0.0035,
+            "precision": 0.0144,
+            "recall": 0.0045,
+            "matched_category": "truck",
+            "area_fraction": 0.045896584440227706
+          }
+        ]
+      },
+      "425063": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "brown cardboard box",
+            "best_match_iou": 0.5345,
+            "precision": 0.8031,
+            "recall": 0.6151,
+            "matched_category": "paper-merged",
+            "area_fraction": 0.25072591145833334
+          },
+          {
+            "mask_index": 1,
+            "region_label": "white paper lining",
+            "best_match_iou": 0.9758,
+            "precision": 0.9787,
+            "recall": 0.997,
+            "matched_category": "donut",
+            "area_fraction": 0.049889322916666666
+          }
+        ]
+      },
+      "530369": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "yellow woven placemat",
+            "best_match_iou": 0.0281,
+            "precision": 0.0292,
+            "recall": 0.4327,
+            "matched_category": "table-merged",
+            "area_fraction": 0.24526933333333334
+          },
+          {
+            "mask_index": 1,
+            "region_label": "large toasted sandwich",
+            "best_match_iou": 0.9274,
+            "precision": 0.9323,
+            "recall": 0.9944,
+            "matched_category": "orange",
+            "area_fraction": 0.16813333333333333
+          },
+          {
+            "mask_index": 2,
+            "region_label": "bright orange carrot sticks",
+            "best_match_iou": 0.8157,
+            "precision": 0.9593,
+            "recall": 0.845,
+            "matched_category": "sandwich",
+            "area_fraction": 0.148208
+          },
+          {
+            "mask_index": 3,
+            "region_label": "segment of reddish-pink citrus fruit",
+            "best_match_iou": 0.0159,
+            "precision": 0.0168,
+            "recall": 0.2264,
+            "matched_category": "fruit",
+            "area_fraction": 0.13891733333333334
+          },
+          {
+            "mask_index": 4,
+            "region_label": "crisp green lettuce leaves",
+            "best_match_iou": 0.8349,
+            "precision": 0.8593,
+            "recall": 0.9671,
+            "matched_category": "person",
+            "area_fraction": 0.06354133333333334
+          },
+          {
+            "mask_index": 5,
+            "region_label": "person wearing a green shirt",
+            "best_match_iou": 0.3767,
+            "precision": 0.9666,
+            "recall": 0.3816,
+            "matched_category": "food-other-merged",
+            "area_fraction": 0.025082666666666666
+          }
+        ]
+      },
+      "155904": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "wooden dining table",
+            "best_match_iou": 0.6346,
+            "precision": 0.9491,
+            "recall": 0.657,
+            "matched_category": "dining table",
+            "area_fraction": 0.4700234192037471
+          },
+          {
+            "mask_index": 1,
+            "region_label": "large white bowl with a yellow base",
+            "best_match_iou": 0.1999,
+            "precision": 0.9899,
+            "recall": 0.2003,
+            "matched_category": "dining table",
+            "area_fraction": 0.13739754098360657
+          },
+          {
+            "mask_index": 2,
+            "region_label": "small white bowl",
+            "best_match_iou": 0.477,
+            "precision": 0.9819,
+            "recall": 0.4813,
+            "matched_category": "bowl",
+            "area_fraction": 0.07646004098360656
+          },
+          {
+            "mask_index": 3,
+            "region_label": "tiny white bowl",
+            "best_match_iou": 0.0522,
+            "precision": 0.884,
+            "recall": 0.0525,
+            "matched_category": "dining table",
+            "area_fraction": 0.04033591920374707
+          },
+          {
+            "mask_index": 4,
+            "region_label": "yellow citrus fruit half",
+            "best_match_iou": 0.9306,
+            "precision": 0.9676,
+            "recall": 0.9605,
+            "matched_category": "spoon",
+            "area_fraction": 0.02373755854800937
+          },
+          {
+            "mask_index": 5,
+            "region_label": "light green bowl",
+            "best_match_iou": 0.142,
+            "precision": 0.9825,
+            "recall": 0.1423,
+            "matched_category": "bowl",
+            "area_fraction": 0.022595872365339578
+          }
+        ]
+      },
+      "406376": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "off-white building",
+            "best_match_iou": 0.9588,
+            "precision": 0.9922,
+            "recall": 0.966,
+            "matched_category": "grass-merged",
+            "area_fraction": 0.4849330357142857
+          },
+          {
+            "mask_index": 1,
+            "region_label": "yellow-green grass",
+            "best_match_iou": 0.8827,
+            "precision": 0.9761,
+            "recall": 0.9022,
+            "matched_category": "person",
+            "area_fraction": 0.12128981660231661
+          },
+          {
+            "mask_index": 2,
+            "region_label": "lush trees with green leaves and gray-brown trunks",
+            "best_match_iou": 0.4733,
+            "precision": 0.9977,
+            "recall": 0.4738,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.11372466216216216
+          }
+        ]
+      },
+      "23275": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "dark mesh tennis net with a white top edge",
+            "best_match_iou": 0.7025,
+            "precision": 0.9317,
+            "recall": 0.7406,
+            "matched_category": "net",
+            "area_fraction": 0.3686142899061033
+          },
+          {
+            "mask_index": 1,
+            "region_label": "woman dressed in a black long-sleeved shirt and black athletic pants",
+            "best_match_iou": 0.2364,
+            "precision": 1.0,
+            "recall": 0.2364,
+            "matched_category": "net",
+            "area_fraction": 0.10961340962441314
+          },
+          {
+            "mask_index": 2,
+            "region_label": "small yellow-green tennis ball",
+            "best_match_iou": 0.1403,
+            "precision": 0.9995,
+            "recall": 0.1403,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.054823210093896714
+          },
+          {
+            "mask_index": 3,
+            "region_label": "tennis racket with a silver and black frame",
+            "best_match_iou": 0.0873,
+            "precision": 0.8668,
+            "recall": 0.0885,
+            "matched_category": "net",
+            "area_fraction": 0.04731880868544601
+          },
+          {
+            "mask_index": 4,
+            "region_label": "long chain-link fence",
+            "best_match_iou": 0.0716,
+            "precision": 0.9979,
+            "recall": 0.0716,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.028011296948356808
+          }
+        ]
+      },
+      "173198": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "gray gravel surface",
+            "best_match_iou": 0.9207,
+            "precision": 0.9671,
+            "recall": 0.9505,
+            "matched_category": "truck",
+            "area_fraction": 0.41069661458333334
+          },
+          {
+            "mask_index": 1,
+            "region_label": "bright sky with light clouds",
+            "best_match_iou": 0.932,
+            "precision": 0.9956,
+            "recall": 0.9358,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.2005078125
+          },
+          {
+            "mask_index": 2,
+            "region_label": "light-colored house",
+            "best_match_iou": 0.8277,
+            "precision": 0.9977,
+            "recall": 0.8292,
+            "matched_category": "gravel",
+            "area_fraction": 0.18977864583333334
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green trees",
+            "best_match_iou": 0.9155,
+            "precision": 0.9538,
+            "recall": 0.958,
+            "matched_category": "person",
+            "area_fraction": 0.046822916666666665
+          },
+          {
+            "mask_index": 4,
+            "region_label": "small patches of grass",
+            "best_match_iou": 0.0585,
+            "precision": 1.0,
+            "recall": 0.0585,
+            "matched_category": "truck",
+            "area_fraction": 0.024423828125
+          }
+        ]
+      },
+      "425484": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "sky",
+            "best_match_iou": 0.9279,
+            "precision": 0.9877,
+            "recall": 0.9387,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.42103340292275576
+          },
+          {
+            "mask_index": 1,
+            "region_label": "sand",
+            "best_match_iou": 0.8552,
+            "precision": 0.895,
+            "recall": 0.9507,
+            "matched_category": "sand",
+            "area_fraction": 0.34103275052192067
+          },
+          {
+            "mask_index": 2,
+            "region_label": "water",
+            "best_match_iou": 0.7911,
+            "precision": 0.8703,
+            "recall": 0.8968,
+            "matched_category": "water-other",
+            "area_fraction": 0.03654423277661795
+          },
+          {
+            "mask_index": 3,
+            "region_label": "kitesurfing kites",
+            "best_match_iou": 0.2844,
+            "precision": 0.9661,
+            "recall": 0.2872,
+            "matched_category": "tent",
+            "area_fraction": 0.03255806367432151
+          },
+          {
+            "mask_index": 4,
+            "region_label": "trees",
+            "best_match_iou": 0.2164,
+            "precision": 0.9905,
+            "recall": 0.2168,
+            "matched_category": "tent",
+            "area_fraction": 0.02397573068893528
+          }
+        ]
+      },
+      "79660": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "clear sky",
+            "best_match_iou": 0.8684,
+            "precision": 0.9994,
+            "recall": 0.8688,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.31833584337349397
+          },
+          {
+            "mask_index": 1,
+            "region_label": "leafy trees",
+            "best_match_iou": 0.8936,
+            "precision": 0.9984,
+            "recall": 0.8949,
+            "matched_category": "road",
+            "area_fraction": 0.29261420682730926
+          },
+          {
+            "mask_index": 2,
+            "region_label": "distant buildings",
+            "best_match_iou": 0.8512,
+            "precision": 0.973,
+            "recall": 0.8719,
+            "matched_category": "elephant",
+            "area_fraction": 0.048490838353413654
+          }
+        ]
+      },
+      "242163": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "vast, cloudy sky",
+            "best_match_iou": 0.921,
+            "precision": 0.9988,
+            "recall": 0.922,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.34314453125
+          },
+          {
+            "mask_index": 1,
+            "region_label": "large green grassy slope",
+            "best_match_iou": 0.8668,
+            "precision": 0.9999,
+            "recall": 0.8669,
+            "matched_category": "grass-merged",
+            "area_fraction": 0.3292421875
+          },
+          {
+            "mask_index": 2,
+            "region_label": "light gray paved walkway",
+            "best_match_iou": 0.5032,
+            "precision": 0.52,
+            "recall": 0.9397,
+            "matched_category": "roof",
+            "area_fraction": 0.05573828125
+          },
+          {
+            "mask_index": 3,
+            "region_label": "several gray benches",
+            "best_match_iou": 0.2788,
+            "precision": 0.9445,
+            "recall": 0.2834,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.0519765625
+          },
+          {
+            "mask_index": 4,
+            "region_label": "building with a dark brown tiled roof and green-framed glass windows",
+            "best_match_iou": 0.0599,
+            "precision": 0.988,
+            "recall": 0.0599,
+            "matched_category": "grass-merged",
+            "area_fraction": 0.02303515625
+          }
+        ]
+      },
+      "283408": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "wood-paneled wall",
+            "best_match_iou": 0.8441,
+            "precision": 0.9748,
+            "recall": 0.863,
+            "matched_category": "person",
+            "area_fraction": 0.27173828125
+          },
+          {
+            "mask_index": 1,
+            "region_label": "man wearing glasses, a brown jacket, and a cap",
+            "best_match_iou": 0.6324,
+            "precision": 0.9856,
+            "recall": 0.6383,
+            "matched_category": "wall-wood",
+            "area_fraction": 0.160546875
+          },
+          {
+            "mask_index": 2,
+            "region_label": "metallic dining table",
+            "best_match_iou": 0.8734,
+            "precision": 0.9087,
+            "recall": 0.9573,
+            "matched_category": "dog",
+            "area_fraction": 0.14496419270833333
+          },
+          {
+            "mask_index": 3,
+            "region_label": "small, tan fluffy dog",
+            "best_match_iou": 0.8389,
+            "precision": 0.8512,
+            "recall": 0.983,
+            "matched_category": "dining table",
+            "area_fraction": 0.10020833333333333
+          },
+          {
+            "mask_index": 4,
+            "region_label": "silver metal chairs",
+            "best_match_iou": 0.1405,
+            "precision": 0.9453,
+            "recall": 0.1417,
+            "matched_category": "wall-wood",
+            "area_fraction": 0.037161458333333335
+          },
+          {
+            "mask_index": 5,
+            "region_label": "dark patterned floor",
+            "best_match_iou": 0.4512,
+            "precision": 0.5212,
+            "recall": 0.7705,
+            "matched_category": "chair",
+            "area_fraction": 0.029361979166666666
+          }
+        ]
+      },
+      "54337": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "light-colored wall",
+            "best_match_iou": 0.9258,
+            "precision": 0.9756,
+            "recall": 0.9477,
+            "matched_category": "person",
+            "area_fraction": 0.10233072916666666
+          },
+          {
+            "mask_index": 1,
+            "region_label": "wooden door",
+            "best_match_iou": 0.9477,
+            "precision": 0.9663,
+            "recall": 0.9802,
+            "matched_category": "person",
+            "area_fraction": 0.08916341145833333
+          },
+          {
+            "mask_index": 2,
+            "region_label": "metal storage shelves",
+            "best_match_iou": 0.5316,
+            "precision": 0.9867,
+            "recall": 0.5354,
+            "matched_category": "dining table",
+            "area_fraction": 0.04198893229166667
+          },
+          {
+            "mask_index": 3,
+            "region_label": "cardboard boxes",
+            "best_match_iou": 0.6315,
+            "precision": 0.9597,
+            "recall": 0.6487,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.039046223958333334
+          },
+          {
+            "mask_index": 4,
+            "region_label": "white dining table",
+            "best_match_iou": 0.9366,
+            "precision": 0.9923,
+            "recall": 0.9434,
+            "matched_category": "door-stuff",
+            "area_fraction": 0.03741536458333333
+          },
+          {
+            "mask_index": 5,
+            "region_label": "gray floor",
+            "best_match_iou": 0.5706,
+            "precision": 0.986,
+            "recall": 0.5752,
+            "matched_category": "person",
+            "area_fraction": 0.024638671875
+          }
+        ]
+      }
+    }
+  },
+  "click": {
+    "summary": {
+      "n": 256,
+      "mean_iou": 0.5515,
+      "median_iou": 0.7165,
+      "min_iou": 0.0,
+      "max_iou": 0.9851,
+      "above_0.5": 149,
+      "above_0.75": 122,
+      "no_mask": 0,
+      "no_panoptic": 0
+    },
+    "per_image": {
+      "208220": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "clear blue sky",
+            "best_match_iou": 0.9762,
+            "precision": 1.0,
+            "recall": 0.9763,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.5684148793565683
+          },
+          {
+            "mask_index": 1,
+            "region_label": "green trees",
+            "best_match_iou": 0.0347,
+            "precision": 0.5429,
+            "recall": 0.0358,
+            "matched_category": "person",
+            "area_fraction": 0.00014661528150134047
+          },
+          {
+            "mask_index": 2,
+            "region_label": "tan building",
+            "best_match_iou": 0.9744,
+            "precision": 1.0,
+            "recall": 0.9744,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.5673006032171581
+          },
+          {
+            "mask_index": 3,
+            "region_label": "grey asphalt ground",
+            "best_match_iou": 0.9766,
+            "precision": 1.0,
+            "recall": 0.9766,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.5685950067024129
+          },
+          {
+            "mask_index": 4,
+            "region_label": "green grass",
+            "best_match_iou": 0.9759,
+            "precision": 1.0,
+            "recall": 0.9759,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.5682221849865952
+          },
+          {
+            "mask_index": 5,
+            "region_label": "grey ramp platform",
+            "best_match_iou": 0.9767,
+            "precision": 1.0,
+            "recall": 0.9767,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.5686829758713137
+          }
+        ]
+      },
+      "175831": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "pale, overcast sky",
+            "best_match_iou": 0.9741,
+            "precision": 1.0,
+            "recall": 0.9742,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.20063668799212597
+          },
+          {
+            "mask_index": 1,
+            "region_label": "expansive tan building",
+            "best_match_iou": 0.0075,
+            "precision": 1.0,
+            "recall": 0.0075,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.00265748031496063
+          },
+          {
+            "mask_index": 2,
+            "region_label": "grey-tiled roof",
+            "best_match_iou": 0.9716,
+            "precision": 1.0,
+            "recall": 0.9716,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.20010457677165355
+          },
+          {
+            "mask_index": 3,
+            "region_label": "red flag with a yellow star",
+            "best_match_iou": 0.8718,
+            "precision": 0.9292,
+            "recall": 0.9338,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.356640625
+          },
+          {
+            "mask_index": 4,
+            "region_label": "stairs",
+            "best_match_iou": 0.0281,
+            "precision": 0.4461,
+            "recall": 0.0291,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.007357283464566929
+          },
+          {
+            "mask_index": 5,
+            "region_label": "green trees",
+            "best_match_iou": 0.0036,
+            "precision": 0.9159,
+            "recall": 0.0036,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.0013902559055118111
+          }
+        ]
+      },
+      "51342": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "dark brown wall",
+            "best_match_iou": 0.7034,
+            "precision": 0.8296,
+            "recall": 0.8222,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.33978498340707963
+          },
+          {
+            "mask_index": 1,
+            "region_label": "barred window",
+            "best_match_iou": 0.2998,
+            "precision": 0.9526,
+            "recall": 0.3043,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.10952018805309735
+          },
+          {
+            "mask_index": 2,
+            "region_label": "wet grey pavement",
+            "best_match_iou": 0.0019,
+            "precision": 0.0031,
+            "recall": 0.0047,
+            "matched_category": "pavement-merged",
+            "area_fraction": 0.23251866703539822
+          },
+          {
+            "mask_index": 3,
+            "region_label": "person",
+            "best_match_iou": 0.7041,
+            "precision": 0.7466,
+            "recall": 0.9252,
+            "matched_category": "person",
+            "area_fraction": 0.02858821902654867
+          },
+          {
+            "mask_index": 4,
+            "region_label": "black umbrella",
+            "best_match_iou": 0.8575,
+            "precision": 0.8969,
+            "recall": 0.9513,
+            "matched_category": "umbrella",
+            "area_fraction": 0.009558213495575221
+          },
+          {
+            "mask_index": 5,
+            "region_label": "cell phone",
+            "best_match_iou": 0.7396,
+            "precision": 0.7865,
+            "recall": 0.9255,
+            "matched_category": "person",
+            "area_fraction": 0.02714670907079646
+          }
+        ]
+      },
+      "448648": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "gray asphalt road",
+            "best_match_iou": 0.202,
+            "precision": 1.0,
+            "recall": 0.202,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.03320963541666667
+          },
+          {
+            "mask_index": 1,
+            "region_label": "light blue sky",
+            "best_match_iou": 0.741,
+            "precision": 0.9917,
+            "recall": 0.7456,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.15860026041666667
+          },
+          {
+            "mask_index": 2,
+            "region_label": "multi-story buildings",
+            "best_match_iou": 0.0406,
+            "precision": 0.1534,
+            "recall": 0.0523,
+            "matched_category": "pavement-merged",
+            "area_fraction": 0.011477864583333334
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green leafy trees",
+            "best_match_iou": 0.0141,
+            "precision": 0.8758,
+            "recall": 0.0141,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.002646484375
+          },
+          {
+            "mask_index": 4,
+            "region_label": "gray pavement",
+            "best_match_iou": 0.953,
+            "precision": 0.9649,
+            "recall": 0.9873,
+            "matched_category": "car",
+            "area_fraction": 0.00759765625
+          },
+          {
+            "mask_index": 5,
+            "region_label": "white structure piece",
+            "best_match_iou": 0.0086,
+            "precision": 0.0298,
+            "recall": 0.012,
+            "matched_category": "motorcycle",
+            "area_fraction": 0.003935546875
+          }
+        ]
+      },
+      "442861": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "clear blue sky",
+            "best_match_iou": 0.1039,
+            "precision": 0.1428,
+            "recall": 0.2759,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.1511313384433962
+          },
+          {
+            "mask_index": 1,
+            "region_label": "vibrant green grass playing field",
+            "best_match_iou": 0.0793,
+            "precision": 0.1206,
+            "recall": 0.1879,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.12183446344339623
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark green tennis net and perimeter fencing",
+            "best_match_iou": 0.1005,
+            "precision": 0.2094,
+            "recall": 0.1619,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.060476857311320756
+          },
+          {
+            "mask_index": 3,
+            "region_label": "man wearing a white polo shirt and white shorts",
+            "best_match_iou": 0.8997,
+            "precision": 0.9614,
+            "recall": 0.9334,
+            "matched_category": "person",
+            "area_fraction": 0.059562942216981135
+          },
+          {
+            "mask_index": 4,
+            "region_label": "silver-rimmed tennis racket",
+            "best_match_iou": 0.9207,
+            "precision": 0.9218,
+            "recall": 0.9987,
+            "matched_category": "tennis racket",
+            "area_fraction": 0.0059883549528301884
+          },
+          {
+            "mask_index": 5,
+            "region_label": "man in white athletic attire",
+            "best_match_iou": 0.8997,
+            "precision": 0.9614,
+            "recall": 0.9334,
+            "matched_category": "person",
+            "area_fraction": 0.059562942216981135
+          }
+        ]
+      },
+      "252186": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "silver mirror",
+            "best_match_iou": 0.0116,
+            "precision": 1.0,
+            "recall": 0.0116,
+            "matched_category": "wall-tile",
+            "area_fraction": 0.009254227053140097
+          },
+          {
+            "mask_index": 1,
+            "region_label": "gray porcelain wall",
+            "best_match_iou": 0.1642,
+            "precision": 0.9164,
+            "recall": 0.1667,
+            "matched_category": "mirror-stuff",
+            "area_fraction": 0.03554121376811594
+          },
+          {
+            "mask_index": 2,
+            "region_label": "black suitcase",
+            "best_match_iou": 0.0253,
+            "precision": 1.0,
+            "recall": 0.0253,
+            "matched_category": "wall-tile",
+            "area_fraction": 0.02018417874396135
+          }
+        ]
+      },
+      "265596": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "brown dining table",
+            "best_match_iou": 0.9466,
+            "precision": 0.9687,
+            "recall": 0.9765,
+            "matched_category": "cup",
+            "area_fraction": 0.0718798828125
+          },
+          {
+            "mask_index": 1,
+            "region_label": "white cup with brown, brown, and blue patterns",
+            "best_match_iou": 0.9451,
+            "precision": 0.9694,
+            "recall": 0.9741,
+            "matched_category": "cup",
+            "area_fraction": 0.0716455078125
+          }
+        ]
+      },
+      "316583": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "indoor floor",
+            "best_match_iou": 0.9708,
+            "precision": 0.9925,
+            "recall": 0.9779,
+            "matched_category": "cell phone",
+            "area_fraction": 0.19814933333333334
+          },
+          {
+            "mask_index": 1,
+            "region_label": "wall",
+            "best_match_iou": 0.93,
+            "precision": 0.943,
+            "recall": 0.9853,
+            "matched_category": "cell phone",
+            "area_fraction": 0.23449066666666665
+          },
+          {
+            "mask_index": 2,
+            "region_label": "ceiling",
+            "best_match_iou": 0.0076,
+            "precision": 0.0132,
+            "recall": 0.0176,
+            "matched_category": "floor-other-merged",
+            "area_fraction": 0.09018133333333334
+          },
+          {
+            "mask_index": 3,
+            "region_label": "window",
+            "best_match_iou": 0.8976,
+            "precision": 0.9526,
+            "recall": 0.9396,
+            "matched_category": "person",
+            "area_fraction": 0.16547733333333334
+          },
+          {
+            "mask_index": 4,
+            "region_label": "overhead light",
+            "best_match_iou": 0.2857,
+            "precision": 0.9994,
+            "recall": 0.2857,
+            "matched_category": "cell phone",
+            "area_fraction": 0.06416
+          },
+          {
+            "mask_index": 5,
+            "region_label": "hands of a person",
+            "best_match_iou": 0.9747,
+            "precision": 0.9924,
+            "recall": 0.9821,
+            "matched_category": "cell phone",
+            "area_fraction": 0.19902933333333334
+          }
+        ]
+      },
+      "119384": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "the fire hydrant is red, with light brown stains on it",
+            "best_match_iou": 0.1067,
+            "precision": 0.9567,
+            "recall": 0.1072,
+            "matched_category": "car",
+            "area_fraction": 0.05482133333333333
+          },
+          {
+            "mask_index": 1,
+            "region_label": "gray car",
+            "best_match_iou": 0.6668,
+            "precision": 0.9974,
+            "recall": 0.6679,
+            "matched_category": "fire hydrant",
+            "area_fraction": 0.07964266666666667
+          },
+          {
+            "mask_index": 2,
+            "region_label": "person wearing white pants",
+            "best_match_iou": 0.137,
+            "precision": 0.9124,
+            "recall": 0.1388,
+            "matched_category": "car",
+            "area_fraction": 0.07444266666666667
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green grass",
+            "best_match_iou": 0.7745,
+            "precision": 0.785,
+            "recall": 0.9829,
+            "matched_category": "car",
+            "area_fraction": 0.6127733333333333
+          },
+          {
+            "mask_index": 4,
+            "region_label": "a white sky",
+            "best_match_iou": 0.7694,
+            "precision": 0.9958,
+            "recall": 0.7719,
+            "matched_category": "fire hydrant",
+            "area_fraction": 0.09218133333333334
+          },
+          {
+            "mask_index": 5,
+            "region_label": "leaves from green trees",
+            "best_match_iou": 0.7767,
+            "precision": 0.7881,
+            "recall": 0.9818,
+            "matched_category": "car",
+            "area_fraction": 0.6097173333333333
+          }
+        ]
+      },
+      "241934": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white cardboard box",
+            "best_match_iou": 0.9252,
+            "precision": 0.9959,
+            "recall": 0.9287,
+            "matched_category": "donut",
+            "area_fraction": 0.0713160536545773
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a colorful assortment of donuts",
+            "best_match_iou": 0.9733,
+            "precision": 0.9943,
+            "recall": 0.9788,
+            "matched_category": "donut",
+            "area_fraction": 0.06388568499295143
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a donut heavily dusted with white powdered sugar",
+            "best_match_iou": 0.9724,
+            "precision": 0.9841,
+            "recall": 0.9879,
+            "matched_category": "donut",
+            "area_fraction": 0.07218644538425392
+          },
+          {
+            "mask_index": 3,
+            "region_label": "a vibrant pink-glazed donut featuring a white swirl pattern",
+            "best_match_iou": 0.9548,
+            "precision": 0.9852,
+            "recall": 0.9687,
+            "matched_category": "donut",
+            "area_fraction": 0.07617529582639156
+          },
+          {
+            "mask_index": 4,
+            "region_label": "a light-brown donut with a speckled, grainy texture",
+            "best_match_iou": 0.9657,
+            "precision": 0.9874,
+            "recall": 0.9778,
+            "matched_category": "donut",
+            "area_fraction": 0.0774648639412192
+          },
+          {
+            "mask_index": 5,
+            "region_label": "a donut topped with green icing and sliced almonds",
+            "best_match_iou": 0.9583,
+            "precision": 0.9941,
+            "recall": 0.9638,
+            "matched_category": "donut",
+            "area_fraction": 0.0799238540732197
+          }
+        ]
+      },
+      "565258": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "brown wooden floor featuring a parquet-style pattern",
+            "best_match_iou": 0.0217,
+            "precision": 1.0,
+            "recall": 0.0217,
+            "matched_category": "floor-wood",
+            "area_fraction": 0.012753599476439791
+          },
+          {
+            "mask_index": 1,
+            "region_label": "black and white cat",
+            "best_match_iou": 0.9204,
+            "precision": 0.9639,
+            "recall": 0.9533,
+            "matched_category": "cat",
+            "area_fraction": 0.1304196662303665
+          },
+          {
+            "mask_index": 2,
+            "region_label": "black fabric backpack",
+            "best_match_iou": 0.9482,
+            "precision": 0.9681,
+            "recall": 0.9788,
+            "matched_category": "backpack",
+            "area_fraction": 0.2761289267015707
+          }
+        ]
+      },
+      "545334": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "green grass playing field",
+            "best_match_iou": 0.1284,
+            "precision": 0.9172,
+            "recall": 0.1299,
+            "matched_category": "dirt-merged",
+            "area_fraction": 0.05337890625
+          },
+          {
+            "mask_index": 1,
+            "region_label": "reddish-brown dirt",
+            "best_match_iou": 0.1459,
+            "precision": 1.0,
+            "recall": 0.1459,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.019352213541666666
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a baseball pitcher",
+            "best_match_iou": 0.7576,
+            "precision": 0.7979,
+            "recall": 0.9375,
+            "matched_category": "sports ball",
+            "area_fraction": 0.00030598958333333335
+          },
+          {
+            "mask_index": 3,
+            "region_label": "another baseball player",
+            "best_match_iou": 0.7576,
+            "precision": 0.7979,
+            "recall": 0.9375,
+            "matched_category": "sports ball",
+            "area_fraction": 0.00030598958333333335
+          },
+          {
+            "mask_index": 4,
+            "region_label": "white sports ball",
+            "best_match_iou": 0.7576,
+            "precision": 0.7979,
+            "recall": 0.9375,
+            "matched_category": "sports ball",
+            "area_fraction": 0.00030598958333333335
+          },
+          {
+            "mask_index": 5,
+            "region_label": "dark baseball gloves",
+            "best_match_iou": 0.7576,
+            "precision": 0.7979,
+            "recall": 0.9375,
+            "matched_category": "sports ball",
+            "area_fraction": 0.00030598958333333335
+          }
+        ]
+      },
+      "477029": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "off-white walls equipped with various pipes, conduits, and safety markings",
+            "best_match_iou": 0.0698,
+            "precision": 0.9533,
+            "recall": 0.07,
+            "matched_category": "airplane",
+            "area_fraction": 0.027015146239554318
+          },
+          {
+            "mask_index": 1,
+            "region_label": "complex ceiling structure consisting of metal beams and overhead lighting components",
+            "best_match_iou": 0.0362,
+            "precision": 1.0,
+            "recall": 0.0362,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.010315111420612814
+          },
+          {
+            "mask_index": 2,
+            "region_label": "small rectangular window",
+            "best_match_iou": 0.3536,
+            "precision": 0.9776,
+            "recall": 0.3565,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.10396065459610028
+          },
+          {
+            "mask_index": 3,
+            "region_label": "dark doorway",
+            "best_match_iou": 0.8904,
+            "precision": 0.9825,
+            "recall": 0.9048,
+            "matched_category": "airplane",
+            "area_fraction": 0.33860550139275764
+          },
+          {
+            "mask_index": 4,
+            "region_label": "bright yellow vintage military aircraft, featuring a prominent black propeller, a star-and-bar insignia, and the numerical identifier '186' on its fuselage",
+            "best_match_iou": 0.8519,
+            "precision": 0.9856,
+            "recall": 0.8627,
+            "matched_category": "airplane",
+            "area_fraction": 0.3218488857938719
+          },
+          {
+            "mask_index": 5,
+            "region_label": "simple wooden bench",
+            "best_match_iou": 0.0708,
+            "precision": 0.9868,
+            "recall": 0.0709,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.020477889972144846
+          }
+        ]
+      },
+      "21215": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "blue sky",
+            "best_match_iou": 0.9851,
+            "precision": 0.9998,
+            "recall": 0.9853,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.8275626666666667
+          },
+          {
+            "mask_index": 1,
+            "region_label": "person wearing a pinkish-orange top",
+            "best_match_iou": 0.9407,
+            "precision": 0.9669,
+            "recall": 0.972,
+            "matched_category": "person",
+            "area_fraction": 0.15486933333333333
+          },
+          {
+            "mask_index": 2,
+            "region_label": "kite that is colored in yellow, black, and red",
+            "best_match_iou": 0.8481,
+            "precision": 0.8577,
+            "recall": 0.9871,
+            "matched_category": "kite",
+            "area_fraction": 0.001424
+          }
+        ]
+      },
+      "302885": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white ceramic plate",
+            "best_match_iou": 0.0157,
+            "precision": 0.9648,
+            "recall": 0.0157,
+            "matched_category": "fruit",
+            "area_fraction": 0.004544
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dark-toned, patterned dining table",
+            "best_match_iou": 0.7582,
+            "precision": 0.8576,
+            "recall": 0.8674,
+            "matched_category": "dining table",
+            "area_fraction": 0.054101333333333335
+          },
+          {
+            "mask_index": 2,
+            "region_label": "triangular slices of watermelon",
+            "best_match_iou": 0.0004,
+            "precision": 0.0263,
+            "recall": 0.0004,
+            "matched_category": "fruit",
+            "area_fraction": 0.003856
+          },
+          {
+            "mask_index": 3,
+            "region_label": "yellow-skinned pear slices",
+            "best_match_iou": 0.6895,
+            "precision": 0.9421,
+            "recall": 0.72,
+            "matched_category": "orange",
+            "area_fraction": 0.023584
+          },
+          {
+            "mask_index": 4,
+            "region_label": "crisp green apple slices",
+            "best_match_iou": 0.9395,
+            "precision": 0.9708,
+            "recall": 0.9669,
+            "matched_category": "orange",
+            "area_fraction": 0.03448
+          },
+          {
+            "mask_index": 5,
+            "region_label": "thick, half-moon orange slices",
+            "best_match_iou": 0.0962,
+            "precision": 0.9757,
+            "recall": 0.0964,
+            "matched_category": "fruit",
+            "area_fraction": 0.027610666666666665
+          }
+        ]
+      },
+      "216036": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white sky",
+            "best_match_iou": 0.9772,
+            "precision": 0.9878,
+            "recall": 0.9891,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.8724382637474541
+          },
+          {
+            "mask_index": 1,
+            "region_label": "one yellow airplane",
+            "best_match_iou": 0.9771,
+            "precision": 0.9871,
+            "recall": 0.9897,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.8735138747454175
+          }
+        ]
+      },
+      "301684": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "blue sky",
+            "best_match_iou": 0.2087,
+            "precision": 0.9984,
+            "recall": 0.2087,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.05617513020833333
+          },
+          {
+            "mask_index": 1,
+            "region_label": "brown walls",
+            "best_match_iou": 0.2187,
+            "precision": 0.8868,
+            "recall": 0.2249,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.06816080729166667
+          },
+          {
+            "mask_index": 2,
+            "region_label": "light brown fence",
+            "best_match_iou": 0.9455,
+            "precision": 0.9698,
+            "recall": 0.9742,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.07666015625
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green trees",
+            "best_match_iou": 0.2309,
+            "precision": 0.9945,
+            "recall": 0.2312,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.06247721354166667
+          },
+          {
+            "mask_index": 4,
+            "region_label": "brown wooden door",
+            "best_match_iou": 0.9449,
+            "precision": 0.9952,
+            "recall": 0.9493,
+            "matched_category": "elephant",
+            "area_fraction": 0.17853190104166666
+          },
+          {
+            "mask_index": 5,
+            "region_label": "brown sidewalk",
+            "best_match_iou": 0.0426,
+            "precision": 0.9492,
+            "recall": 0.0427,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.004482421875
+          }
+        ]
+      },
+      "65705": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "dark sky",
+            "best_match_iou": 0.033,
+            "precision": 0.9659,
+            "recall": 0.033,
+            "matched_category": "bus",
+            "area_fraction": 0.008621149985048485
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dim silhouettes of buildings",
+            "best_match_iou": 0.0314,
+            "precision": 1.0,
+            "recall": 0.0314,
+            "matched_category": "bus",
+            "area_fraction": 0.007929642445213379
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark asphalt road",
+            "best_match_iou": 0.0169,
+            "precision": 1.0,
+            "recall": 0.0169,
+            "matched_category": "bus",
+            "area_fraction": 0.004261181596821735
+          },
+          {
+            "mask_index": 3,
+            "region_label": "low dark fence",
+            "best_match_iou": 0.9274,
+            "precision": 0.9329,
+            "recall": 0.9936,
+            "matched_category": "bus",
+            "area_fraction": 0.26863866461617325
+          },
+          {
+            "mask_index": 4,
+            "region_label": "vibrant red double-decker bus",
+            "best_match_iou": 0.9271,
+            "precision": 0.935,
+            "recall": 0.991,
+            "matched_category": "bus",
+            "area_fraction": 0.2673117177154086
+          },
+          {
+            "mask_index": 5,
+            "region_label": "several people",
+            "best_match_iou": 0.8142,
+            "precision": 0.843,
+            "recall": 0.9597,
+            "matched_category": "person",
+            "area_fraction": 0.0010546157460805674
+          }
+        ]
+      },
+      "353653": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "blue playing field",
+            "best_match_iou": 0.7596,
+            "precision": 0.8563,
+            "recall": 0.8706,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.14758463541666667
+          },
+          {
+            "mask_index": 1,
+            "region_label": "black tennis net",
+            "best_match_iou": 0.3788,
+            "precision": 0.9696,
+            "recall": 0.3833,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.07982421875
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark green mesh fence",
+            "best_match_iou": 0.3973,
+            "precision": 0.9687,
+            "recall": 0.4025,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.08388997395833334
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green grass",
+            "best_match_iou": 0.8873,
+            "precision": 0.9597,
+            "recall": 0.9216,
+            "matched_category": "person",
+            "area_fraction": 0.045367838541666664
+          },
+          {
+            "mask_index": 4,
+            "region_label": "lush green trees",
+            "best_match_iou": 0.9174,
+            "precision": 0.939,
+            "recall": 0.9755,
+            "matched_category": "person",
+            "area_fraction": 0.028343098958333333
+          },
+          {
+            "mask_index": 5,
+            "region_label": "man on the far left wearing a dark blue tank top, black shorts, and sunglasses",
+            "best_match_iou": 0.8848,
+            "precision": 0.968,
+            "recall": 0.9115,
+            "matched_category": "person",
+            "area_fraction": 0.044485677083333335
+          }
+        ]
+      },
+      "362152": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "clear blue sky",
+            "best_match_iou": 0.9841,
+            "precision": 0.9997,
+            "recall": 0.9844,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.2835668449197861
+          },
+          {
+            "mask_index": 1,
+            "region_label": "expansive, flat-topped mountains",
+            "best_match_iou": 0.9838,
+            "precision": 0.9996,
+            "recall": 0.9843,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.28355080213903744
+          },
+          {
+            "mask_index": 2,
+            "region_label": "multi-story buildings and urban structures",
+            "best_match_iou": 0.9844,
+            "precision": 0.9993,
+            "recall": 0.9851,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.2838663101604278
+          },
+          {
+            "mask_index": 3,
+            "region_label": "low harbor walls",
+            "best_match_iou": 0.4746,
+            "precision": 0.8942,
+            "recall": 0.5029,
+            "matched_category": "boat",
+            "area_fraction": 0.006315508021390374
+          },
+          {
+            "mask_index": 4,
+            "region_label": "stone platforms",
+            "best_match_iou": 0.219,
+            "precision": 0.7578,
+            "recall": 0.2355,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.025454545454545455
+          },
+          {
+            "mask_index": 5,
+            "region_label": "calm, blue sea",
+            "best_match_iou": 0.0179,
+            "precision": 0.9716,
+            "recall": 0.0179,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.0015080213903743316
+          }
+        ]
+      },
+      "193465": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "the laptop is entirely gray in color",
+            "best_match_iou": 0.029,
+            "precision": 1.0,
+            "recall": 0.029,
+            "matched_category": "laptop",
+            "area_fraction": 0.017754683840749415
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a gray mouse with blue parts on its surface",
+            "best_match_iou": 0.9187,
+            "precision": 0.9852,
+            "recall": 0.9315,
+            "matched_category": "mouse",
+            "area_fraction": 0.020268588992974238
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a gray stone",
+            "best_match_iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "matched_category": "no_match",
+            "area_fraction": 0.06016905737704918
+          }
+        ]
+      },
+      "12108": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "bright, hazy sky",
+            "best_match_iou": 0.0355,
+            "precision": 1.0,
+            "recall": 0.0355,
+            "matched_category": "house",
+            "area_fraction": 0.0018313253012048193
+          },
+          {
+            "mask_index": 1,
+            "region_label": "wide asphalt road",
+            "best_match_iou": 0.952,
+            "precision": 0.9761,
+            "recall": 0.9746,
+            "matched_category": "person",
+            "area_fraction": 0.24029518072289158
+          },
+          {
+            "mask_index": 2,
+            "region_label": "textured grass",
+            "best_match_iou": 0.0594,
+            "precision": 1.0,
+            "recall": 0.0594,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.004584337349397591
+          },
+          {
+            "mask_index": 3,
+            "region_label": "light-colored concrete pavement",
+            "best_match_iou": 0.7662,
+            "precision": 0.9707,
+            "recall": 0.7843,
+            "matched_category": "grass-merged",
+            "area_fraction": 0.21420481927710844
+          },
+          {
+            "mask_index": 4,
+            "region_label": "young child",
+            "best_match_iou": 0.9511,
+            "precision": 0.9778,
+            "recall": 0.9721,
+            "matched_category": "person",
+            "area_fraction": 0.23925301204819277
+          },
+          {
+            "mask_index": 5,
+            "region_label": "large, dark fire hydrant",
+            "best_match_iou": 0.7686,
+            "precision": 0.9663,
+            "recall": 0.7898,
+            "matched_category": "grass-merged",
+            "area_fraction": 0.21671686746987953
+          }
+        ]
+      },
+      "539632": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "blue and white walls and a ceiling",
+            "best_match_iou": 0.839,
+            "precision": 0.938,
+            "recall": 0.8882,
+            "matched_category": "person",
+            "area_fraction": 0.04932291666666667
+          },
+          {
+            "mask_index": 1,
+            "region_label": "two people",
+            "best_match_iou": 0.1942,
+            "precision": 0.9958,
+            "recall": 0.1943,
+            "matched_category": "person",
+            "area_fraction": 0.010162760416666666
+          },
+          {
+            "mask_index": 2,
+            "region_label": "white paper with blue patterns",
+            "best_match_iou": 0.2037,
+            "precision": 0.99,
+            "recall": 0.2041,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.023824869791666668
+          },
+          {
+            "mask_index": 3,
+            "region_label": "large, golden-brown breaded food item",
+            "best_match_iou": 0.003,
+            "precision": 0.0052,
+            "recall": 0.0073,
+            "matched_category": "carrot",
+            "area_fraction": 0.009469401041666667
+          },
+          {
+            "mask_index": 4,
+            "region_label": "green broccoli florets",
+            "best_match_iou": 0.4238,
+            "precision": 0.9955,
+            "recall": 0.4246,
+            "matched_category": "food-other-merged",
+            "area_fraction": 0.069814453125
+          },
+          {
+            "mask_index": 5,
+            "region_label": "bright orange carrot sticks",
+            "best_match_iou": 0.0239,
+            "precision": 0.7524,
+            "recall": 0.0241,
+            "matched_category": "carrot",
+            "area_fraction": 0.0009993489583333334
+          }
+        ]
+      },
+      "394974": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "light brown soil",
+            "best_match_iou": 0.7802,
+            "precision": 0.9978,
+            "recall": 0.7816,
+            "matched_category": "rock-merged",
+            "area_fraction": 0.2331338028169014
+          },
+          {
+            "mask_index": 1,
+            "region_label": "grayish-black rocks",
+            "best_match_iou": 0.0163,
+            "precision": 1.0,
+            "recall": 0.0163,
+            "matched_category": "rock-merged",
+            "area_fraction": 0.0048591549295774646
+          },
+          {
+            "mask_index": 2,
+            "region_label": "some dry, brown branches",
+            "best_match_iou": 0.0052,
+            "precision": 0.0488,
+            "recall": 0.0058,
+            "matched_category": "rock-merged",
+            "area_fraction": 0.03552816901408451
+          }
+        ]
+      },
+      "487357": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white wall",
+            "best_match_iou": 0.0831,
+            "precision": 0.83,
+            "recall": 0.0846,
+            "matched_category": "person",
+            "area_fraction": 0.05283922209026128
+          },
+          {
+            "mask_index": 1,
+            "region_label": "blue curtains",
+            "best_match_iou": 0.3945,
+            "precision": 0.983,
+            "recall": 0.3972,
+            "matched_category": "person",
+            "area_fraction": 0.20948263064133016
+          }
+        ]
+      },
+      "420210": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "yellow blanket",
+            "best_match_iou": 0.9107,
+            "precision": 0.9576,
+            "recall": 0.949,
+            "matched_category": "couch",
+            "area_fraction": 0.21140625
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a light orange cat",
+            "best_match_iou": 0.8801,
+            "precision": 0.971,
+            "recall": 0.9039,
+            "matched_category": "cat",
+            "area_fraction": 0.32728515625
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a green teddy bear",
+            "best_match_iou": 0.7448,
+            "precision": 0.7839,
+            "recall": 0.9372,
+            "matched_category": "couch",
+            "area_fraction": 0.24129231770833334
+          }
+        ]
+      },
+      "2752": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "gray carpet",
+            "best_match_iou": 0.0924,
+            "precision": 0.8928,
+            "recall": 0.0934,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.03304
+          },
+          {
+            "mask_index": 1,
+            "region_label": "red wall",
+            "best_match_iou": 0.2563,
+            "precision": 0.9803,
+            "recall": 0.2576,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.08298133333333334
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a woman wearing black clothing",
+            "best_match_iou": 0.892,
+            "precision": 0.956,
+            "recall": 0.9302,
+            "matched_category": "person",
+            "area_fraction": 0.037088
+          },
+          {
+            "mask_index": 3,
+            "region_label": "a woman wearing dark red clothing",
+            "best_match_iou": 0.892,
+            "precision": 0.956,
+            "recall": 0.9302,
+            "matched_category": "person",
+            "area_fraction": 0.037088
+          },
+          {
+            "mask_index": 4,
+            "region_label": "deep purple sofa",
+            "best_match_iou": 0.7117,
+            "precision": 0.9339,
+            "recall": 0.7495,
+            "matched_category": "couch",
+            "area_fraction": 0.04979733333333333
+          },
+          {
+            "mask_index": 5,
+            "region_label": "brown chair",
+            "best_match_iou": 0.3058,
+            "precision": 0.3884,
+            "recall": 0.5897,
+            "matched_category": "chair",
+            "area_fraction": 0.07331733333333333
+          }
+        ]
+      },
+      "55199": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "large expanse of dry, patchy grass",
+            "best_match_iou": 0.1413,
+            "precision": 0.9553,
+            "recall": 0.1423,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.025083109919571047
+          },
+          {
+            "mask_index": 1,
+            "region_label": "wide, light-colored corrugated metal roof",
+            "best_match_iou": 0.1266,
+            "precision": 0.9328,
+            "recall": 0.1277,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.023067024128686327
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark, vertical wooden support posts",
+            "best_match_iou": 0.8414,
+            "precision": 0.958,
+            "recall": 0.8735,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.11246648793565683
+          },
+          {
+            "mask_index": 3,
+            "region_label": "group of sturdy work horses",
+            "best_match_iou": 0.7961,
+            "precision": 0.8695,
+            "recall": 0.9041,
+            "matched_category": "horse",
+            "area_fraction": 0.01581769436997319
+          },
+          {
+            "mask_index": 4,
+            "region_label": "person wearing a hat",
+            "best_match_iou": 0.1378,
+            "precision": 0.1888,
+            "recall": 0.3375,
+            "matched_category": "person",
+            "area_fraction": 0.0007667560321715818
+          },
+          {
+            "mask_index": 5,
+            "region_label": "wooden fence or interior partition",
+            "best_match_iou": 0.1979,
+            "precision": 0.9995,
+            "recall": 0.1979,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.03179088471849866
+          }
+        ]
+      },
+      "374734": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "grayish-white snowfield",
+            "best_match_iou": 0.9513,
+            "precision": 0.9898,
+            "recall": 0.9607,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.46865120023419204
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a person wearing a black jacket, blue jeans, and black-and-green shoes",
+            "best_match_iou": 0.8675,
+            "precision": 0.9421,
+            "recall": 0.9163,
+            "matched_category": "person",
+            "area_fraction": 0.01054961943793911
+          },
+          {
+            "mask_index": 2,
+            "region_label": "grayish-blue mountains",
+            "best_match_iou": 0.9518,
+            "precision": 0.9894,
+            "recall": 0.9616,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.4692586358313817
+          },
+          {
+            "mask_index": 3,
+            "region_label": "a gray sky",
+            "best_match_iou": 0.9505,
+            "precision": 0.988,
+            "recall": 0.9616,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.46998682669789227
+          }
+        ]
+      },
+      "242615": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "smooth tan walls",
+            "best_match_iou": 0.5252,
+            "precision": 0.9941,
+            "recall": 0.5268,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.170544
+          },
+          {
+            "mask_index": 1,
+            "region_label": "textured beige ceiling",
+            "best_match_iou": 0.5263,
+            "precision": 0.9946,
+            "recall": 0.5278,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.17076266666666667
+          },
+          {
+            "mask_index": 2,
+            "region_label": "two beds",
+            "best_match_iou": 0.3682,
+            "precision": 0.9729,
+            "recall": 0.372,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.12305066666666667
+          },
+          {
+            "mask_index": 3,
+            "region_label": "black suitcase",
+            "best_match_iou": 0.6029,
+            "precision": 0.9766,
+            "recall": 0.6118,
+            "matched_category": "light",
+            "area_fraction": 0.012090666666666666
+          },
+          {
+            "mask_index": 4,
+            "region_label": "dark wood bedside cabinet",
+            "best_match_iou": 0.0558,
+            "precision": 0.9975,
+            "recall": 0.0558,
+            "matched_category": "bed",
+            "area_fraction": 0.008698666666666667
+          },
+          {
+            "mask_index": 5,
+            "region_label": "lamp with a white lampshade and a textured metallic base",
+            "best_match_iou": 0.9372,
+            "precision": 0.9712,
+            "recall": 0.964,
+            "matched_category": "suitcase",
+            "area_fraction": 0.016474666666666665
+          }
+        ]
+      },
+      "382655": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "light-colored walls",
+            "best_match_iou": 0.5346,
+            "precision": 0.9906,
+            "recall": 0.5373,
+            "matched_category": "curtain",
+            "area_fraction": 0.07508979885057471
+          },
+          {
+            "mask_index": 1,
+            "region_label": "white ceiling",
+            "best_match_iou": 0.1334,
+            "precision": 0.8983,
+            "recall": 0.1354,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.033566810344827586
+          },
+          {
+            "mask_index": 2,
+            "region_label": "wooden floor",
+            "best_match_iou": 0.387,
+            "precision": 0.4238,
+            "recall": 0.8166,
+            "matched_category": "ceiling-merged",
+            "area_fraction": 0.09302262931034483
+          },
+          {
+            "mask_index": 3,
+            "region_label": "several long curtains",
+            "best_match_iou": 0.5365,
+            "precision": 0.9901,
+            "recall": 0.5394,
+            "matched_category": "curtain",
+            "area_fraction": 0.07542205459770115
+          },
+          {
+            "mask_index": 4,
+            "region_label": "windows and doorways",
+            "best_match_iou": 0.6525,
+            "precision": 0.6833,
+            "recall": 0.9355,
+            "matched_category": "person",
+            "area_fraction": 0.016289511494252874
+          },
+          {
+            "mask_index": 5,
+            "region_label": "mirror",
+            "best_match_iou": 0.3338,
+            "precision": 0.9787,
+            "recall": 0.3362,
+            "matched_category": "light",
+            "area_fraction": 0.006752873563218391
+          }
+        ]
+      },
+      "473896": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "the white clock has black hands and numbers",
+            "best_match_iou": 0.9251,
+            "precision": 0.9392,
+            "recall": 0.9841,
+            "matched_category": "clock",
+            "area_fraction": 0.008423594847775176
+          },
+          {
+            "mask_index": 1,
+            "region_label": "gray building",
+            "best_match_iou": 0.9192,
+            "precision": 0.9256,
+            "recall": 0.9925,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.47670521077283373
+          },
+          {
+            "mask_index": 2,
+            "region_label": "grayish-white sky",
+            "best_match_iou": 0.9303,
+            "precision": 0.9369,
+            "recall": 0.9925,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.4710004391100703
+          }
+        ]
+      },
+      "10909": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white, textured ceiling",
+            "best_match_iou": 0.0026,
+            "precision": 0.3439,
+            "recall": 0.0026,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.0011263020833333333
+          },
+          {
+            "mask_index": 1,
+            "region_label": "light orange wall",
+            "best_match_iou": 0.0553,
+            "precision": 0.2675,
+            "recall": 0.0652,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.035631510416666665
+          },
+          {
+            "mask_index": 2,
+            "region_label": "brown wooden cabinets",
+            "best_match_iou": 0.0066,
+            "precision": 0.4471,
+            "recall": 0.0067,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.002184244791666667
+          },
+          {
+            "mask_index": 3,
+            "region_label": "white countertop",
+            "best_match_iou": 0.1538,
+            "precision": 0.9983,
+            "recall": 0.1538,
+            "matched_category": "cabinet-merged",
+            "area_fraction": 0.054606119791666664
+          },
+          {
+            "mask_index": 4,
+            "region_label": "black microwave",
+            "best_match_iou": 0.9503,
+            "precision": 0.9867,
+            "recall": 0.9626,
+            "matched_category": "microwave",
+            "area_fraction": 0.0816796875
+          },
+          {
+            "mask_index": 5,
+            "region_label": "black gas stove and oven",
+            "best_match_iou": 0.1527,
+            "precision": 1.0,
+            "recall": 0.1527,
+            "matched_category": "cabinet-merged",
+            "area_fraction": 0.054114583333333334
+          }
+        ]
+      },
+      "548209": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "white snow",
+            "best_match_iou": 0.0033,
+            "precision": 1.0,
+            "recall": 0.0033,
+            "matched_category": "snow",
+            "area_fraction": 0.0026666666666666666
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dark wooden building",
+            "best_match_iou": 0.9468,
+            "precision": 0.992,
+            "recall": 0.954,
+            "matched_category": "snow",
+            "area_fraction": 0.787568
+          },
+          {
+            "mask_index": 2,
+            "region_label": "adult in a red jacket and black pants",
+            "best_match_iou": 0.9512,
+            "precision": 0.9982,
+            "recall": 0.9528,
+            "matched_category": "snow",
+            "area_fraction": 0.7817013333333334
+          },
+          {
+            "mask_index": 3,
+            "region_label": "small child wearing a blue jacket and a white helmet",
+            "best_match_iou": 0.2399,
+            "precision": 0.5435,
+            "recall": 0.3004,
+            "matched_category": "person",
+            "area_fraction": 0.025296
+          },
+          {
+            "mask_index": 4,
+            "region_label": "person in dark winter clothing",
+            "best_match_iou": 0.2399,
+            "precision": 0.5435,
+            "recall": 0.3004,
+            "matched_category": "person",
+            "area_fraction": 0.025296
+          },
+          {
+            "mask_index": 5,
+            "region_label": "multiple pairs of skis",
+            "best_match_iou": 0.9498,
+            "precision": 0.9987,
+            "recall": 0.951,
+            "matched_category": "snow",
+            "area_fraction": 0.7798133333333334
+          }
+        ]
+      },
+      "294002": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "dark blue sky",
+            "best_match_iou": 0.9012,
+            "precision": 0.9999,
+            "recall": 0.9013,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.17267903645833332
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dark gray buildings with white signs",
+            "best_match_iou": 0.9214,
+            "precision": 0.9999,
+            "recall": 0.9215,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.17656575520833334
+          },
+          {
+            "mask_index": 2,
+            "region_label": "gray road marked with white lines",
+            "best_match_iou": 0.3722,
+            "precision": 0.9786,
+            "recall": 0.3752,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.10031901041666667
+          },
+          {
+            "mask_index": 3,
+            "region_label": "tall green trees",
+            "best_match_iou": 0.6827,
+            "precision": 0.8659,
+            "recall": 0.7634,
+            "matched_category": "traffic light",
+            "area_fraction": 0.0002669270833333333
+          },
+          {
+            "mask_index": 4,
+            "region_label": "blue car",
+            "best_match_iou": 0.9376,
+            "precision": 0.9732,
+            "recall": 0.9624,
+            "matched_category": "car",
+            "area_fraction": 0.055947265625
+          },
+          {
+            "mask_index": 5,
+            "region_label": "one black traffic light",
+            "best_match_iou": 0.3725,
+            "precision": 0.9504,
+            "recall": 0.3799,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.104560546875
+          }
+        ]
+      },
+      "70380": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "light brown wooden dining table",
+            "best_match_iou": 0.2647,
+            "precision": 0.8533,
+            "recall": 0.2773,
+            "matched_category": "cake",
+            "area_fraction": 0.1376244145199063
+          },
+          {
+            "mask_index": 1,
+            "region_label": "round chocolate cake",
+            "best_match_iou": 0.682,
+            "precision": 0.9979,
+            "recall": 0.683,
+            "matched_category": "cake",
+            "area_fraction": 0.2898968091334895
+          },
+          {
+            "mask_index": 2,
+            "region_label": "dark metal knife",
+            "best_match_iou": 0.9095,
+            "precision": 0.9319,
+            "recall": 0.9743,
+            "matched_category": "cup",
+            "area_fraction": 0.047489754098360655
+          },
+          {
+            "mask_index": 3,
+            "region_label": "glass wine glasses",
+            "best_match_iou": 0.8885,
+            "precision": 0.9696,
+            "recall": 0.914,
+            "matched_category": "cake",
+            "area_fraction": 0.3992205796252927
+          },
+          {
+            "mask_index": 4,
+            "region_label": "cups",
+            "best_match_iou": 0.9117,
+            "precision": 0.9352,
+            "recall": 0.9732,
+            "matched_category": "cup",
+            "area_fraction": 0.04726653981264637
+          },
+          {
+            "mask_index": 5,
+            "region_label": "person",
+            "best_match_iou": 0.7135,
+            "precision": 0.953,
+            "recall": 0.7395,
+            "matched_category": "person",
+            "area_fraction": 0.058412617096018735
+          }
+        ]
+      },
+      "38027": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "paved sidewalk",
+            "best_match_iou": 0.9346,
+            "precision": 0.9947,
+            "recall": 0.9393,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.26109154929577466
+          },
+          {
+            "mask_index": 1,
+            "region_label": "dark dirt or mulch",
+            "best_match_iou": 0.9348,
+            "precision": 0.9953,
+            "recall": 0.9389,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.26082012910798125
+          },
+          {
+            "mask_index": 2,
+            "region_label": "sky",
+            "best_match_iou": 0.9257,
+            "precision": 0.9971,
+            "recall": 0.9282,
+            "matched_category": "wall-brick",
+            "area_fraction": 0.19052963615023474
+          },
+          {
+            "mask_index": 3,
+            "region_label": "dark-toned yamaha enduro 100 motorcycle",
+            "best_match_iou": 0.0351,
+            "precision": 1.0,
+            "recall": 0.0351,
+            "matched_category": "motorcycle",
+            "area_fraction": 0.005054284037558685
+          },
+          {
+            "mask_index": 4,
+            "region_label": "textured brick wall",
+            "best_match_iou": 0.0013,
+            "precision": 1.0,
+            "recall": 0.0013,
+            "matched_category": "motorcycle",
+            "area_fraction": 0.00018339201877934271
+          },
+          {
+            "mask_index": 5,
+            "region_label": "large multi-story buildings",
+            "best_match_iou": 0.9293,
+            "precision": 0.9956,
+            "recall": 0.9331,
+            "matched_category": "wall-brick",
+            "area_fraction": 0.1918280516431925
+          }
+        ]
+      },
+      "343734": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "lush green trees",
+            "best_match_iou": 0.131,
+            "precision": 0.3842,
+            "recall": 0.1658,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.10283734939759036
+          },
+          {
+            "mask_index": 1,
+            "region_label": "a dark brown short-sleeved shirt and blue pants, along with a black helmet adorned with a red strap",
+            "best_match_iou": 0.1505,
+            "precision": 0.4235,
+            "recall": 0.1893,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.10653012048192771
+          },
+          {
+            "mask_index": 2,
+            "region_label": "black deck and yellow wheels",
+            "best_match_iou": 0.7196,
+            "precision": 0.9672,
+            "recall": 0.7376,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.18177710843373493
+          },
+          {
+            "mask_index": 3,
+            "region_label": "gray-brown road",
+            "best_match_iou": 0.8374,
+            "precision": 0.9305,
+            "recall": 0.8933,
+            "matched_category": "person",
+            "area_fraction": 0.18040361445783132
+          }
+        ]
+      },
+      "211867": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "wide asphalt street",
+            "best_match_iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "matched_category": "no_match",
+            "area_fraction": 0.2460981973434535
+          },
+          {
+            "mask_index": 1,
+            "region_label": "tall, multi-story buildings",
+            "best_match_iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "matched_category": "no_match",
+            "area_fraction": 0.001239326375711575
+          },
+          {
+            "mask_index": 2,
+            "region_label": "a large vintage semi-truck with a long flatbed trailer",
+            "best_match_iou": 0.8109,
+            "precision": 0.9625,
+            "recall": 0.8373,
+            "matched_category": "truck",
+            "area_fraction": 0.12719995256166983
+          },
+          {
+            "mask_index": 3,
+            "region_label": "group of people, several of whom are in uniform",
+            "best_match_iou": 0.8477,
+            "precision": 0.8926,
+            "recall": 0.9439,
+            "matched_category": "person",
+            "area_fraction": 0.006321157495256167
+          },
+          {
+            "mask_index": 4,
+            "region_label": "various onlookers",
+            "best_match_iou": 0.7912,
+            "precision": 0.9707,
+            "recall": 0.8106,
+            "matched_category": "truck",
+            "area_fraction": 0.12210626185958254
+          },
+          {
+            "mask_index": 5,
+            "region_label": "dark-colored vintage car",
+            "best_match_iou": 0.8864,
+            "precision": 0.9456,
+            "recall": 0.934,
+            "matched_category": "person",
+            "area_fraction": 0.005233040796963947
+          }
+        ]
+      },
+      "425063": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "brown cardboard box",
+            "best_match_iou": 0.5552,
+            "precision": 0.9981,
+            "recall": 0.5558,
+            "matched_category": "paper-merged",
+            "area_fraction": 0.18228190104166667
+          },
+          {
+            "mask_index": 1,
+            "region_label": "white paper lining",
+            "best_match_iou": 0.5545,
+            "precision": 0.997,
+            "recall": 0.5555,
+            "matched_category": "paper-merged",
+            "area_fraction": 0.18237955729166666
+          }
+        ]
+      },
+      "530369": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "yellow woven placemat",
+            "best_match_iou": 0.0273,
+            "precision": 0.0284,
+            "recall": 0.4195,
+            "matched_category": "table-merged",
+            "area_fraction": 0.24415466666666666
+          },
+          {
+            "mask_index": 1,
+            "region_label": "large toasted sandwich",
+            "best_match_iou": 0.8223,
+            "precision": 0.9601,
+            "recall": 0.8514,
+            "matched_category": "sandwich",
+            "area_fraction": 0.14919466666666667
+          },
+          {
+            "mask_index": 2,
+            "region_label": "bright orange carrot sticks",
+            "best_match_iou": 0.833,
+            "precision": 0.8561,
+            "recall": 0.9686,
+            "matched_category": "person",
+            "area_fraction": 0.06388266666666667
+          },
+          {
+            "mask_index": 3,
+            "region_label": "segment of reddish-pink citrus fruit",
+            "best_match_iou": 0.0152,
+            "precision": 0.0162,
+            "recall": 0.2114,
+            "matched_category": "fruit",
+            "area_fraction": 0.134656
+          },
+          {
+            "mask_index": 4,
+            "region_label": "crisp green lettuce leaves",
+            "best_match_iou": 0.927,
+            "precision": 0.9319,
+            "recall": 0.9943,
+            "matched_category": "orange",
+            "area_fraction": 0.16818133333333332
+          },
+          {
+            "mask_index": 5,
+            "region_label": "person wearing a green shirt",
+            "best_match_iou": 0.8353,
+            "precision": 0.859,
+            "recall": 0.968,
+            "matched_category": "person",
+            "area_fraction": 0.06362133333333334
+          }
+        ]
+      },
+      "155904": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "wooden dining table",
+            "best_match_iou": 0.4788,
+            "precision": 0.9823,
+            "recall": 0.483,
+            "matched_category": "bowl",
+            "area_fraction": 0.07671252927400468
+          },
+          {
+            "mask_index": 1,
+            "region_label": "large white bowl with a yellow base",
+            "best_match_iou": 0.1331,
+            "precision": 0.9918,
+            "recall": 0.1333,
+            "matched_category": "bowl",
+            "area_fraction": 0.020960187353629978
+          },
+          {
+            "mask_index": 2,
+            "region_label": "small white bowl",
+            "best_match_iou": 0.1331,
+            "precision": 0.9918,
+            "recall": 0.1333,
+            "matched_category": "bowl",
+            "area_fraction": 0.020960187353629978
+          },
+          {
+            "mask_index": 3,
+            "region_label": "tiny white bowl",
+            "best_match_iou": 0.1331,
+            "precision": 0.9918,
+            "recall": 0.1333,
+            "matched_category": "bowl",
+            "area_fraction": 0.020960187353629978
+          },
+          {
+            "mask_index": 4,
+            "region_label": "yellow citrus fruit half",
+            "best_match_iou": 0.4786,
+            "precision": 0.9822,
+            "recall": 0.4828,
+            "matched_category": "bowl",
+            "area_fraction": 0.07669057377049181
+          },
+          {
+            "mask_index": 5,
+            "region_label": "light green bowl",
+            "best_match_iou": 0.1331,
+            "precision": 0.9918,
+            "recall": 0.1333,
+            "matched_category": "bowl",
+            "area_fraction": 0.020960187353629978
+          }
+        ]
+      },
+      "406376": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "off-white building",
+            "best_match_iou": 0.0139,
+            "precision": 1.0,
+            "recall": 0.0139,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.0033331322393822392
+          },
+          {
+            "mask_index": 1,
+            "region_label": "yellow-green grass",
+            "best_match_iou": 0.0104,
+            "precision": 0.9291,
+            "recall": 0.0104,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.0026785714285714286
+          },
+          {
+            "mask_index": 2,
+            "region_label": "lush trees with green leaves and gray-brown trunks",
+            "best_match_iou": 0.5492,
+            "precision": 0.8288,
+            "recall": 0.6195,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.05774915540540541
+          }
+        ]
+      },
+      "23275": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "dark mesh tennis net with a white top edge",
+            "best_match_iou": 0.0935,
+            "precision": 1.0,
+            "recall": 0.0935,
+            "matched_category": "fence-merged",
+            "area_fraction": 0.03653169014084507
+          },
+          {
+            "mask_index": 1,
+            "region_label": "woman dressed in a black long-sleeved shirt and black athletic pants",
+            "best_match_iou": 0.7468,
+            "precision": 0.9933,
+            "recall": 0.7506,
+            "matched_category": "person",
+            "area_fraction": 0.059914172535211266
+          },
+          {
+            "mask_index": 2,
+            "region_label": "small yellow-green tennis ball",
+            "best_match_iou": 0.3535,
+            "precision": 0.6863,
+            "recall": 0.4217,
+            "matched_category": "sports ball",
+            "area_fraction": 0.0007482394366197183
+          },
+          {
+            "mask_index": 3,
+            "region_label": "tennis racket with a silver and black frame",
+            "best_match_iou": 0.7761,
+            "precision": 0.9804,
+            "recall": 0.7883,
+            "matched_category": "tennis racket",
+            "area_fraction": 0.002061326291079812
+          },
+          {
+            "mask_index": 4,
+            "region_label": "long chain-link fence",
+            "best_match_iou": 0.7432,
+            "precision": 0.9941,
+            "recall": 0.7465,
+            "matched_category": "person",
+            "area_fraction": 0.059543720657277
+          },
+          {
+            "mask_index": 5,
+            "region_label": "two parked cars, one dark gray and one teal,",
+            "best_match_iou": 0.7764,
+            "precision": 0.937,
+            "recall": 0.8192,
+            "matched_category": "car",
+            "area_fraction": 0.012573356807511737
+          }
+        ]
+      },
+      "173198": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "gray gravel surface",
+            "best_match_iou": 0.9348,
+            "precision": 0.9953,
+            "recall": 0.9389,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.20124348958333332
+          },
+          {
+            "mask_index": 1,
+            "region_label": "bright sky with light clouds",
+            "best_match_iou": 0.9214,
+            "precision": 0.9655,
+            "recall": 0.9528,
+            "matched_category": "truck",
+            "area_fraction": 0.41233723958333335
+          },
+          {
+            "mask_index": 2,
+            "region_label": "light-colored house",
+            "best_match_iou": 0.01,
+            "precision": 0.8043,
+            "recall": 0.01,
+            "matched_category": "truck",
+            "area_fraction": 0.0051888020833333335
+          },
+          {
+            "mask_index": 3,
+            "region_label": "green trees",
+            "best_match_iou": 0.0419,
+            "precision": 0.9487,
+            "recall": 0.042,
+            "matched_category": "truck",
+            "area_fraction": 0.018483072916666666
+          },
+          {
+            "mask_index": 4,
+            "region_label": "small patches of grass",
+            "best_match_iou": 0.9169,
+            "precision": 0.968,
+            "recall": 0.9456,
+            "matched_category": "truck",
+            "area_fraction": 0.40817708333333336
+          },
+          {
+            "mask_index": 5,
+            "region_label": "large red fire truck",
+            "best_match_iou": 0.9473,
+            "precision": 0.965,
+            "recall": 0.9811,
+            "matched_category": "truck",
+            "area_fraction": 0.42480143229166667
+          }
+        ]
+      },
+      "425484": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "sky",
+            "best_match_iou": 0.9288,
+            "precision": 0.9876,
+            "recall": 0.9397,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.421535751565762
+          },
+          {
+            "mask_index": 1,
+            "region_label": "sand",
+            "best_match_iou": 0.9352,
+            "precision": 0.9848,
+            "recall": 0.9489,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.4268854384133612
+          },
+          {
+            "mask_index": 2,
+            "region_label": "water",
+            "best_match_iou": 0.9296,
+            "precision": 0.9875,
+            "recall": 0.9407,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.4220185281837161
+          },
+          {
+            "mask_index": 3,
+            "region_label": "kitesurfing kites",
+            "best_match_iou": 0.9143,
+            "precision": 0.9741,
+            "recall": 0.9371,
+            "matched_category": "kite",
+            "area_fraction": 0.009684890396659708
+          },
+          {
+            "mask_index": 4,
+            "region_label": "trees",
+            "best_match_iou": 0.0128,
+            "precision": 0.2198,
+            "recall": 0.0134,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.0019735125260960332
+          },
+          {
+            "mask_index": 5,
+            "region_label": "fence",
+            "best_match_iou": 0.5224,
+            "precision": 0.7955,
+            "recall": 0.6034,
+            "matched_category": "car",
+            "area_fraction": 0.002870563674321503
+          }
+        ]
+      },
+      "79660": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "clear sky",
+            "best_match_iou": 0.8735,
+            "precision": 0.9993,
+            "recall": 0.874,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.32025916164658635
+          },
+          {
+            "mask_index": 1,
+            "region_label": "leafy trees",
+            "best_match_iou": 0.8675,
+            "precision": 0.9993,
+            "recall": 0.868,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.3180377761044177
+          },
+          {
+            "mask_index": 2,
+            "region_label": "distant buildings",
+            "best_match_iou": 0.8641,
+            "precision": 0.9994,
+            "recall": 0.8645,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.3167200050200803
+          },
+          {
+            "mask_index": 3,
+            "region_label": "large tent",
+            "best_match_iou": 0.6262,
+            "precision": 0.8994,
+            "recall": 0.6733,
+            "matched_category": "tent",
+            "area_fraction": 0.010664533132530121
+          },
+          {
+            "mask_index": 4,
+            "region_label": "horse",
+            "best_match_iou": 0.8561,
+            "precision": 0.9731,
+            "recall": 0.8769,
+            "matched_category": "elephant",
+            "area_fraction": 0.05585153112449799
+          },
+          {
+            "mask_index": 5,
+            "region_label": "several large elephants",
+            "best_match_iou": 0.852,
+            "precision": 0.9722,
+            "recall": 0.8733,
+            "matched_category": "elephant",
+            "area_fraction": 0.05567269076305221
+          }
+        ]
+      },
+      "242163": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "vast, cloudy sky",
+            "best_match_iou": 0.9216,
+            "precision": 0.9983,
+            "recall": 0.923,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.3436640625
+          },
+          {
+            "mask_index": 1,
+            "region_label": "large green grassy slope",
+            "best_match_iou": 0.9189,
+            "precision": 0.9991,
+            "recall": 0.9197,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.3421484375
+          },
+          {
+            "mask_index": 2,
+            "region_label": "light gray paved walkway",
+            "best_match_iou": 0.9169,
+            "precision": 0.9995,
+            "recall": 0.9173,
+            "matched_category": "sky-other-merged",
+            "area_fraction": 0.34114453125
+          },
+          {
+            "mask_index": 3,
+            "region_label": "several gray benches",
+            "best_match_iou": 0.8327,
+            "precision": 0.8642,
+            "recall": 0.9582,
+            "matched_category": "bench",
+            "area_fraction": 0.00310546875
+          },
+          {
+            "mask_index": 4,
+            "region_label": "building with a dark brown tiled roof and green-framed glass windows",
+            "best_match_iou": 0.0395,
+            "precision": 0.9789,
+            "recall": 0.0395,
+            "matched_category": "building-other-merged",
+            "area_fraction": 0.0005546875
+          },
+          {
+            "mask_index": 5,
+            "region_label": "lush green trees and leafy shrubs",
+            "best_match_iou": 0.2155,
+            "precision": 0.9069,
+            "recall": 0.2203,
+            "matched_category": "tree-merged",
+            "area_fraction": 0.0420859375
+          }
+        ]
+      },
+      "283408": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "wood-paneled wall",
+            "best_match_iou": 0.1568,
+            "precision": 0.9402,
+            "recall": 0.1583,
+            "matched_category": "wall-wood",
+            "area_fraction": 0.041748046875
+          },
+          {
+            "mask_index": 1,
+            "region_label": "man wearing glasses, a brown jacket, and a cap",
+            "best_match_iou": 0.1968,
+            "precision": 0.9975,
+            "recall": 0.1969,
+            "matched_category": "person",
+            "area_fraction": 0.060576171875
+          },
+          {
+            "mask_index": 2,
+            "region_label": "metallic dining table",
+            "best_match_iou": 0.8364,
+            "precision": 0.8477,
+            "recall": 0.9843,
+            "matched_category": "dining table",
+            "area_fraction": 0.10075846354166666
+          },
+          {
+            "mask_index": 3,
+            "region_label": "small, tan fluffy dog",
+            "best_match_iou": 0.2061,
+            "precision": 0.9975,
+            "recall": 0.2062,
+            "matched_category": "person",
+            "area_fraction": 0.06345052083333333
+          },
+          {
+            "mask_index": 4,
+            "region_label": "silver metal chairs",
+            "best_match_iou": 0.6384,
+            "precision": 0.9186,
+            "recall": 0.6766,
+            "matched_category": "chair",
+            "area_fraction": 0.018759765625
+          },
+          {
+            "mask_index": 5,
+            "region_label": "dark patterned floor",
+            "best_match_iou": 0.6311,
+            "precision": 0.9849,
+            "recall": 0.6373,
+            "matched_category": "wall-wood",
+            "area_fraction": 0.160400390625
+          }
+        ]
+      },
+      "54337": {
+        "regions": [
+          {
+            "mask_index": 0,
+            "region_label": "light-colored wall",
+            "best_match_iou": 0.0375,
+            "precision": 0.9535,
+            "recall": 0.0376,
+            "matched_category": "cardboard",
+            "area_fraction": 0.0037825520833333335
+          },
+          {
+            "mask_index": 1,
+            "region_label": "wooden door",
+            "best_match_iou": 0.1325,
+            "precision": 0.8381,
+            "recall": 0.136,
+            "matched_category": "wall-other-merged",
+            "area_fraction": 0.009371744791666666
+          },
+          {
+            "mask_index": 2,
+            "region_label": "metal storage shelves",
+            "best_match_iou": 0.0358,
+            "precision": 0.8899,
+            "recall": 0.0359,
+            "matched_category": "cardboard",
+            "area_fraction": 0.0038736979166666668
+          },
+          {
+            "mask_index": 3,
+            "region_label": "cardboard boxes",
+            "best_match_iou": 0.9235,
+            "precision": 0.9755,
+            "recall": 0.9454,
+            "matched_category": "person",
+            "area_fraction": 0.10208984375
+          },
+          {
+            "mask_index": 4,
+            "region_label": "white dining table",
+            "best_match_iou": 0.8109,
+            "precision": 0.8282,
+            "recall": 0.9749,
+            "matched_category": "bottle",
+            "area_fraction": 0.0050390625
+          },
+          {
+            "mask_index": 5,
+            "region_label": "gray floor",
+            "best_match_iou": 0.9465,
+            "precision": 0.9672,
+            "recall": 0.9779,
+            "matched_category": "person",
+            "area_fraction": 0.0888671875
+          }
+        ]
+      }
+    }
+  }
+}
