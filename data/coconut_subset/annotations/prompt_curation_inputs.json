@@ -1,0 +1,1726 @@
+[
+  {
+    "image_id": "473896",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "the white clock has black hands and numbers",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0040.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "gray building",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0035.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "grayish-white sky",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0041.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "21215",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "blue sky",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0036.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "person wearing a pinkish-orange top",
+        "style_name": "cubism",
+        "style_reference": "../data/style_references/cubism/image_0025.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "54337",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "light-colored wall",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0004.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "wooden door",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0006.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "metal storage shelves",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0000.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "cardboard boxes",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0028.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "white dining table",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0018.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "gray floor",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0017.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "374734",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "grayish-white snowfield",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0028.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "a person wearing a black jacket, blue jeans, and black-and-green shoes",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0023.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "23275",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "dark mesh tennis net with a white top edge",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0043.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "woman dressed in a black long-sleeved shirt and black athletic pants",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0032.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "small yellow-green tennis ball",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0031.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "tennis racket with a silver and black frame",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0001.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "long chain-link fence",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0030.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "2752",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "gray carpet",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0008.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "red wall",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0044.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "a woman wearing black clothing",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0002.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "a woman wearing dark red clothing",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0019.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "deep purple sofa",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0007.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "brown chair",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0045.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "548209",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "white snow",
+        "style_name": "baroque",
+        "style_reference": "../data/style_references/baroque/image_0030.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "dark wooden building",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0004.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "adult in a red jacket and black pants",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0014.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "70380",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "light brown wooden dining table",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0010.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "round chocolate cake",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0030.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "dark metal knife",
+        "style_name": "baroque",
+        "style_reference": "../data/style_references/baroque/image_0012.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "glass wine glasses",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0020.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "cups",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0003.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "person",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0022.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "55199",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "large expanse of dry, patchy grass",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0026.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "wide, light-colored corrugated metal roof",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0010.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "dark, vertical wooden support posts",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0020.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "group of sturdy work horses",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0021.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "person wearing a hat",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0038.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "wooden fence or interior partition",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0024.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "294002",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "dark blue sky",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0030.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "dark gray buildings with white signs",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0023.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "gray road marked with white lines",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0015.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "tall green trees",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0038.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "blue car",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0007.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "one black traffic light",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0048.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "208220",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "clear blue sky",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0009.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "green trees",
+        "style_name": "baroque",
+        "style_reference": "../data/style_references/baroque/image_0003.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "tan building",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0047.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "grey asphalt ground",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0021.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "green grass",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0005.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "343734",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "lush green trees",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0009.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "a dark brown short-sleeved shirt and blue pants, along with a black helmet adorned with a red strap",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0017.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "black deck and yellow wheels",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0004.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "gray-brown road",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0030.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "353653",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "blue playing field",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0028.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "black tennis net",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0018.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "dark green mesh fence",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0049.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "green grass",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0033.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "lush green trees",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0036.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "man on the far left wearing a dark blue tank top, black shorts, and sunglasses",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0023.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "406376",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "off-white building",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0011.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "yellow-green grass",
+        "style_name": "abstract-expressionism",
+        "style_reference": "../data/style_references/abstract-expressionism/image_0029.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "lush trees with green leaves and gray-brown trunks",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0048.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "442861",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "clear blue sky",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0005.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "vibrant green grass playing field",
+        "style_name": "baroque",
+        "style_reference": "../data/style_references/baroque/image_0008.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "dark green tennis net and perimeter fencing",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0012.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "man wearing a white polo shirt and white shorts",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0032.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "silver-rimmed tennis racket",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0049.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "38027",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "paved sidewalk",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0008.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "dark dirt or mulch",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0035.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "sky",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0015.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "dark-toned yamaha enduro 100 motorcycle",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0035.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "textured brick wall",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0021.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "large multi-story buildings",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0035.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "530369",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "yellow woven placemat",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0020.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "large toasted sandwich",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0007.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "bright orange carrot sticks",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0005.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "segment of reddish-pink citrus fruit",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0019.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "crisp green lettuce leaves",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0014.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "person wearing a green shirt",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0042.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "425063",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "brown cardboard box",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0035.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "white paper lining",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0004.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "283408",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "wood-paneled wall",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0044.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "man wearing glasses, a brown jacket, and a cap",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0043.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "metallic dining table",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0023.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "small, tan fluffy dog",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0020.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "silver metal chairs",
+        "style_name": "abstract-expressionism",
+        "style_reference": "../data/style_references/abstract-expressionism/image_0045.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "dark patterned floor",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0030.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "448648",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "gray asphalt road",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0049.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "light blue sky",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0005.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "multi-story buildings",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0044.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "green leafy trees",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0036.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "382655",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "light-colored walls",
+        "style_name": "cubism",
+        "style_reference": "../data/style_references/cubism/image_0013.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "white ceiling",
+        "style_name": "baroque",
+        "style_reference": "../data/style_references/baroque/image_0048.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "wooden floor",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0033.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "several long curtains",
+        "style_name": "abstract-expressionism",
+        "style_reference": "../data/style_references/abstract-expressionism/image_0034.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "windows and doorways",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0026.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "mirror",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0038.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "242615",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "smooth tan walls",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0034.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "textured beige ceiling",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0016.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "two beds",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0039.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "black suitcase",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0049.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "dark wood bedside cabinet",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0005.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "lamp with a white lampshade and a textured metallic base",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0018.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "211867",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "wide asphalt street",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0008.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "tall, multi-story buildings",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0046.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "a large vintage semi-truck with a long flatbed trailer",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0029.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "group of people, several of whom are in uniform",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0012.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "various onlookers",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0000.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "394974",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "light brown soil",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0039.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "grayish-black rocks",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0028.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "some dry, brown branches",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0023.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "10909",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "white, textured ceiling",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0009.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "light orange wall",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0022.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "brown wooden cabinets",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0025.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "white countertop",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0019.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "black microwave",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0039.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "black gas stove and oven",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0049.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "362152",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "clear blue sky",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0015.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "expansive, flat-topped mountains",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0001.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "multi-story buildings and urban structures",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0008.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "545334",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "green grass playing field",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0002.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "reddish-brown dirt",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0045.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "a baseball pitcher",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0021.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "another baseball player",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0018.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "white sports ball",
+        "style_name": "cubism",
+        "style_reference": "../data/style_references/cubism/image_0016.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "565258",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "brown wooden floor featuring a parquet-style pattern",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0045.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "black and white cat",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0001.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "black fabric backpack",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0004.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "65705",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "dark sky",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0033.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "dim silhouettes of buildings",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0026.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "dark asphalt road",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0039.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "low dark fence",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0035.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "119384",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "the fire hydrant is red, with light brown stains on it",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0039.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "gray car",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0044.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "person wearing white pants",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0006.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "green grass",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0015.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "a white sky",
+        "style_name": "cubism",
+        "style_reference": "../data/style_references/cubism/image_0032.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "leaves from green trees",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0010.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "173198",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "gray gravel surface",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0040.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "bright sky with light clouds",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0041.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "light-colored house",
+        "style_name": "abstract-expressionism",
+        "style_reference": "../data/style_references/abstract-expressionism/image_0017.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "green trees",
+        "style_name": "cubism",
+        "style_reference": "../data/style_references/cubism/image_0031.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "small patches of grass",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0008.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "242163",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "vast, cloudy sky",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0012.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "large green grassy slope",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0022.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "light gray paved walkway",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0001.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "several gray benches",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0016.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "building with a dark brown tiled roof and green-framed glass windows",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0041.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "487357",
+    "coconut_caption": "",
+    "split": "train",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "white wall",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0048.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "blue curtains",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0032.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "477029",
+    "coconut_caption": "",
+    "split": "val",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "off-white walls equipped with various pipes, conduits, and safety markings",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0032.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "complex ceiling structure consisting of metal beams and overhead lighting components",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0037.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "small rectangular window",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0045.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "dark doorway",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0006.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "bright yellow vintage military aircraft, featuring a prominent black propeller, a star-and-bar insignia, and the numerical identifier '186' on its fuselage",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0002.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "265596",
+    "coconut_caption": "",
+    "split": "val",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "brown dining table",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0046.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "white cup with brown, brown, and blue patterns",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0006.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "302885",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "white ceramic plate",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0030.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "dark-toned, patterned dining table",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0033.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "triangular slices of watermelon",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0011.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "yellow-skinned pear slices",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0030.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "crisp green apple slices",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0007.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "thick, half-moon orange slices",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0022.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "241934",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "white cardboard box",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0032.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "a colorful assortment of donuts",
+        "style_name": "cubism",
+        "style_reference": "../data/style_references/cubism/image_0011.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "a donut heavily dusted with white powdered sugar",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0027.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "a vibrant pink-glazed donut featuring a white swirl pattern",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0008.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "a light-brown donut with a speckled, grainy texture",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0024.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "a donut topped with green icing and sliced almonds",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0042.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "420210",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "yellow blanket",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0010.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "a light orange cat",
+        "style_name": "abstract-expressionism",
+        "style_reference": "../data/style_references/abstract-expressionism/image_0027.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "a green teddy bear",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0044.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "539632",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "blue and white walls and a ceiling",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0011.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "two people",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0046.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "white paper with blue patterns",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0038.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "large, golden-brown breaded food item",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0039.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "green broccoli florets",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0030.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "bright orange carrot sticks",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0008.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "12108",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "bright, hazy sky",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0017.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "wide asphalt road",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0047.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "textured grass",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0031.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "light-colored concrete pavement",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0046.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "young child",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0002.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "large, dark fire hydrant",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0001.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "79660",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "clear sky",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0021.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "leafy trees",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0028.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "distant buildings",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0034.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "252186",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "silver mirror",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0049.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "gray porcelain wall",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0002.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "black suitcase",
+        "style_name": "baroque",
+        "style_reference": "../data/style_references/baroque/image_0042.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "193465",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "the laptop is entirely gray in color",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0039.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "a gray mouse with blue parts on its surface",
+        "style_name": "baroque",
+        "style_reference": "../data/style_references/baroque/image_0024.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "a gray stone",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0031.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "175831",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "pale, overcast sky",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0024.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "expansive tan building",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0033.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "grey-tiled roof",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0017.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "red flag with a yellow star",
+        "style_name": "color-field-painting",
+        "style_reference": "../data/style_references/color-field-painting/image_0036.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "stairs",
+        "style_name": "pointillism",
+        "style_reference": "../data/style_references/pointillism/image_0019.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "green trees",
+        "style_name": "ukiyo-e",
+        "style_reference": "../data/style_references/ukiyo-e/image_0012.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "425484",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "sky",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0049.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "sand",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0040.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "water",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0025.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "kitesurfing kites",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0009.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "trees",
+        "style_name": "symbolism",
+        "style_reference": "../data/style_references/symbolism/image_0021.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "216036",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "white sky",
+        "style_name": "expressionism",
+        "style_reference": "../data/style_references/expressionism/image_0047.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "one yellow airplane",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0041.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "155904",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "wooden dining table",
+        "style_name": "romanticism",
+        "style_reference": "../data/style_references/romanticism/image_0008.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "large white bowl with a yellow base",
+        "style_name": "abstract-expressionism",
+        "style_reference": "../data/style_references/abstract-expressionism/image_0032.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "small white bowl",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0045.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "tiny white bowl",
+        "style_name": "impressionism",
+        "style_reference": "../data/style_references/impressionism/image_0002.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "yellow citrus fruit half",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0030.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "light green bowl",
+        "style_name": "fauvism",
+        "style_reference": "../data/style_references/fauvism/image_0035.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "301684",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "blue sky",
+        "style_name": "post-impressionism",
+        "style_reference": "../data/style_references/post-impressionism/image_0019.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "brown walls",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0028.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "light brown fence",
+        "style_name": "art-deco",
+        "style_reference": "../data/style_references/art-deco/image_0047.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "green trees",
+        "style_name": "watercolor",
+        "style_reference": "../data/style_references/watercolor/image_0010.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "brown wooden door",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0048.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "51342",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "dark brown wall",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0022.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "barred window",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0027.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "wet grey pavement",
+        "style_name": "pop-art",
+        "style_reference": "../data/style_references/pop-art/image_0022.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "person",
+        "style_name": "minimalism",
+        "style_reference": "../data/style_references/minimalism/image_0010.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "black umbrella",
+        "style_name": "art-nouveau",
+        "style_reference": "../data/style_references/art-nouveau/image_0011.jpg"
+      }
+    ]
+  },
+  {
+    "image_id": "316583",
+    "coconut_caption": "",
+    "split": "test",
+    "regions": [
+      {
+        "mask_index": 0,
+        "region_label": "indoor floor",
+        "style_name": "renaissance",
+        "style_reference": "../data/style_references/renaissance/image_0026.jpg"
+      },
+      {
+        "mask_index": 1,
+        "region_label": "wall",
+        "style_name": "abstract-expressionism",
+        "style_reference": "../data/style_references/abstract-expressionism/image_0043.jpg"
+      },
+      {
+        "mask_index": 2,
+        "region_label": "ceiling",
+        "style_name": "cubism",
+        "style_reference": "../data/style_references/cubism/image_0028.jpg"
+      },
+      {
+        "mask_index": 3,
+        "region_label": "window",
+        "style_name": "neoclassicism",
+        "style_reference": "../data/style_references/neoclassicism/image_0043.jpg"
+      },
+      {
+        "mask_index": 4,
+        "region_label": "overhead light",
+        "style_name": "baroque",
+        "style_reference": "../data/style_references/baroque/image_0024.jpg"
+      },
+      {
+        "mask_index": 5,
+        "region_label": "hands of a person",
+        "style_name": "realism",
+        "style_reference": "../data/style_references/realism/image_0034.jpg"
+      }
+    ]
+  }
+]
