@@ -1,28 +1,123 @@
 # Prompt Curation for Regional Style Transfer
+**University of Bath MSc Data Science 2026**
 
-## Dissertation contribution
-Attention-guided prompt curation and fine-tuning for instruction-following LLMs
-in regional style transfer. Comparative study across Mistral-7B, Phi-3-mini, Gemma-2B.
 
-## Structure
-scripts/          — all Python scripts (attention extraction, curation, fine-tuning)
-attention_maps/   — extracted attention scores per region per template per model
-prompts/          — 5 prompt templates (A-E) and generated instructions
-results/          — evaluation scores, comparison tables
-models/           — fine-tuned LoRA adapters (not in git — too large)
+---
+
+## Environment
+
+```bash
+source ~/benchmark_env/bin/activate
+export CUDA_VISIBLE_DEVICES=1
+export HF_HOME=/mnt/fast1/yvs23/hf_cache
+export HF_HUB_DISABLE_XET=1
+export TMPDIR=/mnt/fast1/yvs23/tmp
+```
+
+---
 
 ## Pipeline
-Step 1  extract_attention.py     — baseline attention extraction on Mistral-7B
-Step 2  visualise_attention.py   — heatmap visualisation per token
-Step 3  curate_prompts.py        — compare 5 templates, score attention alignment
-Step 4  finetune_lora.py         — LoRA fine-tune on best template
-Step 5  compare_models.py        — cross-model comparison (Mistral, Phi-3, Gemma)
 
-## Models
-Mistral-7B-Instruct-v0.2    — 4-bit quantisation via bitsandbytes
-Phi-3-mini-4k-instruct      — float16, fits in 8 GB comfortably
-Gemma-2B-it                 — float16, smallest baseline
+### Step 1 — Generate instructions + extract attention
+```bash
+cd ~/Benchmark_dataset/prompt_curation/scripts
 
-## Data inputs (from existing benchmark pipeline)
-../data/coconut_subset/annotations/subset_auto_final_gguf.json
-../data/style_references/
+python3 step1_generate_and_attend.py \
+    --json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output ../attention_maps/baseline_mistral.json \
+    --max_regions 0
+```
+
+### Step 1b — Visualise with COCONut masks
+```bash
+python3 step1b_visualise_attention.py \
+    --attention_json ../attention_maps/baseline_mistral.json \
+    --ann_json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --pan_json /mnt/fast1/yvs23/annotations/panoptic_train2017.json \
+    --pan_dir  /mnt/fast1/yvs23/annotations/panoptic_train2017 \
+    --img_dir  ../../data/coconut_subset/images \
+    --output   ../attention_maps/visualisations/ \
+    --n 10
+```
+
+### Step 1c — Matplotlib heatmap figures
+```bash
+python3 step1c_heatmap_figure.py \
+    --attention_json ../attention_maps/baseline_mistral.json \
+    --output ../attention_maps/figures/
+```
+
+Copy figures to laptop:
+```powershell
+scp -r yvs23@ogg.cs.bath.ac.uk:/mnt/vurm/homes/homes/yvs23/Benchmark_dataset/prompt_curation/attention_maps/ "C:\Users\Yuvan Velkumar\Downloads\attention_maps"
+```
+
+### Step 2 — Prompt curation (NEXT)
+```bash
+python3 step2_curate_prompts.py \
+    --json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output ../results/template_comparison_mistral.json \
+    --max_regions 0
+```
+
+### Step 3 — LoRA fine-tuning (PENDING)
+```bash
+python3 step3_finetune_lora.py \
+    --base_model mistralai/Mistral-7B-Instruct-v0.2 \
+    --template B \
+    --output ../models/mistral_lora/
+```
+
+### Step 4 — Model comparison (PENDING)
+```bash
+python3 step4_compare_models.py \
+    --models mistral phi3 gemma \
+    --json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output ../results/model_comparison.json
+```
+
+### Step 5 — Evaluation (PENDING)
+```bash
+python3 step5_evaluate.py \
+    --results_dir ../results/ \
+    --output ../results/final_evaluation.json
+```
+
+---
+
+## Troubleshooting
+
+**Disk quota exceeded on model download:**
+HF_HOME must point to fast1, not home.
+```bash
+export HF_HOME=/mnt/fast1/yvs23/hf_cache
+export HF_HUB_DISABLE_XET=1
+export TMPDIR=/mnt/fast1/yvs23/tmp
+```
+
+**Label attention mass showing 0.000:**
+Attention shape during generation is `(layers, heads, seq, seq)` — full causal matrix.
+Correct extraction:
+```python
+att = torch.stack([l[0] for l in output.attentions[0]]).mean(dim=(0,1))
+weights = att[-1, :input_len]
+```
+
+**Panoptic PNGs not found:**
+Re-download to fast1:
+```bash
+cd /mnt/fast1/yvs23
+curl -L -o pan.zip http://images.cocodataset.org/annotations/panoptic_annotations_trainval2017.zip
+unzip -q pan.zip && cd annotations && unzip -q panoptic_train2017.zip
+```
+
+**Git push rejected:**
+```bash
+git pull origin main --no-rebase && git push
+```
+
+**CUDA out of memory:**
+Mistral-7B in 4-bit needs ~5 GB VRAM. Check no other process is using GPU:
+```bash
+nvidia-smi
+```
