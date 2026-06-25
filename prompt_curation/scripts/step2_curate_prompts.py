@@ -109,6 +109,16 @@ def template_H(label, style, caption):
         f"Scene context: {caption} [/INST]"
     )
 
+def template_I(label, style, caption):
+    return (
+        f"[INST] Image scene: {caption}\n"
+        f"Write a single image editing instruction that transfers {style} style "
+        f"specifically to the {label} in the scene, "
+        f"leaving all other regions completely unchanged.\n"
+        f"The instruction must describe what to do to the {label} only, "
+        f"using visual and stylistic language. [/INST]"
+    )
+
 TEMPLATES = {
     "A": template_A,
     "B": template_B,
@@ -118,6 +128,7 @@ TEMPLATES = {
     "F": template_F,
     "G": template_G,
     "H": template_H,
+    "I": template_I,
 }
 
 
