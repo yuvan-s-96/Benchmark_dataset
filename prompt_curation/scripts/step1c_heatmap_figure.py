@@ -93,7 +93,7 @@ def plot_comparison_grid(regions, out_path):
 
     ax.set_title(
         "Attention distribution by token group — Mistral-7B baseline (template A)\n"
-        "5 lowest and 5 highest label-attention regions",
+        "10 sampled regions from 979-region dataset",
         fontsize=11, pad=28
     )
 

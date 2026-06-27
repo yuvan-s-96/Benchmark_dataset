@@ -190,7 +190,7 @@ def plot_clip_comparison(clip_summary, att_summary, out_path):
     ax1.set_xticklabels(labels, rotation=20, ha="right", fontsize=9)
     ax1.set_title(
         "CLIP alignment vs label attention mass per template\n"
-        "Mistral-7B | 229 regions | green=E winner on attention | blue=baseline A",
+        "Mistral-7B | 979 regions | green=E winner on CLIP | blue=baseline A",
         fontsize=11
     )
 

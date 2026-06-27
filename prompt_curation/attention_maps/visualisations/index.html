@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'>
+<title>Attention visualisations — Mistral-7B baseline</title>
+<style>
+  body{font-family:sans-serif;max-width:900px;margin:40px auto;padding:0 20px}
+  h1{color:#2d3748}
+  table{border-collapse:collapse;width:100%}
+  th{background:#edf2f7;padding:8px;text-align:left}
+  td{padding:8px;border-bottom:1px solid #e2e8f0}
+  .LOW{color:#e53e3e;font-weight:700}
+  .HIGH{color:#38a169;font-weight:700}
+  .stat{display:inline-block;background:#edf2f7;border-radius:6px;
+         padding:8px 16px;margin:4px;font-size:14px}
+</style></head><body>
+<h1>Attention visualisations — Mistral-7B baseline (template A)</h1>
+<p>
+  <span class='stat'>Mean label mass: <b>1.140%</b></span>
+  <span class='stat'>Median: <b>1.080%</b></span>
+  <span class='stat'>Min: <b>0.210%</b></span>
+  <span class='stat'>Max: <b>3.600%</b></span>
+</p>
+<p style='font-size:14px;color:#555'>
+  Showing 5 lowest and 5 highest attention regions.
+  Each view shows the COCO image with COCONut mask overlay + token attention chart.
+</p>
+<table>
+  <tr><th>Type</th><th>Region label</th><th>Style</th>
+      <th>Label mass</th><th>View</th></tr>
+  <tr><td class='LOW'>LOW</td><td>sand</td><td>expressionism</td><td>0.207%</td><td><a href='region_00_img425484_mask1.html'>view</a></td></tr>
+<tr><td class='LOW'>LOW</td><td>water</td><td>impressionism</td><td>0.230%</td><td><a href='region_01_img425484_mask2.html'>view</a></td></tr>
+<tr><td class='LOW'>LOW</td><td>wall</td><td>abstract-expressionism</td><td>0.346%</td><td><a href='region_02_img316583_mask1.html'>view</a></td></tr>
+<tr><td class='LOW'>LOW</td><td>sky</td><td>ukiyo-e</td><td>0.382%</td><td><a href='region_03_img38027_mask2.html'>view</a></td></tr>
+<tr><td class='LOW'>LOW</td><td>sky</td><td>neoclassicism</td><td>0.427%</td><td><a href='region_04_img425484_mask0.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>woman dressed in a black long-sleeved shirt a</td><td>art-nouveau</td><td>2.510%</td><td><a href='region_05_img23275_mask1.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>off-white walls equipped with various pipes, </td><td>renaissance</td><td>2.667%</td><td><a href='region_06_img477029_mask0.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>man on the far left wearing a dark blue tank </td><td>impressionism</td><td>2.883%</td><td><a href='region_07_img353653_mask5.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>bright yellow vintage military aircraft, feat</td><td>color-field-painting</td><td>3.224%</td><td><a href='region_08_img477029_mask4.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>a dark brown short-sleeved shirt and blue pan</td><td>renaissance</td><td>3.604%</td><td><a href='region_09_img343734_mask1.html'>view</a></td></tr>
+
+</table></body></html>

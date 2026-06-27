@@ -79,7 +79,7 @@ def plot_template_heatmap(summary, out_path):
 
     ax.set_title(
         "Template comparison — attention mass by grounding target\n"
-        "Mistral-7B-Instruct-v0.2 | 229 regions | ranked by label mass",
+        "Mistral-7B-Instruct-v0.2 | 979 regions | ranked by label mass",
         fontsize=11, pad=28
     )
 
@@ -151,7 +151,7 @@ def plot_label_style_scatter(summary, out_path):
     ax.set_ylabel("Style attention mass % — WikiArt style grounding", fontsize=10)
     ax.set_title(
         "Label vs style grounding trade-off across templates\n"
-        "Mistral-7B | 229 regions | no template maximises both simultaneously",
+        "Mistral-7B | 979 regions | no template maximises both simultaneously",
         fontsize=11
     )
     ax.grid(True, alpha=0.3, linestyle="--")
@@ -177,7 +177,7 @@ def plot_label_style_scatter(summary, out_path):
 
 def plot_per_region_improvement(per_template, out_path):
     """
-    For each of 229 regions: delta = E_label_mass - A_label_mass
+    For each of 979 regions: delta = H_label_mass - A_label_mass
     Sorted bar chart showing improvement is consistent, not driven by outliers
     """
     regions_A = {
@@ -186,7 +186,7 @@ def plot_per_region_improvement(per_template, out_path):
     }
     regions_E = {
         (r["image_id"], r["mask_index"]): r["label_attention_mass"]
-        for r in per_template["E"]
+        for r in per_template["H"]
     }
 
     keys   = sorted(set(regions_A.keys()) & set(regions_E.keys()))
