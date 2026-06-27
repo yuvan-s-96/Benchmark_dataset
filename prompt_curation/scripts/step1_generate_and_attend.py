@@ -66,7 +66,7 @@ def get_label_indices(tokenizer, prompt, region_label):
 # ─────────────────────────────────────────────────────────────────────────────
 
 @torch.no_grad()
-def generate_and_attend(model, tokenizer, prompt, region_label, device,
+def generate_and_attend(model, tokenizer, prompt, region_label, style_name, device,
                         max_new_tokens=80):
     """
     One forward pass:
@@ -127,17 +127,24 @@ def generate_and_attend(model, tokenizer, prompt, region_label, device,
     # Label token indices
     label_indices = get_label_indices(tokenizer, prompt, region_label)
 
-    # Label attention mass
+    # Style token indices
+    style_indices = get_label_indices(tokenizer, prompt, style_name)
+
+    # Attention masses
     label_mass = float(sum(att_weights[i] for i in label_indices
+                           if i < len(att_weights)))
+    style_mass = float(sum(att_weights[i] for i in style_indices
                            if i < len(att_weights)))
 
     return {
-        "instruction":         instruction,
-        "att_weights":         att_weights,
-        "tokens_decoded":      tokens_decoded,
-        "label_token_indices": label_indices,
+        "instruction":          instruction,
+        "att_weights":          att_weights,
+        "tokens_decoded":       tokens_decoded,
+        "label_token_indices":  label_indices,
+        "style_token_indices":  style_indices,
         "label_attention_mass": label_mass,
-        "n_input_tokens":      input_len,
+        "style_attention_mass": style_mass,
+        "n_input_tokens":       input_len,
     }
 
 
@@ -187,7 +194,7 @@ def run(args):
             prompt = build_prompt_A(label, style, caption)
 
             result = generate_and_attend(
-                model, tokenizer, prompt, label, device
+                model, tokenizer, prompt, label, style, device
             )
 
             entry = {
@@ -203,6 +210,8 @@ def run(args):
                 "tokens_decoded":      result["tokens_decoded"],
                 "label_token_indices": result["label_token_indices"],
                 "label_attention_mass": result["label_attention_mass"],
+                "style_attention_mass": result["style_attention_mass"],
+                "style_token_indices":  result["style_token_indices"],
                 "n_input_tokens":      result["n_input_tokens"],
             }
             results.append(entry)
@@ -219,12 +228,16 @@ def run(args):
             break
 
     # Summary
-    masses_arr = np.array(masses)
+    masses_arr  = np.array(masses)
+    style_masses = np.array([r["style_attention_mass"] for r in results])
     print(f"\n{'='*55}")
     print(f"Regions processed     : {len(results)}")
-    print(f"Label mass mean       : {masses_arr.mean():.4f}")
+    print(f"Label mass mean       : {masses_arr.mean():.4f}  (COCO region grounding)")
     print(f"Label mass median     : {np.median(masses_arr):.4f}")
     print(f"Label mass min/max    : {masses_arr.min():.4f} / {masses_arr.max():.4f}")
+    print(f"Style mass mean       : {style_masses.mean():.4f}  (WikiArt style grounding)")
+    print(f"Style mass median     : {np.median(style_masses):.4f}")
+    print(f"Style mass min/max    : {style_masses.min():.4f} / {style_masses.max():.4f}")
     print(f"{'='*55}")
 
     out = {

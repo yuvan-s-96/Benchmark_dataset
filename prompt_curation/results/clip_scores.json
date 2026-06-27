@@ -3,59 +3,59 @@
   "clip_model": "ViT-B/32",
   "summary": {
     "E": {
-      "clip_mean": 0.2213,
-      "clip_median": 0.2232,
-      "clip_max": 0.2521,
-      "n_scored": 90,
-      "n_skipped": 139
+      "clip_mean": 0.2263,
+      "clip_median": 0.2278,
+      "clip_max": 0.2599,
+      "n_scored": 828,
+      "n_skipped": 151
     },
     "A": {
-      "clip_mean": 0.2042,
-      "clip_median": 0.2036,
-      "clip_max": 0.2475,
-      "n_scored": 229,
+      "clip_mean": 0.2104,
+      "clip_median": 0.2106,
+      "clip_max": 0.2537,
+      "n_scored": 979,
       "n_skipped": 0
     },
     "C": {
-      "clip_mean": 0.2056,
-      "clip_median": 0.208,
-      "clip_max": 0.2503,
-      "n_scored": 229,
+      "clip_mean": 0.2061,
+      "clip_median": 0.2085,
+      "clip_max": 0.2504,
+      "n_scored": 979,
       "n_skipped": 0
     },
     "B": {
-      "clip_mean": 0.1996,
-      "clip_median": 0.202,
-      "clip_max": 0.2451,
-      "n_scored": 229,
+      "clip_mean": 0.1988,
+      "clip_median": 0.1999,
+      "clip_max": 0.2448,
+      "n_scored": 979,
       "n_skipped": 0
     },
     "D": {
-      "clip_mean": 0.2141,
-      "clip_median": 0.2153,
-      "clip_max": 0.2549,
-      "n_scored": 229,
+      "clip_mean": 0.2146,
+      "clip_median": 0.2162,
+      "clip_max": 0.2555,
+      "n_scored": 979,
       "n_skipped": 0
     },
     "H": {
-      "clip_mean": 0.2106,
-      "clip_median": 0.2096,
-      "clip_max": 0.2527,
-      "n_scored": 229,
+      "clip_mean": 0.2122,
+      "clip_median": 0.2116,
+      "clip_max": 0.2528,
+      "n_scored": 979,
       "n_skipped": 0
     },
     "G": {
-      "clip_mean": 0.1941,
-      "clip_median": 0.1973,
-      "clip_max": 0.2463,
-      "n_scored": 229,
+      "clip_mean": 0.2026,
+      "clip_median": 0.206,
+      "clip_max": 0.2524,
+      "n_scored": 979,
       "n_skipped": 0
     },
     "F": {
-      "clip_mean": 0.1998,
-      "clip_median": 0.2027,
-      "clip_max": 0.2452,
-      "n_scored": 229,
+      "clip_mean": 0.2103,
+      "clip_median": 0.2119,
+      "clip_max": 0.2537,
+      "n_scored": 979,
       "n_skipped": 0
     },
     "I": {
@@ -67,14 +67,14 @@
     }
   },
   "attention": {
-    "E": 1.6275,
-    "A": 1.1438,
-    "C": 0.8959,
-    "B": 0.8131,
-    "D": 0.7556,
-    "H": 0.7409,
-    "G": 0.7282,
-    "F": 0.6269,
+    "E": 0.3919,
+    "A": 0.6317,
+    "C": 0.3263,
+    "B": 0.4892,
+    "D": 0.5024,
+    "H": 0.5585,
+    "G": 0.4701,
+    "F": 0.2519,
     "I": 0.806
   }
 }

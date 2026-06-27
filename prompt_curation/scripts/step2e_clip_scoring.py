@@ -2,7 +2,7 @@
 Step 2e — CLIP alignment scoring across all templates
 ======================================================
 Loads all template results from:
-  - template_comparison_mistral.json  (templates A-H)
+  - template_comparison_979.json  (templates A-H)
   - template_EI_comparison.json       (template I, skip duplicate E)
 
 For each region × template:
@@ -39,7 +39,7 @@ STYLE_REF_DIR = Path(
     "/homes/yvs23/Benchmark_dataset/data/style_references"
 )
 RESULTS_FILES = {
-    "main": "../results/template_comparison_mistral.json",
+    "main": "../results/template_comparison_979.json",
     "EI":   "../results/template_EI_comparison.json",
 }
 # Template display order (ranked by label mass from step2)
