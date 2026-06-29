@@ -1,0 +1,10 @@
+{
+  "template": "H",
+  "base_model": "mistralai/Mistral-7B-Instruct-v0.2",
+  "train_samples": 882,
+  "val_samples": 97,
+  "epochs": 3,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "adapter_path": "../models/lora_H/adapter"
+}
