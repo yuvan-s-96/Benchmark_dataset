@@ -150,11 +150,17 @@ def get_token_attentions(model, tokenizer, prompt, device):
 
 
 def get_label_indices(tokenizer, prompt, region_label):
-    all_tokens   = tokenizer.encode(prompt, add_special_tokens=True)
-    label_tokens = tokenizer.encode(region_label, add_special_tokens=False)
-    for i in range(len(all_tokens) - len(label_tokens) + 1):
-        if all_tokens[i:i+len(label_tokens)] == label_tokens:
-            return list(range(i, i + len(label_tokens)))
+    all_tokens = tokenizer.encode(prompt, add_special_tokens=True)
+    candidates = [
+        tokenizer.encode(region_label, add_special_tokens=False),
+        tokenizer.encode(" " + region_label, add_special_tokens=False),
+    ]
+    for label_tokens in candidates:
+        if not label_tokens:
+            continue
+        for i in range(len(all_tokens) - len(label_tokens) + 1):
+            if all_tokens[i:i+len(label_tokens)] == label_tokens:
+                return list(range(i, i + len(label_tokens)))
     return []
 
 
@@ -317,20 +323,21 @@ def run(args):
             region_lookup[key] = {**reg, "coconut_caption": caption,
                                   "image_id": rec["image_id"]}
 
-    print("Loading Mistral-7B in 4-bit...")
+    print(f"Loading {args.model} in 4-bit...")
     bnb = BitsAndBytesConfig(
         load_in_4bit=True, bnb_4bit_quant_type="nf4",
         bnb_4bit_compute_dtype=torch.float16,
         bnb_4bit_use_double_quant=True,
     )
     tokenizer = AutoTokenizer.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2"
+        args.model, trust_remote_code=True
     )
     model = AutoModelForCausalLM.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2",
+        args.model,
         quantization_config=bnb,
         device_map={"": device},
         attn_implementation="eager",
+        trust_remote_code=True,
     )
     model.eval()
     print("Model loaded.\n")
@@ -434,6 +441,7 @@ def run(args):
 
 def parse_args():
     p = argparse.ArgumentParser()
+    p.add_argument("--model", default="mistralai/Mistral-7B-Instruct-v0.2", help="HuggingFace model id")
     p.add_argument("--attention_json",
         default="../attention_maps/baseline_mistral.json")
     p.add_argument("--ann_json",

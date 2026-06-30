@@ -53,11 +53,36 @@ def build_prompt_A(label, style, caption):
 # ─────────────────────────────────────────────────────────────────────────────
 
 def get_label_indices(tokenizer, prompt, region_label):
-    all_tokens   = tokenizer.encode(prompt, add_special_tokens=True)
-    label_tokens = tokenizer.encode(region_label, add_special_tokens=False)
-    for i in range(len(all_tokens) - len(label_tokens) + 1):
-        if all_tokens[i:i+len(label_tokens)] == label_tokens:
-            return list(range(i, i + len(label_tokens)))
+    all_tokens = tokenizer.encode(prompt, add_special_tokens=True)
+
+    # Try multiple tokenisation variants — different tokenizers
+    # (SentencePiece vs BPE) handle leading spaces differently
+    candidates = [
+        tokenizer.encode(region_label, add_special_tokens=False),
+        tokenizer.encode(" " + region_label, add_special_tokens=False),
+    ]
+
+    for label_tokens in candidates:
+        if not label_tokens:
+            continue
+        for i in range(len(all_tokens) - len(label_tokens) + 1):
+            if all_tokens[i:i+len(label_tokens)] == label_tokens:
+                return list(range(i, i + len(label_tokens)))
+
+    # Fallback: decode each token and do substring matching
+    # Handles cases where label spans differently due to BPE merges
+    decoded = [tokenizer.decode([t]) for t in all_tokens]
+    label_lower = region_label.lower().strip()
+    for i in range(len(decoded)):
+        window = ""
+        indices = []
+        for j in range(i, min(i + 20, len(decoded))):
+            window += decoded[j]
+            indices.append(j)
+            if label_lower in window.lower().strip():
+                return indices
+            if len(window.strip()) > len(label_lower) + 5:
+                break
     return []
 
 
@@ -164,13 +189,14 @@ def run(args):
         bnb_4bit_use_double_quant=True,
     )
     tokenizer = AutoTokenizer.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2"
+        args.model, trust_remote_code=True
     )
     model = AutoModelForCausalLM.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2",
+        args.model,
         quantization_config=bnb_config,
         device_map={"": device},
         attn_implementation="eager",
+        trust_remote_code=True,
     )
     model.eval()
     print("Model loaded.\n")
@@ -203,7 +229,7 @@ def run(args):
                 "region_label":        label,
                 "style_name":          style,
                 "template":            "A",
-                "model":               "mistral-7b-instruct-v0.2-transformers",
+                "model":               args.model,
                 "prompt":              prompt,
                 "instruction":         result["instruction"],
                 "att_weights":         result["att_weights"],
@@ -268,6 +294,9 @@ def parse_args():
         default="../../data/coconut_subset/annotations/subset_auto_final_gguf.json")
     p.add_argument("--output",
         default="../attention_maps/baseline_mistral.json")
+    p.add_argument("--model",
+        default="mistralai/Mistral-7B-Instruct-v0.2",
+        help="HuggingFace model id")
     p.add_argument("--max_regions", type=int, default=5,
         help="Limit for test run. Set 0 for all 229.")
     return p.parse_args()

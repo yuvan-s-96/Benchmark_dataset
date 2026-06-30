@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'>
+<title>Attention visualisations — Mistral-7B baseline</title>
+<style>
+  body{font-family:sans-serif;max-width:900px;margin:40px auto;padding:0 20px}
+  h1{color:#2d3748}
+  table{border-collapse:collapse;width:100%}
+  th{background:#edf2f7;padding:8px;text-align:left}
+  td{padding:8px;border-bottom:1px solid #e2e8f0}
+  .LOW{color:#e53e3e;font-weight:700}
+  .HIGH{color:#38a169;font-weight:700}
+  .stat{display:inline-block;background:#edf2f7;border-radius:6px;
+         padding:8px 16px;margin:4px;font-size:14px}
+</style></head><body>
+<h1>Attention visualisations — Mistral-7B baseline (template A)</h1>
+<p>
+  <span class='stat'>Mean label mass: <b>0.940%</b></span>
+  <span class='stat'>Median: <b>0.600%</b></span>
+  <span class='stat'>Min: <b>0.140%</b></span>
+  <span class='stat'>Max: <b>7.180%</b></span>
+</p>
+<p style='font-size:14px;color:#555'>
+  Showing 5 lowest and 5 highest attention regions.
+  Each view shows the COCO image with COCONut mask overlay + token attention chart.
+</p>
+<table>
+  <tr><th>Type</th><th>Region label</th><th>Style</th>
+      <th>Label mass</th><th>View</th></tr>
+  <tr><td class='LOW'>LOW</td><td>people</td><td>minimalism</td><td>0.136%</td><td><a href='region_00_img168453_mask3.html'>view</a></td></tr>
+<tr><td class='LOW'>LOW</td><td>man</td><td>fauvism</td><td>0.153%</td><td><a href='region_01_img76893_mask3.html'>view</a></td></tr>
+<tr><td class='LOW'>LOW</td><td>person</td><td>post-impressionism</td><td>0.155%</td><td><a href='region_02_img49782_mask3.html'>view</a></td></tr>
+<tr><td class='LOW'>LOW</td><td>person</td><td>baroque</td><td>0.158%</td><td><a href='region_03_img424332_mask1.html'>view</a></td></tr>
+<tr><td class='LOW'>LOW</td><td>person</td><td>symbolism</td><td>0.161%</td><td><a href='region_04_img494032_mask1.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>off-white walls equipped with various pipes, </td><td>renaissance</td><td>5.313%</td><td><a href='region_05_img477029_mask0.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>man wearing glasses, a brown jacket, and a ca</td><td>art-deco</td><td>5.490%</td><td><a href='region_06_img283408_mask1.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>man on the far left wearing a dark blue tank </td><td>impressionism</td><td>5.800%</td><td><a href='region_07_img353653_mask5.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>a dark brown short-sleeved shirt and blue pan</td><td>renaissance</td><td>7.082%</td><td><a href='region_08_img343734_mask1.html'>view</a></td></tr>
+<tr><td class='HIGH'>HIGH</td><td>bright yellow vintage military aircraft, feat</td><td>color-field-painting</td><td>7.182%</td><td><a href='region_09_img477029_mask4.html'>view</a></td></tr>
+
+</table></body></html>

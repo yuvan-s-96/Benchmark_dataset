@@ -137,11 +137,17 @@ TEMPLATES = {
 # ─────────────────────────────────────────────────────────────────────────────
 
 def get_token_indices(tokenizer, prompt, text):
-    all_tokens  = tokenizer.encode(prompt, add_special_tokens=True)
-    text_tokens = tokenizer.encode(text, add_special_tokens=False)
-    for i in range(len(all_tokens) - len(text_tokens) + 1):
-        if all_tokens[i:i+len(text_tokens)] == text_tokens:
-            return list(range(i, i + len(text_tokens)))
+    all_tokens = tokenizer.encode(prompt, add_special_tokens=True)
+    candidates = [
+        tokenizer.encode(text, add_special_tokens=False),
+        tokenizer.encode(" " + text, add_special_tokens=False),
+    ]
+    for text_tokens in candidates:
+        if not text_tokens:
+            continue
+        for i in range(len(all_tokens) - len(text_tokens) + 1):
+            if all_tokens[i:i+len(text_tokens)] == text_tokens:
+                return list(range(i, i + len(text_tokens)))
     return []
 
 
@@ -197,7 +203,7 @@ def extract_attention(model, tokenizer, prompt, label, style, device,
 def run(args):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Device: {device}")
-    print("Loading Mistral-7B-Instruct-v0.2 in 4-bit...")
+    print(f"Loading {args.model} in 4-bit...")
 
     bnb = BitsAndBytesConfig(
         load_in_4bit=True, bnb_4bit_quant_type="nf4",
@@ -205,10 +211,10 @@ def run(args):
         bnb_4bit_use_double_quant=True,
     )
     tokenizer = AutoTokenizer.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2"
+        args.model, trust_remote_code=True
     )
     model = AutoModelForCausalLM.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2",
+        args.model, trust_remote_code=True,
         quantization_config=bnb,
         device_map={"": device},
         attn_implementation="eager",
@@ -321,6 +327,7 @@ def run(args):
 
 def parse_args():
     p = argparse.ArgumentParser()
+    p.add_argument("--model", default="mistralai/Mistral-7B-Instruct-v0.2", help="HuggingFace model id")
     p.add_argument("--json",
         default="../../data/coconut_subset/annotations/prompt_curation_inputs.json")
     p.add_argument("--output",
