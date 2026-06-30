@@ -1,7 +1,6 @@
 # Prompt Curation for Regional Style Transfer
 **University of Bath MSc Data Science 2026**
 
-
 ---
 
 ## Environment
@@ -14,67 +13,41 @@ export HF_HUB_DISABLE_XET=1
 export TMPDIR=/mnt/fast1/yvs23/tmp
 ```
 
-Add to bashrc permanently:
-```bash
-echo 'export HF_HOME=/mnt/fast1/yvs23/hf_cache' >> ~/.bashrc
-echo 'export HF_HUB_DISABLE_XET=1' >> ~/.bashrc
-echo 'export TMPDIR=/mnt/fast1/yvs23/tmp' >> ~/.bashrc
-```
-
 ---
 
-## Storage layout
+## Storage
 
 ```
-~/Benchmark_dataset/
-├── prompt_curation/
-│   ├── scripts/         ← all pipeline scripts
-│   ├── attention_maps/  ← baseline_mistral.json + visualisations + figures
-│   ├── results/         ← template_comparison_mistral.json
-│   ├── models/          ← LoRA adapters (not in git, large)
-│   └── prompts/
-├── data/
-│   ├── coconut_subset/  ← 50 COCO images + annotations
-│   ├── style_references/ ← WikiArt style images (458 MB)
-│   └── annotations/
-└── coconut_pipeline/    ← benchmark pipeline scripts (previous direction)
+~/Benchmark_dataset/prompt_curation/
+├── scripts/          ← all pipeline scripts
+├── attention_maps/   ← baseline_mistral.json, baseline_lora_A/H.json, visualisations, figures
+├── results/          ← template_comparison_979.json, attention_lora_A/H.json, clip_*.json
+├── models/lora_A/    ← LoRA-A adapter (~200 MB, not in git)
+└── models/lora_H/    ← LoRA-H adapter (~200 MB, not in git)
 
 /mnt/fast1/yvs23/
-├── hf_cache/            ← HuggingFace models (~14 GB Mistral-7B)
-├── annotations/
-│   ├── panoptic_train2017/  ← COCONut panoptic PNGs (1.1 GB)
-│   └── panoptic_train2017.json
-├── sam2.1_hiera_large.pt    ← SAM2 checkpoint (moved from home, 857 MB)
-└── tmp/
+├── hf_cache/                    ← Mistral-7B (~14 GB)
+├── annotations/panoptic_train2017/  ← COCONut PNGs (1.1 GB)
+└── sam2.1_hiera_large.pt        ← SAM2 checkpoint (moved from home)
 ```
 
 ---
 
 ## Step 1 — Generate instructions + extract attention (DONE ✓)
 
-Single forward pass: generates instruction text AND extracts attention maps
-from Mistral-7B-Instruct-v0.2 in 4-bit quantisation.
-
 ```bash
-cd ~/Benchmark_dataset/prompt_curation/scripts
-
 python3 step1_generate_and_attend.py \
     --json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
     --output ../attention_maps/baseline_mistral.json \
     --max_regions 0
 ```
 
-Runtime: ~33 min for 229 regions.
-
-**Results (template A baseline, 229 regions):**
-- Label attention mass mean: 1.14% (COCO grounding)
-- Style attention mass mean: 0.89% (WikiArt grounding)
-- BOS token: ~55%, closing [/INST]: ~15%, task text: ~21%
-- Region label: 0.21–3.60% (length artifact, not grounding quality)
+**Results:** 979 regions | label mass mean 0.63% | style mass mean 0.57%
+BOS token ~55% | region label 0.09–3.82% | caption length major confound
 
 ---
 
-## Step 1b — Visualise with COCONut masks (DONE ✓)
+## Step 1b — HTML visualisations (DONE ✓)
 
 ```bash
 python3 step1b_visualise_attention.py \
@@ -83,8 +56,7 @@ python3 step1b_visualise_attention.py \
     --pan_json /mnt/fast1/yvs23/annotations/panoptic_train2017.json \
     --pan_dir  /mnt/fast1/yvs23/annotations/panoptic_train2017 \
     --img_dir  ../../data/coconut_subset/images \
-    --output   ../attention_maps/visualisations/ \
-    --n 10
+    --output   ../attention_maps/visualisations/ --n 10
 ```
 
 ---
@@ -97,136 +69,123 @@ python3 step1c_heatmap_figure.py \
     --output ../attention_maps/figures/
 ```
 
-Produces: fig1_attention_group_grid.png, fig2_label_mass_bars.png, fig3_*.png
-
 ---
 
-## Step 2 — Prompt curation (DONE ✓)
-
-Compare 8 templates (A–H) across all 229 regions.
+## Step 2 — Prompt curation, 9 templates (DONE ✓)
 
 ```bash
 python3 step2_curate_prompts.py \
     --json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
-    --output ../results/template_comparison_mistral.json \
+    --output ../results/template_comparison_979.json \
     --max_regions 0
 ```
 
-Runtime: ~5.5 hours for 229 regions × 8 templates.
+**Results (979 regions):**
 
-**Results — ranked by label attention mass:**
+| Template | Label mass | Style mass | CLIP | CV | Refusal% |
+|---|---|---|---|---|---|
+| A — baseline | 0.632% | 0.568% | 0.2104 | 0.668 | 0% |
+| H — hybrid | 0.558% | 1.448% | 0.2122 | 0.594 | 0% |
+| E — question | 0.554% | 1.420% | 0.2263 | 1.409 | 15.4% |
+| F — chain-of-thought | 0.252% | 0.485% | 0.2103 | 1.051 | 0% |
 
-| Template | Label mass | Style mass | vs Baseline |
-|---|---|---|---|
-| E — question-style | 1.58% | 1.37% | +39% |
-| A — baseline | 1.14% | 0.89% | — |
-| C — caption-grounded | 0.90% | 1.17% | -21% |
-| B — region first | 0.81% | 1.11% | -29% |
-| D — contrastive | 0.76% | 1.10% | -33% |
-| H — hybrid (E+G) | 0.74% | 1.56% | -35% |
-| G — label repetition | 0.73% | 1.60% | -36% |
-| F — chain-of-thought | 0.63% | 0.49% | -45% |
-
-**Key findings:**
-- Template E wins label grounding (+39%) and is the only template that beats
-  baseline A on both label AND style simultaneously
-- 217/229 regions improved with template E over baseline A
-- Position alone does not improve grounding — grammatical framing matters more
-- G/H win style mass but at the cost of label mass (trade-off)
-- Chain-of-thought F is worst on both metrics
+**Key finding:** Template A wins label mass on full dataset. E wins on short prompts only.
+Caption length dilutes attention — long prompts systematically reduce label mass.
 
 ---
 
-## Step 2b — Visualise template comparison (DONE ✓)
+## Step 2b/e — Visualisation + CLIP (DONE ✓)
 
 ```bash
 python3 step2b_visualise_comparison.py \
-    --results ../results/template_comparison_mistral.json \
+    --results ../results/template_comparison_979.json \
     --output  ../attention_maps/figures/
-```
 
-Produces: fig4_template_heatmap.png, fig5_label_style_scatter.png,
-fig6_per_region_improvement.png
-
-Copy all figures to laptop:
-```powershell
-scp -r yvs23@ogg.cs.bath.ac.uk:/mnt/vurm/homes/homes/yvs23/Benchmark_dataset/prompt_curation/attention_maps/ "C:\Users\Yuvan Velkumar\Downloads\attention_maps"
+python3 step2e_clip_scoring.py --output ../attention_maps/figures/
 ```
 
 ---
 
-## Step 3 — Run other models (NEXT)
-
-Run step1 + step2 (templates A and E only) on LLaMA-3-8B and Phi-3-mini
-to verify Template E generalises across model architectures.
+## Step 3 — LoRA fine-tuning (DONE ✓)
 
 ```bash
-# Download models to fast1
+# LoRA-A: fine-tune on template A instructions
+python3 step3_finetune_lora.py \
+    --template A \
+    --results_json ../results/template_comparison_979.json \
+    --output ../models/lora_A/ --epochs 3
+
+# LoRA-H: fine-tune on template H instructions (separate GPU)
+python3 step3_finetune_lora.py \
+    --template H \
+    --results_json ../results/template_comparison_979.json \
+    --output ../models/lora_H/ --epochs 3
+```
+
+**Results:** Both converged in ~25 min. LoRA-H lower final eval loss (0.215 vs 0.262).
+
+---
+
+## Step 4 — Attention extraction on fine-tuned models (DONE ✓)
+
+```bash
+python3 step4_attention_finetuned.py \
+    --adapter   ../models/lora_A/adapter \
+    --lora_name lora_A \
+    --output    ../results/attention_lora_A.json
+
+python3 step4_attention_finetuned.py \
+    --adapter   ../models/lora_H/adapter \
+    --lora_name lora_H \
+    --output    ../results/attention_lora_H.json
+```
+
+**Four headline findings:**
+1. LoRA-A improves 6/9 templates. LoRA-H degrades its own template H (-0.168%) — over-specialisation
+2. Style mass improves on 7/9 templates under both runs — WikiArt grounding most improved
+3. Template E refusals: 15.4% → 1.0% (LoRA-A), 0.1% (LoRA-H) — eliminated without explicit suppression
+4. High-variance templates (E, F, C, I) show CV reduction — partial invariant grounding
+
+---
+
+## Step 4b — CLIP on fine-tuned outputs (DONE ✓)
+
+```bash
+python3 step4b_clip_finetuned.py
+```
+
+**Results:** LoRA-A improves CLIP on 6/9 templates. LoRA-H improves on 5/9.
+Largest gains: G (+0.0054 LoRA-A, +0.0104 LoRA-H), I (+0.0037 LoRA-A, +0.0081 LoRA-H)
+
+---
+
+## Step 4c/d — Before/after visualisations (DONE ✓)
+
+```bash
+python3 step4c_visualise_finetuned.py   # fig8, fig9, fig10
+python3 step4d_clip_visualise.py        # fig11
+```
+
+Copy all figures:
+```powershell
+scp -r yvs23@ogg.cs.bath.ac.uk:/mnt/vurm/homes/homes/yvs23/Benchmark_dataset/prompt_curation/attention_maps/figures/ "C:\Users\Yuvan Velkumar\Downloads\figures_final"
+```
+
+---
+
+## Step 5 — Other models (PENDING)
+
+```bash
+# Download LLaMA-3-8B to fast1
 export HF_HOME=/mnt/fast1/yvs23/hf_cache
+python3 -c "from transformers import AutoTokenizer; AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct')"
 
-# LLaMA-3-8B (~6 GB)
-python3 -c "
-from transformers import AutoTokenizer, AutoModelForCausalLM
-AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct')
-print('LLaMA tokenizer downloaded')
-"
-
-# Phi-3-mini (~2.3 GB)
-python3 -c "
-from transformers import AutoTokenizer
-AutoTokenizer.from_pretrained('microsoft/Phi-3-mini-4k-instruct')
-print('Phi-3 tokenizer downloaded')
-"
-
-# Run step1 for each model
+# Run full pipeline on LLaMA-3-8B
 python3 step1_generate_and_attend.py \
     --json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
     --output ../attention_maps/baseline_llama3.json \
     --model meta-llama/Meta-Llama-3-8B-Instruct \
     --max_regions 0
-
-python3 step1_generate_and_attend.py \
-    --json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
-    --output ../attention_maps/baseline_phi3.json \
-    --model microsoft/Phi-3-mini-4k-instruct \
-    --max_regions 0
-```
-
-Note: step1_generate_and_attend.py needs a --model argument added for this.
-
----
-
-## Step 4 — LoRA fine-tuning (PENDING)
-
-Fine-tune Mistral-7B (and other models) on Template E instructions.
-
-```bash
-pip install peft accelerate
-
-python3 step3_finetune_lora.py \
-    --base_model mistralai/Mistral-7B-Instruct-v0.2 \
-    --template_results ../results/template_comparison_mistral.json \
-    --best_template E \
-    --output ../models/mistral_lora_E/ \
-    --epochs 3
-```
-
-Then re-run step1 on fine-tuned model and compare attention mass before/after.
-
----
-
-## Step 5 — Final evaluation (PENDING)
-
-Score all model/template combinations:
-- Attention mass (primary grounding metric)
-- CLIP alignment (instruction vs style reference image)
-- Label coverage (does instruction mention region label?)
-- Visual specificity (visual descriptor word count)
-
-```bash
-python3 step5_evaluate.py \
-    --results_dir ../results/ \
-    --output ../results/final_evaluation.json
 ```
 
 ---
@@ -241,37 +200,30 @@ export TMPDIR=/mnt/fast1/yvs23/tmp
 ```
 
 **Label attention mass showing 0.000:**
-Attention shape during generation is `(layers, heads, seq, seq)` — full causal.
-Correct extraction:
 ```python
+# Correct extraction — full causal attention matrix
 step0   = output.attentions[0]
 att     = torch.stack([l[0] for l in step0]).mean(dim=(0,1))
 weights = att[-1, :input_len]
 ```
+
+**LoRA load_best_model_at_end error:**
+Set `load_best_model_at_end=False` in TrainingArguments — PEFT compatibility issue.
 
 **Git push rejected:**
 ```bash
 git pull origin main --no-rebase && git push
 ```
 
-**CUDA out of memory:**
-Check no other process is using GPU:
+**tmux for long runs:**
 ```bash
-nvidia-smi
-fuser /dev/nvidia1
+tmux new -s jobname   # start
+# Ctrl+B then D       # detach
+tmux attach -t jobname  # reattach
+tmux capture-pane -t jobname -p | tail -10  # quick check
 ```
 
 **Panoptic PNGs not found:**
 ```bash
-cd /mnt/fast1/yvs23/annotations
-unzip -q panoptic_train2017.zip
-ls panoptic_train2017/ | head -5
-```
-
-**tmux for long runs:**
-```bash
-tmux new -s step2
-# run script
-# detach: Ctrl+B then D
-# reattach: tmux attach -t step2
+cd /mnt/fast1/yvs23/annotations && unzip -q panoptic_train2017.zip
 ```
