@@ -38,10 +38,7 @@ from tqdm import tqdm
 STYLE_REF_DIR = Path(
     "/homes/yvs23/Benchmark_dataset/data/style_references"
 )
-RESULTS_FILES = {
-    "main": "../results/template_comparison_979.json",
-    "EI":   "../results/template_EI_comparison.json",
-}
+# Results files set via command line arguments
 # Template display order (ranked by label mass from step2)
 TMPL_ORDER = ["E","A","C","B","D","H","G","F","I"]
 TMPL_LABELS = {
@@ -229,7 +226,11 @@ def run(args):
     model.eval()
 
     # Load all template results
-    all_results = load_all_results(RESULTS_FILES)
+    results_files = {
+        "main": args.main_results,
+        "EI":   args.ei_results,
+    }
+    all_results = load_all_results(results_files)
 
     # Cache style embeddings
     style_cache = cache_style_embeddings(model, preprocess, device)
@@ -302,7 +303,7 @@ def run(args):
         "summary":      clip_summary,
         "attention":    {t: round(v*100,4) for t,v in att_summary.items()},
     }
-    json_path = Path("../results/clip_scores.json")
+    json_path = Path(args.output_json)
     with open(json_path, "w") as f:
         json.dump(out_json, f, indent=2)
     print(f"\nScores saved: {json_path}")
@@ -322,6 +323,19 @@ def parse_args():
                    default="../attention_maps/figures/")
     return p.parse_args()
 
+
+def parse_args():
+    import argparse
+    p = argparse.ArgumentParser()
+    p.add_argument("--main_results",
+        default="../results/template_comparison_979.json")
+    p.add_argument("--ei_results",
+        default="../results/template_EI_comparison.json")
+    p.add_argument("--output_json",
+        default="../results/clip_scores.json")
+    p.add_argument("--output",
+        default="../attention_maps/figures/")
+    return p.parse_args()
 
 if __name__ == "__main__":
     run(parse_args())

@@ -1,0 +1,80 @@
+{
+  "model": "mistral-7b-instruct-v0.2-transformers",
+  "clip_model": "ViT-B/32",
+  "summary": {
+    "E": {
+      "clip_mean": 0.2123,
+      "clip_median": 0.2152,
+      "clip_max": 0.2527,
+      "n_scored": 979,
+      "n_skipped": 0
+    },
+    "A": {
+      "clip_mean": 0.2028,
+      "clip_median": 0.205,
+      "clip_max": 0.2468,
+      "n_scored": 977,
+      "n_skipped": 2
+    },
+    "C": {
+      "clip_mean": 0.2018,
+      "clip_median": 0.2048,
+      "clip_max": 0.2492,
+      "n_scored": 979,
+      "n_skipped": 0
+    },
+    "B": {
+      "clip_mean": 0.197,
+      "clip_median": 0.1993,
+      "clip_max": 0.2435,
+      "n_scored": 979,
+      "n_skipped": 0
+    },
+    "D": {
+      "clip_mean": 0.2042,
+      "clip_median": 0.2079,
+      "clip_max": 0.252,
+      "n_scored": 979,
+      "n_skipped": 0
+    },
+    "H": {
+      "clip_mean": 0.201,
+      "clip_median": 0.2001,
+      "clip_max": 0.2511,
+      "n_scored": 979,
+      "n_skipped": 0
+    },
+    "G": {
+      "clip_mean": 0.2038,
+      "clip_median": 0.2068,
+      "clip_max": 0.2501,
+      "n_scored": 979,
+      "n_skipped": 0
+    },
+    "F": {
+      "clip_mean": 0.2067,
+      "clip_median": 0.2086,
+      "clip_max": 0.2498,
+      "n_scored": 979,
+      "n_skipped": 0
+    },
+    "I": {
+      "clip_mean": 0.1973,
+      "clip_median": 0.1985,
+      "clip_max": 0.2416,
+      "n_scored": 979,
+      "n_skipped": 0
+    }
+  },
+  "attention": {
+    "E": 0.4307,
+    "A": 0.9372,
+    "C": 0.3556,
+    "B": 0.883,
+    "D": 0.5821,
+    "H": 0.7585,
+    "G": 0.5906,
+    "F": 0.3355,
+    "I": 0.3051
+  }
+}
