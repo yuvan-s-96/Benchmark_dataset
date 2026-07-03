@@ -1,0 +1,264 @@
+{
+  "template_comparison_raw_wilcoxon": {
+    "B": {
+      "mean": 0.4892,
+      "ci_lo": 0.4702,
+      "ci_hi": 0.5084,
+      "wilcoxon_p": 2.732664592017022e-151,
+      "sig": "***"
+    },
+    "C": {
+      "mean": 0.3263,
+      "ci_lo": 0.3028,
+      "ci_hi": 0.3509,
+      "wilcoxon_p": 9.411251787034856e-159,
+      "sig": "***"
+    },
+    "D": {
+      "mean": 0.5024,
+      "ci_lo": 0.4833,
+      "ci_hi": 0.521,
+      "wilcoxon_p": 2.6197730256803643e-89,
+      "sig": "***"
+    },
+    "E": {
+      "mean": 0.5539,
+      "ci_lo": 0.5058,
+      "ci_hi": 0.6031,
+      "wilcoxon_p": 1.0376215825739939e-27,
+      "sig": "***"
+    },
+    "F": {
+      "mean": 0.2519,
+      "ci_lo": 0.2355,
+      "ci_hi": 0.2688,
+      "wilcoxon_p": 9.286970015981803e-162,
+      "sig": "***"
+    },
+    "G": {
+      "mean": 0.4701,
+      "ci_lo": 0.4538,
+      "ci_hi": 0.487,
+      "wilcoxon_p": 7.75319496295974e-151,
+      "sig": "***"
+    },
+    "H": {
+      "mean": 0.5585,
+      "ci_lo": 0.5385,
+      "ci_hi": 0.5794,
+      "wilcoxon_p": 7.905568359542581e-14,
+      "sig": "***"
+    },
+    "I": {
+      "mean": 0.315,
+      "ci_lo": 0.2926,
+      "ci_hi": 0.3378,
+      "wilcoxon_p": 2.6578728478567886e-156,
+      "sig": "***"
+    }
+  },
+  "lora_a_vs_baseline_wilcoxon": {
+    "A": {
+      "baseline_mean": 0.6317,
+      "lora_a_mean": 0.6788,
+      "ci_lo": 0.6473,
+      "ci_hi": 0.7117,
+      "wilcoxon_p": 7.161721606699918e-09,
+      "sig": "***"
+    },
+    "B": {
+      "baseline_mean": 0.4892,
+      "lora_a_mean": 0.5031,
+      "ci_lo": 0.4825,
+      "ci_hi": 0.5248,
+      "wilcoxon_p": 0.061279437680923414,
+      "sig": "ns"
+    },
+    "C": {
+      "baseline_mean": 0.3263,
+      "lora_a_mean": 0.3741,
+      "ci_lo": 0.3478,
+      "ci_hi": 0.4011,
+      "wilcoxon_p": 4.088199889463995e-158,
+      "sig": "***"
+    },
+    "D": {
+      "baseline_mean": 0.5024,
+      "lora_a_mean": 0.5013,
+      "ci_lo": 0.4822,
+      "ci_hi": 0.5207,
+      "wilcoxon_p": 0.0012799224961685873,
+      "sig": "**"
+    },
+    "E": {
+      "baseline_mean": 0.5539,
+      "lora_a_mean": 0.6,
+      "ci_lo": 0.5508,
+      "ci_hi": 0.6509,
+      "wilcoxon_p": 1.423897099540814e-125,
+      "sig": "***"
+    },
+    "F": {
+      "baseline_mean": 0.2519,
+      "lora_a_mean": 0.3017,
+      "ci_lo": 0.284,
+      "ci_hi": 0.32,
+      "wilcoxon_p": 1.5737220745738585e-159,
+      "sig": "***"
+    },
+    "G": {
+      "baseline_mean": 0.4701,
+      "lora_a_mean": 0.4353,
+      "ci_lo": 0.4201,
+      "ci_hi": 0.4512,
+      "wilcoxon_p": 2.1113784932587747e-121,
+      "sig": "***"
+    },
+    "H": {
+      "baseline_mean": 0.5585,
+      "lora_a_mean": 0.5285,
+      "ci_lo": 0.5091,
+      "ci_hi": 0.5489,
+      "wilcoxon_p": 8.208851639746318e-58,
+      "sig": "***"
+    },
+    "I": {
+      "baseline_mean": 0.315,
+      "lora_a_mean": 0.3391,
+      "ci_lo": 0.3165,
+      "ci_hi": 0.362,
+      "wilcoxon_p": 4.9257676614194716e-123,
+      "sig": "***"
+    }
+  },
+  "lora_h_vs_baseline_wilcoxon": {
+    "A": {
+      "baseline_mean": 0.6317,
+      "lora_h_mean": 0.5986,
+      "ci_lo": 0.5701,
+      "ci_hi": 0.628,
+      "wilcoxon_p": 4.243250912547876e-37,
+      "sig": "***"
+    },
+    "B": {
+      "baseline_mean": 0.4892,
+      "lora_h_mean": 0.4386,
+      "ci_lo": 0.4203,
+      "ci_hi": 0.4575,
+      "wilcoxon_p": 2.1705390503921216e-102,
+      "sig": "***"
+    },
+    "C": {
+      "baseline_mean": 0.3263,
+      "lora_h_mean": 0.3395,
+      "ci_lo": 0.3154,
+      "ci_hi": 0.3637,
+      "wilcoxon_p": 1.025994453045453e-50,
+      "sig": "***"
+    },
+    "D": {
+      "baseline_mean": 0.5024,
+      "lora_h_mean": 0.3903,
+      "ci_lo": 0.3738,
+      "ci_hi": 0.4076,
+      "wilcoxon_p": 2.1190368007010856e-160,
+      "sig": "***"
+    },
+    "E": {
+      "baseline_mean": 0.5539,
+      "lora_h_mean": 0.5596,
+      "ci_lo": 0.5137,
+      "ci_hi": 0.6054,
+      "wilcoxon_p": 6.599848892232057e-38,
+      "sig": "***"
+    },
+    "F": {
+      "baseline_mean": 0.2519,
+      "lora_h_mean": 0.3031,
+      "ci_lo": 0.2851,
+      "ci_hi": 0.3222,
+      "wilcoxon_p": 1.5283936250685543e-156,
+      "sig": "***"
+    },
+    "G": {
+      "baseline_mean": 0.4701,
+      "lora_h_mean": 0.3768,
+      "ci_lo": 0.3635,
+      "ci_hi": 0.3904,
+      "wilcoxon_p": 6.164443076102239e-161,
+      "sig": "***"
+    },
+    "H": {
+      "baseline_mean": 0.5585,
+      "lora_h_mean": 0.3858,
+      "ci_lo": 0.3689,
+      "ci_hi": 0.4032,
+      "wilcoxon_p": 4.088249137679273e-158,
+      "sig": "***"
+    },
+    "I": {
+      "baseline_mean": 0.315,
+      "lora_h_mean": 0.3218,
+      "ci_lo": 0.3014,
+      "ci_hi": 0.3433,
+      "wilcoxon_p": 2.636845639664334e-28,
+      "sig": "***"
+    }
+  },
+  "lora_a_vs_lora_h_wilcoxon": {
+    "A": {
+      "lora_a_mean": 0.6788,
+      "lora_h_mean": 0.5986,
+      "wilcoxon_p": 3.6553945349765257e-146,
+      "sig": "***"
+    },
+    "B": {
+      "lora_a_mean": 0.5031,
+      "lora_h_mean": 0.4386,
+      "wilcoxon_p": 7.531526918750715e-161,
+      "sig": "***"
+    },
+    "C": {
+      "lora_a_mean": 0.3741,
+      "lora_h_mean": 0.3395,
+      "wilcoxon_p": 4.97540746306082e-132,
+      "sig": "***"
+    },
+    "D": {
+      "lora_a_mean": 0.5013,
+      "lora_h_mean": 0.3903,
+      "wilcoxon_p": 9.00615198759171e-162,
+      "sig": "***"
+    },
+    "E": {
+      "lora_a_mean": 0.6,
+      "lora_h_mean": 0.5596,
+      "wilcoxon_p": 6.680056840908902e-25,
+      "sig": "***"
+    },
+    "F": {
+      "lora_a_mean": 0.3017,
+      "lora_h_mean": 0.3031,
+      "wilcoxon_p": 0.035012659986831354,
+      "sig": "*"
+    },
+    "G": {
+      "lora_a_mean": 0.4353,
+      "lora_h_mean": 0.3768,
+      "wilcoxon_p": 1.2737504346406822e-155,
+      "sig": "***"
+    },
+    "H": {
+      "lora_a_mean": 0.5285,
+      "lora_h_mean": 0.3858,
+      "wilcoxon_p": 3.282194764950798e-159,
+      "sig": "***"
+    },
+    "I": {
+      "lora_a_mean": 0.3391,
+      "lora_h_mean": 0.3218,
+      "wilcoxon_p": 6.607185683625868e-25,
+      "sig": "***"
+    }
+  }
+}

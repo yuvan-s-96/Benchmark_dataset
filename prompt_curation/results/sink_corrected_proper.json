@@ -1,0 +1,87 @@
+{
+  "model": "mistral-7b-instruct-v0.2",
+  "method": "sink-corrected \u2014 proper renormalisation with actual att_weights",
+  "summary": {
+    "A": {
+      "label_raw": 0.632,
+      "label_corr": 6.172,
+      "style_raw": 0.568,
+      "style_corr": 5.475,
+      "struct_mass": 88.629,
+      "factor": 9.77,
+      "n": 979
+    },
+    "B": {
+      "label_raw": 0.489,
+      "label_corr": 1.871,
+      "style_raw": 0.689,
+      "style_corr": 2.646,
+      "struct_mass": 73.431,
+      "factor": 3.82,
+      "n": 979
+    },
+    "C": {
+      "label_raw": 0.326,
+      "label_corr": 1.352,
+      "style_raw": 1.085,
+      "style_corr": 4.297,
+      "struct_mass": 74.611,
+      "factor": 4.14,
+      "n": 979
+    },
+    "D": {
+      "label_raw": 0.502,
+      "label_corr": 2.181,
+      "style_raw": 0.843,
+      "style_corr": 3.655,
+      "struct_mass": 76.734,
+      "factor": 4.34,
+      "n": 979
+    },
+    "E": {
+      "label_raw": 0.554,
+      "label_corr": 2.693,
+      "style_raw": 1.42,
+      "style_corr": 6.332,
+      "struct_mass": 77.462,
+      "factor": 4.86,
+      "n": 979
+    },
+    "F": {
+      "label_raw": 0.252,
+      "label_corr": 1.368,
+      "style_raw": 0.485,
+      "style_corr": 2.488,
+      "struct_mass": 80.373,
+      "factor": 5.43,
+      "n": 979
+    },
+    "G": {
+      "label_raw": 0.47,
+      "label_corr": 1.752,
+      "style_raw": 1.134,
+      "style_corr": 4.23,
+      "struct_mass": 72.976,
+      "factor": 3.73,
+      "n": 979
+    },
+    "H": {
+      "label_raw": 0.558,
+      "label_corr": 2.594,
+      "style_raw": 1.448,
+      "style_corr": 6.727,
+      "struct_mass": 78.401,
+      "factor": 4.64,
+      "n": 979
+    },
+    "I": {
+      "label_raw": 0.315,
+      "label_corr": 1.181,
+      "style_raw": 0.662,
+      "style_corr": 2.411,
+      "struct_mass": 72.489,
+      "factor": 3.75,
+      "n": 979
+    }
+  }
+}

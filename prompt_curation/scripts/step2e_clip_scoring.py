@@ -60,23 +60,13 @@ TMPL_LABELS = {
 
 def load_all_results(files):
     """Returns dict: template -> list of region dicts"""
-    combined = {}
-
-    # Load main file (A-H)
     with open(files["main"]) as f:
         main = json.load(f)
-    for tmpl, regions in main["per_template"].items():
-        combined[tmpl] = regions
-
-    # Load EI file — only take I (E is duplicate)
-    with open(files["EI"]) as f:
-        ei = json.load(f)
-    combined["I"] = ei["per_template"]["I"]
-
+    combined = {tmpl: regions
+                for tmpl, regions in main["per_template"].items()}
     print(f"Templates loaded: {sorted(combined.keys())}")
     print(f"Regions per template: {len(list(combined.values())[0])}")
     return combined
-
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Pre-cache style reference image embeddings
@@ -228,7 +218,6 @@ def run(args):
     # Load all template results
     results_files = {
         "main": args.main_results,
-        "EI":   args.ei_results,
     }
     all_results = load_all_results(results_files)
 
@@ -240,6 +229,7 @@ def run(args):
     clip_summary = {}
     att_summary  = {}  # template -> mean label mass
 
+    per_region_scores = {}
     for tmpl in tqdm(TMPL_ORDER, desc="Templates"):
         if tmpl not in all_results:
             continue
@@ -249,6 +239,7 @@ def run(args):
         max_scores = []
         label_masses = []
 
+        region_clip_list = []
         for r in regions:
             instr = r.get("instruction", "")
             style = r.get("style_name",  "")
@@ -258,6 +249,12 @@ def run(args):
                 "i'm an ai","i cannot","language model","as an ai"
             ])
             if is_refusal:
+                region_clip_list.append({
+                    "image_id":   r.get("image_id"),
+                    "mask_index": r.get("mask_index"),
+                    "clip_score": None,
+                    "skipped":    True,
+                })
                 continue
 
             mean_sim, max_sim = clip_score(
@@ -267,6 +264,12 @@ def run(args):
                 scores.append(mean_sim)
                 max_scores.append(max_sim)
                 label_masses.append(r["label_attention_mass"])
+                region_clip_list.append({
+                    "image_id":   r.get("image_id"),
+                    "mask_index": r.get("mask_index"),
+                    "clip_score": round(float(mean_sim), 4),
+                    "skipped":    False,
+                })
 
         if scores:
             clip_scores[tmpl]  = scores
@@ -278,6 +281,7 @@ def run(args):
                 "n_skipped":   len(regions) - len(scores),
             }
             att_summary[tmpl] = float(np.mean(label_masses))
+            per_region_scores[tmpl] = region_clip_list
 
     # Print summary table
     print(f"\n{'='*65}")
@@ -302,6 +306,7 @@ def run(args):
         "clip_model":   "ViT-B/32",
         "summary":      clip_summary,
         "attention":    {t: round(v*100,4) for t,v in att_summary.items()},
+        "per_region":   per_region_scores,
     }
     json_path = Path(args.output_json)
     with open(json_path, "w") as f:
@@ -329,8 +334,6 @@ def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--main_results",
         default="../results/template_comparison_979.json")
-    p.add_argument("--ei_results",
-        default="../results/template_EI_comparison.json")
     p.add_argument("--output_json",
         default="../results/clip_scores.json")
     p.add_argument("--output",
