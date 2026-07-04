@@ -26,6 +26,7 @@ import torch
 from Levenshtein import ratio as lev_ratio
 from bert_score import score as bert_score_fn
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from peft import PeftModel
 from tqdm import tqdm
 
 
@@ -159,14 +160,22 @@ def run(args):
         bnb_4bit_compute_dtype=torch.float16,
         bnb_4bit_use_double_quant=True,
     )
-    tokenizer = AutoTokenizer.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2")
-    model = AutoModelForCausalLM.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2",
+    base_model_id = "mistralai/Mistral-7B-Instruct-v0.2"
+    tokenizer = AutoTokenizer.from_pretrained(base_model_id)
+    base = AutoModelForCausalLM.from_pretrained(
+        base_model_id,
         quantization_config=bnb, device_map={"": device},
         attn_implementation="eager")
-    model.eval()
-    print("Model loaded\n")
+
+    if args.adapter:
+        print(f"Loading LoRA adapter: {args.adapter}")
+        model = PeftModel.from_pretrained(base, args.adapter)
+        model.eval()
+        print("Fine-tuned model loaded\n")
+    else:
+        model = base
+        model.eval()
+        print("Base model loaded\n")
 
     with open(args.inputs_json) as f:
         records = json.load(f)
@@ -324,6 +333,8 @@ def parse_args():
     p.add_argument("--output",
         default="../results/causal_test.json")
     p.add_argument("--n_sample", type=int, default=200)
+    p.add_argument("--adapter", default=None,
+        help="Path to LoRA adapter directory (optional)")
     return p.parse_args()
 
 

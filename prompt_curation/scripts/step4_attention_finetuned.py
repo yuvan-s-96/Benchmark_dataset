@@ -127,9 +127,11 @@ def run(args):
         bnb_4bit_compute_dtype=torch.float16,
         bnb_4bit_use_double_quant=True,
     )
-    tokenizer = AutoTokenizer.from_pretrained(args.adapter)
+    tokenizer = AutoTokenizer.from_pretrained(
+        args.adapter, trust_remote_code=True)
     base_model = AutoModelForCausalLM.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2",
+        args.base_model,
+        trust_remote_code=True,
         quantization_config=bnb,
         device_map={"": device},
         attn_implementation="eager",
@@ -173,6 +175,7 @@ def run(args):
                     "style_name":           style,
                     "template":             tmpl_name,
                     "lora":                 args.lora_name,
+                    "prompt":               prompt,
                     "instruction":          instr,
                     "label_attention_mass": lm,
                     "style_attention_mass": sm,
@@ -246,6 +249,9 @@ def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--adapter",     required=True)
     p.add_argument("--lora_name",   required=True)
+    p.add_argument("--base_model",
+        default="mistralai/Mistral-7B-Instruct-v0.2",
+        help="HuggingFace base model id")
     p.add_argument("--inputs_json",
         default="../../data/coconut_subset/annotations/prompt_curation_inputs.json")
     p.add_argument("--output",      required=True)

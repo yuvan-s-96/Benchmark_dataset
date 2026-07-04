@@ -121,7 +121,8 @@ def run(args):
     # Load tokenizer
     print("\nLoading tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2",
+        args.base_model,
+        trust_remote_code=True,
         padding_side="right",
     )
     if tokenizer.pad_token is None:
@@ -144,7 +145,7 @@ def run(args):
     print(f"  Train: {len(train_ds)}  Val: {len(val_ds)}")
 
     # Load model in 4-bit
-    print("\nLoading Mistral-7B in 4-bit...")
+    print(f"\nLoading {args.base_model} in 4-bit...")
     bnb = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_quant_type="nf4",
@@ -152,8 +153,9 @@ def run(args):
         bnb_4bit_use_double_quant=True,
     )
     model = AutoModelForCausalLM.from_pretrained(
-        "mistralai/Mistral-7B-Instruct-v0.2",
+        args.base_model,
         quantization_config=bnb,
+        trust_remote_code=True,
         device_map={"": device},
     )
     model = prepare_model_for_kbit_training(model)
@@ -212,7 +214,7 @@ def run(args):
     # Save training summary
     summary = {
         "template":      args.template,
-        "base_model":    "mistralai/Mistral-7B-Instruct-v0.2",
+        "base_model":    args.base_model,
         "train_samples": len(train_ds),
         "val_samples":   len(val_ds),
         "epochs":        args.epochs,
@@ -230,6 +232,9 @@ def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--template", required=True, choices=["A","B","C","D","E","F","G","H","I"],
                    help="Which template's instructions to use for fine-tuning")
+    p.add_argument("--base_model",
+                   default="mistralai/Mistral-7B-Instruct-v0.2",
+                   help="HuggingFace base model id")
     p.add_argument("--results_json",
                    default="../results/template_comparison_979.json")
     p.add_argument("--output", required=True,
