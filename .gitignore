@@ -51,3 +51,10 @@ data/coconut_subset/images/
 data/coconut_subset/masks_auto/
 data/coconut_subset/masks_click/
 data/masks_sam1/
+prompt_curation/models/lora_A/adapter/
+prompt_curation/models/lora_H/adapter/
+prompt_curation/models/lora_A/checkpoint-*/
+prompt_curation/models/lora_H/checkpoint-*/
+prompt_curation/models/phi4_lora_A/
+prompt_curation/models/phi4_lora_H/
+prompt_curation/results/judge_images/

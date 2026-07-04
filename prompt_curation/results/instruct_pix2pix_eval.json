@@ -1,0 +1,121 @@
+{
+  "model": "timbrooks/instruct-pix2pix",
+  "clip_model": "ViT-B/32",
+  "n_sample": 3,
+  "summary": {
+    "baseline_A": {
+      "region_clip_mean": 0.4492,
+      "nonregion_clip_mean": 1.0,
+      "n_scored": 3,
+      "n_skipped": 0
+    },
+    "baseline_C": {
+      "region_clip_mean": 0.4413,
+      "nonregion_clip_mean": 1.0,
+      "n_scored": 3,
+      "n_skipped": 0
+    },
+    "baseline_E": {
+      "region_clip_mean": 0.5352,
+      "nonregion_clip_mean": 1.0,
+      "n_scored": 1,
+      "n_skipped": 2
+    },
+    "lora_A_tmplA": {
+      "region_clip_mean": 0.4792,
+      "nonregion_clip_mean": 1.0,
+      "n_scored": 3,
+      "n_skipped": 0
+    }
+  },
+  "results": {
+    "baseline_A": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply a pointillist style to the brown wooden cabinets in the scene, follow these steps: 1. Selec",
+        "region_clip": 0.4541,
+        "nonregion_clip": 1.0
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To apply an expressionist style to the dark wooden building region, use a post-processing effect tha",
+        "region_clip": 0.4309,
+        "nonregion_clip": 1.0
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the long wooden desk in this scene, follow these steps: 1. Keep the",
+        "region_clip": 0.4626,
+        "nonregion_clip": 1.0
+      }
+    ],
+    "baseline_C": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To stylize the brown wooden cabinets in pointillism, apply small dots of paint in various shades to ",
+        "region_clip": 0.4353,
+        "nonregion_clip": 1.0
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To stylize the dark wooden building in an expressionist manner, exaggerate the textures and forms to",
+        "region_clip": 0.4771,
+        "nonregion_clip": 1.0
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To stylize the long wooden desk in a neoclassical manner, simplify its design by removing any clutte",
+        "region_clip": 0.4116,
+        "nonregion_clip": 1.0
+      }
+    ],
+    "baseline_E": [
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To transfer a neoclassical artistic style specifically to the long wooden desk while leaving everyth",
+        "region_clip": 0.5352,
+        "nonregion_clip": 1.0
+      }
+    ],
+    "lora_A_tmplA": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply a pointillist style to the brown wooden cabinets in the scene, follow these steps: 1. Selec",
+        "region_clip": 0.4451,
+        "nonregion_clip": 1.0
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To apply an expressionist style to the dark wooden building region, use a post-processing effect tha",
+        "region_clip": 0.522,
+        "nonregion_clip": 1.0
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the long wooden desk in this scene, follow these steps: 1. Keep the",
+        "region_clip": 0.4707,
+        "nonregion_clip": 1.0
+      }
+    ]
+  }
+}

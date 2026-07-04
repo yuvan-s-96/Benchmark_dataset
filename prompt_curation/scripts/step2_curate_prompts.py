@@ -262,6 +262,10 @@ def run(args):
                     "label_attention_mass": res["label_mass"],
                     "style_attention_mass": res["style_mass"],
                     "prompt":      prompt,
+                    "att_weights": res["weights"],
+                    "label_token_indices": res["label_indices"],
+                    "style_token_indices": res["style_indices"],
+                    "n_input_tokens": len(res["weights"]),
                 })
                 label_masses.append(res["label_mass"])
                 style_masses.append(res["style_mass"])
@@ -309,7 +313,7 @@ def run(args):
     print(f"\nBest template by label mass: {best}")
 
     out = {
-        "model":        "mistral-7b-instruct-v0.2-transformers",
+        "model":        args.model,
         "baseline_A": {
             "label_mass": 0.0114,
             "style_mass": 0.0089,
