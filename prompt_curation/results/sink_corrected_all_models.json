@@ -1,0 +1,118 @@
+{
+  "base": {
+    "A": {
+      "corrected": 617.1999999999999
+    },
+    "B": {
+      "corrected": 187.1
+    },
+    "C": {
+      "corrected": 135.20000000000002
+    },
+    "D": {
+      "corrected": 218.1
+    },
+    "E": {
+      "corrected": 269.3
+    },
+    "F": {
+      "corrected": 136.8
+    },
+    "G": {
+      "corrected": 175.2
+    },
+    "H": {
+      "corrected": 259.4
+    },
+    "I": {
+      "corrected": 118.10000000000001
+    }
+  },
+  "lora_A": {
+    "A": {
+      "corrected": NaN
+    },
+    "B": {
+      "corrected": NaN
+    },
+    "C": {
+      "corrected": NaN
+    },
+    "D": {
+      "corrected": NaN
+    },
+    "E": {
+      "corrected": NaN
+    },
+    "F": {
+      "corrected": NaN
+    },
+    "G": {
+      "corrected": NaN
+    },
+    "H": {
+      "corrected": NaN
+    },
+    "I": {
+      "corrected": NaN
+    }
+  },
+  "lora_H": {
+    "A": {
+      "corrected": NaN
+    },
+    "B": {
+      "corrected": NaN
+    },
+    "C": {
+      "corrected": NaN
+    },
+    "D": {
+      "corrected": NaN
+    },
+    "E": {
+      "corrected": NaN
+    },
+    "F": {
+      "corrected": NaN
+    },
+    "G": {
+      "corrected": NaN
+    },
+    "H": {
+      "corrected": NaN
+    },
+    "I": {
+      "corrected": NaN
+    }
+  },
+  "lora_C": {
+    "A": {
+      "corrected": NaN
+    },
+    "B": {
+      "corrected": NaN
+    },
+    "C": {
+      "corrected": NaN
+    },
+    "D": {
+      "corrected": NaN
+    },
+    "E": {
+      "corrected": NaN
+    },
+    "F": {
+      "corrected": NaN
+    },
+    "G": {
+      "corrected": NaN
+    },
+    "H": {
+      "corrected": NaN
+    },
+    "I": {
+      "corrected": NaN
+    }
+  }
+}
