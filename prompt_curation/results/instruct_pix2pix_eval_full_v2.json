@@ -1,0 +1,2657 @@
+{
+  "model": "timbrooks/instruct-pix2pix",
+  "clip_model": "ViT-B/32",
+  "n_sample": 30,
+  "summary": {
+    "baseline_A": {
+      "region_clip_mean": 0.5185,
+      "nonregion_clip_mean": 0.8379,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "baseline_C": {
+      "region_clip_mean": 0.5219,
+      "nonregion_clip_mean": 0.717,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "baseline_E": {
+      "region_clip_mean": 0.515,
+      "nonregion_clip_mean": 0.8167,
+      "n_scored": 20,
+      "n_skipped": 10
+    },
+    "lora_A_tmplA": {
+      "region_clip_mean": 0.5169,
+      "nonregion_clip_mean": 0.8706,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "lora_H_tmplA": {
+      "region_clip_mean": 0.5164,
+      "nonregion_clip_mean": 0.8323,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "baseline_H": {
+      "region_clip_mean": 0.5125,
+      "nonregion_clip_mean": 0.836,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "baseline_F": {
+      "region_clip_mean": 0.5238,
+      "nonregion_clip_mean": 0.7985,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "baseline_B": {
+      "region_clip_mean": 0.522,
+      "nonregion_clip_mean": 0.7396,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "baseline_D": {
+      "region_clip_mean": 0.5189,
+      "nonregion_clip_mean": 0.8376,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "baseline_G": {
+      "region_clip_mean": 0.5219,
+      "nonregion_clip_mean": 0.8052,
+      "n_scored": 30,
+      "n_skipped": 0
+    },
+    "baseline_I": {
+      "region_clip_mean": 0.5223,
+      "nonregion_clip_mean": 0.8319,
+      "n_scored": 30,
+      "n_skipped": 0
+    }
+  },
+  "results": {
+    "baseline_A": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply a pointillist style to the brown wooden cabinets in the scene, follow these steps: 1. Selec",
+        "region_clip": 0.5972,
+        "nonregion_clip": 0.6392
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To apply an expressionist style to the dark wooden building region, use a post-processing effect tha",
+        "region_clip": 0.563,
+        "nonregion_clip": 0.626
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the long wooden desk in this scene, follow these steps: 1. Keep the",
+        "region_clip": 0.5635,
+        "nonregion_clip": 0.8389
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style to the white tent and the surrounding area in this image, follow these step",
+        "region_clip": 0.6421,
+        "nonregion_clip": 0.52
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "Apply an art-deco filter to the region surrounding the purple and lilac backpack and the girls posin",
+        "region_clip": 0.3816,
+        "nonregion_clip": 0.9551
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "To apply a realism style to the hands region in the scene, use a graphic editing software or applica",
+        "region_clip": 0.6069,
+        "nonregion_clip": 0.9727
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the region with green trees, use a graphic editing software or an AI-ba",
+        "region_clip": 0.4722,
+        "nonregion_clip": 0.8252
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the bright green lawn region in this peaceful garden scene, follow thes",
+        "region_clip": 0.5093,
+        "nonregion_clip": 0.9126
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "To apply a pointillist style to a wide asphalt street scene, you would need to use a digital paintin",
+        "region_clip": 0.4824,
+        "nonregion_clip": 0.9663
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To apply a baroque style to the light-colored floor region in this image, you can use a texture over",
+        "region_clip": 0.5796,
+        "nonregion_clip": 0.6782
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To apply a minimalist style to the given region of a cluttered home office or bedroom desk area with",
+        "region_clip": 0.519,
+        "nonregion_clip": 0.6445
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style to the blue and black backpack region in this image, follow th",
+        "region_clip": 0.5122,
+        "nonregion_clip": 0.9097
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To apply minimalist style to the hand and arm of the person raising a gesture in the given scene, fo",
+        "region_clip": 0.4785,
+        "nonregion_clip": 0.6909
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "To apply a symbolic style to the light blue sky region, you can use a graphic editing software or an",
+        "region_clip": 0.5366,
+        "nonregion_clip": 0.8667
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "Apply a renaissance style filter to the tan brick column, enhancing its texture and giving it a more",
+        "region_clip": 0.5415,
+        "nonregion_clip": 0.5625
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To apply a baroque style to the dark metal stairs and surrounding area in this image, you can use a ",
+        "region_clip": 0.5146,
+        "nonregion_clip": 0.9097
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "To apply a symbolic style to the person region in the scene, you can follow these steps: 1. Identify",
+        "region_clip": 0.4951,
+        "nonregion_clip": 0.939
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the region of glass wine glasses, consider adding elegant and simpl",
+        "region_clip": 0.4521,
+        "nonregion_clip": 0.9126
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "To apply an abstract-expressionist style to several long curtains in a scene, you can follow these s",
+        "region_clip": 0.5093,
+        "nonregion_clip": 0.9526
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "To apply a renaissance style to an indoor floor scene, you can use a image editing software or an AI",
+        "region_clip": 0.4897,
+        "nonregion_clip": 0.9658
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To apply a minimalist style to the region of mashed green food in this image, focus on simplifying t",
+        "region_clip": 0.5312,
+        "nonregion_clip": 0.9517
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "Apply an impressionist filter to the blue stream area while keeping the goats and snow in their orig",
+        "region_clip": 0.4668,
+        "nonregion_clip": 0.9478
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To apply the fauvist style to the folding chairs in this photograph, you can follow these steps: 1. ",
+        "region_clip": 0.4646,
+        "nonregion_clip": 0.9321
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "To apply a romanticism style to a light brown wooden dining table, consider adding soft, flowing cur",
+        "region_clip": 0.4895,
+        "nonregion_clip": 0.918
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the white ceiling with dark wooden beams in this image, you can use a i",
+        "region_clip": 0.4895,
+        "nonregion_clip": 0.7603
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style to the kitesurfing kites scene, use a pop-art filter or effect in your imag",
+        "region_clip": 0.582,
+        "nonregion_clip": 0.7871
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style to the dark asphalt road region in the given scene, follow the",
+        "region_clip": 0.5762,
+        "nonregion_clip": 0.9849
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To apply the romanticism style to the moist, grain-based mixture region in the given image, focus on",
+        "region_clip": 0.4546,
+        "nonregion_clip": 0.9878
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To apply a minimalist style to the brick houses region in this black and white historical photograph",
+        "region_clip": 0.5503,
+        "nonregion_clip": 0.6567
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To apply an abstract-expressionist style to the concrete sidewalk and road in this image, you could ",
+        "region_clip": 0.5049,
+        "nonregion_clip": 0.9238
+      }
+    ],
+    "baseline_C": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To stylize the brown wooden cabinets in pointillism, apply small dots of paint in various shades to ",
+        "region_clip": 0.5879,
+        "nonregion_clip": 0.8936
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To stylize the dark wooden building in an expressionist manner, exaggerate the textures and forms to",
+        "region_clip": 0.5737,
+        "nonregion_clip": 0.5386
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To stylize the long wooden desk in a neoclassical manner, simplify its design by removing any clutte",
+        "region_clip": 0.5557,
+        "nonregion_clip": 0.6533
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To stylize a white tent in pop-art style, exaggerate its geometric shapes and bold colors. Use sharp",
+        "region_clip": 0.6226,
+        "nonregion_clip": 0.4534
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "To stylize the purple and lilac backpack in an art-deco manner, consider adding geometric shapes and",
+        "region_clip": 0.3799,
+        "nonregion_clip": 0.9517
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "To stylize the hands of a person in realism style, pay close attention to the details and textures. ",
+        "region_clip": 0.6597,
+        "nonregion_clip": 0.5015
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "To stylize green trees in a cubist artistic style, break down each tree into geometric shapes and pl",
+        "region_clip": 0.4731,
+        "nonregion_clip": 0.7593
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To stylize the bright green lawn in cubism style, break down the lawn into geometric shapes and plan",
+        "region_clip": 0.469,
+        "nonregion_clip": 0.6289
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "To stylize a wide asphalt street in pointillism, break down the scene into small, individual points ",
+        "region_clip": 0.5034,
+        "nonregion_clip": 0.875
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To stylize the light-colored floor in a baroque artistic style, add intricate and ornate patterns re",
+        "region_clip": 0.5405,
+        "nonregion_clip": 0.8413
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To stylize the large window in minimalism style, remove the outdoor scenery and keep only the window",
+        "region_clip": 0.5791,
+        "nonregion_clip": 0.5571
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To stylize the blue and black backpack in a color-field-painting style, focus on creating large, fla",
+        "region_clip": 0.5107,
+        "nonregion_clip": 0.8979
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To stylize the hand and arm of another person in minimalism style, simplify the forms by reducing th",
+        "region_clip": 0.4634,
+        "nonregion_clip": 0.7056
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "To stylize the light blue sky in a symbolic artistic style, consider enhancing its ethereal and drea",
+        "region_clip": 0.4951,
+        "nonregion_clip": 0.5918
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To stylize the tan brick column in a renaissance artistic style, apply chiaroscuro techniques by add",
+        "region_clip": 0.5195,
+        "nonregion_clip": 0.5317
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To stylize the dark metal stairs in a baroque manner, consider adding ornate and intricate details t",
+        "region_clip": 0.5063,
+        "nonregion_clip": 0.5972
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "To stylize the person in a symbolic artistic style, transform their physical features into abstract ",
+        "region_clip": 0.5439,
+        "nonregion_clip": 0.52
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "To stylize glass wine glasses in a neoclassical artistic style, consider the following instruction: ",
+        "region_clip": 0.5083,
+        "nonregion_clip": 0.6025
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "To stylize several long curtains in abstract-expressionism, consider the following instruction: Tran",
+        "region_clip": 0.54,
+        "nonregion_clip": 0.6909
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "To stylize the indoor floor in a renaissance artistic style, apply intricate geometric patterns usin",
+        "region_clip": 0.5518,
+        "nonregion_clip": 0.4233
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To stylize the mashed green food in minimalism, simplify its texture by representing it as a flat, s",
+        "region_clip": 0.5195,
+        "nonregion_clip": 0.9351
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "To stylize the blue stream in an impressionist manner, use broad, loose brushstrokes to capture the ",
+        "region_clip": 0.4688,
+        "nonregion_clip": 0.9048
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To stylize the folding chairs in a fauvist manner, apply bold and vivid colors to their fabric, givi",
+        "region_clip": 0.4631,
+        "nonregion_clip": 0.937
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "To stylize the light brown wooden dining table in a romanticism style, consider adding soft, warm li",
+        "region_clip": 0.4885,
+        "nonregion_clip": 0.8501
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To stylize the white ceiling with dark wooden beams in a cubist artistic style, break down the geome",
+        "region_clip": 0.4375,
+        "nonregion_clip": 0.5903
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "To stylize kitesurfing kites in pop-art style, exaggerate their shapes and colors with bold, vibrant",
+        "region_clip": 0.6074,
+        "nonregion_clip": 0.7031
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To stylize the dark asphalt road in a color-field-painting style, apply a single flat and solid colo",
+        "region_clip": 0.5884,
+        "nonregion_clip": 0.876
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To stylize the moist, grain-based mixture in a romanticism style, consider enhancing its textures an",
+        "region_clip": 0.4492,
+        "nonregion_clip": 0.9937
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To stylize the brick houses in minimalism, simplify their forms by reducing the details to essential",
+        "region_clip": 0.5596,
+        "nonregion_clip": 0.6182
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To stylize the concrete sidewalk and road in an abstract-expressionism style, apply heavy textures a",
+        "region_clip": 0.4919,
+        "nonregion_clip": 0.8877
+      }
+    ],
+    "baseline_E": [
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To transfer a neoclassical artistic style specifically to the long wooden desk while leaving everyth",
+        "region_clip": 0.5581,
+        "nonregion_clip": 0.7363
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To transfer a pop-art artistic style specifically to the white tent in the image, you could give the",
+        "region_clip": 0.6533,
+        "nonregion_clip": 0.9722
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "To transfer an art deco style specifically to the purple and lilac backpack, you could instruct the ",
+        "region_clip": 0.4014,
+        "nonregion_clip": 0.9492
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To transfer the cubist artistic style specifically to the bright green lawn while leaving everything",
+        "region_clip": 0.5098,
+        "nonregion_clip": 0.9204
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "Unfortunately, it's not possible to transfer a specific artistic style like pointillism to a physica",
+        "region_clip": 0.4604,
+        "nonregion_clip": 0.8564
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To transfer a baroque artistic style specifically to the light-colored floor while leaving everythin",
+        "region_clip": 0.5566,
+        "nonregion_clip": 0.4187
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To transfer minimalist artistic style specifically to the large window while leaving everything else",
+        "region_clip": 0.5576,
+        "nonregion_clip": 0.5498
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To transfer a color-field painting artistic style specifically to the blue and black backpack in the",
+        "region_clip": 0.5063,
+        "nonregion_clip": 0.9287
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To transfer minimalism artistic style to the hand and arm of the person in the scene, you could inst",
+        "region_clip": 0.5068,
+        "nonregion_clip": 0.6807
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "To transfer a specific artistic style, such as symbolism, to only the light blue sky in an image usi",
+        "region_clip": 0.5488,
+        "nonregion_clip": 0.8838
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To transfer a Renaissance artistic style specifically to the tan brick column while leaving the rest",
+        "region_clip": 0.4871,
+        "nonregion_clip": 0.9658
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To transfer a baroque artistic style specifically to the dark metal stairs, you could instruct an ar",
+        "region_clip": 0.5327,
+        "nonregion_clip": 0.6328
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To transfer minimalism artistic style specifically to the mashed green food while leaving the rest o",
+        "region_clip": 0.5249,
+        "nonregion_clip": 0.8628
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "To transfer an impressionistic artistic style specifically to the blue stream while leaving everythi",
+        "region_clip": 0.4705,
+        "nonregion_clip": 0.9478
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To transfer the Fauvism artistic style specifically to the folding chairs in this image, you would i",
+        "region_clip": 0.4526,
+        "nonregion_clip": 0.939
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To transfer the cubist artistic style specifically to the white ceiling with dark wooden beams, you ",
+        "region_clip": 0.4653,
+        "nonregion_clip": 0.5854
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To transfer a color-field painting artistic style specifically to the dark asphalt road, you could i",
+        "region_clip": 0.5771,
+        "nonregion_clip": 0.9819
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To transfer a romanticism artistic style specifically to the moist, grain-based mixture in the image",
+        "region_clip": 0.4504,
+        "nonregion_clip": 0.9819
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To transfer minimalism artistic style specifically to the brick houses in this image, you could inst",
+        "region_clip": 0.5649,
+        "nonregion_clip": 0.6143
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To transfer an abstract-expressionist artistic style specifically to the concrete sidewalk and road ",
+        "region_clip": 0.5146,
+        "nonregion_clip": 0.9253
+      }
+    ],
+    "lora_A_tmplA": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply a pointillist style to the brown wooden cabinets in the scene, follow these steps: 1. Selec",
+        "region_clip": 0.6118,
+        "nonregion_clip": 0.9307
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To apply an expressionist style to the dark wooden building region, use a post-processing effect tha",
+        "region_clip": 0.5586,
+        "nonregion_clip": 0.876
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the long wooden desk in this scene, follow these steps: 1. Keep the",
+        "region_clip": 0.5669,
+        "nonregion_clip": 0.8164
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style to the white tent and the surrounding area in this image, follow these step",
+        "region_clip": 0.6475,
+        "nonregion_clip": 0.9766
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "Apply an art-deco filter to the purple and lilac backpack and the girls in the scene, enhancing the ",
+        "region_clip": 0.4004,
+        "nonregion_clip": 0.9399
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "To apply a realism style to the hands region in the scene, use a graphic editing software or applica",
+        "region_clip": 0.603,
+        "nonregion_clip": 0.9731
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the region with green trees, use a graphic editing software or an AI-ba",
+        "region_clip": 0.4729,
+        "nonregion_clip": 0.8218
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the bright green lawn region in this peaceful garden scene, follow thes",
+        "region_clip": 0.5181,
+        "nonregion_clip": 0.9194
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "To apply a pointillist style to a wide asphalt street scene, you would need to use a digital paintin",
+        "region_clip": 0.4734,
+        "nonregion_clip": 0.9502
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To apply a baroque style to the light-colored floor region in this image, you can add ornate and int",
+        "region_clip": 0.5747,
+        "nonregion_clip": 0.7329
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To apply a minimalist style to the given region of a cluttered home office or bedroom desk area with",
+        "region_clip": 0.5117,
+        "nonregion_clip": 0.5845
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style to the blue and black backpack and the people in the scene whi",
+        "region_clip": 0.502,
+        "nonregion_clip": 0.9189
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To apply minimalist style to the hand and arm of the person raising a gesture in the given scene, fo",
+        "region_clip": 0.427,
+        "nonregion_clip": 0.9287
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "To apply a symbolic style to the light blue sky region, you could instruct an artist or image editin",
+        "region_clip": 0.5449,
+        "nonregion_clip": 0.9102
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To apply a renaissance style to the tan brick column in this scene, you can follow these steps: 1. I",
+        "region_clip": 0.5327,
+        "nonregion_clip": 0.5908
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To apply a baroque style to the dark metal stairs in this image, you can follow these steps: 1. Sele",
+        "region_clip": 0.4658,
+        "nonregion_clip": 0.937
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "To apply a symbolic style to the person region in the scene, you can follow these steps: 1. Identify",
+        "region_clip": 0.5176,
+        "nonregion_clip": 0.9355
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the region of glass wine glasses, consider adding elegant and simpl",
+        "region_clip": 0.4602,
+        "nonregion_clip": 0.9575
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "To apply an abstract-expressionist style to several long curtains in a scene, you can follow these s",
+        "region_clip": 0.5254,
+        "nonregion_clip": 0.9541
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "To apply a renaissance style to an indoor floor scene, you can use a graphic editing software or an ",
+        "region_clip": 0.5005,
+        "nonregion_clip": 0.9331
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To apply a minimalist style to the region of mashed green food in this image, focus on simplifying t",
+        "region_clip": 0.5259,
+        "nonregion_clip": 0.936
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "Apply an impressionist filter to the blue stream area while keeping the goats and snow in their orig",
+        "region_clip": 0.4688,
+        "nonregion_clip": 0.9541
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To apply the fauvist style to the folding chairs in this black and white photograph, you can follow ",
+        "region_clip": 0.4536,
+        "nonregion_clip": 0.9326
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "To apply a romanticism style to a light brown wooden dining table, consider adding soft, flowing cur",
+        "region_clip": 0.4983,
+        "nonregion_clip": 0.9131
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the white ceiling with dark wooden beams in this image, you can follow ",
+        "region_clip": 0.4683,
+        "nonregion_clip": 0.6035
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style to the kitesurfing kites scene, use a pop-art filter or effect in your imag",
+        "region_clip": 0.5967,
+        "nonregion_clip": 0.7876
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style to the given region of a dark asphalt road scene, follow these",
+        "region_clip": 0.5742,
+        "nonregion_clip": 0.9707
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To apply a romanticism style to the given region of a moist, grain-based mixture, you could add soft",
+        "region_clip": 0.469,
+        "nonregion_clip": 0.917
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To apply a minimalist style to the brick houses region in this black and white historical photograph",
+        "region_clip": 0.5298,
+        "nonregion_clip": 0.6084
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To apply an abstract-expressionist style to the concrete sidewalk and road in this image, you can us",
+        "region_clip": 0.5063,
+        "nonregion_clip": 0.9072
+      }
+    ],
+    "lora_H_tmplA": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply a pointillist style to the brown wooden cabinets in the scene, you can use a graphic design",
+        "region_clip": 0.6016,
+        "nonregion_clip": 0.9399
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To apply an expressionist style to the dark wooden building region, use a technique called \"pointill",
+        "region_clip": 0.564,
+        "nonregion_clip": 0.6699
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the long wooden desk in the given scene, you could instruct an imag",
+        "region_clip": 0.5586,
+        "nonregion_clip": 0.5938
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style transfer to the white tent in the given scene, you can use image editing so",
+        "region_clip": 0.6514,
+        "nonregion_clip": 0.9668
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "To apply an Art Deco style to the purple and lilac backpack in this scene, you can use a image editi",
+        "region_clip": 0.3843,
+        "nonregion_clip": 0.9404
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "To apply a realism style transfer specifically to the hands of a person in an image, you can use a t",
+        "region_clip": 0.6016,
+        "nonregion_clip": 0.9692
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "To apply a cubist style to the region of green trees using automatic image processing, you can use a",
+        "region_clip": 0.4814,
+        "nonregion_clip": 0.8096
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply a cubist style to the bright green lawn and surrounding lush palm trees in the given garden",
+        "region_clip": 0.4951,
+        "nonregion_clip": 0.9102
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "To apply a pointillist style to a wide asphalt street, you can use a graphic design software or a ph",
+        "region_clip": 0.4717,
+        "nonregion_clip": 0.9663
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To apply a Baroque style to the light-colored floor in the given scene, you could add ornate and int",
+        "region_clip": 0.5649,
+        "nonregion_clip": 0.4082
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To apply a minimalist style to the given region of a large window in an image, follow these steps: 1",
+        "region_clip": 0.457,
+        "nonregion_clip": 0.5093
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style specifically to the blue and black backpack in the given scene",
+        "region_clip": 0.5044,
+        "nonregion_clip": 0.8315
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To apply minimalism style to the hand and arm of the person in the scene, focus on simplifying the f",
+        "region_clip": 0.4771,
+        "nonregion_clip": 0.7168
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "To apply the symbolism style to the light blue sky region, you could instruct the image editing soft",
+        "region_clip": 0.5396,
+        "nonregion_clip": 0.9277
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To apply the Renaissance style to the tan brick column in this scene, you can use a technique called",
+        "region_clip": 0.5503,
+        "nonregion_clip": 0.833
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To apply a Baroque style to the dark metal stairs in this image, you could add ornate and intricate ",
+        "region_clip": 0.5054,
+        "nonregion_clip": 0.9297
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "To apply the symbolism style specifically to the person region in the scene, you could use the follo",
+        "region_clip": 0.5391,
+        "nonregion_clip": 0.915
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the region of glass wine glasses, you could instruct an artist or d",
+        "region_clip": 0.5273,
+        "nonregion_clip": 0.5479
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "To apply an abstract-expressionist style to several long curtains in a scene using abstract-expressi",
+        "region_clip": 0.5127,
+        "nonregion_clip": 0.9575
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "To apply a Renaissance style to an indoor floor region, you can use a graphic design software or ima",
+        "region_clip": 0.4297,
+        "nonregion_clip": 0.9712
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To apply minimalism style to the region of mashed green food in the given image, you can use the fol",
+        "region_clip": 0.5312,
+        "nonregion_clip": 0.9766
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "To apply an Impressionist style to the given scene of three goats standing on snow with a green fore",
+        "region_clip": 0.4656,
+        "nonregion_clip": 0.8892
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To apply the Fauvism style to the folding chairs in the given scene, you can follow these steps: 1. ",
+        "region_clip": 0.459,
+        "nonregion_clip": 0.939
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "To apply a romanticism style to the light brown wooden dining table region, consider adding intricat",
+        "region_clip": 0.4812,
+        "nonregion_clip": 0.9009
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply a cubist style to the white ceiling with dark wooden beams in the given image, you can use ",
+        "region_clip": 0.542,
+        "nonregion_clip": 0.5288
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style specifically to kitesurfing kites in a scene, you can use image editing sof",
+        "region_clip": 0.5381,
+        "nonregion_clip": 0.8457
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style to the dark asphalt road in the given scene, you can follow th",
+        "region_clip": 0.5913,
+        "nonregion_clip": 0.9805
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To apply the romanticism style to the moist, grain-based mixture region in the given scene, focus on",
+        "region_clip": 0.4487,
+        "nonregion_clip": 0.9893
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To apply minimalism style to the given region of brick houses and the historical photograph scene, y",
+        "region_clip": 0.5161,
+        "nonregion_clip": 0.6519
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To apply an abstract-expressionist style to the concrete sidewalk and road in this image, you could ",
+        "region_clip": 0.5015,
+        "nonregion_clip": 0.9546
+      }
+    ],
+    "baseline_H": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply Pointillism style specifically to the brown wooden cabinets while leaving the rest of the s",
+        "region_clip": 0.5547,
+        "nonregion_clip": 0.7388
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To apply expressionism specifically to the dark wooden building in the scene while leaving everythin",
+        "region_clip": 0.543,
+        "nonregion_clip": 0.9131
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply the Neoclassical style specifically to the long wooden desk while leaving the rest of the s",
+        "region_clip": 0.5322,
+        "nonregion_clip": 0.6006
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style specifically to the white tent while leaving the rest of the scene untouche",
+        "region_clip": 0.6416,
+        "nonregion_clip": 0.9785
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "To apply an Art Deco style specifically to the purple and lilac backpack, you could use a image edit",
+        "region_clip": 0.4126,
+        "nonregion_clip": 0.9526
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "To apply realism specifically to the hands of a person while leaving the rest of the scene untouched",
+        "region_clip": 0.5972,
+        "nonregion_clip": 0.9688
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "To apply Cubism style specifically to the green trees in a given scene while leaving the rest of the",
+        "region_clip": 0.4712,
+        "nonregion_clip": 0.8208
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply Cubism specifically to the bright green lawn while leaving the rest of the scene untouched,",
+        "region_clip": 0.5215,
+        "nonregion_clip": 0.9165
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "To apply Pointillism style specifically to the wide asphalt street while leaving the rest of the sce",
+        "region_clip": 0.4736,
+        "nonregion_clip": 0.9619
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To apply the Baroque style specifically to the light-colored floor while leaving the rest of the sce",
+        "region_clip": 0.54,
+        "nonregion_clip": 0.4875
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To apply minimalism specifically to the large window while leaving the rest of the scene untouched, ",
+        "region_clip": 0.5034,
+        "nonregion_clip": 0.8618
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To apply the color-field-painting style specifically to the blue and black backpack, you can use a l",
+        "region_clip": 0.5015,
+        "nonregion_clip": 0.8525
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To apply minimalism specifically to the hand and arm of the person in the scene while leaving everyt",
+        "region_clip": 0.4155,
+        "nonregion_clip": 0.7715
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "To apply symbolism style specifically to the light blue sky in a given scene using a single instruct",
+        "region_clip": 0.5405,
+        "nonregion_clip": 0.9473
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To apply the Renaissance style specifically to the tan brick column while leaving the rest of the sc",
+        "region_clip": 0.4927,
+        "nonregion_clip": 0.8545
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To apply the Baroque style specifically to the dark metal stairs while leaving the rest of the scene",
+        "region_clip": 0.5693,
+        "nonregion_clip": 0.7285
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "To apply symbolism specifically to a person in a scene while leaving the rest of the scene untouched",
+        "region_clip": 0.5161,
+        "nonregion_clip": 0.9033
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "To apply the Neoclassical style specifically to the glass wine glasses in a scene while leaving the ",
+        "region_clip": 0.5142,
+        "nonregion_clip": 0.6279
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "To apply abstract-expressionism style specifically to the several long curtains in the scene while l",
+        "region_clip": 0.4963,
+        "nonregion_clip": 0.9658
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "To apply the Renaissance style specifically to an indoor floor while leaving the rest of the scene u",
+        "region_clip": 0.4414,
+        "nonregion_clip": 0.9717
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To apply minimalism specifically to the portion of mashed green food while leaving the rest of the s",
+        "region_clip": 0.5249,
+        "nonregion_clip": 0.9751
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "To apply an Impressionist style specifically to the blue stream while leaving the rest of the scene ",
+        "region_clip": 0.4719,
+        "nonregion_clip": 0.8501
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To apply the Fauvism style specifically to the folding chairs in the given black and white photograp",
+        "region_clip": 0.4536,
+        "nonregion_clip": 0.937
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "To apply the Romanticism style specifically to the light brown wooden dining table while leaving the",
+        "region_clip": 0.4893,
+        "nonregion_clip": 0.6104
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply Cubism specifically to the white ceiling with dark wooden beams while leaving the rest of t",
+        "region_clip": 0.457,
+        "nonregion_clip": 0.6997
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style transfer specifically to the kitesurfing kites in the scene while leaving t",
+        "region_clip": 0.5566,
+        "nonregion_clip": 0.7217
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To apply the color-field-painting style specifically to the dark asphalt road while leaving the rest",
+        "region_clip": 0.5903,
+        "nonregion_clip": 0.9766
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To apply the Romanticism style specifically to the moist, grain-based mixture in the scene, you coul",
+        "region_clip": 0.4714,
+        "nonregion_clip": 0.9526
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To apply minimalism specifically to the brick houses in the scene while leaving everything else unto",
+        "region_clip": 0.5518,
+        "nonregion_clip": 0.6162
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To apply abstract-expressionism specifically to the concrete sidewalk and road while leaving the res",
+        "region_clip": 0.5303,
+        "nonregion_clip": 0.918
+      }
+    ],
+    "baseline_F": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply pointillism style to brown wooden cabinets in a scene, follow these steps: 1. Identify the ",
+        "region_clip": 0.6143,
+        "nonregion_clip": 0.7446
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "Identify the dark wooden building in the scene and apply expressionism by enhancing its textures and",
+        "region_clip": 0.5298,
+        "nonregion_clip": 0.8857
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply the neoclassical style to the long wooden desk in the scene, first, ensure that the clutter",
+        "region_clip": 0.563,
+        "nonregion_clip": 0.8311
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style to the white tent in the scene, follow these steps: 1. Isolate the white te",
+        "region_clip": 0.6543,
+        "nonregion_clip": 0.8916
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "To apply an art-deco style to the purple and lilac backpack in the scene, follow these steps: 1. Iso",
+        "region_clip": 0.4089,
+        "nonregion_clip": 0.9448
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "Step 1: Identify the hands of the person in the scene: Locate the area of the image where the hands ",
+        "region_clip": 0.6001,
+        "nonregion_clip": 0.9785
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "Identify the green trees in the scene and outline their boundaries. Then, apply the cubism style by ",
+        "region_clip": 0.5059,
+        "nonregion_clip": 0.7783
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the bright green lawn in the given scene, follow these steps: 1. Isolat",
+        "region_clip": 0.522,
+        "nonregion_clip": 0.9253
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "To create a pointillist representation of a wide asphalt street, follow these steps: 1. Begin by ske",
+        "region_clip": 0.4871,
+        "nonregion_clip": 0.7568
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To apply a baroque style to the light-colored floor in the given scene, follow these steps: 1. Isola",
+        "region_clip": 0.5771,
+        "nonregion_clip": 0.7227
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To apply minimalism to the large window in the scene, first identify the window by locating the part",
+        "region_clip": 0.54,
+        "nonregion_clip": 0.6851
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style to the blue and black backpack in the scene, follow these step",
+        "region_clip": 0.5054,
+        "nonregion_clip": 0.8906
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To apply minimalism to the hand and arm of the person in the scene, follow these steps: 1. Isolate t",
+        "region_clip": 0.4675,
+        "nonregion_clip": 0.7104
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "Identify the light blue sky in the scene and replace it with a symbolic representation using clouds ",
+        "region_clip": 0.5176,
+        "nonregion_clip": 0.7217
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To apply a renaissance style to the tan brick column in the scene, begin by enhancing the texture an",
+        "region_clip": 0.4944,
+        "nonregion_clip": 0.5537
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To apply a baroque style to the dark metal stairs in the given urban scene, follow these steps: 1. I",
+        "region_clip": 0.5713,
+        "nonregion_clip": 0.6201
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "Identify the key features of the person in the scene, such as their facial features, body shape, and",
+        "region_clip": 0.5117,
+        "nonregion_clip": 0.9194
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "Step 1: Identify the glass wine glasses in the scene: Locate the area of the image or scene where th",
+        "region_clip": 0.4917,
+        "nonregion_clip": 0.9624
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "Step 1: Identify the several long curtains in the scene: Locate the areas in the image where the cur",
+        "region_clip": 0.5137,
+        "nonregion_clip": 0.9478
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "Identify the indoor floor in the scene by locating the flat, horizontal surface covered with a mater",
+        "region_clip": 0.4958,
+        "nonregion_clip": 0.4211
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To apply minimalism to the portion of mashed green food in the given image, focus on simplifying its",
+        "region_clip": 0.5264,
+        "nonregion_clip": 0.958
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "To apply an impressionist style to the blue stream in the scene, follow these steps: 1. Identify the",
+        "region_clip": 0.4758,
+        "nonregion_clip": 0.8979
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "Identify the folding chairs in the scene by looking for the distinctive shapes and patterns of their",
+        "region_clip": 0.4673,
+        "nonregion_clip": 0.9058
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "Identify the light brown wooden dining table in the scene. To apply a romanticism style to the table",
+        "region_clip": 0.4788,
+        "nonregion_clip": 0.6357
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the white ceiling with dark wooden beams in the given scene, follow the",
+        "region_clip": 0.4905,
+        "nonregion_clip": 0.5928
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "Step 1: Identify the kitesurfing kites in the scene: Locate the brightly colored kites in the image,",
+        "region_clip": 0.5723,
+        "nonregion_clip": 0.6982
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style to the dark asphalt road in the scene, first isolate the road ",
+        "region_clip": 0.6113,
+        "nonregion_clip": 0.9629
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To apply the romanticism style to the moist, grain-based mixture in the scene, imagine the grains as",
+        "region_clip": 0.5107,
+        "nonregion_clip": 0.8931
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To apply minimalism to the brick houses in the given scene, focus on simplifying their forms while r",
+        "region_clip": 0.4866,
+        "nonregion_clip": 0.6084
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To apply the abstract-expressionist style to the concrete sidewalk and road in the given scene, foll",
+        "region_clip": 0.5215,
+        "nonregion_clip": 0.9092
+      }
+    ],
+    "baseline_B": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "Apply pointillism technique by dotting small, distinct points of paint onto the surface of the brown",
+        "region_clip": 0.5991,
+        "nonregion_clip": 0.7163
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "Use bold, exaggerated brushstrokes and intense, contrasting colors to bring out the emotional and su",
+        "region_clip": 0.5469,
+        "nonregion_clip": 0.5474
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the long wooden desk in this scene, consider giving it a simple and",
+        "region_clip": 0.561,
+        "nonregion_clip": 0.7197
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "Apply a pop-art filter specifically to the white tent, enhancing its colors and adding bold, vibrant",
+        "region_clip": 0.6411,
+        "nonregion_clip": 0.9727
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "Apply an art-deco design to the purple and lilac backpack, incorporating geometric shapes, bold line",
+        "region_clip": 0.4045,
+        "nonregion_clip": 0.8281
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "Apply a textured and detailed brush technique to the hands, focusing on the intricacies of the skin,",
+        "region_clip": 0.5854,
+        "nonregion_clip": 0.5312
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "Apply a cubist transformation to the green tree objects, converting their shapes into geometric form",
+        "region_clip": 0.4768,
+        "nonregion_clip": 0.7036
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "Apply cubism texture and geometry transformation to the bright green lawn area, preserving the origi",
+        "region_clip": 0.4719,
+        "nonregion_clip": 0.6611
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "Apply pointillism technique to the wide asphalt street by dotting the surface with small, distinct p",
+        "region_clip": 0.4575,
+        "nonregion_clip": 0.9341
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "Apply a baroque floor texture with intricate patterns and swirling designs, giving the appearance of",
+        "region_clip": 0.5464,
+        "nonregion_clip": 0.4092
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "Instruction: Keep the large window unadorned and clear of any decorations to maintain a minimalist a",
+        "region_clip": 0.5386,
+        "nonregion_clip": 0.6079
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "Apply a solid coat of blue paint to the main surface of the backpack, blending seamlessly into a sol",
+        "region_clip": 0.5039,
+        "nonregion_clip": 0.8945
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "Minimize the hand and arm by rendering them in monochrome, using simple geometric shapes to represen",
+        "region_clip": 0.459,
+        "nonregion_clip": 0.7119
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "Interpret the light blue sky as a symbol of tranquility and peace, representing the calm and serene ",
+        "region_clip": 0.5371,
+        "nonregion_clip": 0.9243
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "Apply a renaissance texture and color palette to the tan brick column, giving it an aged and weather",
+        "region_clip": 0.5332,
+        "nonregion_clip": 0.5586
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "Add ornate, intricately designed wrought iron balustrades and scrollwork to the dark metal stairs, g",
+        "region_clip": 0.488,
+        "nonregion_clip": 0.5845
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "Instruction: Paint a radiant sun where the person's heart should be, symbolizing their inner spirit ",
+        "region_clip": 0.5698,
+        "nonregion_clip": 0.855
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "Create glass wine glasses with clean, elegant lines and simple, geometric shapes inspired by Neoclas",
+        "region_clip": 0.4897,
+        "nonregion_clip": 0.604
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "Apply an abstract-expressionist paint technique to the surface of the several long curtains, using b",
+        "region_clip": 0.6035,
+        "nonregion_clip": 0.6333
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "Instruction: Transform the indoor floor into a renaissance-style design by adding intricate geometri",
+        "region_clip": 0.5166,
+        "nonregion_clip": 0.4802
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "Minimize the mashed green food by simplifying its texture, making it appear smooth and uniform in co",
+        "region_clip": 0.5171,
+        "nonregion_clip": 0.9062
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "Apply an impressionistic technique to the blue stream by using short, thick brushstrokes to capture ",
+        "region_clip": 0.4722,
+        "nonregion_clip": 0.8682
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "Apply vibrant, expressive colors to the folding chairs, focusing on the use of contrasting hues and ",
+        "region_clip": 0.4626,
+        "nonregion_clip": 0.9395
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "Instruction: Transform the light brown wooden dining table into a romantic setting by adding soft, w",
+        "region_clip": 0.4795,
+        "nonregion_clip": 0.9263
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "Apply cubism to the white ceiling and dark wooden beams by fragmenting and rearranging their geometr",
+        "region_clip": 0.5107,
+        "nonregion_clip": 0.5107
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "Apply a pop-art filter specifically to the kitesurfing kites in the scene.",
+        "region_clip": 0.6113,
+        "nonregion_clip": 0.7451
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "Apply a solid, uniform coat of a dark, rich hue of asphalt gray or black color to cover the entirety",
+        "region_clip": 0.5801,
+        "nonregion_clip": 0.9438
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "Paint the moist, grain-based mixture with soft, warm hues, enhancing its natural pearly sheen to evo",
+        "region_clip": 0.4724,
+        "nonregion_clip": 0.9438
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "Instruction: Minimalize the brick houses by removing all decorative elements, such as chimneys, shop",
+        "region_clip": 0.5112,
+        "nonregion_clip": 0.5874
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "Apply abstract-expressionism to the concrete sidewalk and road by exaggerating the textures and patt",
+        "region_clip": 0.5132,
+        "nonregion_clip": 0.939
+      }
+    ],
+    "baseline_D": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply the pointillism style to the brown wooden cabinets in the given image while preserving the ",
+        "region_clip": 0.5796,
+        "nonregion_clip": 0.9648
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To apply expressionist style to the dark wooden building in the image while preserving the other reg",
+        "region_clip": 0.542,
+        "nonregion_clip": 0.6909
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply the neoclassical style to the long wooden desk in the given image, follow these steps: 1. I",
+        "region_clip": 0.5649,
+        "nonregion_clip": 0.5493
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style to the white tent in the given image, follow these steps: 1. Load the image",
+        "region_clip": 0.6475,
+        "nonregion_clip": 0.9771
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "To apply an Art Deco style to the purple and lilac backpack in the given image, follow these steps: ",
+        "region_clip": 0.3943,
+        "nonregion_clip": 0.9443
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "To apply the realism style to the hands of the person in the image while preserving the rest of the ",
+        "region_clip": 0.6021,
+        "nonregion_clip": 0.9756
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the green trees in the given image while preserving the other regions u",
+        "region_clip": 0.4722,
+        "nonregion_clip": 0.8223
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the bright green lawn in the given image, follow these steps: 1. Load t",
+        "region_clip": 0.5088,
+        "nonregion_clip": 0.8921
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "To apply the pointillism style to the wide asphalt street in the given image while preserving the ot",
+        "region_clip": 0.4561,
+        "nonregion_clip": 0.9653
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To apply the Baroque style to the light-colored floor in the given image, follow these steps: 1. Loa",
+        "region_clip": 0.5508,
+        "nonregion_clip": 0.5269
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To apply the minimalist style to the large window in the given image, follow these steps: 1. Identif",
+        "region_clip": 0.4946,
+        "nonregion_clip": 0.8701
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To apply the color-field painting style to the blue and black backpack in the given image, follow th",
+        "region_clip": 0.5044,
+        "nonregion_clip": 0.9287
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To apply minimalism style to the hand and arm of the person in the lower right corner of the image, ",
+        "region_clip": 0.4907,
+        "nonregion_clip": 0.6821
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "To apply a symbolic style transfer to the light blue sky in the given image, please follow these ste",
+        "region_clip": 0.5322,
+        "nonregion_clip": 0.9194
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To apply the Renaissance style to the tan brick column in the given image, follow these steps: 1. Is",
+        "region_clip": 0.5615,
+        "nonregion_clip": 0.4807
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To apply the Baroque style to the dark metal stairs in the given image, follow these steps: 1. Isola",
+        "region_clip": 0.5127,
+        "nonregion_clip": 0.9351
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "To apply a symbolic style transfer to the person in the image while preserving the rest of the scene",
+        "region_clip": 0.4829,
+        "nonregion_clip": 0.9341
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "To apply the neoclassical style to the glass wine glasses in the given image while preserving the ot",
+        "region_clip": 0.5034,
+        "nonregion_clip": 0.5498
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "To apply the abstract-expressionism style to several long curtains in the given image while preservi",
+        "region_clip": 0.4985,
+        "nonregion_clip": 0.9761
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "To apply the Renaissance style to the indoor floor in the given image while preserving the other reg",
+        "region_clip": 0.4473,
+        "nonregion_clip": 0.9697
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To apply the minimalist style to the portion of mashed green food in the image, follow these steps: ",
+        "region_clip": 0.5171,
+        "nonregion_clip": 0.8926
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "To apply the impressionist style to the blue stream in the given image, follow these steps: 1. Load ",
+        "region_clip": 0.4717,
+        "nonregion_clip": 0.9385
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To apply the Fauvism style to the folding chairs in the given black and white photograph, follow the",
+        "region_clip": 0.4583,
+        "nonregion_clip": 0.9287
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "To apply the romanticism style to the light brown wooden dining table in the given image, please fol",
+        "region_clip": 0.4875,
+        "nonregion_clip": 0.9209
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the white ceiling with dark wooden beams in the given image, follow the",
+        "region_clip": 0.5142,
+        "nonregion_clip": 0.6846
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style to the kitesurfing kites in the given image while preserving the rest of th",
+        "region_clip": 0.6182,
+        "nonregion_clip": 0.8022
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To apply the color-field painting style to the dark asphalt road in the given image while preserving",
+        "region_clip": 0.5845,
+        "nonregion_clip": 0.9854
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "In the heart of this vibrant tableau, the moist, grain-based mixture beckons with an irresistible al",
+        "region_clip": 0.5,
+        "nonregion_clip": 0.8833
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To apply minimalism style to the brick houses in the given image, follow these steps: 1. Selectively",
+        "region_clip": 0.542,
+        "nonregion_clip": 0.6299
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To apply abstract expressionism style to the concrete sidewalk and road in the given image, follow t",
+        "region_clip": 0.5264,
+        "nonregion_clip": 0.9067
+      }
+    ],
+    "baseline_G": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To apply pointillism style transfer to brown wooden cabinets, follow these steps: 1. Isolate the bro",
+        "region_clip": 0.6069,
+        "nonregion_clip": 0.6577
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "Title: \"Expressionist Twist: The Dark, Dramatic Wooden Building\" Style Transfer Instruction: 1. Emph",
+        "region_clip": 0.5825,
+        "nonregion_clip": 0.4888
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To apply a neoclassical style to the long wooden desk in this scene, follow these steps: 1. Begin by",
+        "region_clip": 0.522,
+        "nonregion_clip": 0.5977
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "To apply a pop-art style transfer to the white tent in the given scene, follow these steps: 1. Isola",
+        "region_clip": 0.6279,
+        "nonregion_clip": 0.8584
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "To apply an art deco style to the purple and lilac backpack in the given scene, follow these steps: ",
+        "region_clip": 0.4045,
+        "nonregion_clip": 0.9575
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "To create a realistic style transfer for the hands of a person, follow these steps: 1. Start by capt",
+        "region_clip": 0.6055,
+        "nonregion_clip": 0.9722
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to green trees in a scene, follow these style transfer instructions: 1. Id",
+        "region_clip": 0.4646,
+        "nonregion_clip": 0.7959
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply the cubist style to the bright green lawn in this peaceful garden scene, follow these steps",
+        "region_clip": 0.5181,
+        "nonregion_clip": 0.8574
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "Title: Pointillist Asphalt Street Style Transfer Instruction: 1. Identify the wide asphalt street in",
+        "region_clip": 0.4734,
+        "nonregion_clip": 0.9492
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "To apply a Baroque style to the light-colored floor in the given image, follow these steps: 1. Isola",
+        "region_clip": 0.5669,
+        "nonregion_clip": 0.4578
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To apply minimalism to the large window in this image, we will focus on removing any unnecessary ele",
+        "region_clip": 0.5259,
+        "nonregion_clip": 0.4849
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style transfer to the blue and black backpack in the given scene, fo",
+        "region_clip": 0.5039,
+        "nonregion_clip": 0.9038
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "To apply minimalist style to the hand and arm of the person in the scene, follow these steps: 1. Des",
+        "region_clip": 0.4451,
+        "nonregion_clip": 0.8882
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "Style Transfer Instruction for Light Blue Sky: Symbolism: The light blue sky represents serenity, tr",
+        "region_clip": 0.5332,
+        "nonregion_clip": 0.9004
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To apply a renaissance style transfer to the tan brick column in the given scene, follow these steps",
+        "region_clip": 0.5381,
+        "nonregion_clip": 0.8213
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To apply a Baroque style to the dark metal stairs in this urban scene, follow these steps: 1. Isolat",
+        "region_clip": 0.5796,
+        "nonregion_clip": 0.6416
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "Style Transfer Instruction for Person as a Symbol of Enlightenment: 1. Color Palette: Use a warm and",
+        "region_clip": 0.5562,
+        "nonregion_clip": 0.9517
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "To apply neoclassical style to glass wine glasses, follow these guidelines: 1. Shape: Give the wine ",
+        "region_clip": 0.4937,
+        "nonregion_clip": 0.9175
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "Title: \"Abstract Expressionist Long Curtains\" Scene Context: A grand, dimly lit room with several lo",
+        "region_clip": 0.5405,
+        "nonregion_clip": 0.7549
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "To apply the Renaissance style to an indoor floor, follow these steps for a convincing and authentic",
+        "region_clip": 0.4578,
+        "nonregion_clip": 0.9253
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To apply minimalist style to the portion of mashed green food in the given vegetable dish image, fol",
+        "region_clip": 0.5269,
+        "nonregion_clip": 0.959
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "Title: Impressionistic Blue Stream Instruction: 1. Hue: Shift the blue hue towards a more vibrant an",
+        "region_clip": 0.4746,
+        "nonregion_clip": 0.8481
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To apply the Fauvism art style to the folding chairs in the given black and white photograph, follow",
+        "region_clip": 0.4612,
+        "nonregion_clip": 0.9268
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "To apply a romantic style transfer to a light brown wooden dining table, follow these steps: 1. Soft",
+        "region_clip": 0.4824,
+        "nonregion_clip": 0.9258
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply cubist style to the white ceiling with dark wooden beams in the given scene, follow these s",
+        "region_clip": 0.4336,
+        "nonregion_clip": 0.6152
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "Title: Pop Art Kitesurfing Kites Style Transfer Instruction: 1. Select the kitesurfing kites as the ",
+        "region_clip": 0.5645,
+        "nonregion_clip": 0.8237
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To apply a color-field-painting style to the dark asphalt road in this scene, follow these steps: 1.",
+        "region_clip": 0.6045,
+        "nonregion_clip": 0.9805
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To apply a romanticism style to the moist, grain-based mixture in the given image, follow these step",
+        "region_clip": 0.4839,
+        "nonregion_clip": 0.8418
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "To apply minimalist style to the brick houses in this historical photograph, follow these instructio",
+        "region_clip": 0.5356,
+        "nonregion_clip": 0.6235
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "Title: Urban Abstract Concrete Instructions for Applying Abstract-Expressionism to the Concrete Side",
+        "region_clip": 0.5444,
+        "nonregion_clip": 0.8291
+      }
+    ],
+    "baseline_I": [
+      {
+        "image_id": "10909",
+        "mask_index": 2,
+        "style": "pointillism",
+        "instruction": "To transfer a pointillist style to the brown wooden cabinets in the scene, follow these steps: 1. Se",
+        "region_clip": 0.5894,
+        "nonregion_clip": 0.6401
+      },
+      {
+        "image_id": "548209",
+        "mask_index": 1,
+        "style": "expressionism",
+        "instruction": "To transfer an expressionist style to the dark wooden building in the scene, apply the following adj",
+        "region_clip": 0.5752,
+        "nonregion_clip": 0.8188
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 2,
+        "style": "neoclassicism",
+        "instruction": "To transfer a neoclassical style to the long wooden desk in the scene, follow these steps: 1. Adjust",
+        "region_clip": 0.5347,
+        "nonregion_clip": 0.5942
+      },
+      {
+        "image_id": "29444",
+        "mask_index": 4,
+        "style": "pop-art",
+        "instruction": "Apply a pop-art filter to the white tent, enhancing its edges with bold, sharp lines. Increase the s",
+        "region_clip": 0.6333,
+        "nonregion_clip": 0.8901
+      },
+      {
+        "image_id": "363645",
+        "mask_index": 3,
+        "style": "art-deco",
+        "instruction": "Apply an Art Deco filter selectively to the purple and lilac backpack. Use a brush tool to paint the",
+        "region_clip": 0.3899,
+        "nonregion_clip": 0.9502
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 5,
+        "style": "realism",
+        "instruction": "To transfer a realistic style to the hands in this image scene, follow these steps: 1. Select the ha",
+        "region_clip": 0.5962,
+        "nonregion_clip": 0.978
+      },
+      {
+        "image_id": "173198",
+        "mask_index": 3,
+        "style": "cubism",
+        "instruction": "To apply a cubist style to the green trees in the scene while leaving all other regions untouched, f",
+        "region_clip": 0.4927,
+        "nonregion_clip": 0.8579
+      },
+      {
+        "image_id": "32639",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To apply a cubist style to the bright green lawn in the scene, follow these steps: 1. Select the bri",
+        "region_clip": 0.5347,
+        "nonregion_clip": 0.9214
+      },
+      {
+        "image_id": "211867",
+        "mask_index": 0,
+        "style": "pointillism",
+        "instruction": "To transfer a pointillist style to the wide asphalt street in the scene while leaving all other regi",
+        "region_clip": 0.4666,
+        "nonregion_clip": 0.96
+      },
+      {
+        "image_id": "144373",
+        "mask_index": 1,
+        "style": "baroque",
+        "instruction": "Apply a Baroque texture overlay to the light-colored floor, enhancing its visual richness and grande",
+        "region_clip": 0.5571,
+        "nonregion_clip": 0.6934
+      },
+      {
+        "image_id": "123697",
+        "mask_index": 1,
+        "style": "minimalism",
+        "instruction": "To transfer a minimalist style to the large window in the scene, follow these steps: 1. Select the w",
+        "region_clip": 0.4802,
+        "nonregion_clip": 0.8652
+      },
+      {
+        "image_id": "239771",
+        "mask_index": 5,
+        "style": "color-field-painting",
+        "instruction": "To transfer a color-field-painting style specifically to the blue and black backpack in the scene, f",
+        "region_clip": 0.4971,
+        "nonregion_clip": 0.8999
+      },
+      {
+        "image_id": "232676",
+        "mask_index": 4,
+        "style": "minimalism",
+        "instruction": "Convert the hand and arm of the person on the right to minimalist style by applying a high contrast ",
+        "region_clip": 0.4197,
+        "nonregion_clip": 0.9214
+      },
+      {
+        "image_id": "448648",
+        "mask_index": 1,
+        "style": "symbolism",
+        "instruction": "To imbue the light blue sky with a symbolic style, apply a soft gradient overlay. Begin by selecting",
+        "region_clip": 0.5327,
+        "nonregion_clip": 0.8643
+      },
+      {
+        "image_id": "51052",
+        "mask_index": 2,
+        "style": "renaissance",
+        "instruction": "To transfer a renaissance style to the tan brick column in the scene, apply a textured overlay of br",
+        "region_clip": 0.5161,
+        "nonregion_clip": 0.8774
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 4,
+        "style": "baroque",
+        "instruction": "To transfer a baroque style to the dark metal stairs in the scene, apply the following image editing",
+        "region_clip": 0.564,
+        "nonregion_clip": 0.6162
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 5,
+        "style": "symbolism",
+        "instruction": "Convert the person into a stylized silhouette, using bold lines and sharp edges. Fill the silhouette",
+        "region_clip": 0.5298,
+        "nonregion_clip": 0.5342
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 3,
+        "style": "neoclassicism",
+        "instruction": "To transfer a neoclassical style to the glass wine glasses in the scene, follow these steps: 1. Sele",
+        "region_clip": 0.5034,
+        "nonregion_clip": 0.8862
+      },
+      {
+        "image_id": "382655",
+        "mask_index": 3,
+        "style": "abstract-expressionism",
+        "instruction": "To imbue the long curtains with an abstract-expressionist style, follow these steps: 1. Select the l",
+        "region_clip": 0.5054,
+        "nonregion_clip": 0.9346
+      },
+      {
+        "image_id": "316583",
+        "mask_index": 0,
+        "style": "renaissance",
+        "instruction": "To transfer a renaissance style to the indoor floor in the scene, follow these steps: 1. Select the ",
+        "region_clip": 0.5166,
+        "nonregion_clip": 0.9478
+      },
+      {
+        "image_id": "282930",
+        "mask_index": 3,
+        "style": "minimalism",
+        "instruction": "To transfer a minimalist style to the mashed green food in the scene, apply the following adjustment",
+        "region_clip": 0.5176,
+        "nonregion_clip": 0.9331
+      },
+      {
+        "image_id": "161757",
+        "mask_index": 2,
+        "style": "impressionism",
+        "instruction": "Apply an impressionist brush effect to the blue stream, blending the colors together to create a dre",
+        "region_clip": 0.4834,
+        "nonregion_clip": 0.8115
+      },
+      {
+        "image_id": "398285",
+        "mask_index": 4,
+        "style": "fauvism",
+        "instruction": "To transfer the Fauvism style to the folding chairs in the scene, follow these steps: 1. Select the ",
+        "region_clip": 0.4517,
+        "nonregion_clip": 0.9355
+      },
+      {
+        "image_id": "70380",
+        "mask_index": 0,
+        "style": "romanticism",
+        "instruction": "To imbue the light brown wooden dining table with a romanticism style, apply a soft, warm color grad",
+        "region_clip": 0.5166,
+        "nonregion_clip": 0.6206
+      },
+      {
+        "image_id": "312917",
+        "mask_index": 1,
+        "style": "cubism",
+        "instruction": "To transfer a cubist style to the white ceiling with dark wooden beams in the scene, follow these st",
+        "region_clip": 0.4717,
+        "nonregion_clip": 0.6094
+      },
+      {
+        "image_id": "425484",
+        "mask_index": 3,
+        "style": "pop-art",
+        "instruction": "To give the kitesurfing kites a pop-art makeover, apply the following image editing steps: 1. Select",
+        "region_clip": 0.6094,
+        "nonregion_clip": 0.8877
+      },
+      {
+        "image_id": "338941",
+        "mask_index": 1,
+        "style": "color-field-painting",
+        "instruction": "To transfer a color-field painting style to the dark asphalt road in the scene, follow these steps: ",
+        "region_clip": 0.5737,
+        "nonregion_clip": 0.9824
+      },
+      {
+        "image_id": "333225",
+        "mask_index": 1,
+        "style": "romanticism",
+        "instruction": "To transfer a romanticism style to the moist, grain-base mixture in the scene, apply a soft focus ef",
+        "region_clip": 0.5073,
+        "nonregion_clip": 0.9497
+      },
+      {
+        "image_id": "434765",
+        "mask_index": 0,
+        "style": "minimalism",
+        "instruction": "Convert the brick houses to monochrome, keeping the same grayscale tones as the rest of the image. S",
+        "region_clip": 0.5845,
+        "nonregion_clip": 0.6577
+      },
+      {
+        "image_id": "443592",
+        "mask_index": 1,
+        "style": "abstract-expressionism",
+        "instruction": "To transfer an abstract-expressionist style to the concrete sidewalk and road in the scene, apply a ",
+        "region_clip": 0.5181,
+        "nonregion_clip": 0.9189
+      }
+    ]
+  }
+}

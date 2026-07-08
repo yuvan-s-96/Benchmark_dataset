@@ -38,35 +38,34 @@ def is_refusal(text):
     return any(p in text.lower() for p in REFUSAL_PHRASES)
 
 def load_mask(pan_dir, pan_json, image_id, mask_index):
-    """Load COCONut panoptic mask for a specific region."""
-    import cv2
-    # Find the panoptic annotation for this image
-    with open(pan_json) as f:
-        pan_data = json.load(f)
-
-    ann = next((a for a in pan_data["annotations"]
-                if a["image_id"] == image_id), None)
-    if ann is None:
+    """Load COCONut panoptic mask using segment_lookup.json."""
+    import json as _json
+    
+    # Load segment lookup (cached)
+    if not hasattr(load_mask, "_lookup"):
+        lookup_path = Path(pan_dir) / "segment_lookup.json"
+        with open(lookup_path) as f:
+            load_mask._lookup = _json.load(f)
+    
+    key = f"{image_id}_{mask_index}"
+    info = load_mask._lookup.get(key)
+    if info is None:
         return None
-
+    
+    seg_id = info["segment_id"]
+    
     # Load panoptic PNG
-    pan_path = Path(pan_dir) / ann["file_name"]
+    pan_path = Path(pan_dir) / f"{str(image_id).zfill(12)}.png"
     if not pan_path.exists():
         return None
-
+    
     pan_img = np.array(Image.open(pan_path).convert("RGB"))
-    # Decode segment ID from RGB
-    segment_id = (pan_img[:,:,0].astype(np.int32) +
-                  pan_img[:,:,1].astype(np.int32) * 256 +
-                  pan_img[:,:,2].astype(np.int32) * 256 * 256)
-
-    # Find the segment for this mask_index
-    if mask_index >= len(ann["segments_info"]):
-        return None
-    seg = ann["segments_info"][mask_index]
-    mask = (segment_id == seg["id"]).astype(np.uint8) * 255
+    segment_map = (pan_img[:,:,0].astype(np.int32) +
+                   pan_img[:,:,1].astype(np.int32) * 256 +
+                   pan_img[:,:,2].astype(np.int32) * 65536)
+    
+    mask = (segment_map == seg_id).astype(np.uint8) * 255
     return mask
-
 def masked_clip_score(clip_model, clip_preprocess, stylised_img, orig_img,
                       mask, style_ref_path, device):
     """
