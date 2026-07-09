@@ -2,109 +2,180 @@
 
 **MSc Data Science Dissertation — University of Bath 2026**
 
-
 ---
 
 ## ⚠ Current Status — Regeneration in Progress
 
-Instructions are being regenerated with a **256-token limit** (previously 80 tokens caused 82% truncation, biasing comparisons towards Template C). After regeneration: LoRA models will be retrained, LLM judge and InstructPix2Pix 9×4 will be rerun.
-
-**Attention mass and causal test results STAND** — they measure prompt properties, not generated instruction content.
+Instructions are being regenerated with a **256-token limit** (previously 80 tokens caused 82% truncation). After regeneration: LoRA models retrained, LLM judge and InstructPix2Pix 9×4 rerun. **Attention mass and causal test results STAND.**
 
 ---
 
-## Overview
-
-Attention-guided prompt curation for instruction-following LLMs in regional style transfer. Two-stage framework:
-
-- **Stage 1** — Attention probe: compare nine prompt templates across 979 COCO regions using Mistral-7B-Instruct-v0.2. Identify which template most causally grounds the model on the label token.
-- **Stage 2** — LoRA fine-tuning: fine-tune on instructions from the most grounded template. Evaluate downstream stylisation quality via InstructPix2Pix.
-
----
-
-## Key Findings (Stable — Not Affected by Regeneration)
-
-| Finding | Result | Status |
-|---|---|---|
-| Attention probe validated | Att mass vs causal drop r=0.804, p=0.0089 | ✓ STANDS |
-| Template A most grounded | 68pp label drop, 6.172% corrected att mass | ✓ STANDS |
-| Refusal elimination | E: 15.4%→1.0% (LoRA-A) without explicit suppression | ✓ STANDS |
-| Caption confound confirmed | E +69pp delta, A +19.5pp, C/G genuine 0pp | ✓ STANDS |
-| Background-region trade-off | Causal drop vs NonReg r=+0.812, p=0.008 | ✓ STANDS |
-| LoRA-C best on attention mass | 9/9 templates improved (all p<1e-130***) | ✓ STANDS |
-| FT degrades att-grounding corr | Base r=0.796* → LoRA-C r=0.463 ns | ✓ STANDS |
-| C wins quality + downstream | Claude 17.50, Gemini 17.80, RC=0.5219 | ⚠ PENDING v2 |
-
----
-
-## Pipeline
-
-```
-step1_generate_and_attend.py      Baseline attention (979 regions)        ✓ STANDS
-step2_curate_prompts.py           9 templates × 979 regions               ⟳ REGENERATING (256 tokens)
-step2e_clip_scoring.py            Per-region CLIP + bootstrap CI          PENDING v2
-step3_finetune_lora.py            LoRA-A, LoRA-H, LoRA-C                  PENDING retrain
-step4_attention_finetuned.py      Post-FT attention (3 LoRA variants)     PENDING v2
-step5_sink_corrected_metric.py    Sink-corrected attention                 ✓ STANDS
-step5b_causal_test.py             Causal label ablation (base + LoRA)     ✓ STANDS
-step5c_caption_masked_causal.py   Caption confound test                   ✓ STANDS
-step6_llm_judge.py                Claude + Gemini image-grounded          PENDING v2
-step7_instruct_pix2pix.py         InstructPix2Pix 9×4 (correct masks)    PENDING v2
-step7b_instruct_pix2pix_lora.py   LoRA variants downstream                PENDING v2
-step8_artfid_gram.py              Gram/LPIPS/ArtFID                       PENDING v2
-```
-
----
-
-## Stable Results
-
-### Template Comparison (979 regions, Mistral-7B, corrected attention mass)
-
-| Template | Att mass (corr) | Causal drop | Caption confound | CLIP | Refusal% |
-|---|---|---|---|---|---|
-| A — baseline | **6.172%** | **68.0pp** | Partial (+19.5pp) | 0.2104 | 0% |
-| E — question | 2.693% | 21.0pp* | Strong (+69pp) | **0.2263** | 15.4% |
-| H — hybrid | 2.594% | 1.0pp | Weak (+5.5pp) | 0.2122 | 0% |
-| C — caption | 1.352% | 0.0pp | None | 0.2061 | 0% |
-| F — chain-of-thought | 1.368% | 0.0pp | None | 0.2103 | 0% |
-| G — label repeat | 1.752% | 0.5pp | None | 0.2026 | 0% |
-
-*E grounding is largely a caption confound — see caption-masked causal test.
-
-Wilcoxon A vs all: p=8.84e-162 to p=2.65e-154 (all ***). Cohen's d 0.875–1.342.
-
-### Background-Region Trade-Off (v1 — correct masks)
-
-| Template | Region CLIP | NonRegion CLIP | Interpretation |
-|---|---|---|---|
-| F | 0.5238 | 0.7985 | Best stylisation, more leakage |
-| A | 0.5185 | **0.8379** | Less stylisation, best preservation |
-| C | 0.5219 | 0.7170 | Good stylisation, most leakage |
-
-Causal drop vs NonReg CLIP: r=+0.812, p=0.008 (suggestive, n=9).
-Att mass vs Region CLIP: r=-0.895, p=0.001 (suggestive, n=9).
-
-### LoRA Attention Mass (stable — measures prompt grounding)
-
-| Template | Base | LoRA-A | LoRA-H | LoRA-C |
-|---|---|---|---|---|
-| A | 0.632% | 0.679%*** | 0.599%*** | **0.847%***↑ |
-| H | 0.558% | 0.529%*** | 0.386%***↓ | 0.638%*** |
-| C | 0.326% | 0.374%*** | 0.340%*** | 0.441%*** |
-
-LoRA-C improves 9/9 templates (all p<1e-130***). LoRA-H degrades H catastrophically (-0.173%, p=4.09e-158***).
-
----
-
-## Environment
+## Setup
 
 ```bash
-# On ogg
+# SSH to ogg
+ssh yvs23@ogg.cs.bath.ac.uk
+
+# Activate environment
 source /mnt/fast1/yvs23/benchmark_env/bin/activate
+
+# Set environment variables
 export HF_HOME=/mnt/fast1/yvs23/hf_cache
 export HF_HUB_DISABLE_XET=1
-export CUDA_VISIBLE_DEVICES=1  # or 0-5
+export CUDA_VISIBLE_DEVICES=1  # change per GPU (0-5)
+
 cd ~/Benchmark_dataset/prompt_curation/scripts
+```
+
+---
+
+## Pipeline Commands
+
+### Step 1 — Baseline Attention (DONE ✓ STANDS)
+```bash
+python3 step1_generate_and_attend.py \
+    --json    ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output  ../results/step1_baseline_attention.json
+```
+
+### Step 2 — Prompt Curation 9 Templates (REGENERATING at 256 tokens)
+```bash
+python3 step2_curate_prompts.py \
+    --json        ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output      ../results/template_comparison_979_v2.json \
+    --max_regions 979
+# Runtime: ~20 hours on 1 GPU. Check progress:
+tmux capture-pane -t regen_256 -p | tail -5
+```
+
+### Step 2e — CLIP Scoring (PENDING v2)
+```bash
+python3 step2e_clip_scoring.py \
+    --results_json ../results/template_comparison_979_v2.json \
+    --output       ../results/clip_scores_v2.json
+```
+
+### Step 3 — LoRA Fine-Tuning (PENDING retrain on 256-token instructions)
+```bash
+# Run all three in parallel on separate GPUs
+# GPU 1
+python3 step3_finetune_lora.py --template A \
+    --results_json ../results/template_comparison_979_v2.json \
+    --output ../models/lora_A_v2/ --epochs 3
+
+# GPU 2
+CUDA_VISIBLE_DEVICES=2 python3 step3_finetune_lora.py --template H \
+    --results_json ../results/template_comparison_979_v2.json \
+    --output ../models/lora_H_v2/ --epochs 3
+
+# GPU 3
+CUDA_VISIBLE_DEVICES=3 python3 step3_finetune_lora.py --template C \
+    --results_json ../results/template_comparison_979_v2.json \
+    --output ../models/lora_C_v2/ --epochs 3
+# Runtime: ~25 min each
+```
+
+### Step 4 — Post Fine-Tuning Attention (PENDING v2)
+```bash
+python3 step4_attention_finetuned.py \
+    --adapter    ../models/lora_A_v2/adapter \
+    --lora_name  lora_A \
+    --base_model mistralai/Mistral-7B-Instruct-v0.2 \
+    --output     ../results/attention_lora_A_v2.json
+# Repeat for lora_H_v2 and lora_C_v2. Runtime: ~9 hours each.
+```
+
+### Step 5a — Sink-Corrected Attention (DONE ✓ STANDS)
+```bash
+python3 step5_sink_corrected_metric.py \
+    --weights_json /mnt/fast1/yvs23/template_comparison_979_weights.json \
+    --output       ../results/sink_corrected_proper.json
+```
+
+### Step 5b — Causal Test (DONE ✓ STANDS)
+```bash
+# Base model
+python3 step5b_causal_test.py \
+    --inputs_json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output      ../results/causal_test.json \
+    --n_sample    200
+
+# LoRA variants (after retrain)
+python3 step5b_causal_test.py \
+    --inputs_json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output      ../results/causal_test_lora_A_v2.json \
+    --adapter     ../models/lora_A_v2/adapter \
+    --n_sample    200
+# Runtime: ~40 hours each. Run in parallel on separate GPUs.
+```
+
+### Step 5c — Caption-Masked Causal Test (DONE ✓ STANDS)
+```bash
+python3 step5c_caption_masked_causal.py \
+    --inputs_json ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output      ../results/causal_test_caption_masked.json \
+    --templates   A,C,H,G,E \
+    --n_sample    200
+```
+
+### Step 6 — LLM Judge (PENDING v2)
+```bash
+# Prepare judge input from v2 instructions
+python3 step6_llm_judge.py \
+    --results_json  ../results/template_comparison_979_v2.json \
+    --lora_a_json   ../results/attention_lora_A_v2.json \
+    --indices_json  ../results/human_rating_indices.json \
+    --output        ../results/llm_judge_scores_v2.json
+# Then run Claude and Gemini via API
+```
+
+### Step 7 — InstructPix2Pix 9×4 (PENDING v2)
+```bash
+# Base model
+python3 step7_instruct_pix2pix.py \
+    --results_json  ../results/template_comparison_979_v2.json \
+    --lora_a_json   ../results/attention_lora_A_v2.json \
+    --pan_dir       /mnt/fast1/yvs23/coconut_panoptic \
+    --pan_json      ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --indices_json  ../results/human_rating_indices.json \
+    --output        ../results/instruct_pix2pix_eval_full_v3.json \
+    --n_sample      30
+
+# LoRA variants (after retrain)
+python3 step7b_instruct_pix2pix_lora.py \
+    --adapter      ../models/lora_A_v2/adapter \
+    --inputs_json  ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --pan_dir      /mnt/fast1/yvs23/coconut_panoptic \
+    --pan_json     ../../data/coconut_subset/annotations/prompt_curation_inputs.json \
+    --output       ../results/pix2pix_lora_A_v2.json \
+    --templates    A,B,C,D,E,F,G,H,I \
+    --n_sample     30
+# Repeat for lora_H_v2 and lora_C_v2. Runtime: ~1 hour each.
+```
+
+### Step 8 — ArtFID/Gram (PENDING v2)
+```bash
+python3 step8_artfid_gram.py \
+    --results_json  ../results/template_comparison_979_v2.json \
+    --lora_a_json   ../results/attention_lora_A_v2.json \
+    --lora_h_json   ../results/attention_lora_H_v2.json \
+    --lora_c_json   ../results/attention_lora_C_v2.json \
+    --indices_json  ../results/human_rating_indices.json \
+    --img_dir       ../../data/coconut_subset/images \
+    --pan_dir       /mnt/fast1/yvs23/coconut_panoptic \
+    --style_ref_dir ../../data/style_references \
+    --output        ../results/artfid_gram_eval_v3.json \
+    --n_sample      30
+```
+
+---
+
+## Check tmux Sessions
+
+```bash
+tmux ls
+tmux capture-pane -t regen_256 -p | tail -5
+tmux capture-pane -t <session_name> -p | tail -5
 ```
 
 ---
@@ -114,71 +185,73 @@ cd ~/Benchmark_dataset/prompt_curation/scripts
 ```
 ~/Benchmark_dataset/
 ├── prompt_curation/
-│   ├── scripts/           All pipeline scripts
-│   ├── results/           All JSON results
-│   └── models/lora_A/, lora_H/, lora_C/
+│   ├── scripts/                    All pipeline scripts
+│   ├── results/                    All JSON results
+│   └── models/
+│       ├── lora_A/, lora_H/, lora_C/        v1 (80-token gold)
+│       └── lora_A_v2/, lora_H_v2/, lora_C_v2/  v2 (256-token gold, pending)
 ├── data/
-│   ├── coconut_subset/images/          COCO images
-│   ├── coconut_subset/annotations/     COCONut annotations
-│   └── style_references/               WikiArt reference images
-└── README.md
+│   ├── coconut_subset/images/      COCO images
+│   ├── coconut_subset/annotations/ COCONut annotations
+│   └── style_references/           WikiArt reference images
 
 /mnt/fast1/yvs23/
-├── template_comparison_979_weights.json    62MB with att_weights (v1)
-├── template_comparison_979_weights_v2.json 256-token version (regenerating)
-├── coconut_panoptic/                       COCONut panoptic PNGs (25 images)
-│   ├── 000000010909.png ... 000000548209.png
+├── template_comparison_979_weights.json    v1 weights (80-token)
+├── template_comparison_979_weights_v2.json v2 weights (256-token, pending)
+├── coconut_panoptic/
+│   ├── 000000010909.png ... 000000548209.png  COCONut panoptic PNGs
 │   ├── coconut_b_panoptic.json
-│   └── segment_lookup.json                 Region→segment mapping
-└── hf_cache/                               Mistral-7B, InstructPix2Pix
+│   └── segment_lookup.json         Region label → panoptic segment mapping
+└── hf_cache/                       Mistral-7B, InstructPix2Pix
 ```
 
-### Results Files Status
+### Results File Status
 
-```
-prompt_curation/results/
-├── template_comparison_979.json            v1 80-token — being replaced
-├── template_comparison_979_v2.json         v2 256-token — regenerating
-├── sink_corrected_proper.json              ✓ STANDS
-├── causal_test.json                        ✓ STANDS
-├── causal_test_lora_A/H/C.json            ✓ STANDS
-├── causal_test_caption_masked.json         ✓ STANDS
-├── statistical_tests.json                  ✓ STANDS
-├── instruct_pix2pix_eval_full_v2.json      v1 correct masks — pending v2
-├── pix2pix_lora_A/H/C_all_templates_v2.json v1 correct masks — pending v2
-├── instruct_pix2pix_v2_complete.json       v1 correct masks — pending v2
-├── artfid_gram_complete.json               v1 — pending v2
-├── gemini_image_grounded.json              v1 — pending v2
-├── three_way_judge_comparison_v2.json      v1 — pending v2
-├── human_rating_indices.json               30 evaluation regions
-└── judge_input_full.json                   10 sources, full instructions
-```
+| File | Status |
+|---|---|
+| `sink_corrected_proper.json` | ✓ STANDS |
+| `causal_test.json` | ✓ STANDS |
+| `causal_test_lora_A/H/C.json` | ✓ STANDS |
+| `causal_test_caption_masked.json` | ✓ STANDS |
+| `statistical_tests.json` | ✓ STANDS |
+| `template_comparison_979_v2.json` | ⟳ REGENERATING |
+| `instruct_pix2pix_eval_full_v2.json` | ⚠ v1 correct masks, pending v2 instructions |
+| `artfid_gram_complete.json` | ⚠ v1 pending v2 |
+| `gemini_image_grounded.json` | ⚠ v1 pending v2 |
 
 ---
 
-## Regeneration Plan
+## Stable Results Summary
 
-```
-Step 2 v2    Regenerate 979×9 (256 tokens)      ~7 hours    RUNNING
-Truncation   Verify <5% truncation               After v2    PENDING
-Step 3       Retrain LoRA-A/H/C                 75 min      PENDING
-Step 4 v2    Post-FT attention                  9 hours     PENDING
-Step 5b v2   Causal test new LoRA               40 hours    PENDING
-Step 6 v2    LLM judge (Claude + Gemini)        2 hours     PENDING
-Step 7 v2    InstructPix2Pix 9×4               4 hours     PENDING
-Step 8 v2    ArtFID/Gram                        6 hours     PENDING
-Human rating Session with Deblina + Yudi        After v2    POSTPONED
-Writeup      Chapters 3/4/5                     After all   PENDING
-```
+### Attention Mass (corrected, base model)
+
+| Template | Att mass (corr) | Causal drop | Caption confound |
+|---|---|---|---|
+| A | **6.172%** | **68.0pp** | Partial (+19.5pp) |
+| E | 2.693% | 21.0pp | Strong (+69pp) — caption confound |
+| H | 2.594% | 1.0pp | Weak (+5.5pp) |
+| C | 1.352% | 0.0pp | None — genuinely ungrounded |
+| G | 1.752% | 0.5pp | None — genuinely ungrounded |
+
+### Background-Region Trade-Off (v2 correct masks — robust)
+
+| Correlation | r | p | Status |
+|---|---|---|---|
+| Att mass vs Region CLIP | -0.895 | 0.001** | Robust |
+| Causal drop vs Region CLIP | -0.786 | 0.012* | Robust |
+| Causal drop vs NonRegion CLIP | +0.812 | 0.008** | Robust |
+| NonRegion CLIP vs ArtFID | -0.750 | 0.020* | Robust |
+
+All n=9 templates — treat as suggestive.
 
 ---
 
 ## Dataset
 
-- 200 COCO images from COCONut-PanCap (xdeng77/coconut_pancap)
-- 979 segmented regions across 20 WikiArt styles (45–57 regions per style)
-- COCONut panoptic masks downloaded from Kaggle (xueqingdeng/coconut)
-- 225 empty-caption regions, 754 with full narrative captions
+- 200 COCO images from COCONut-PanCap (`xdeng77/coconut_pancap` on HuggingFace)
+- 979 segmented regions across 20 WikiArt styles
+- COCONut panoptic masks from Kaggle (`xueqingdeng/coconut`)
+- Segment lookup built by keyword matching region labels to COCONut categories
 
 ---
 
