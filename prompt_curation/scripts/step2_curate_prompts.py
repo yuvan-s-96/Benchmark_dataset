@@ -153,7 +153,7 @@ def get_token_indices(tokenizer, prompt, text):
 
 @torch.no_grad()
 def extract_attention(model, tokenizer, prompt, label, style, device,
-                      max_new_tokens=80):
+                      max_new_tokens=256):
     inputs = tokenizer(
         prompt, return_tensors="pt",
         truncation=True, max_length=512,
