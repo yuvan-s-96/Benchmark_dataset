@@ -153,7 +153,7 @@ def get_token_indices(tokenizer, prompt, text):
 
 @torch.no_grad()
 def extract_attention(model, tokenizer, prompt, label, style, device,
-                      max_new_tokens=256):
+                      max_new_tokens=768):
     inputs = tokenizer(
         prompt, return_tensors="pt",
         truncation=True, max_length=512,
@@ -228,7 +228,10 @@ def run(args):
     all_results = {}
     summary     = {}
 
+    templates_to_run = set(args.templates.split(","))
     for tmpl_name, tmpl_fn in TEMPLATES.items():
+        if tmpl_name not in templates_to_run:
+            continue
         print(f"\n{'='*55}")
         print(f"Template {tmpl_name}")
         print(f"{'='*55}")
@@ -336,6 +339,8 @@ def parse_args():
         default="../../data/coconut_subset/annotations/prompt_curation_inputs.json")
     p.add_argument("--output",
         default="../results/template_comparison_mistral.json")
+    p.add_argument("--templates", default="A,B,C,D,E,F,G,H,I",
+        help="Comma-separated templates to run e.g. D,E,F")
     p.add_argument("--max_regions", type=int, default=20,
         help="Limit for test run. Set 0 for all 229.")
     return p.parse_args()

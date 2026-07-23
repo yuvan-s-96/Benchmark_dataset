@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "A": {
+      "label_mass_raw": 0.0063,
+      "label_mass_corrected": 0.0617,
+      "improvement_factor": 9.77,
+      "n": 979
+    },
+    "B": {
+      "label_mass_raw": 0.0073,
+      "label_mass_corrected": 0.028,
+      "improvement_factor": 3.85,
+      "n": 979
+    },
+    "C": {
+      "label_mass_raw": 0.004,
+      "label_mass_corrected": 0.0168,
+      "improvement_factor": 4.22,
+      "n": 979
+    },
+    "D": {
+      "label_mass_raw": 0.0052,
+      "label_mass_corrected": 0.0235,
+      "improvement_factor": 4.51,
+      "n": 979
+    },
+    "E": {
+      "label_mass_raw": 0.005,
+      "label_mass_corrected": 0.0244,
+      "improvement_factor": 4.9,
+      "n": 979
+    },
+    "F": {
+      "label_mass_raw": 0.0026,
+      "label_mass_corrected": 0.0143,
+      "improvement_factor": 5.49,
+      "n": 979
+    },
+    "G": {
+      "label_mass_raw": 0.008,
+      "label_mass_corrected": 0.0306,
+      "improvement_factor": 3.82,
+      "n": 979
+    },
+    "H": {
+      "label_mass_raw": 0.0056,
+      "label_mass_corrected": 0.0262,
+      "improvement_factor": 4.68,
+      "n": 979
+    },
+    "I": {
+      "label_mass_raw": 0.0028,
+      "label_mass_corrected": 0.0106,
+      "improvement_factor": 3.84,
+      "n": 979
+    }
+  }
+}

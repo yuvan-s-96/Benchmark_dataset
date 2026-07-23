@@ -135,7 +135,7 @@ def masked_clip_score(clip_model, clip_preprocess, stylised_img, orig_img,
 
 
 @torch.no_grad()
-def generate_instruction(model, tokenizer, prompt, device, max_new_tokens=80):
+def generate_instruction(model, tokenizer, prompt, device, max_new_tokens=512):
     inputs = tokenizer(prompt, return_tensors="pt",
                       truncation=True, max_length=512).to(device)
     input_len = inputs["input_ids"].shape[1]

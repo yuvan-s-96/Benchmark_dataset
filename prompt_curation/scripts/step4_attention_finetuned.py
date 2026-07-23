@@ -91,7 +91,7 @@ def generate_and_attend(model, tokenizer, prompt, label, style, device):
     input_len = inputs["input_ids"].shape[1]
 
     output = model.generate(
-        **inputs, max_new_tokens=80, do_sample=False,
+        **inputs, max_new_tokens=512, do_sample=False,
         output_attentions=True, return_dict_in_generate=True,
         pad_token_id=tokenizer.eos_token_id,
     )

@@ -159,6 +159,10 @@ def run(args):
         lora_h = json.load(f)
     sources["lora_H_tmplA"] = lora_h["per_template"]["A"]
 
+    with open(args.lora_c_json) as f:
+        lora_c = json.load(f)
+    sources["lora_C_tmplA"] = lora_c["per_template"]["A"]
+
     for src in ["H","F","B","D","G","I"]:
         sources[f"baseline_{src}"] = tmpl["per_template"][src]
 
@@ -321,6 +325,8 @@ def parse_args():
         default="../results/attention_lora_A.json")
     p.add_argument("--lora_h_json",
         default="../results/attention_lora_H.json")
+    p.add_argument("--lora_c_json",
+        default="../results/attention_lora_C.json")
     p.add_argument("--indices_json",
         default="../results/human_rating_indices.json")
     p.add_argument("--img_dir",
