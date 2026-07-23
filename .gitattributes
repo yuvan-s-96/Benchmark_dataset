@@ -1,0 +1,5 @@
+\*.json filter=lfs diff=lfs merge=lfs -text
+prompt_curation/results/\*.json filter=lfs diff=lfs merge=lfs -text
+prompt_curation/attention_maps/*.json filter=lfs diff=lfs merge=lfs -text
+prompt_curation/results/template_comparison_979_final.json filter=lfs diff=lfs merge=lfs -text
+prompt_curation/results/attention_lora_*.json filter=lfs diff=lfs merge=lfs -text
