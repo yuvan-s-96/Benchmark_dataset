@@ -1,0 +1,246 @@
+{
+  "adapter": "../models/lora_C_v3/adapter",
+  "template": "C",
+  "results": [
+    {
+      "region_num": 1,
+      "image_id": "10909",
+      "mask_index": 2,
+      "region_label": "brown wooden cabinets",
+      "style_name": "pointillism",
+      "instruction": "To stylize the brown wooden cabinets in pointillism, apply small dots of paint in various shades to represent the wood grain and color. Blend different shades of brown to create the illusion of texture and depth. Use a fine brush to apply the dots evenly and consistently. Gradually build up the layers of dots to achieve the desired level of detail and tonality. Remember to maintain a consistent distance between the dots to preserve the pointillist technique."
+    },
+    {
+      "region_num": 2,
+      "image_id": "548209",
+      "mask_index": 1,
+      "region_label": "dark wooden building",
+      "style_name": "expressionism",
+      "instruction": "To stylize the dark wooden building in an expressionist manner, exaggerate the textures and forms to convey emotion and intensity. Use bold, contrasting colors to highlight the wood grain and shadows, giving the building a sense of depth and dimension. Distort the perspectives and shapes to create a sense of tension and movement, and use thick, expressive brushstrokes to convey the raw energy and emotion of the scene. Pay close attention to the play of light and shadow, using them to create dramatic contrasts and to emphasize the emotional impact of the scene."
+    },
+    {
+      "region_num": 3,
+      "image_id": "123697",
+      "mask_index": 2,
+      "region_label": "long wooden desk",
+      "style_name": "neoclassicism",
+      "instruction": "To stylize the long wooden desk in a neoclassical manner, simplify its design by removing any clutter and giving it a clean, geometric shape. Use classic colors such as white, black, and gold for the desk surface and legs. Add ornate details such as intricate carvings, gilded edges, and raised panels to give the desk a grand and elegant appearance. Consider adding a marble top or a glass inlay to add a touch of luxury and refinement. The overall effect should be one of timeless beauty and sophistication."
+    },
+    {
+      "region_num": 4,
+      "image_id": "29444",
+      "mask_index": 4,
+      "region_label": "a white tent",
+      "style_name": "pop-art",
+      "instruction": "To stylize a white tent in pop-art style, exaggerate its geometric shapes and bold colors. Use sharp, clean lines to define the tent's structure, and apply bright, vibrant colors to the fabric. Consider adding bold, graphic patterns or symbols to the tent's surface to enhance its pop-art aesthetic. Additionally, consider adding bold outlines or shadows to give the tent a more defined, flat appearance."
+    },
+    {
+      "region_num": 5,
+      "image_id": "363645",
+      "mask_index": 3,
+      "region_label": "purple and lilac backpack",
+      "style_name": "art-deco",
+      "instruction": "To stylize the purple and lilac backpack in an art-deco manner, consider adding geometric shapes and clean lines to its design. Suggestions could include:\n\n1. Define the overall shape of the backpack with sharp, angular lines and geometric forms.\n2. Use a bold, contrasting color palette, such as purple and lilac with accents of metallic silver or gold.\n3. Add intricate patterns, such as zigzags, chevrons, or geometric florals, to the surface of the backpack.\n4. Incorporate reflective or metallic surfaces, such as silver or gold hardware or mirrored accents, to add a sense of luxury and depth.\n5. Consider adding a sense of symmetry or balance to the design, with repeating patterns or reflective elements.\n6. Use clean, sharp lines and precise edges to create a sense of order and modernity.\n7. Experiment with textured or embossed surfaces to add visual interest and depth to the design.\n8. Consider adding a sense of movement or dynamism to the design, such as diagonal lines or abstract shapes, to add energy and excitement."
+    },
+    {
+      "region_num": 6,
+      "image_id": "316583",
+      "mask_index": 5,
+      "region_label": "hands of a person",
+      "style_name": "realism",
+      "instruction": "To stylize the hands of a person in realism style, pay close attention to the details and textures. Observe the intricacies of the fingers, knuckles, and the veins running across the back of the hand. Use sharp lines and precise shading to render the wrinkles and creases. Ensure that the lighting accurately depicts the shadows and highlights on the hand, reflecting the source of light in the scene. Lastly, use a rich color palette to accurately represent the skin tones and any nail polish or jewelry on the hands."
+    },
+    {
+      "region_num": 7,
+      "image_id": "173198",
+      "mask_index": 3,
+      "region_label": "green trees",
+      "style_name": "cubism",
+      "instruction": "To stylize green trees in a cubist artistic style, break down each tree into geometric shapes and planes. Analyze the tree into its basic components such as trunk, branches, and leaves. Then, represent each component as interconnected cubes or geometric forms. Apply distorted perspectives and fragmented angles to create a sense of depth and complexity. Finally, use bold and contrasting colors to emphasize the cubist forms and bring the abstracted tree to life."
+    },
+    {
+      "region_num": 8,
+      "image_id": "32639",
+      "mask_index": 1,
+      "region_label": "bright green lawn",
+      "style_name": "cubism",
+      "instruction": "To stylize the bright green lawn in a cubist artistic style, break down the lawn into geometric shapes and planes. Analyze the lawn as a collection of interconnected rectangular and triangular planes, each with distinct textures and shades of green. Apply bold, contrasting colors and sharp angles to define the edges and surfaces of these planes, creating a fragmented and abstract representation of the lawn in the cubist style."
+    },
+    {
+      "region_num": 9,
+      "image_id": "211867",
+      "mask_index": 0,
+      "region_label": "wide asphalt street",
+      "style_name": "pointillism",
+      "instruction": "To stylize a wide asphalt street in pointillism, break down the scene into small, individual points or dots of various shades and colors. Apply these dots meticulously to represent the textures and patterns of the asphalt, such as the smooth, dark areas and the rough, lighter areas from sun reflection or tire marks. Use a palette knife or a small brush to apply the dots for a more authentic pointillist effect. Remember to maintain a consistent distance between the dots to create the illusion of continuity and depth."
+    },
+    {
+      "region_num": 10,
+      "image_id": "144373",
+      "mask_index": 1,
+      "region_label": "light-colored floor",
+      "style_name": "baroque",
+      "instruction": "To stylize the light-colored floor in a baroque artistic style, add intricate and ornate patterns reminiscent of marble or stone designs commonly found in baroque architecture. Use rich and vibrant colors, such as gold, deep reds, and greens, to create a grand and opulent appearance. Add shadows and highlights to give depth and dimension to the floor, and consider adding gilded edges or border designs to enhance the baroque aesthetic."
+    },
+    {
+      "region_num": 11,
+      "image_id": "123697",
+      "mask_index": 1,
+      "region_label": "large window",
+      "style_name": "minimalism",
+      "instruction": "To stylize the large window in minimalism style, remove the outdoor scenery and keep only the window frame and the transparent glass surface. Eliminate any textures or patterns on the window and glass, leaving them smooth and simple. Use a monochromatic color palette with shades of gray or white to further emphasize the simplicity and cleanliness of the minimalist design."
+    },
+    {
+      "region_num": 12,
+      "image_id": "239771",
+      "mask_index": 5,
+      "region_label": "blue and black backpack",
+      "style_name": "color-field-painting",
+      "instruction": "To stylize the blue and black backpack in a color-field painting style, focus on creating large, flat areas of solid color to represent the different parts of the backpack. Begin by choosing a dominant color for the blue portion of the backpack, such as a bright, saturated blue hue. Apply this color evenly across the entire surface of the backpack that is blue.\n\nNext, select a flat, dark color for the black portions of the backpack, such as a deep, rich black. Apply this color evenly to the areas of the backpack that are black, ensuring that the edges between the blue and black areas are sharp and well-defined.\n\nFinally, consider adding subtle textural details or patterns to the backpack, such as small, geometric shapes or subtle shading, to add visual interest and depth to the painting. However, be sure to keep these elements minimal and consistent with the flat, uniform style of color-field painting."
+    },
+    {
+      "region_num": 13,
+      "image_id": "232676",
+      "mask_index": 4,
+      "region_label": "hand and arm of another person",
+      "style_name": "minimalism",
+      "instruction": "Use bold, flat colors to define the hand and arm, eliminating any textures or patterns. Keep the shapes simple and geometric, reducing the hand to basic shapes such as circles and triangles for the fingers and palm. Use clean, sharp lines to define the arm and hand boundaries. Minimize any details, focusing on the essential forms to create a simplified and abstract representation of the hand and arm."
+    },
+    {
+      "region_num": 14,
+      "image_id": "448648",
+      "mask_index": 1,
+      "region_label": "light blue sky",
+      "style_name": "symbolism",
+      "instruction": "To stylize the light blue sky in a symbolic manner, consider enhancing its ethereal and dreamlike qualities by adding soft, flowing clouds in various shapes that symbolize emotions or abstract concepts. Use gradual color shifts and subtle textures to create a sense of depth and mystery, while maintaining a sense of harmony and tranquility. Employ the use of symbolic elements such as stars, halos, or other celestial bodies to add layers of meaning and intrigue to the scene."
+    },
+    {
+      "region_num": 15,
+      "image_id": "51052",
+      "mask_index": 2,
+      "region_label": "tan brick column",
+      "style_name": "renaissance",
+      "instruction": "To stylize the tan brick column in a renaissance artistic style, apply chiaroscuro techniques by adding contrasting shades of color to create the illusion of depth and texture. Use earthy tones such as browns and reds to mimic the brick texture, and consider adding intricate carvings or motifs to the column's surface to emulate the ornate details commonly found in renaissance architecture. Additionally, consider using a soft focus effect to give the column a sense of depth and dimension within the scene."
+    },
+    {
+      "region_num": 16,
+      "image_id": "443592",
+      "mask_index": 4,
+      "region_label": "dark metal stairs",
+      "style_name": "baroque",
+      "instruction": "To stylize the dark metal stairs in a baroque manner, consider adding ornate and intricate details to the metalwork, such as scrollwork, cherubs, or other decorative motifs commonly found in Baroque architecture. Additionally, consider adding a rich, dark color palette with highlights and shadows to create a sense of depth and grandeur. Finally, consider adding a sense of movement or dynamism to the stairs, such as curved lines or flowing forms, to evoke the energy and excitement of the Baroque period."
+    },
+    {
+      "region_num": 17,
+      "image_id": "70380",
+      "mask_index": 5,
+      "region_label": "person",
+      "style_name": "symbolism",
+      "instruction": "To stylize the person in a symbolic artistic style, transform their physical features into abstract symbols that represent deeper emotions or ideas. For instance, elongate their limbs to symbolize reach or ambition, give them large, expressive eyes to represent insight or wisdom, and use bold, contrasting colors to emphasize their inner emotions. Use metaphors and allegories to convey their personality or character, and consider incorporating natural elements or mythological symbols to enhance the symbolic representation."
+    },
+    {
+      "region_num": 18,
+      "image_id": "70380",
+      "mask_index": 3,
+      "region_label": "glass wine glasses",
+      "style_name": "neoclassicism",
+      "instruction": "To stylize glass wine glasses in a neoclassical artistic style, consider enhancing their elegant and refined appearance by adding delicate curves, intricate lines, and subtle ornaments. Imagine each glass as a graceful and slender vase, adorned with thin, delicate ribbing and subtle, geometric patterns. The stem and base should be simple and elegant, with clean lines and a sense of balance and harmony. The overall effect should be one of understated elegance and timeless beauty, evoking the sophistication and refinement of neoclassical art."
+    },
+    {
+      "region_num": 19,
+      "image_id": "382655",
+      "mask_index": 3,
+      "region_label": "several long curtains",
+      "style_name": "abstract-expressionism",
+      "instruction": "To stylize several long curtains in abstract-expressionism, consider the following instruction:\n\nEmploy bold, sweeping brushstrokes to convey the dynamic movement and fluidity of the curtains. Use a vibrant color palette, allowing for rich hues and contrasting shades to create a sense of depth and texture. Experiment with overlapping and intermingling brushstrokes to suggest the layered folds and undulations of the fabric. Allow for visible brushstrokes and visible impasto to emphasize the expressive, raw quality of the abstract-expressionist style. Additionally, consider incorporating subtle, abstract shapes and forms within the folds of the curtains to add intrigue and visual interest."
+    },
+    {
+      "region_num": 20,
+      "image_id": "316583",
+      "mask_index": 0,
+      "region_label": "indoor floor",
+      "style_name": "renaissance",
+      "instruction": "To stylize the indoor floor in a renaissance artistic style, apply intricate geometric patterns using terracotta or limestone tiles. Incorporate the use of classic motifs such as roses, pomegranates, or acanthus leaves in the design. Employ a monochromatic color palette with shades of red, green, and brown, or opt for a contrasting border in a complementary hue. Ensure the patterns are symmetrical and meticulously executed to evoke the grandeur and elegance of the renaissance era."
+    },
+    {
+      "region_num": 21,
+      "image_id": "282930",
+      "mask_index": 3,
+      "region_label": "a portion of mashed green food",
+      "style_name": "minimalism",
+      "instruction": "To stylize the mashed green food in minimalism, simplify its texture by representing it as a flat, solid green shape with no visible grains or irregularities. Remove any details or variations in color, leaving only a uniform, monochromatic green tone."
+    },
+    {
+      "region_num": 22,
+      "image_id": "161757",
+      "mask_index": 2,
+      "region_label": "blue stream",
+      "style_name": "impressionism",
+      "instruction": "To stylize the blue stream in an impressionist manner, use broad, loose brushstrokes to capture the flowing movement of the water. Blend shades of blue and turquoise together to create a sense of depth and reflection on the surface of the water. Don't be afraid to let some white show through to represent the frothy bubbles and ripples in the stream. The goal is to convey a sense of energy and motion in the water, while maintaining a dreamlike and ethereal quality that is characteristic of impressionist art."
+    },
+    {
+      "region_num": 23,
+      "image_id": "398285",
+      "mask_index": 4,
+      "region_label": "folding chairs",
+      "style_name": "fauvism",
+      "instruction": "To stylize the folding chairs in a fauvist manner, apply bold and vivid colors to their fabric, giving them a non-realistic and expressive appearance. Use thick, impasto brushstrokes to create texture and depth, emphasizing the folds and patterns of the chair's design. Experiment with contrasting colors to add energy and intensity to the scene, while maintaining the overall balance and harmony of the composition."
+    },
+    {
+      "region_num": 24,
+      "image_id": "70380",
+      "mask_index": 0,
+      "region_label": "light brown wooden dining table",
+      "style_name": "romanticism",
+      "instruction": "To stylize the light brown wooden dining table in a romanticism style, consider adding soft, warm lighting to create an inviting and cozy atmosphere. Place a tablecloth made of delicate, flowing fabric in a soft, muted color such as blush pink or ivory over the table. Decorate the table with elegant, vintage-inspired tableware, including fine china, crystal glasses, and silver flatware. Add a centerpiece of fresh, fragrant flowers in a tall, ornate vase to add a touch of nature and beauty to the scene. Finally, place a few candles around the table, lit and surrounded by decorative holders, to cast a gentle, flickering glow over the table and create an air of romance and sophistication."
+    },
+    {
+      "region_num": 25,
+      "image_id": "312917",
+      "mask_index": 1,
+      "region_label": "white ceiling with dark wooden beams",
+      "style_name": "cubism",
+      "instruction": "To stylize the white ceiling with dark wooden beams in a cubist artistic style, break down each geometric shape into smaller, distorted cubes. For the white ceiling, represent it as a collection of interconnected white cubes with varying sizes and angles. For the dark wooden beams, depict them as a series of intersecting cubes in a darker tone, with irregular shapes and angles to emphasize the fragmented nature of the cubist style."
+    },
+    {
+      "region_num": 26,
+      "image_id": "425484",
+      "mask_index": 3,
+      "region_label": "kitesurfing kites",
+      "style_name": "pop-art",
+      "instruction": "To stylize kitesurfing kites in pop-art style, exaggerate their shapes and colors with bold, vibrant hues and sharp, clean edges. Simplify their intricate patterns into bold geometric designs or abstract shapes. Consider adding graphic elements such as thick outlines, bold typography, or iconic symbols to enhance their pop-art aesthetic."
+    },
+    {
+      "region_num": 27,
+      "image_id": "338941",
+      "mask_index": 1,
+      "region_label": "dark asphalt road",
+      "style_name": "color-field-painting",
+      "instruction": "To stylize the dark asphalt road in a color-field painting style, apply large, flat areas of a deep, uniform black color to represent the road surface. Avoid adding any textures or patterns, as the goal is to create a smooth and flat appearance. The edge of the road should blend seamlessly with the edge of the building or sky, creating a sense of depth and continuity. The focus should be on the harmonious relationship between the colors and shapes, rather than on representational details."
+    },
+    {
+      "region_num": 28,
+      "image_id": "333225",
+      "mask_index": 1,
+      "region_label": "moist, grain-based mixture",
+      "style_name": "romanticism",
+      "instruction": "To stylize the moist, grain-based mixture in a romanticism style, enhance the textures and colors to evoke a sense of passion and emotion. Use soft, warm lighting to bring out the natural hues of the grains and vegetables, giving the dish a glowing, inviting appearance. Add delicate, flowing lines to the surface of the grain-based mixture, creating the illusion of gentle ripples or waves. Use a rich, velvety brush technique to add depth and dimension to the grains, making them appear plump and juicy. Finally, add subtle, delicate highlights to the surface of the grains to create a sense of depth and shine. The result should be a romantic, emotionally charged representation of the moist, grain-based mixture, evoking a sense of longing and desire."
+    },
+    {
+      "region_num": 29,
+      "image_id": "434765",
+      "mask_index": 0,
+      "region_label": "brick houses",
+      "style_name": "minimalism",
+      "instruction": "To stylize the brick houses in minimalism, simplify their forms by reducing the details to essential geometric shapes. Keep the color palette limited to a few neutral tones, such as shades of gray or white. Eliminate textures and ornamentation, leaving only the basic shapes and lines to represent the brick houses."
+    },
+    {
+      "region_num": 30,
+      "image_id": "443592",
+      "mask_index": 1,
+      "region_label": "concrete sidewalk and road",
+      "style_name": "abstract-expressionism",
+      "instruction": "To stylize the concrete sidewalk and road in abstract-expressionism, use bold, sweeping brushstrokes to convey the texture and rhythm of the concrete's surface. Employ a limited color palette of muted grays and browns, with occasional splashes of darker shades to represent cracks and imperfections. Experiment with adding dynamic, expressive lines to suggest the flow of foot traffic and the movement of water or tires on the wet concrete. Use heavy impasto techniques to build up texture and depth, and consider incorporating gestural marks to suggest the energy and chaos of urban life."
+    }
+  ]
+}

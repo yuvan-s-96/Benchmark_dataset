@@ -1,0 +1,246 @@
+{
+  "adapter": "../models/lora_A_v3/adapter",
+  "template": "A",
+  "results": [
+    {
+      "region_num": 1,
+      "image_id": "10909",
+      "mask_index": 2,
+      "region_label": "brown wooden cabinets",
+      "style_name": "pointillism",
+      "instruction": "To apply a pointillist style to the brown wooden cabinets in the scene, follow these steps:\n\n1. Select the region of the brown wooden cabinets in your image editing software.\n2. Duplicate the selected region to create a new layer.\n3. Apply a pointillist filter or brush to the new layer. This can be done by using a pointillist brush or by applying a pointillist filter such as the Fractal Texture or Pointillize filter in Adobe Photoshop.\n4. Adjust the size, shape, and density of the points to achieve the desired pointillist effect.\n5. Blend the pointillist layer with the original layer using a blending mode such as Multiply or Soft Light to achieve the desired level of integration with the rest of the scene.\n6. Repeat the process for any additional details or textures within the selected region as needed.\n7. Adjust the overall color balance and contrast of the image to ensure that the pointillist style is consistent with the rest of the scene."
+    },
+    {
+      "region_num": 2,
+      "image_id": "548209",
+      "mask_index": 1,
+      "region_label": "dark wooden building",
+      "style_name": "expressionism",
+      "instruction": "To apply an expressionist style to the dark wooden building region, use a post-processing effect that amplifies the contrast, saturation, and angles to create a sense of emotional intensity and distortion. This can be achieved through various image editing software or tools, such as Adobe Photoshop or GIMP, using expressionist filters or manually adjusting the image settings to achieve the desired effect."
+    },
+    {
+      "region_num": 3,
+      "image_id": "123697",
+      "mask_index": 2,
+      "region_label": "long wooden desk",
+      "style_name": "neoclassicism",
+      "instruction": "To apply a neoclassical style to the long wooden desk in this image, follow these steps:\n\n1. Convert the image to grayscale to simplify the colors and focus on the form.\n2. Apply a high-pass filter to enhance the edges and textures of the wood grain to make it more defined and pronounced.\n3. Use a dodge and burn tool to enhance the contrast and brightness of the wood grain, giving it a more polished and refined appearance.\n4. Apply a texture overlay of a neoclassical pattern to the desk surface to add the desired style.\n5. Adjust the levels and curves to fine-tune the contrast and brightness of the image to ensure the neoclassical style is consistent across the entire scene.\n6. Lastly, adjust the saturation and vibrance to ensure the plush toys and other colors in the scene do not clash with the neoclassical style."
+    },
+    {
+      "region_num": 4,
+      "image_id": "29444",
+      "mask_index": 4,
+      "region_label": "a white tent",
+      "style_name": "pop-art",
+      "instruction": "To apply a pop-art style to the white tent and the surrounding area in this image, follow these steps:\n\n1. Select the white tent and the grassy area around it as your region of interest (ROI).\n2. Apply a color filter to the ROI to enhance the colors and make them more vibrant, as pop-art often features bold and bright colors.\n3. Apply edge detection to the ROI to create sharp outlines and geometric shapes, which are characteristic of pop-art style.\n4. Apply a pattern overlay to the ROI, such as a grid or geometric shapes, to add texture and depth to the image.\n5. Experiment with contrast and saturation levels to make the colors more vivid and the edges more defined.\n6. Adjust the hue and brightness of the colors in the ROI to create a more pop-art look.\n7. Apply these changes only to the selected region, leaving the rest of the image untouched to preserve the original scene."
+    },
+    {
+      "region_num": 5,
+      "image_id": "363645",
+      "mask_index": 3,
+      "region_label": "purple and lilac backpack",
+      "style_name": "art-deco",
+      "instruction": "Apply an art-deco filter to the region of the purple and lilac backpack and the surrounding people, enhancing the geometric shapes and clean lines to give the scene a stylized, art-deco look. Ensure that the colors remain vibrant and the contrast is high to maintain the bright and lively atmosphere of the original image."
+    },
+    {
+      "region_num": 6,
+      "image_id": "316583",
+      "mask_index": 5,
+      "region_label": "hands of a person",
+      "style_name": "realism",
+      "instruction": "To apply a realism style to the hands region in the scene, use a graphic editing software or application with a \"style transfer\" or \"filter\" feature. Select the hands region, and apply the realism style filter specifically to that selection. This will enhance the details and textures of the hands to make them appear more lifelike and true-to-form."
+    },
+    {
+      "region_num": 7,
+      "image_id": "173198",
+      "mask_index": 3,
+      "region_label": "green trees",
+      "style_name": "cubism",
+      "instruction": "To apply the cubist style to the region with green trees, use a graphic editing software or an AI-based image manipulation tool to select the green tree region. Then, apply the cubist filter or effect to the selected area while leaving the rest of the image untouched. This will result in a cubist representation of the green trees while preserving the original appearance of the surrounding scene."
+    },
+    {
+      "region_num": 8,
+      "image_id": "32639",
+      "mask_index": 1,
+      "region_label": "bright green lawn",
+      "style_name": "cubism",
+      "instruction": "To apply the cubist style to the bright green lawn region in this peaceful garden scene, follow these steps:\n\n1. Isolate the bright green lawn area using a mask or selection tool.\n2. Apply a cubist filter or effect to the selected region only.\n3. Adjust the intensity and contrast of the filter to achieve the desired cubist effect.\n4. Blend the filtered lawn back into the original image, ensuring that the edges seamlessly blend with the unfiltered areas.\n5. Repeat the process for any additional cubist effects desired on the lawn, such as adding geometric shapes or distorting the texture.\n6. Fine-tune the overall image to ensure that the cubist style is consistent and harmonious with the rest of the scene."
+    },
+    {
+      "region_num": 9,
+      "image_id": "211867",
+      "mask_index": 0,
+      "region_label": "wide asphalt street",
+      "style_name": "pointillism",
+      "instruction": "To apply a pointillist style to a wide asphalt street scene, you would need to use a digital painting or image editing software that supports the pointillist technique. Here's an instruction to help you get started:\n\n1. Import the wide asphalt street scene image into your preferred software.\n2. Duplicate the image layer to create a new layer for the pointillist style application.\n3. Select the pointillist brush tool with adjustable size and hardness.\n4. Begin applying small dots of color to the asphalt street area on the new layer, focusing on the textures and patterns of the surface.\n5. Continue adding dots of color to build up the layers and create the desired pointillist effect.\n6. Adjust the size, opacity, and blending mode of the brush as needed to achieve the desired level of detail and texture.\n7. Repeat this process for other elements in the scene, such as buildings, cars, and trees, to maintain a consistent style throughout the image.\n8. Once you're satisfied with the pointillist effect, you can adjust the overall color balance and contrast to fine-tune the image.\n9. Merge the pointillist layer with the original image layer to combine the two styles.\n10. Save the final image with the pointillist style applied to the wide asphalt street scene."
+    },
+    {
+      "region_num": 10,
+      "image_id": "144373",
+      "mask_index": 1,
+      "region_label": "light-colored floor",
+      "style_name": "baroque",
+      "instruction": "To apply a baroque style to the light-colored floor region in this image, you can use a texture overlay and adjust the color palette to fit the style. Here's a step-by-step instruction:\n\n1. Select the light-colored floor region using the lasso tool or a mask.\n2. Apply a baroque texture overlay to the selected region using a soft brush.\n3. Adjust the blending mode of the texture layer to \"Multiply\" or \"Overlay\" to enhance the effect.\n4. Adjust the color palette of the image to fit the baroque style by increasing the saturation and adding warm tones.\n5. Adjust the contrast and brightness to enhance the texture and create a more dramatic effect.\n6. Fine-tune the image by making any necessary adjustments to the edges of the texture and the overall appearance of the image.\n\nBy following these steps, you should be able to apply the baroque style to the light-colored floor region in the image while preserving the original texture and details of the rest of the image."
+    },
+    {
+      "region_num": 11,
+      "image_id": "123697",
+      "mask_index": 1,
+      "region_label": "large window",
+      "style_name": "minimalism",
+      "instruction": "To apply a minimalist style to the given region of a cluttered home office or bedroom desk area with a large window, follow these steps:\n\n1. Keep the large window untouched, as it adds natural light and contrast to the scene.\n2. Remove all the cluttered toys from the desk and floor, leaving only a few essential items.\n3. Keep the wooden desk and the two black computer monitors.\n4. Remove the transparent bottle and the red and white items on the floor.\n5. Keep the plush brown dog on the large dark exercise ball.\n6. Replace the vast collection of plush toys with a few well-placed minimalist decorative objects or plants.\n7. Keep the background wall and the window lookout scene as is.\n8. Adjust the lighting to create a soft, even glow across the desk surface.\n9. Use a monochromatic color palette or limited color scheme to unify the scene.\n10. Simplify the composition by removing unnecessary details and focusing on the essential elements.\n\nBy following these steps, you will transform the cluttered scene into a minimalist and visually pleasing home office or bedroom desk area."
+    },
+    {
+      "region_num": 12,
+      "image_id": "239771",
+      "mask_index": 5,
+      "region_label": "blue and black backpack",
+      "style_name": "color-field-painting",
+      "instruction": "To apply a color-field-painting style to the blue and black backpack region in this image, follow these steps:\n\n1. Select the region of interest (ROI) using a mask or the painting tool in your preferred image editing software.\n2. Duplicate the original image layer to create a new layer for the style transfer.\n3. Apply a color-field-painting filter or effect to the new layer. You can use various methods to achieve this, such as using a pre-made filter, applying a custom color palette, or manually painting each pixel with the desired colors.\n4. Adjust the colors and saturation levels to match the style of the given color-field-painting example.\n5. Blend the new layer with the original image by adjusting the opacity and blending mode of the new layer until the style is seamlessly integrated with the rest of the image.\n6. Fine-tune the result by making any necessary adjustments to the colors, contrast, or other image attributes to ensure a cohesive and visually pleasing final image."
+    },
+    {
+      "region_num": 13,
+      "image_id": "232676",
+      "mask_index": 4,
+      "region_label": "hand and arm of another person",
+      "style_name": "minimalism",
+      "instruction": "To apply minimalist style to the hand and arm of the person raising a gesture in the given scene, follow these steps:\n\n1. Isolate the hand and arm region using a mask or selection tool.\n2. Apply a grayscale filter to the selected area to convert it to black and white.\n3. Apply a threshold adjustment to enhance the contrast and define the edges of the hand and arm.\n4. Apply a dilation or erosion filter to refine the edges and remove any unwanted details.\n5. Adjust the brightness and contrast to achieve a minimalist look, ensuring that the hand and arm stand out against the background while maintaining a simple and clean appearance.\n6. Save the edited image as a new file to preserve the original image."
+    },
+    {
+      "region_num": 14,
+      "image_id": "448648",
+      "mask_index": 1,
+      "region_label": "light blue sky",
+      "style_name": "symbolism",
+      "instruction": "To apply a symbolic style to the light blue sky region, you can use a graphic editing software or an AI-based image manipulation tool. Here's a general instruction:\n\nTransform the light blue sky into a symbolic representation by adding abstract shapes, symbols, or icons that convey a deeper meaning or emotion. Use a soft, pastel color palette to maintain the light and airy feel of the sky while ensuring that the symbols stand out clearly. Experiment with different shapes and sizes to create a visually striking and thought-provoking image."
+    },
+    {
+      "region_num": 15,
+      "image_id": "51052",
+      "mask_index": 2,
+      "region_label": "tan brick column",
+      "style_name": "renaissance",
+      "instruction": "To apply a renaissance style to the tan brick column in this scene, you can follow these steps:\n\n1. Isolate the tan brick column using a mask or selection tool.\n2. Duplicate the selected region and apply a renaissance filter or texture to the duplicate layer. You can use a texture overlay or a filter like \"Renaissance Technique\" in Adobe Photoshop.\n3. Adjust the blending mode of the renaissance layer to achieve the desired effect. You may want to experiment with modes like \"Multiply,\" \"Overlay,\" or \"Soft Light.\"\n4. Adjust the opacity and fill of the renaissance layer to control the intensity of the style transfer.\n5. Fine-tune the result by making any necessary adjustments to color, contrast, or sharpness.\n\nBy following these steps, you should be able to apply a renaissance style to the tan brick column in the scene while leaving the rest of the image unaffected."
+    },
+    {
+      "region_num": 16,
+      "image_id": "443592",
+      "mask_index": 4,
+      "region_label": "dark metal stairs",
+      "style_name": "baroque",
+      "instruction": "To apply a baroque style to the dark metal stairs in this image, focus on enhancing the ornate and decorative elements of the metalwork. Use a texture brush to add intricate patterns and swirls to the metal surfaces, giving them a rich, textured appearance. Apply a gold or gilded color palette to the metal to create a sense of opulence and grandeur. Lastly, add dramatic shadows and highlights to create a sense of depth and dimension, emphasizing the three-dimensional quality of the metal stairs."
+    },
+    {
+      "region_num": 17,
+      "image_id": "70380",
+      "mask_index": 5,
+      "region_label": "person",
+      "style_name": "symbolism",
+      "instruction": "To apply a symbolic style to the person region in the scene, you can follow these steps:\n\n1. Identify and isolate the person region using image segmentation or masking techniques.\n2. Replace the person's features with symbolic representations. For example, replace the face with a stylized mask, the body with geometric shapes, and the clothes with abstract patterns.\n3. Ensure that the symbolic representations maintain the overall proportions and poses of the original person.\n4. Apply color palettes and shading that are typical of symbolic art to enhance the effect.\n5. Blend the symbolic representations back into the scene while preserving the background and other elements.\n\nBy following these steps, you can effectively transfer a symbolic style to the person region in the scene while leaving the rest of the image untouched."
+    },
+    {
+      "region_num": 18,
+      "image_id": "70380",
+      "mask_index": 3,
+      "region_label": "glass wine glasses",
+      "style_name": "neoclassicism",
+      "instruction": "To apply a neoclassical style to the region of glass wine glasses, consider adding elegant and simple curves, clean lines, and geometric shapes reminiscent of ancient Greek and Roman art. Adjust the colors to include soft pastels and muted tones, and consider adding gold or silver accents for a touch of opulence. Remember to maintain a balanced and harmonious composition to truly capture the essence of neoclassical art."
+    },
+    {
+      "region_num": 19,
+      "image_id": "382655",
+      "mask_index": 3,
+      "region_label": "several long curtains",
+      "style_name": "abstract-expressionism",
+      "instruction": "To apply an abstract-expressionist style to several long curtains in a scene, you can follow these steps:\n\n1. Duplicate the layer of the curtains in your image to create a new layer for the style transfer.\n2. Apply an appropriate image filter to convert the curtains into an abstract-expressionist style. You can use various software or tools for this, such as Adobe Photoshop's \"Filter Gallery\" with the \"Stylize\" > \"Impasto\" option or the \"Artistic\" > \"Wave\" filter. Alternatively, you can use dedicated style transfer tools like \"DeepArt.io\" or \"Runway ML.\"\n3. Adjust the filter settings to achieve the desired level of abstraction and expressionism. Experiment with different settings to find the best fit for your image.\n4. Once you're satisfied with the abstract-expressionist style, merge the filtered layer back into the original image, making sure that the curtains are the only region affected by the style transfer.\n5. Adjust the blending mode and opacity of the merged layer to ensure that the abstract-expressionist style blends seamlessly with the rest of the scene.\n\nBy following these steps, you should be able to apply an abstract-expressionist style to several long curtains in your scene while leaving the rest of the image untouched."
+    },
+    {
+      "region_num": 20,
+      "image_id": "316583",
+      "mask_index": 0,
+      "region_label": "indoor floor",
+      "style_name": "renaissance",
+      "instruction": "To apply a renaissance style to an indoor floor scene, you can use a graphic editing software or an AI-based image manipulation tool. Here's a general instruction:\n\nApply a renaissance filter or texture to the indoor floor image while preserving the original colors and shapes of the objects present in the scene. This can be achieved by adjusting the brightness, contrast, and saturation levels to mimic the warm and rich tones commonly found in renaissance art. Additionally, consider adding intricate patterns or textures reminiscent of renaissance floor designs, such as geometric patterns, floral motifs, or marble textures."
+    },
+    {
+      "region_num": 21,
+      "image_id": "282930",
+      "mask_index": 3,
+      "region_label": "a portion of mashed green food",
+      "style_name": "minimalism",
+      "instruction": "To apply a minimalist style to the region of mashed green food in this image, focus on simplifying the textures and colors while maintaining the essential elements of the dish. Here's a step-by-step instruction:\n\n1. Desaturate the colors in the mashed green food region to create a monochromatic or near-monochromatic palette.\n2. Apply a smooth, uniform texture to the mashed green food, removing any visible grain or texture that doesn't contribute to the minimalist aesthetic.\n3. Consider using a soft, muted color palette to enhance the simplicity of the dish while maintaining the distinction between the mashed green food and the broccoli florets.\n4. Remove any unnecessary details or distractions from the mashed green food region, focusing on the essential elements of the dish.\n5. Adjust the contrast and brightness to ensure the mashed green food stands out clearly against the plate while maintaining a minimalist appearance.\n\nBy following these steps, you can apply a minimalist style to the region of mashed green food in this image while preserving the overall composition and contrast of the dish."
+    },
+    {
+      "region_num": 22,
+      "image_id": "161757",
+      "mask_index": 2,
+      "region_label": "blue stream",
+      "style_name": "impressionism",
+      "instruction": "Apply an impressionist filter to the blue stream area while keeping the goats and snow in their original colors (light brown for goats and white for snow). The forest in the background should remain in its original green color as well. This will result in a scene where the goats and snow appear in their natural colors, while the blue stream is transformed to convey the impressionist style."
+    },
+    {
+      "region_num": 23,
+      "image_id": "398285",
+      "mask_index": 4,
+      "region_label": "folding chairs",
+      "style_name": "fauvism",
+      "instruction": "To apply the fauvist style to the folding chairs in this photograph, you can follow these steps:\n\n1. Selectively apply color to the folding chairs using bold and vibrant hues that are characteristic of the Fauvist style.\n2. Use thick brushstrokes to paint the chairs, focusing on the textures and shapes to create a sense of depth and dimension.\n3. Experiment with contrasting colors to create a sense of energy and movement in the chairs.\n4. Pay attention to the shadows and highlights on the chairs to add depth and texture.\n5. Consider using complementary colors to create a sense of harmony and balance in the composition.\n6. Experiment with distortion and exaggeration to add a sense of movement and dynamism to the chairs.\n7. Keep the background and people in black and white to create a stark contrast between the colorful chairs and the monochromatic background.\n8. Use bold and expressive brushstrokes to capture the essence of the Fauvist style in the chairs while maintaining the overall composition and mood of the photograph."
+    },
+    {
+      "region_num": 24,
+      "image_id": "70380",
+      "mask_index": 0,
+      "region_label": "light brown wooden dining table",
+      "style_name": "romanticism",
+      "instruction": "To apply a romanticism style to a light brown wooden dining table, consider adding soft, flowing curves and intricate details to the table's design. You could also incorporate gentle color tones and textures, such as muted reds, pinks, and golds, to create an atmosphere of passion and emotion. Additionally, consider adding decorative elements, such as flowers, candles, or ornate carvings, to enhance the romantic feel of the scene. Instruction: Transform the light brown wooden dining table into a romantic masterpiece by adding soft curves, intricate details, muted color tones, and decorative elements."
+    },
+    {
+      "region_num": 25,
+      "image_id": "312917",
+      "mask_index": 1,
+      "region_label": "white ceiling with dark wooden beams",
+      "style_name": "cubism",
+      "instruction": "To apply the cubist style to the white ceiling with dark wooden beams in this image, you can use a image editing software or application that supports style transfer, such as Adobe Photoshop or Prisma. Here's a general instruction on how to do it:\n\n1. Open the image in your preferred image editing software or application.\n2. Select the white ceiling with dark wooden beams region using the lasso tool or any other selection tool.\n3. Apply the cubist style filter or effect to the selected region only. This can be done by using a preset cubist style filter or by creating your own custom cubist effect.\n4. Adjust the intensity and other parameters of the cubist effect to achieve the desired level of abstraction and distortion.\n5. Preview the result and make any necessary adjustments to ensure that the cubist effect is applied only to the ceiling and beams, and not to other parts of the image.\n6. Save the edited image with the cubist style applied to the ceiling only."
+    },
+    {
+      "region_num": 26,
+      "image_id": "425484",
+      "mask_index": 3,
+      "region_label": "kitesurfing kites",
+      "style_name": "pop-art",
+      "instruction": "To apply a pop-art style to the kitesurfing kites scene, use a graphic design software or an image editing tool with a pop-art filter. Apply the filter selectively to the kites in the scene while ensuring that the background and other elements remain unaffected. This will give the kites a bold, colorful, and stylized pop-art appearance."
+    },
+    {
+      "region_num": 27,
+      "image_id": "338941",
+      "mask_index": 1,
+      "region_label": "dark asphalt road",
+      "style_name": "color-field-painting",
+      "instruction": "To apply a color-field-painting style to the given region of a dark asphalt road, follow these steps:\n\n1. Isolate the region of the dark asphalt road in the image using a mask or selection tool.\n2. Create a new blank layer above the original image layer.\n3. Fill the selected region on the new layer with a solid color that represents the base color for the color-field-painting style. For a dark asphalt road, a deep black or dark gray color would be appropriate.\n4. Apply a color overlay to the new layer using the base color.\n5. Experiment with different saturation and brightness levels to achieve the desired intensity and tone for the color-field painting effect.\n6. Repeat this process for other elements in the scene, such as the sky, building complex, and pedestrians, using appropriate colors and tones for each element.\n7. Adjust the opacity and blending mode of each layer to achieve a seamless integration of the color-field painting style with the original image.\n8. Fine-tune the image by making any necessary adjustments to color, contrast, and sharpness to ensure a cohesive and visually appealing final result."
+    },
+    {
+      "region_num": 28,
+      "image_id": "333225",
+      "mask_index": 1,
+      "region_label": "moist, grain-based mixture",
+      "style_name": "romanticism",
+      "instruction": "To apply a romanticism style to the given region of a moist, grain-based mixture in a nutritious meal image, you can use the following instruction:\n\nTransform the grain-based mixture into a more textured and visually appealing version, reminiscent of romanticism art. Enhance the colors of the grains to have a warmer and more vibrant hue. Add subtle shadows and highlights to create a sense of depth and dimension. Use soft, flowing lines to mimic the brushstrokes commonly found in romanticism art. Lastly, add small details such as reflections or texture overlay to add depth and complexity to the grain-based mixture.\n\nBy following this instruction, the region of the moist, grain-based mixture in the nutritious meal image will be transformed to have a romanticism style, enhancing the overall visual appeal of the image."
+    },
+    {
+      "region_num": 29,
+      "image_id": "434765",
+      "mask_index": 0,
+      "region_label": "brick houses",
+      "style_name": "minimalism",
+      "instruction": "To apply a minimalist style to the brick houses region in this black and white historical photograph, focus on simplifying the architectural details of the brick houses while preserving their essential features. Use a grayscale color palette to maintain the monochromatic look. For the houses, concentrate on the outlines, textures, and tonal values to convey the sense of minimalism. The chimneys and shop signs should be reduced to their basic shapes, and the sky should be kept simple with few or no clouds. The vendor, the man in the bowler hat, and the animals should be rendered in high contrast to create a focal point against the minimalist backdrop. The paving stones and the dirt road should also be simplified while retaining their textural qualities. Overall, the goal is to strip the scene down to its essential elements while maintaining the historical and urban atmosphere."
+    },
+    {
+      "region_num": 30,
+      "image_id": "443592",
+      "mask_index": 1,
+      "region_label": "concrete sidewalk and road",
+      "style_name": "abstract-expressionism",
+      "instruction": "To apply an abstract-expressionist style to the concrete sidewalk and road in this image, you can use a combination of techniques such as color distortion, texture overlays, and brush strokes to create a sense of movement and energy. Here's a step-by-step instruction:\n\n1. Select the region of the image that corresponds to the concrete sidewalk and road using a mask or a selection tool.\n2. Apply a color distortion filter to the selected region, focusing on creating a vibrant and contrasting color palette that is typical of abstract-expressionist art.\n3. Use a texture overlay to add a gritty and rough texture to the concrete surfaces, mimicking the look of abstract brush strokes.\n4. Apply a brush stroke filter to the selected region, using large and expressive brush strokes to further enhance the abstract-expressionist style.\n5. Adjust the opacity and blending mode of the brush strokes to achieve the desired level of intensity and integration with the original image.\n6. Repeat steps 3-5 with different textures and brush strokes to add variation and depth to the abstract-expressionist effect.\n7. Adjust the levels and contrast of the entire image to ensure that the abstract-expressionist style is consistent across the entire scene.\n8. Fine-tune the image as needed to ensure that the abstract-expressionist style is balanced and harmonious with the rest of the image."
+    }
+  ]
+}

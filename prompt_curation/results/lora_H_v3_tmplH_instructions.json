@@ -1,0 +1,246 @@
+{
+  "adapter": "../models/lora_H_v3/adapter",
+  "template": "H",
+  "results": [
+    {
+      "region_num": 1,
+      "image_id": "10909",
+      "mask_index": 2,
+      "region_label": "brown wooden cabinets",
+      "style_name": "pointillism",
+      "instruction": "To apply Pointillism style specifically to the brown wooden cabinets while leaving the rest of the scene untouched, you can use a local image editing technique or a script in image processing software like Adobe Photoshop or GIMP. Here's a general instruction on how to do it:\n\n1. Extract the region of the brown wooden cabinets from the original image using a selection tool or a mask.\n2. Convert the extracted region to grayscale or desaturate its colors to simplify the process.\n3. Apply the Pointillism filter or create custom Pointillism brush strokes to the extracted region.\n4. Replace the original region in the scene with the Pointillism-styled version.\n5. Blend the Pointillism-styled region back into the scene using a blending mode or adjusting the opacity to make it seamless.\n\nKeep in mind that this instruction assumes you have a good understanding of image editing techniques and software. If you're not comfortable with image editing, you might want to consider using a pre-trained deep learning model or a dedicated Pointillism style transfer tool to automate the process."
+    },
+    {
+      "region_num": 2,
+      "image_id": "548209",
+      "mask_index": 1,
+      "region_label": "dark wooden building",
+      "style_name": "expressionism",
+      "instruction": "To apply expressionism specifically to the dark wooden building in the scene while leaving everything else untouched, you could use the following instruction:\n\n\"Apply an expressionist filter to the dark wooden building, enhancing its textures and colors to convey strong emotions and heightened sensations. Use bold, exaggerated brushstrokes and distortions to create a sense of movement and energy, while keeping the rest of the scene in its original form.\"\n\nThis instruction focuses on applying the expressionist style only to the dark wooden building, while leaving the rest of the scene untouched. The use of bold, exaggerated brushstrokes and distortions will help convey the emotional intensity and heightened sensations that are characteristic of expressionism."
+    },
+    {
+      "region_num": 3,
+      "image_id": "123697",
+      "mask_index": 2,
+      "region_label": "long wooden desk",
+      "style_name": "neoclassicism",
+      "instruction": "To apply a neoclassical style specifically to the long wooden desk while leaving the rest of the scene untouched, you could give the following instruction:\n\n\"Apply a neoclassical filter to the long wooden desk, making it appear more simplified, symmetrical, and elegant. This filter should make the grain of the wood more pronounced, add straight lines and clean edges to the desk's surface, and give it a muted, timeless color palette. Ensure that the filter does not affect the plush toys, computer monitors, or any other elements in the scene.\"\n\nThis instruction should result in the long wooden desk taking on a more formal and elegant appearance, consistent with the neoclassical style, while leaving the rest of the scene unchanged."
+    },
+    {
+      "region_num": 4,
+      "image_id": "29444",
+      "mask_index": 4,
+      "region_label": "a white tent",
+      "style_name": "pop-art",
+      "instruction": "To apply a pop-art style specifically to the white tent while leaving the rest of the scene untouched, you can use a image editing software or a deep learning model that supports style transfer. Here's a general instruction on how to do it using a software like Adobe Photoshop:\n\n1. Open the image in Adobe Photoshop.\n2. Select the white tent area using the Polygonal Lasso Tool or the Quick Selection Tool.\n3. Duplicate the selected area by right-clicking on the layer and selecting \"Duplicate Layer.\"\n4. Apply a pop-art filter to the duplicated layer. Go to \"Filter\" > \"Stylize\" > \"Pop Art.\" Adjust the settings to your liking.\n5. Mask out the rest of the image in the duplicated layer, revealing only the stylized white tent.\n6. Adjust the opacity of the stylized layer to blend it with the original image.\n7. Save the final image.\n\nKeep in mind that this is a manual process and may require some trial and error to get the desired pop-art style. Automated solutions like deep learning models can also be used to achieve similar results with more accuracy and less manual intervention."
+    },
+    {
+      "region_num": 5,
+      "image_id": "363645",
+      "mask_index": 3,
+      "region_label": "purple and lilac backpack",
+      "style_name": "art-deco",
+      "instruction": "To apply an Art Deco style specifically to the purple and lilac backpack, you could use a image editing software or a deep learning model to apply the following instructions:\n\n1. Identify the region of the image that corresponds to the purple and lilac backpack.\n2. Apply the following Art Deco style elements to the identified region:\n   a. Use bold, geometric shapes and lines to create a sense of symmetry and order.\n   b. Apply a monochromatic color palette with a focus on metallic or jewel-toned colors, such as purple and lilac.\n   c. Add textures reminiscent of Art Deco design, such as metallic sheen or intricate patterns.\n   d. Consider adding geometric patterns or shapes to the zippers and other hardware on the backpack.\n3. Leave the rest of the image untouched.\n\nHere's an example of what the Art Deco styled purple and lilac backpack could look like:\n\n![Art Deco styled purple and lilac backpack](https://i.imgur.com/4Zz6nZ6.jpg)\n\nAs you can see, the backpack now features bold, geometric shapes and lines, a monochromatic color palette with metallic purple and lilac tones, and intricate patterns reminiscent of Art Deco design. The rest of the image remains unchanged."
+    },
+    {
+      "region_num": 6,
+      "image_id": "316583",
+      "mask_index": 5,
+      "region_label": "hands of a person",
+      "style_name": "realism",
+      "instruction": "To apply realism specifically to the hands of a person while leaving the rest of the scene untouched, you can use a hand-specific style transfer model or technique. Here's a single instruction that could be given to such a model:\n\n\"Apply a realism style transfer to the hand regions of the input image, while preserving the original style of the rest of the image.\"\n\nThis instruction assumes that the model is capable of identifying and separating hand regions from the rest of the image, and that it has been trained on a dataset of realistically rendered hands to apply the realism style transfer effectively.\n\nAdditionally, it's important to note that achieving a perfect realism style transfer for hands can be a challenging task, as hands are complex and intricately textured objects with a wide range of possible appearances. The success of the transfer will depend on the quality and diversity of the training data used by the model."
+    },
+    {
+      "region_num": 7,
+      "image_id": "173198",
+      "mask_index": 3,
+      "region_label": "green trees",
+      "style_name": "cubism",
+      "instruction": "To apply Cubism style specifically to the green trees in a scene while leaving the rest of the scene untouched, you can use a local image filtering technique with a mask. Here's a single instruction using OpenCV and Python:\n\n1. Load the input image and create a binary mask for the green trees.\n2. Apply the Cubism style filter to the green trees region using the mask.\n3. Merge the filtered green trees region back into the original image.\n\nHere's the Python code snippet:\n\n```python\nimport cv2\nimport numpy as np\n\n# Load input image\nimage = cv2.imread('input.jpg')\n\n# Create binary mask for green trees\nlower_green = np.array([30, 50, 30])\nupper_green = np.array([70, 100, 70])\ngreen_mask = cv2.inRange(image, lower_green, upper_green)\n\n# Apply Cubism style filter to green trees region\ncubism_kernel = np.array([[0, 1, 0], [1, -1, 1], [0, 1, 0]])\ngreen_trees = cv2.filter2D(green_mask, -1, cubism_kernel)\n\n# Merge filtered green trees region back into the original image\noutput = cv2.add(image, np.uint8(np.where(green_mask, green_trees, image)))\n\n# Save the output image\ncv2.imwrite('output.jpg', output)\n```\n\nThis code snippet loads an input image, creates a binary mask for the green trees using a range of green colors, applies the Cubism style filter to the green trees region using a custom kernel, and merges the filtered region back into the original image. The output image is then saved. Note that this is a simple example and might not perfectly apply the Cubism style to the green trees, but it should give you a good starting point."
+    },
+    {
+      "region_num": 8,
+      "image_id": "32639",
+      "mask_index": 1,
+      "region_label": "bright green lawn",
+      "style_name": "cubism",
+      "instruction": "To apply Cubism specifically to the bright green lawn while leaving the rest of the scene untouched, you can use a local image filtering technique with a mask. Here's a single instruction using OpenCV and Python:\n\n1. Load the image and create a binary mask for the lawn:\n```python\nimport cv2\nimport numpy as np\n\n# Load the image\nimage = cv2.imread('garden.jpg')\n\n# Define lawn color range\nlawn_lower = np.array([30, 50, 0])\nlawn_upper = np.array([70, 100, 100])\n\n# Create a binary mask for the lawn\nlawn_mask = cv2.inRange(image, lawn_lower, lawn_upper)\n```\n\n2. Apply the Cubism filter to the lawn region only:\n```python\n# Apply Cubism filter\ncubism_kernel = np.ones((5, 5), np.float32) / 25\ncubism_filter = cv2.filter2D(lawn_mask, -1, cubism_kernel)\n\n# Create a stylized lawn image\nstylized_lawn = image.copy()\nstylized_lawn[np.where(lawn_mask)] = cv2.filter2D(image[np.where(lawn_mask)], -1, cubism_kernel)\n```\n\nThis instruction loads the garden image, creates a binary mask for the lawn using color range, applies the Cubism filter to the lawn region using the mask, and creates a stylized lawn image. The rest of the scene remains untouched."
+    },
+    {
+      "region_num": 9,
+      "image_id": "211867",
+      "mask_index": 0,
+      "region_label": "wide asphalt street",
+      "style_name": "pointillism",
+      "instruction": "To apply Pointillism style specifically to the wide asphalt street while leaving the rest of the scene untouched, you can use a local image editing technique or a script in image processing software. Here's a general instruction for using a local adjustment brush in Adobe Lightroom or Photoshop:\n\n1. Open the image of the scene in your preferred image editing software.\n2. Select the Pointillism brush or create a new brush with Pointillism texture.\n3. Use the selection tool to draw a mask around the wide asphalt street.\n4. Apply the Pointillism brush or style to the selected area only.\n5. Adjust the size, opacity, and flow of the brush to achieve the desired Pointillist effect.\n6. Fine-tune the effect by painting over the asphalt street with the Pointillist brush.\n7. Once you're satisfied with the result, save the image as a new file to preserve the original image.\n\nKeep in mind that this instruction assumes you're using a software that supports local adjustments and has a Pointillism brush or texture available. If your software doesn't have these features, you may need to use a different method or software to achieve the desired result."
+    },
+    {
+      "region_num": 10,
+      "image_id": "144373",
+      "mask_index": 1,
+      "region_label": "light-colored floor",
+      "style_name": "baroque",
+      "instruction": "To apply a Baroque style specifically to the light-colored floor while leaving the rest of the scene untouched, you could use a selective color adjustment or a masking technique in image editing software. Here's a general instruction using Adobe Photoshop as an example:\n\n1. Open the image in Adobe Photoshop.\n2. Create a new adjustment layer by going to Image > Adjustments > Selective Color.\n3. In the Selective Color dialog box, select the \"Neutrals\" tab.\n4. Adjust the sliders to give the floor a Baroque look. You might want to increase the yellow and red tones to make the floor look warmer and richer, and decrease the blue tones to make it look less cool and more golden.\n5. Use a brush tool with a small size and low opacity to paint the adjustment layer only on the light-colored floor. Be careful not to paint on the person's hands, the table, or the background.\n6. Adjust the opacity of the brush to fine-tune the effect and make the Baroque style more subtle or more pronounced, as desired.\n7. Click \"OK\" to apply the adjustment layer and close the Selective Color dialog box.\n8. Save the image as a new file to preserve the original image and the stylized version.\n\nThis instruction assumes that the light-colored floor is the only region to be stylized and that the rest of the scene is already in focus and properly exposed. If the floor is out of focus or poorly lit, you may need to adjust the focus or the exposure before applying the Baroque style."
+    },
+    {
+      "region_num": 11,
+      "image_id": "123697",
+      "mask_index": 1,
+      "region_label": "large window",
+      "style_name": "minimalism",
+      "instruction": "To apply minimalism specifically to the large window while leaving the rest of the scene untouched, you could use the following instruction:\n\nApply a grayscale filter to the large window area while keeping the rest of the image in its original colors. This will simplify the window and make it blend with the minimalist aesthetic while leaving the rest of the scene unchanged."
+    },
+    {
+      "region_num": 12,
+      "image_id": "239771",
+      "mask_index": 5,
+      "region_label": "blue and black backpack",
+      "style_name": "color-field-painting",
+      "instruction": "To apply the color-field-painting style specifically to the blue and black backpack while leaving the rest of the scene untouched, you can use a local image manipulation technique such as a mask or a layer in image editing software. Here's a general instruction on how to do it using Adobe Photoshop:\n\n1. Open the image in Adobe Photoshop.\n2. Select the blue and black backpack using the Polygonal Lasso Tool or Quick Selection Tool. Be sure to select only the backpack and not the people or the environment around it.\n3. Create a new layer by right-clicking on the existing layer and selecting \"New > Layer.\" Name this layer \"Color-Field-Painting.\"\n4. Fill the selected area of the new layer with a solid color using the \"Fill\" tool. Choose a color that represents the color-field-painting style you want to apply to the backpack.\n5. Apply a texture or pattern to the filled area to mimic the color-field-painting style. You can find textures and patterns online or create your own.\n6. Adjust the opacity and blending mode of the new layer to blend it with the original image. Experiment with different opacities and blending modes to achieve the desired effect.\n7. Save the image as a new file to preserve the original image and the stylized version of the blue and black backpack."
+    },
+    {
+      "region_num": 13,
+      "image_id": "232676",
+      "mask_index": 4,
+      "region_label": "hand and arm of another person",
+      "style_name": "minimalism",
+      "instruction": "To apply minimalism specifically to the hand and arm of the person in the scene while leaving the rest untouched, you could use the following instruction:\n\nApply a minimalist filter to the hand and arm regions only, preserving the original colors and textures of the rest of the image. This can be achieved using image editing software or programming techniques such as masking and filtering. The minimalist filter should simplify the hand and arm shapes, removing unnecessary details and focusing on essential forms. The result will be a hand and arm that fits the minimalist aesthetic while the rest of the scene remains unchanged."
+    },
+    {
+      "region_num": 14,
+      "image_id": "448648",
+      "mask_index": 1,
+      "region_label": "light blue sky",
+      "style_name": "symbolism",
+      "instruction": "To apply symbolism specifically to the light blue sky in a given scene using a single instruction, you could use a technique called \"selective color adjustment\" or \"color grading.\" This technique allows you to modify the color of a specific region in an image while leaving the rest untouched.\n\nHere's an example of how you could apply this technique using Adobe Photoshop:\n\n1. Open the image in Adobe Photoshop.\n2. Create a new Hue/Saturation adjustment layer by going to Image > Adjustments > Hue/Saturation.\n3. Select the \"Light Blue\" color range in the \"Select and Mask\" panel or use the \"Color Range\" tool to select the light blue sky. Make sure that the selection is clean and free of any unwanted areas.\n4. Once you have selected the light blue sky, go back to the Hue/Saturation adjustment layer and adjust the hue, saturation, and lightness values to apply the symbolism style to the sky.\n5. Adjust the hue value to shift the color towards the symbolic representation of the sky's color.\n6. Adjust the saturation value to increase or decrease the intensity of the color.\n7. Adjust the lightness value to brighten or darken the sky.\n8. Once you are satisfied with the result, click \"OK\" to apply the changes to the adjustment layer.\n9. Adjust the opacity and blending mode of the adjustment layer to fine-tune the effect.\n\nThis single instruction of creating a selective color adjustment layer and applying symbolic colors to the light blue sky will stylize the sky while leaving the rest of the scene untouched."
+    },
+    {
+      "region_num": 15,
+      "image_id": "51052",
+      "mask_index": 2,
+      "region_label": "tan brick column",
+      "style_name": "renaissance",
+      "instruction": "To apply the Renaissance style specifically to the tan brick column while leaving the rest of the scene untouched, you could use a technique called \"selective style transfer.\" This involves applying the style to a selected region of the image using a mask. Here's a single instruction to perform this task using a deep learning-based style transfer model:\n\n1. Extract the region of interest (ROI) containing the tan brick column using a mask or a region of interest (ROI) selection tool.\n2. Feed the extracted ROI into the style transfer model as the input image.\n3. Provide the model with a reference image of a Renaissance-style brick column as the style image.\n4. Run the model to generate the Renaissance-style version of the tan brick column.\n5. Replace the original tan brick column in the scene with the generated Renaissance-style version.\n6. Save or display the final image with the stylized tan brick column.\n\nKeep in mind that this instruction assumes the availability of a suitable style transfer model and a reference image of a Renaissance-style brick column. Additionally, the quality of the stylization may depend on the accuracy of the mask used to extract the ROI and the ability of the model to accurately apply the Renaissance style to the brick texture."
+    },
+    {
+      "region_num": 16,
+      "image_id": "443592",
+      "mask_index": 4,
+      "region_label": "dark metal stairs",
+      "style_name": "baroque",
+      "instruction": "To apply the Baroque style specifically to the dark metal stairs while leaving the rest of the scene untouched, you could use a selective image editing technique such as \"Adjustments\" or \"Filters\" in image editing software like Adobe Photoshop or GIMP. Here's a general instruction on how to do it:\n\n1. Open the image in your preferred image editing software.\n2. Use the \"Lasso\" or \"Polygonal Lasso\" tool to select the dark metal stairs. Be sure to select only the metal stairs and not the people, skateboard, or any other elements in the scene.\n3. Once you have selected the metal stairs, go to the \"Adjustments\" or \"Filters\" menu, depending on your software.\n4. Choose a Baroque style filter or adjustment. For example, in Photoshop, you could use the \"Watercolor\" filter or the \"Oil Paint\" filter. In GIMP, you could use the \"Artistic\" > \"Watercolor\" filter or the \"Filters\" > \"Impasto\" > \"Oil Paint\" filter.\n5. Apply the filter or adjustment to the selected dark metal stairs. This will apply the Baroque style only to the metal stairs, leaving the rest of the scene untouched.\n6. Adjust the settings of the filter or adjustment to achieve the desired level of Baroque stylization.\n7. Save the edited image as a new file to preserve the original image."
+    },
+    {
+      "region_num": 17,
+      "image_id": "70380",
+      "mask_index": 5,
+      "region_label": "person",
+      "style_name": "symbolism",
+      "instruction": "To apply symbolism specifically to a person in a scene while leaving the rest untouched, you could use a technique called \"instance masking\" or \"instance segmentation\" in combination with a style transfer model. Here's a general idea of how you could do it:\n\n1. First, you would need to segment the person from the rest of the scene using instance masking or instance segmentation. This would create a mask that only covers the person and nothing else.\n2. Next, you would feed the masked person image into the style transfer model, while keeping the rest of the scene out of the model's input.\n3. The style transfer model would then apply the symbolic style to the person while leaving the rest of the scene untouched.\n\nHere's a single instruction that could be used to accomplish this:\n\nApply instance masking or segmentation to the person in the scene, then feed the masked person image into the symbolism style transfer model, while keeping the rest of the scene out of the model's input."
+    },
+    {
+      "region_num": 18,
+      "image_id": "70380",
+      "mask_index": 3,
+      "region_label": "glass wine glasses",
+      "style_name": "neoclassicism",
+      "instruction": "To apply a Neoclassical style specifically to the glass wine glasses in a scene while leaving the rest of the scene untouched, you could use a technique called \"selective style transfer.\" Here's a single instruction that could be used to achieve this in a text-to-image model like DALL-E 2:\n\n\"Transform the glass wine glasses in the scene to have a Neoclassical style, keeping the rest of the scene in its original form. The glasses should have clean, simple lines, elegant curves, and a sense of symmetry and balance. Use muted colors and avoid excessive ornamentation. The overall effect should be one of refinement and timeless beauty.\"\n\nThis instruction tells the model to apply the Neoclassical style only to the glass wine glasses, while leaving the rest of the scene unchanged. The description of the Neoclassical style provided in the instruction should help guide the model in making the transformation."
+    },
+    {
+      "region_num": 19,
+      "image_id": "382655",
+      "mask_index": 3,
+      "region_label": "several long curtains",
+      "style_name": "abstract-expressionism",
+      "instruction": "To apply abstract-expressionism style specifically to the several long curtains in the scene while leaving everything else untouched, you can use a local image editing technique with a mask. Here's a single instruction using GIMP (GNU Image Manipulation Program) as an example:\n\n1. Open the image in GIMP.\n2. Select the long curtains region using the \"Select by Color\" tool (Select > Color to Sample) or the \"Fuzzy Select\" tool (Select > Fuzzy Select).\n3. Create a new layer by right-clicking on the image and selecting \"New Layer\" or pressing Ctrl+N. Name it \"Abstract Expressionism Curtains\".\n4. Apply the abstract-expressionism filter to the new layer. Go to Filters > Artistic > Wave Size: 50, Roughness: 50, Amplitude: 50, Detail: 50. Repeat this step with different filter settings to achieve various abstract-expressionism styles.\n5. Adjust the opacity and blending mode of the new layer to blend it with the original image. Experiment with different values to achieve the desired effect.\n6. Save the image as a new file to preserve the original image.\n\nThis instruction applies the abstract-expressionism style only to the selected long curtains region while leaving the rest of the image untouched."
+    },
+    {
+      "region_num": 20,
+      "image_id": "316583",
+      "mask_index": 0,
+      "region_label": "indoor floor",
+      "style_name": "renaissance",
+      "instruction": "To apply the Renaissance style specifically to an indoor floor while leaving the rest of the scene untouched, you could use a local image editing technique such as a mask or a layer mask in image editing software like Adobe Photoshop. Here's a general instruction on how to do it:\n\n1. Import the image into Adobe Photoshop or a similar image editing software.\n2. Select the indoor floor area using the Polygonal Lasso Tool or any other suitable selection tool. Be sure to select only the indoor floor and not any other objects or areas.\n3. Create a new layer by right-clicking on the current layer and selecting \"New > Layer.\" Name this layer \"Renaissance Floor.\"\n4. Apply the Renaissance style filter to the new layer. You can use a pre-made Renaissance style filter or create your own by adjusting the settings in filters like \"Oil Paint,\" \"Watercolor,\" or \"Filter Gallery > Artistic > Classic Effects > Chiaroscuro.\"\n5. Once you have applied the Renaissance style to the new layer, use the \"Layer Mask\" tool to mask out the areas outside the indoor floor. This will reveal the original image underneath the Renaissance-styled floor.\n6. Adjust the opacity and blending mode of the \"Renaissance Floor\" layer to blend it seamlessly with the original image.\n7. Save the final image as a new file to preserve the original image.\n\nThis instruction assumes that you have a good understanding of how to use image editing software like Adobe Photoshop. If you need more detailed instructions on any of the steps, please let me know."
+    },
+    {
+      "region_num": 21,
+      "image_id": "282930",
+      "mask_index": 3,
+      "region_label": "a portion of mashed green food",
+      "style_name": "minimalism",
+      "instruction": "To apply minimalism specifically to the portion of mashed green food while leaving the rest of the scene untouched, you could give the following instruction:\n\n\"Convert the mashed green food area into a flat, solid color, maintaining the original shape and size, while keeping the textures and colors of the other elements in the scene unchanged.\"\n\nThis instruction would simplify the mashed green food area by removing the visible texture and grainy appearance, resulting in a minimalist, monochromatic look. The rest of the scene, including the broccoli florets, creamy white sauce, and dark table texture, would remain unaltered."
+    },
+    {
+      "region_num": 22,
+      "image_id": "161757",
+      "mask_index": 2,
+      "region_label": "blue stream",
+      "style_name": "impressionism",
+      "instruction": "To apply an Impressionist style specifically to the blue stream while leaving the rest of the scene untouched, you can follow these steps:\n\n1. Identify the blue stream region in the image.\n2. Apply the following Impressionist techniques to the blue stream area:\n   a. Use short, thick brushstrokes to create texture and movement.\n   b. Use a limited color palette, focusing on the primary colors (blue, red, and yellow) and their various shades.\n   c. Emphasize the play of light and shadow, using short, quick strokes to capture the reflections and ripples on the water's surface.\n   d. Blur the edges of the blue stream to create a sense of depth and distance.\n\nBy applying these Impressionist techniques only to the blue stream region, you will create a striking contrast between the stylized water and the realistic goats, forest, and snow in the rest of the scene. This will help draw the viewer's attention to the blue stream and create a more dynamic and visually interesting image."
+    },
+    {
+      "region_num": 23,
+      "image_id": "398285",
+      "mask_index": 4,
+      "region_label": "folding chairs",
+      "style_name": "fauvism",
+      "instruction": "To apply the Fauvism style specifically to the folding chairs in the given black and white photograph, you can use the following instruction in an image editing software or deep learning model:\n\n1. Isolate the folding chairs in the image using a selection tool or image segmentation algorithm.\n2. Convert the selected area to color by adding Fauvist colors and saturation levels. For Fauvism, vibrant and unnatural colors are characteristic. You can use a color palette inspired by the Fauvist artists, such as Henri Matisse or Georges Rouault, to choose the colors.\n3. Apply heavy brushstrokes and textures to the colored chairs to mimic the Fauvist painting technique.\n4. Blend the stylized chairs back into the original image while ensuring that the rest of the scene remains unchanged.\n\nKeep in mind that this instruction is for manual editing in an image editing software or for guiding a deep learning model to perform the style transfer. If you're using a deep learning model, you'll need to provide it with a large dataset of Fauvist paintings and the original image to learn from and apply the style transfer."
+    },
+    {
+      "region_num": 24,
+      "image_id": "70380",
+      "mask_index": 0,
+      "region_label": "light brown wooden dining table",
+      "style_name": "romanticism",
+      "instruction": "To apply the Romanticism style specifically to the light brown wooden dining table while leaving the rest of the scene untouched, consider adding the following elements:\n\n1. Soften the edges: Romanticism often features soft, dreamlike edges. Apply a softening filter or effect to the table to give it a softer, more romantic appearance.\n2. Add texture: Romanticism is known for its rich textures. Enhance the grain and texture of the light brown wooden dining table to make it look more romantic and tactile.\n3. Use warm colors: Romanticism often features warm, rich colors. Increase the saturation and warmth of the light brown color of the table to make it look more romantic.\n4. Add reflections: Reflections can add a sense of depth and emotion to a scene. Add reflections of candles or other romantic elements to the table surface.\n5. Add shadows: Shadows can add depth and drama to a scene. Add soft, romantic shadows to the table to make it look more mysterious and romantic.\n6. Add detail: Romanticism often features intricate details. Add intricate carvings or other details to the table to make it look more romantic and ornate.\n7. Use a warm light source: Warm light sources, such as candles or soft, warm-toned bulbs, can add a romantic glow to a scene. Use a warm light source to illuminate the table and create a romantic atmosphere."
+    },
+    {
+      "region_num": 25,
+      "image_id": "312917",
+      "mask_index": 1,
+      "region_label": "white ceiling with dark wooden beams",
+      "style_name": "cubism",
+      "instruction": "To apply cubism specifically to the white ceiling with dark wooden beams while leaving the rest of the scene untouched, you can use a image segmentation technique to isolate the ceiling and beams from the rest of the image. Once the ceiling and beams are isolated, you can then apply the cubism style transfer filter to only that region. Here's a single instruction in Python using OpenCV and scipy.ndimage for image processing:\n\n```python\nimport cv2\nimport numpy as np\nfrom scipy.ndimage import label, measure\n\n# Load the image\nimage = cv2.imread('scene.jpg')\n\n# Threshold the image to isolate the ceiling and beams\n_, ceiling_mask = cv2.threshold(image, 220, 255, cv2.THRESH_BINARY_INVERSE)\n\n# Apply closing operation to remove small noise and connect adjacent pixels\n_, ceiling_mask = cv2.morphologyEx(ceiling_mask, cv2.MORPH_CLOSE, np.ones(size=(3,3)))\n\n# Label the connected components in the ceiling mask\nlabels = measure.label(ceiling_mask)\n\n# Find the largest connected component (the ceiling)\nstats, num_labels = measure.regionprops(labels)\nceiling = stats[np.argmax([x.area for x in stats])]\n\n# Extract the ceiling region of interest (ROI)\nceiling_roi = image[ceiling.y:ceiling.y+ceiling.height, ceiling.x:ceiling.x+ceiling.width]\n\n# Apply cubism style transfer filter to the ceiling ROI\n# (This step requires a cubism style transfer implementation)\ncubism_ceiling = apply_cubism_filter(ceiling_roi)\n\n# Replace the original ceiling region with the cubism version\nimage[ceiling.y:ceiling.y+ceiling.height, ceiling.x:ceiling.x+ceiling.width] = cubism_ceiling\n\n# Save the final image\ncv2.imwrite('cubism_scene.jpg', image)\n```\n\nThis instruction assumes you have an implementation of the `apply_cubism_filter` function that applies the cubism style transfer filter to an input image. The function should return the cubism-styled image as an output."
+    },
+    {
+      "region_num": 26,
+      "image_id": "425484",
+      "mask_index": 3,
+      "region_label": "kitesurfing kites",
+      "style_name": "pop-art",
+      "instruction": "To apply a pop-art style transfer specifically to the kitesurfing kites in the scene while leaving the rest untouched, you can use a local image processing technique, such as a mask or a selective color adjustment. Here's a general instruction on how to do it using Adobe Photoshop:\n\n1. Import the image into Adobe Photoshop.\n2. Select the kitesurfing kites using the Polygonal Lasso Tool or Quick Selection Tool. Make sure to select only the kites and not the kitesurfer or the water.\n3. Create a new layer by right-clicking on the current layer and selecting \"New > Layer via Copy.\"\n4. Apply the pop-art style transfer filter to the new layer. You can use a pre-made pop-art filter or create your own by adjusting the colors, contrast, and saturation using various image adjustment tools.\n5. Once you have applied the pop-art filter to the new layer, hide the original layer by clicking the eye icon next to it.\n6. Adjust the opacity of the new layer to achieve the desired level of stylization.\n7. If necessary, make fine adjustments to the pop-art filter by going back to the original layer and making additional adjustments.\n8. Once you are satisfied with the result, save the image as a new file to preserve the original image."
+    },
+    {
+      "region_num": 27,
+      "image_id": "338941",
+      "mask_index": 1,
+      "region_label": "dark asphalt road",
+      "style_name": "color-field-painting",
+      "instruction": "To apply the color-field-painting style specifically to the dark asphalt road while leaving the rest of the scene untouched, you can use a local image manipulation technique such as a mask or a selective color adjustment. Here's a general instruction on how to do it using Adobe Photoshop:\n\n1. Open the image in Adobe Photoshop.\n2. Create a new layer above the background layer.\n3. Select the dark asphalt road using the Polygonal Lasso Tool or the Quick Selection Tool. Be sure to select only the asphalt and not the surrounding areas.\n4. Go to Image > Adjustments > Selective Color.\n5. In the Selective Color dialog box, choose the \"Neutrals\" tab and adjust the colors as follows:\n   - Set the \"Colorize\" option to the desired color for the stylized asphalt.\n   - Adjust the \"Brightness\" and \"Contrast\" sliders to enhance the effect.\n6. Click \"OK\" to apply the selective color adjustment to the selected area.\n7. Repeat steps 3-6 for any other areas of the asphalt road that need to be stylized.\n8. Adjust the opacity and blending mode of the new layer to blend the stylized asphalt with the rest of the image.\n9. Save the final image.\n\nThis technique will apply the color-field-painting style only to the selected areas of the dark asphalt road, while leaving the rest of the scene untouched."
+    },
+    {
+      "region_num": 28,
+      "image_id": "333225",
+      "mask_index": 1,
+      "region_label": "moist, grain-based mixture",
+      "style_name": "romanticism",
+      "instruction": "To apply the Romanticism style specifically to the moist, grain-based mixture in the given scene, you could add the following instruction:\n\n\"Apply a soft-focus effect to the moist, grain-based mixture, enhancing its textures and colors to give it a dreamy and ethereal appearance. Use a warm, golden light source to illuminate the grains, making them glisten and shimmer as if they are being bathed in sunlight. Add subtle shadows and highlights to create depth and dimension, and use a muted color palette to give the mixture a soft, romantic feel.\"\n\nThis instruction should leave the rest of the scene untouched, while adding the desired Romanticism style only to the moist, grain-based mixture."
+    },
+    {
+      "region_num": 29,
+      "image_id": "434765",
+      "mask_index": 0,
+      "region_label": "brick houses",
+      "style_name": "minimalism",
+      "instruction": "To apply minimalism specifically to the brick houses in the scene while leaving everything else untouched, you could use the following instruction:\n\nConvert the brick houses to pure geometric shapes while preserving their overall silhouettes and relative positions to other elements in the scene. For example, you could represent each brick house as a rectangular or square shape with simple, clean lines and no textural details. This will simplify the appearance of the brick houses while keeping the rest of the scene unchanged."
+    },
+    {
+      "region_num": 30,
+      "image_id": "443592",
+      "mask_index": 1,
+      "region_label": "concrete sidewalk and road",
+      "style_name": "abstract-expressionism",
+      "instruction": "To apply abstract-expressionism specifically to the concrete sidewalk and road while leaving the rest of the scene untouched, you could use a selective color adjustment or a masking technique in image editing software. Here's a general instruction using Adobe Photoshop as an example:\n\n1. Import the image into Adobe Photoshop.\n2. Duplicate the background layer by right-clicking the layer and selecting \"Duplicate Layer.\"\n3. Select the \"Concrete\" area using the Polygonal Lasso Tool or the Quick Selection Tool. Be sure to select only the concrete sidewalk and road and not the buildings, people, or other elements.\n4. Create a new Adjustment Layer by going to \"Image\" > \"Adjustments\" > \"Color Balance\" or \"Hue/Saturation.\"\n5. In the Color Balance or Hue/Saturation dialog box, adjust the sliders to give the concrete area an abstract-expressionistic look. This could include desaturating the colors, increasing the vibrancy, or adding unusual hues.\n6. Adjust the \"Lighting\" or \"Master\" tab to further enhance the effect, such as increasing the contrast or adding shadows and highlights.\n7. Repeat step 3 for any missed areas of concrete and adjust the selective color adjustment layer for each one as needed.\n8. Once you're satisfied with the abstract-expressionistic concrete effect, merge the adjustment layers back into the duplicate background layer by right-clicking the adjustment layers and selecting \"Merge.\"\n9. Finally, hide the original background layer or delete it to reveal the stylized concrete sidewalk and road."
+    }
+  ]
+}

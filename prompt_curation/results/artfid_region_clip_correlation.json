@@ -1,0 +1,11 @@
+{
+  "n_pairs": 1043,
+  "lpips_vs_region_clip": {
+    "spearman_r": 0.0192,
+    "spearman_p": 0.53524
+  },
+  "gram_vs_artfid": {
+    "spearman_r": 0.1721,
+    "spearman_p": 0.0
+  }
+}
