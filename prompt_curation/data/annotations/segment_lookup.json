@@ -1,0 +1,800 @@
+{
+  "548209_0": {
+    "segment_id": 2,
+    "category": "snow",
+    "coverage": 82.58,
+    "fallback": false
+  },
+  "548209_1": {
+    "segment_id": 1,
+    "category": "building-other-merged",
+    "coverage": 3.37,
+    "fallback": false
+  },
+  "548209_2": {
+    "segment_id": 2,
+    "category": "snow [FALLBACK]",
+    "coverage": 82.58,
+    "fallback": true
+  },
+  "70380_0": {
+    "segment_id": 9,
+    "category": "dining table",
+    "coverage": 17.83,
+    "fallback": false
+  },
+  "70380_1": {
+    "segment_id": 3,
+    "category": "cake",
+    "coverage": 44.94,
+    "fallback": false
+  },
+  "70380_2": {
+    "segment_id": 2,
+    "category": "knife",
+    "coverage": 5.49,
+    "fallback": false
+  },
+  "70380_3": {
+    "segment_id": 4,
+    "category": "wine glass",
+    "coverage": 1.04,
+    "fallback": false
+  },
+  "70380_4": {
+    "segment_id": 3,
+    "category": "cake [FALLBACK]",
+    "coverage": 44.94,
+    "fallback": true
+  },
+  "70380_5": {
+    "segment_id": 5,
+    "category": "person",
+    "coverage": 5.74,
+    "fallback": false
+  },
+  "448648_0": {
+    "segment_id": 2,
+    "category": "road",
+    "coverage": 39.6,
+    "fallback": false
+  },
+  "448648_1": {
+    "segment_id": 1,
+    "category": "sky-other-merged",
+    "coverage": 18.95,
+    "fallback": false
+  },
+  "448648_2": {
+    "segment_id": 2,
+    "category": "road [FALLBACK]",
+    "coverage": 39.6,
+    "fallback": true
+  },
+  "448648_3": {
+    "segment_id": 2,
+    "category": "road [FALLBACK]",
+    "coverage": 39.6,
+    "fallback": true
+  },
+  "382655_0": {
+    "segment_id": 3,
+    "category": "wall-other-merged [FALLBACK]",
+    "coverage": 21.05,
+    "fallback": true
+  },
+  "382655_1": {
+    "segment_id": 4,
+    "category": "ceiling-merged",
+    "coverage": 5.02,
+    "fallback": false
+  },
+  "382655_2": {
+    "segment_id": 21,
+    "category": "dining table",
+    "coverage": 1.92,
+    "fallback": false
+  },
+  "382655_3": {
+    "segment_id": 5,
+    "category": "curtain",
+    "coverage": 13.33,
+    "fallback": false
+  },
+  "382655_4": {
+    "segment_id": 3,
+    "category": "wall-other-merged [FALLBACK]",
+    "coverage": 21.05,
+    "fallback": true
+  },
+  "382655_5": {
+    "segment_id": 9,
+    "category": "mirror-stuff",
+    "coverage": 1.27,
+    "fallback": false
+  },
+  "211867_0": {
+    "segment_id": 9,
+    "category": "truck [FALLBACK]",
+    "coverage": 13.28,
+    "fallback": true
+  },
+  "211867_1": {
+    "segment_id": 9,
+    "category": "truck [FALLBACK]",
+    "coverage": 13.28,
+    "fallback": true
+  },
+  "211867_2": {
+    "segment_id": 9,
+    "category": "truck [FALLBACK]",
+    "coverage": 13.28,
+    "fallback": true
+  },
+  "211867_3": {
+    "segment_id": 9,
+    "category": "truck [FALLBACK]",
+    "coverage": 13.28,
+    "fallback": true
+  },
+  "211867_4": {
+    "segment_id": 9,
+    "category": "truck [FALLBACK]",
+    "coverage": 13.28,
+    "fallback": true
+  },
+  "10909_0": {
+    "segment_id": 2,
+    "category": "ceiling-merged",
+    "coverage": 9.13,
+    "fallback": false
+  },
+  "10909_1": {
+    "segment_id": 1,
+    "category": "wall-other-merged",
+    "coverage": 13.15,
+    "fallback": false
+  },
+  "10909_2": {
+    "segment_id": 4,
+    "category": "cabinet-merged",
+    "coverage": 34.58,
+    "fallback": false
+  },
+  "10909_3": {
+    "segment_id": 3,
+    "category": "counter",
+    "coverage": 8.22,
+    "fallback": false
+  },
+  "10909_4": {
+    "segment_id": 8,
+    "category": "microwave",
+    "coverage": 8.41,
+    "fallback": false
+  },
+  "10909_5": {
+    "segment_id": 9,
+    "category": "oven",
+    "coverage": 18.96,
+    "fallback": false
+  },
+  "173198_0": {
+    "segment_id": 3,
+    "category": "gravel",
+    "coverage": 20.77,
+    "fallback": false
+  },
+  "173198_1": {
+    "segment_id": 1,
+    "category": "sky-other-merged",
+    "coverage": 20.45,
+    "fallback": false
+  },
+  "173198_2": {
+    "segment_id": 2,
+    "category": "house",
+    "coverage": 2.17,
+    "fallback": false
+  },
+  "173198_3": {
+    "segment_id": 9,
+    "category": "truck [FALLBACK]",
+    "coverage": 44.01,
+    "fallback": true
+  },
+  "173198_4": {
+    "segment_id": 5,
+    "category": "grass-merged",
+    "coverage": 0.25,
+    "fallback": false
+  },
+  "425484_0": {
+    "segment_id": 1,
+    "category": "sky-other-merged",
+    "coverage": 44.21,
+    "fallback": false
+  },
+  "425484_1": {
+    "segment_id": 2,
+    "category": "sand",
+    "coverage": 31.08,
+    "fallback": false
+  },
+  "425484_2": {
+    "segment_id": 6,
+    "category": "water-other",
+    "coverage": 3.42,
+    "fallback": false
+  },
+  "425484_3": {
+    "segment_id": 1,
+    "category": "sky-other-merged [FALLBACK]",
+    "coverage": 44.21,
+    "fallback": true
+  },
+  "425484_4": {
+    "segment_id": 1,
+    "category": "sky-other-merged [FALLBACK]",
+    "coverage": 44.21,
+    "fallback": true
+  },
+  "316583_0": {
+    "segment_id": 1,
+    "category": "floor-other-merged",
+    "coverage": 5.44,
+    "fallback": false
+  },
+  "316583_1": {
+    "segment_id": 2,
+    "category": "wall-other-merged",
+    "coverage": 1.62,
+    "fallback": false
+  },
+  "316583_2": {
+    "segment_id": 3,
+    "category": "ceiling-merged",
+    "coverage": 0.06,
+    "fallback": false
+  },
+  "316583_3": {
+    "segment_id": 4,
+    "category": "window-other",
+    "coverage": 4.96,
+    "fallback": false
+  },
+  "316583_4": {
+    "segment_id": 5,
+    "category": "light",
+    "coverage": 0.71,
+    "fallback": false
+  },
+  "316583_5": {
+    "segment_id": 10,
+    "category": "person",
+    "coverage": 18.04,
+    "fallback": false
+  },
+  "282930_0": {
+    "segment_id": 1,
+    "category": "table-merged",
+    "coverage": 2.11,
+    "fallback": false
+  },
+  "282930_1": {
+    "segment_id": 6,
+    "category": "broccoli",
+    "coverage": 9.55,
+    "fallback": false
+  },
+  "282930_2": {
+    "segment_id": 6,
+    "category": "broccoli",
+    "coverage": 9.55,
+    "fallback": false
+  },
+  "282930_3": {
+    "segment_id": 2,
+    "category": "food-other-merged",
+    "coverage": 1.16,
+    "fallback": false
+  },
+  "363645_0": {
+    "segment_id": 1,
+    "category": "grass-merged",
+    "coverage": 4.91,
+    "fallback": false
+  },
+  "363645_1": {
+    "segment_id": 26,
+    "category": "person [FALLBACK]",
+    "coverage": 21.6,
+    "fallback": true
+  },
+  "363645_2": {
+    "segment_id": 26,
+    "category": "person [FALLBACK]",
+    "coverage": 21.6,
+    "fallback": true
+  },
+  "363645_3": {
+    "segment_id": 5,
+    "category": "backpack",
+    "coverage": 6.46,
+    "fallback": false
+  },
+  "363645_4": {
+    "segment_id": 2,
+    "category": "bottle",
+    "coverage": 0.65,
+    "fallback": false
+  },
+  "363645_5": {
+    "segment_id": 3,
+    "category": "cell phone",
+    "coverage": 0.26,
+    "fallback": false
+  },
+  "29444_0": {
+    "segment_id": 7,
+    "category": "person [FALLBACK]",
+    "coverage": 43.69,
+    "fallback": true
+  },
+  "29444_1": {
+    "segment_id": 6,
+    "category": "frisbee",
+    "coverage": 5.18,
+    "fallback": false
+  },
+  "29444_2": {
+    "segment_id": 3,
+    "category": "grass-merged",
+    "coverage": 16.64,
+    "fallback": false
+  },
+  "29444_3": {
+    "segment_id": 4,
+    "category": "door-stuff",
+    "coverage": 5.87,
+    "fallback": false
+  },
+  "29444_4": {
+    "segment_id": 5,
+    "category": "tent",
+    "coverage": 2.9,
+    "fallback": false
+  },
+  "29444_5": {
+    "segment_id": 1,
+    "category": "sky-other-merged",
+    "coverage": 1.99,
+    "fallback": false
+  },
+  "443592_0": {
+    "segment_id": 3,
+    "category": "building-other-merged",
+    "coverage": 29.21,
+    "fallback": false
+  },
+  "443592_1": {
+    "segment_id": 7,
+    "category": "pavement-merged",
+    "coverage": 14.11,
+    "fallback": false
+  },
+  "443592_2": {
+    "segment_id": 1,
+    "category": "sky-other-merged",
+    "coverage": 2.84,
+    "fallback": false
+  },
+  "443592_3": {
+    "segment_id": 10,
+    "category": "person",
+    "coverage": 11.54,
+    "fallback": false
+  },
+  "443592_4": {
+    "segment_id": 5,
+    "category": "stairs",
+    "coverage": 17.8,
+    "fallback": false
+  },
+  "443592_5": {
+    "segment_id": 4,
+    "category": "wall-brick",
+    "coverage": 1.79,
+    "fallback": false
+  },
+  "161757_0": {
+    "segment_id": 2,
+    "category": "snow",
+    "coverage": 1.49,
+    "fallback": false
+  },
+  "161757_1": {
+    "segment_id": 1,
+    "category": "tree-merged [FALLBACK]",
+    "coverage": 63.36,
+    "fallback": true
+  },
+  "161757_2": {
+    "segment_id": 3,
+    "category": "river",
+    "coverage": 1.12,
+    "fallback": false
+  },
+  "232676_0": {
+    "segment_id": 1,
+    "category": "wall-other-merged",
+    "coverage": 41.4,
+    "fallback": false
+  },
+  "232676_1": {
+    "segment_id": 1,
+    "category": "wall-other-merged [FALLBACK]",
+    "coverage": 41.4,
+    "fallback": true
+  },
+  "232676_2": {
+    "segment_id": 1,
+    "category": "wall-other-merged [FALLBACK]",
+    "coverage": 41.4,
+    "fallback": true
+  },
+  "232676_3": {
+    "segment_id": 1,
+    "category": "wall-other-merged [FALLBACK]",
+    "coverage": 41.4,
+    "fallback": true
+  },
+  "232676_4": {
+    "segment_id": 6,
+    "category": "person",
+    "coverage": 30.49,
+    "fallback": false
+  },
+  "312917_0": {
+    "segment_id": 2,
+    "category": "wall-other-merged [FALLBACK]",
+    "coverage": 40.1,
+    "fallback": true
+  },
+  "312917_1": {
+    "segment_id": 3,
+    "category": "ceiling-merged",
+    "coverage": 5.33,
+    "fallback": false
+  },
+  "312917_2": {
+    "segment_id": 1,
+    "category": "rug-merged",
+    "coverage": 6.28,
+    "fallback": false
+  },
+  "312917_3": {
+    "segment_id": 6,
+    "category": "door-stuff",
+    "coverage": 0.11,
+    "fallback": false
+  },
+  "312917_4": {
+    "segment_id": 8,
+    "category": "person",
+    "coverage": 4.6,
+    "fallback": false
+  },
+  "312917_5": {
+    "segment_id": 7,
+    "category": "bed",
+    "coverage": 8.16,
+    "fallback": false
+  },
+  "51052_0": {
+    "segment_id": 4,
+    "category": "pavement-merged",
+    "coverage": 48.12,
+    "fallback": false
+  },
+  "51052_1": {
+    "segment_id": 1,
+    "category": "building-other-merged",
+    "coverage": 0.42,
+    "fallback": false
+  },
+  "51052_2": {
+    "segment_id": 3,
+    "category": "wall-brick",
+    "coverage": 2.91,
+    "fallback": false
+  },
+  "51052_3": {
+    "segment_id": 4,
+    "category": "pavement-merged [FALLBACK]",
+    "coverage": 48.12,
+    "fallback": true
+  },
+  "51052_4": {
+    "segment_id": 7,
+    "category": "person",
+    "coverage": 10.93,
+    "fallback": false
+  },
+  "51052_5": {
+    "segment_id": 6,
+    "category": "bicycle",
+    "coverage": 1.43,
+    "fallback": false
+  },
+  "398285_0": {
+    "segment_id": 2,
+    "category": "sea",
+    "coverage": 8.25,
+    "fallback": false
+  },
+  "398285_1": {
+    "segment_id": 1,
+    "category": "sand [FALLBACK]",
+    "coverage": 53.32,
+    "fallback": true
+  },
+  "398285_2": {
+    "segment_id": 1,
+    "category": "sand [FALLBACK]",
+    "coverage": 53.32,
+    "fallback": true
+  },
+  "398285_3": {
+    "segment_id": 1,
+    "category": "sand [FALLBACK]",
+    "coverage": 53.32,
+    "fallback": true
+  },
+  "398285_4": {
+    "segment_id": 1,
+    "category": "sand [FALLBACK]",
+    "coverage": 53.32,
+    "fallback": true
+  },
+  "398285_5": {
+    "segment_id": 1,
+    "category": "sand [FALLBACK]",
+    "coverage": 53.32,
+    "fallback": true
+  },
+  "333225_0": {
+    "segment_id": 2,
+    "category": "food-other-merged [FALLBACK]",
+    "coverage": 53.92,
+    "fallback": true
+  },
+  "333225_1": {
+    "segment_id": 2,
+    "category": "food-other-merged [FALLBACK]",
+    "coverage": 53.92,
+    "fallback": true
+  },
+  "333225_2": {
+    "segment_id": 6,
+    "category": "broccoli",
+    "coverage": 6.22,
+    "fallback": false
+  },
+  "333225_3": {
+    "segment_id": 10,
+    "category": "carrot",
+    "coverage": 3.98,
+    "fallback": false
+  },
+  "333225_4": {
+    "segment_id": 22,
+    "category": "spoon",
+    "coverage": 1.35,
+    "fallback": false
+  },
+  "144373_0": {
+    "segment_id": 2,
+    "category": "table-merged",
+    "coverage": 1.81,
+    "fallback": false
+  },
+  "144373_1": {
+    "segment_id": 1,
+    "category": "floor-other-merged",
+    "coverage": 5.76,
+    "fallback": false
+  },
+  "144373_2": {
+    "segment_id": 1,
+    "category": "floor-other-merged",
+    "coverage": 5.76,
+    "fallback": false
+  },
+  "144373_3": {
+    "segment_id": 5,
+    "category": "person [FALLBACK]",
+    "coverage": 29.96,
+    "fallback": true
+  },
+  "144373_4": {
+    "segment_id": 4,
+    "category": "cake",
+    "coverage": 15.75,
+    "fallback": false
+  },
+  "144373_5": {
+    "segment_id": 3,
+    "category": "paper-merged",
+    "coverage": 4.34,
+    "fallback": false
+  },
+  "434765_0": {
+    "segment_id": 2,
+    "category": "house [FALLBACK]",
+    "coverage": 30.95,
+    "fallback": true
+  },
+  "434765_1": {
+    "segment_id": 1,
+    "category": "sky-other-merged",
+    "coverage": 3.11,
+    "fallback": false
+  },
+  "434765_2": {
+    "segment_id": 4,
+    "category": "pavement-merged",
+    "coverage": 17.34,
+    "fallback": false
+  },
+  "434765_3": {
+    "segment_id": 3,
+    "category": "dirt-merged",
+    "coverage": 24.76,
+    "fallback": false
+  },
+  "434765_4": {
+    "segment_id": 2,
+    "category": "house [FALLBACK]",
+    "coverage": 30.95,
+    "fallback": true
+  },
+  "434765_5": {
+    "segment_id": 2,
+    "category": "house [FALLBACK]",
+    "coverage": 30.95,
+    "fallback": true
+  },
+  "338941_0": {
+    "segment_id": 1,
+    "category": "sky-other-merged",
+    "coverage": 16.43,
+    "fallback": false
+  },
+  "338941_1": {
+    "segment_id": 2,
+    "category": "road",
+    "coverage": 13.34,
+    "fallback": false
+  },
+  "338941_2": {
+    "segment_id": 2,
+    "category": "road",
+    "coverage": 13.34,
+    "fallback": false
+  },
+  "338941_3": {
+    "segment_id": 6,
+    "category": "bridge",
+    "coverage": 3.06,
+    "fallback": false
+  },
+  "338941_4": {
+    "segment_id": 3,
+    "category": "building-other-merged [FALLBACK]",
+    "coverage": 50.21,
+    "fallback": true
+  },
+  "338941_5": {
+    "segment_id": 8,
+    "category": "car",
+    "coverage": 1.53,
+    "fallback": false
+  },
+  "32639_0": {
+    "segment_id": 2,
+    "category": "dirt-merged",
+    "coverage": 14.43,
+    "fallback": false
+  },
+  "32639_1": {
+    "segment_id": 3,
+    "category": "grass-merged",
+    "coverage": 5.04,
+    "fallback": false
+  },
+  "32639_2": {
+    "segment_id": 4,
+    "category": "bench",
+    "coverage": 2.25,
+    "fallback": false
+  },
+  "32639_3": {
+    "segment_id": 1,
+    "category": "tree-merged [FALLBACK]",
+    "coverage": 76.81,
+    "fallback": true
+  },
+  "123697_0": {
+    "segment_id": 2,
+    "category": "wall-other-merged",
+    "coverage": 14.81,
+    "fallback": false
+  },
+  "123697_1": {
+    "segment_id": 4,
+    "category": "window-other",
+    "coverage": 13.0,
+    "fallback": false
+  },
+  "123697_2": {
+    "segment_id": 3,
+    "category": "table-merged",
+    "coverage": 8.71,
+    "fallback": false
+  },
+  "123697_3": {
+    "segment_id": 2,
+    "category": "wall-other-merged [FALLBACK]",
+    "coverage": 14.81,
+    "fallback": true
+  },
+  "123697_4": {
+    "segment_id": 2,
+    "category": "wall-other-merged [FALLBACK]",
+    "coverage": 14.81,
+    "fallback": true
+  },
+  "123697_5": {
+    "segment_id": 17,
+    "category": "bottle",
+    "coverage": 0.12,
+    "fallback": false
+  },
+  "239771_0": {
+    "segment_id": 21,
+    "category": "bicycle [FALLBACK]",
+    "coverage": 30.75,
+    "fallback": true
+  },
+  "239771_1": {
+    "segment_id": 5,
+    "category": "dirt-merged",
+    "coverage": 0.85,
+    "fallback": false
+  },
+  "239771_2": {
+    "segment_id": 21,
+    "category": "bicycle [FALLBACK]",
+    "coverage": 30.75,
+    "fallback": true
+  },
+  "239771_3": {
+    "segment_id": 19,
+    "category": "parking meter",
+    "coverage": 1.89,
+    "fallback": false
+  },
+  "239771_4": {
+    "segment_id": 21,
+    "category": "bicycle [FALLBACK]",
+    "coverage": 30.75,
+    "fallback": true
+  },
+  "239771_5": {
+    "segment_id": 28,
+    "category": "backpack",
+    "coverage": 0.98,
+    "fallback": false
+  }
+}
