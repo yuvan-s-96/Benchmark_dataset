@@ -1,0 +1,272 @@
+{
+  "region_1": {
+    "baseline_A": {"grounding": 4, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5},
+    "baseline_E": {"grounding": 4, "style_fidelity": 4, "actionability": 3, "conciseness": 2},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 4, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_2": {
+    "baseline_A": {"grounding": 4, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5},
+    "baseline_E": {"grounding": 4, "style_fidelity": 3, "actionability": 2, "conciseness": 2},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 4, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_3": {
+    "baseline_A": {"grounding": 2, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 2, "style_fidelity": 2, "actionability": 3, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_4": {
+    "baseline_A": {"grounding": 3, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 3, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_5": {
+    "baseline_A": {"grounding": 2, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 2, "style_fidelity": 3, "actionability": 3, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 3}
+  },
+  "region_6": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 2, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 2, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_7": {
+    "baseline_A": {"grounding": 4, "style_fidelity": 3, "actionability": 3, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 3, "style_fidelity": 3, "actionability": 2, "conciseness": 2},
+    "baseline_H": {"grounding": 4, "style_fidelity": 2, "actionability": 2, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 4, "style_fidelity": 3, "actionability": 3, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 4, "style_fidelity": 2, "actionability": 2, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_8": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 2, "actionability": 2, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_9": {
+    "baseline_A": {"grounding": 2, "style_fidelity": 4, "actionability": 4, "conciseness": 2},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 2, "style_fidelity": 2, "actionability": 1, "conciseness": 2},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 2, "style_fidelity": 4, "actionability": 4, "conciseness": 2},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_10": {
+    "baseline_A": {"grounding": 4, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_11": {
+    "baseline_A": {"grounding": 1, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 4, "conciseness": 4},
+    "lora_A_tmplA": {"grounding": 1, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 4, "conciseness": 5},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_12": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 3},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 4, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 3}
+  },
+  "region_13": {
+    "baseline_A": {"grounding": 4, "style_fidelity": 3, "actionability": 4, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 4, "style_fidelity": 3, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_14": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "baseline_H": {"grounding": 5, "style_fidelity": 2, "actionability": 3, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 2, "actionability": 3, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_15": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 5},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 5, "actionability": 3, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 4, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 3, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_16": {
+    "baseline_A": {"grounding": 3, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "baseline_C": {"grounding": 3, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 2, "actionability": 3, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 2, "actionability": 3, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_17": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 2, "style_fidelity": 2, "actionability": 1, "conciseness": 1},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_18": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 5},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 2},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_19": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 5, "actionability": 3, "conciseness": 3},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 3}
+  },
+  "region_20": {
+    "baseline_A": {"grounding": 3, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "baseline_H": {"grounding": 5, "style_fidelity": 2, "actionability": 2, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 3, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_21": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 5, "conciseness": 5},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 5, "actionability": 5, "conciseness": 5},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 5, "actionability": 5, "conciseness": 4},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 5, "conciseness": 5}
+  },
+  "region_22": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 3, "actionability": 4, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 3, "actionability": 4, "conciseness": 4},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_23": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_24": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 4},
+    "baseline_C": {"grounding": 4, "style_fidelity": 3, "actionability": 3, "conciseness": 3},
+    "baseline_E": {"grounding": 5, "style_fidelity": 4, "actionability": 2, "conciseness": 2},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 4, "style_fidelity": 3, "actionability": 3, "conciseness": 3}
+  },
+  "region_25": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5},
+    "baseline_E": {"grounding": 5, "style_fidelity": 5, "actionability": 3, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 3, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 4, "style_fidelity": 2, "actionability": 1, "conciseness": 1},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_26": {
+    "baseline_A": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 5},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5},
+    "baseline_E": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 5},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5}
+  },
+  "region_27": {
+    "baseline_A": {"grounding": 2, "style_fidelity": 4, "actionability": 3, "conciseness": 2},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 5, "conciseness": 5},
+    "baseline_E": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 2, "style_fidelity": 4, "actionability": 3, "conciseness": 2},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  },
+  "region_28": {
+    "baseline_A": {"grounding": 4, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_C": {"grounding": 4, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "baseline_E": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "lora_A_tmplA": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 3}
+  },
+  "region_29": {
+    "baseline_A": {"grounding": 4, "style_fidelity": 4, "actionability": 4, "conciseness": 4},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5},
+    "baseline_E": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 4, "actionability": 4, "conciseness": 5},
+    "lora_A_tmplA": {"grounding": 2, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 5}
+  },
+  "region_30": {
+    "baseline_A": {"grounding": 2, "style_fidelity": 4, "actionability": 3, "conciseness": 3},
+    "baseline_C": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_E": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4},
+    "baseline_H": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "lora_A_tmplA": {"grounding": 4, "style_fidelity": 4, "actionability": 4, "conciseness": 3},
+    "lora_H_tmplH": {"grounding": 5, "style_fidelity": 3, "actionability": 3, "conciseness": 2},
+    "lora_C_tmplC": {"grounding": 5, "style_fidelity": 5, "actionability": 4, "conciseness": 4}
+  }
+}

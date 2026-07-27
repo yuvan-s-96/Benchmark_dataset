@@ -116,3 +116,20 @@ instead of its real size.
 ---
 
 *Last updated: alongside master document v9.*
+
+---
+
+## data/ — Consolidated Results and Visualizations
+
+| File | Status | Notes |
+|---|---|---|
+| `MASTER_RESULTS_CONSOLIDATED.json` | **CURRENT** | Every key result computed fresh from source files: attention mass, causal ablation (all 5 metrics), Wilcoxon tests, all correlations, judge scores, confound regression (all 9 features tested), downstream ArtFID/LPIPS/Gram/CLIP. Validated (16/16 keys, 0 errors, 0 warnings, cross-checked against known values). |
+| `prompt_curation_inputs.json` | **CURRENT** | The 200-image / 979-region source annotation file used throughout the pipeline (region labels, styles, captions). |
+| `visualizations/attention_mass_by_template.png` | **CURRENT** | Sink-corrected attention mass, grouped bar, all 9 templates x 4 models. |
+| `visualizations/causal_drop_by_template.png` | **CURRENT** | Causal label drop, grouped bar, all 9 templates x 4 models. |
+| `visualizations/attention_vs_causal_scatter.png` | **CURRENT** | Scatter of attention mass vs causal drop, shows Template A as the outlier driving the correlation. |
+| `visualizations/sink_correction_old_vs_new.png` | **CURRENT** | Old (inconsistent method) vs new (true, consistent method) sink-corrected attention mass, base model. |
+| `visualizations/judge_scores_by_source.png` | **CURRENT** | Claude vs Gemini overall scores, all 7 judge-evaluation sources. |
+| `visualizations/artfid_lpips_by_model.png` | **CURRENT** | ArtFID and LPIPS means, all 4 models. |
+| `visualizations/causal_full_metrics_panel.png` | **CURRENT** | BLEU-4, Jaccard, Levenshtein, BERTScore-F1 by template, base model, Template A highlighted. |
+| `visualizations/confound_coefficients_claude.png` | **CURRENT** | Regression coefficients for all 9 tested confound features (Claude), significant features highlighted. |
