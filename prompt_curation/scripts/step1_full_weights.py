@@ -60,7 +60,11 @@ TEMPLATES = {
 def get_label_indices(tokenizer, prompt, target_text):
     if not target_text:
         return []
-    input_ids = tokenizer(prompt, add_special_tokens=False)["input_ids"]
+    # IMPORTANT: must match generate_and_attend's tokenization exactly (with special
+    # tokens / BOS included), otherwise indices are off by one relative to the real
+    # attention-weight array. target_text is searched WITHOUT special tokens since it
+    # is a substring, never re-adding its own BOS.
+    input_ids = tokenizer(prompt, add_special_tokens=True)["input_ids"]
     target_ids = tokenizer(target_text, add_special_tokens=False)["input_ids"]
     if not target_ids:
         return []
