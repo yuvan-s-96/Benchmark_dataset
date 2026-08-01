@@ -205,3 +205,54 @@ The following files supersede earlier attention-map and sink-correction files af
 | File | Status | Notes |
 |---|---|---|
 | `step1_full_weights.py` | **CURRENT** | `get_label_indices` fixed to use `add_special_tokens=True`. |
+---
+
+## Update: Llama-3.1-8B-Instruct Cross-Model Generalisation Check
+
+New files added for the cross-model check approved to run alongside dissertation writing.
+Template *content* is identical to the Mistral versions (see `step1_full_weights.py`'s
+`TEMPLATES` dict); these are separate scripts because Llama requires a different prompt
+wrapper (`tokenizer.apply_chat_template` rather than a hardcoded `[INST]` string) and two
+Llama-specific tokenization fixes not needed for Mistral.
+
+### scripts/ — New
+
+| File | Status | Notes |
+|---|---|---|
+| `step1_full_weights_llama.py` | **CURRENT** | Llama raw attention extraction. Template content identical to `step1_full_weights.py`, wrapped via `apply_chat_template` instead of `[INST]...[/INST]`. `get_label_indices` uses `add_special_tokens=False` (prompt already contains `<|begin_of_text|>` as literal text) and tries leading-space label tokenization first (Llama's BPE tokenizer produces a different first token for a word at string-start vs mid-sentence) — both fixes verified via decoded-token checks before running at scale. |
+| `step5_sink_corrected_metric_llama.py` | **CURRENT** | Llama sink correction. Same `STRUCTURAL_STRINGS` template-boilerplate list as the Mistral version; adds Llama-specific structural-token detection for `<|begin_of_text|>`, header tags, the "Cutting Knowledge Date" system preamble, and `<|eot_id|>` markers, none of which are caught by the Mistral-specific `[INST]`/`[/INST]` detection. Verified: zero overlap between structural and label token indices before running at scale. |
+| `step5b_causal_test_llama.py` | **CURRENT** | Llama causal ablation. Same scrambling/metric logic as `step5b_causal_test.py`, with the same `add_special_tokens=False` and leading-space label-matching fixes applied to `scramble_label`. Verified via a full generation test (original vs scrambled instruction) before running at scale. |
+
+### attention_maps/ — New (Llama)
+
+| File | Status | Notes |
+|---|---|---|
+| `llama_A_v1.json` | **CURRENT** (component) | Template A, base model, raw attention weights. Verified: label-token indices decode exactly to ground-truth region labels. |
+| `llama_BD_v1.json`, `llama_CF_v1.json`, `llama_EG_v1.json`, `llama_HI_v1.json` | **CURRENT** (components) | Templates B–I in pairs, raw attention weights. Same verification as above. |
+| `llama_ALL9_merged.json` | **CURRENT — authoritative** | All 9 templates merged, 979 regions each. Feeds `sink_corrected_llama.json`. |
+| `llama_smoke_test.json`, `llama_smoke_test2.json` | **TEST/DEBUG** | Small-sample diagnostic runs (2 and 5 regions respectively) used to discover and verify the label-index and BPE-tokenization fixes before running at full scale. Kept for provenance — this is the data that revealed the leading-space tokenization issue. |
+
+### results/ — New (Llama)
+
+| File | Status | Notes |
+|---|---|---|
+| `sink_corrected_llama.json` | **CURRENT — authoritative** | Llama base model, all 9 templates, true sink-correction method. Template A: 9.07% corrected attention mass — higher than Mistral's 6.17%, same overall template ranking (A ≫ E > rest). |
+| `causal_test_llama.json` | **PENDING** | Llama causal ablation, all 9 templates, $n=200$. In progress at time of writing; not yet available for use. |
+
+### Cross-Model Comparison Status
+
+| Measure | Mistral | Llama |
+|---|---|---|
+| Attention extraction (all 9 templates) | ✓ Complete | ✓ Complete |
+| Sink correction (true method) | ✓ Complete | ✓ Complete |
+| Causal ablation | ✓ Complete | ⟳ In progress |
+| Attention-grounding correlation | ✓ Complete (r=0.804, base model) | Pending causal ablation |
+| LoRA fine-tuning equivalent | ✓ Complete (3 adapters) | Not started — not currently planned |
+
+**Qualitative finding (not yet quantified):** Llama-3.1-8B-Instruct frequently produces
+markdown-formatted technical breakdowns and illustrative code (Python/OpenCV/PyTorch
+snippets) rather than a single natural-language instruction as requested, despite
+identical prompt content to Mistral. This does not affect the validity of the attention-mass
+measurements (computed from the first generation step over the input prompt, independent
+of how the subsequent generation unfolds); its effect on the causal ablation measurements
+(which use a shorter 80-token generation cap) is being assessed as that run completes.
