@@ -1,0 +1,50 @@
+{
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "summary": {
+    "A": {
+      "label_mass_raw": 0.004254522131217513,
+      "label_mass_corrected": 0.09073111344678943,
+      "n": 979
+    },
+    "B": {
+      "label_mass_raw": 0.0035757832191085424,
+      "label_mass_corrected": 0.0223048665970319,
+      "n": 979
+    },
+    "D": {
+      "label_mass_raw": 0.003159590529713616,
+      "label_mass_corrected": 0.019966140780369485,
+      "n": 979
+    },
+    "C": {
+      "label_mass_raw": 0.0021518038412645475,
+      "label_mass_corrected": 0.020268341994590384,
+      "n": 979
+    },
+    "F": {
+      "label_mass_raw": 0.0014775096456899827,
+      "label_mass_corrected": 0.016231859275215324,
+      "n": 979
+    },
+    "E": {
+      "label_mass_raw": 0.0031625641865676707,
+      "label_mass_corrected": 0.03030501358168874,
+      "n": 979
+    },
+    "G": {
+      "label_mass_raw": 0.0037781742912269102,
+      "label_mass_corrected": 0.021248494451439084,
+      "n": 979
+    },
+    "H": {
+      "label_mass_raw": 0.0034527730527766755,
+      "label_mass_corrected": 0.02649245140105062,
+      "n": 979
+    },
+    "I": {
+      "label_mass_raw": 0.0022282211359236407,
+      "label_mass_corrected": 0.015491637623201186,
+      "n": 979
+    }
+  }
+}
