@@ -2,41 +2,89 @@
   "B": {
     "statistic": 7657.0,
     "p_value": 0.012066131467382371,
-    "sig": "*"
+    "sig": "*",
+    "levenshtein_statistic": 7513.0,
+    "levenshtein_p": 0.0019643231223302987,
+    "levenshtein_sig": "**",
+    "bertscore_statistic": 2376.0,
+    "bertscore_p": 7.707505773468589e-21,
+    "bertscore_sig": "***"
   },
   "C": {
     "statistic": 1168.0,
     "p_value": 2.2849725316745063e-27,
-    "sig": "***"
+    "sig": "***",
+    "levenshtein_statistic": 1180.5,
+    "levenshtein_p": 2.6991307271231912e-27,
+    "levenshtein_sig": "***",
+    "bertscore_statistic": 376.0,
+    "bertscore_p": 3.725148650721934e-32,
+    "bertscore_sig": "***"
   },
   "D": {
     "statistic": 727.0,
     "p_value": 8.472615188975376e-30,
-    "sig": "***"
+    "sig": "***",
+    "levenshtein_statistic": 1231.0,
+    "levenshtein_p": 5.277705515541518e-27,
+    "levenshtein_sig": "***",
+    "bertscore_statistic": 1390.0,
+    "bertscore_p": 4.253107208941735e-26,
+    "bertscore_sig": "***"
   },
   "E": {
     "statistic": 2629.5,
     "p_value": 1.0202299818158147e-18,
-    "sig": "***"
+    "sig": "***",
+    "levenshtein_statistic": 3125.5,
+    "levenshtein_p": 2.9363039962068405e-17,
+    "levenshtein_sig": "***",
+    "bertscore_statistic": 3454.0,
+    "bertscore_p": 8.399135294535095e-16,
+    "bertscore_sig": "***"
   },
   "F": {
     "statistic": 1815.0,
     "p_value": 1.511477341970699e-23,
-    "sig": "***"
+    "sig": "***",
+    "levenshtein_statistic": 2898.0,
+    "levenshtein_p": 2.6230700173001995e-18,
+    "levenshtein_sig": "***",
+    "bertscore_statistic": 1782.0,
+    "bertscore_p": 6.2195257104603756e-24,
+    "bertscore_sig": "***"
   },
   "G": {
     "statistic": 2196.0,
     "p_value": 4.106900776058552e-21,
-    "sig": "***"
+    "sig": "***",
+    "levenshtein_statistic": 2002.5,
+    "levenshtein_p": 9.296642190211384e-23,
+    "levenshtein_sig": "***",
+    "bertscore_statistic": 1335.0,
+    "bertscore_p": 2.0751945995322998e-26,
+    "bertscore_sig": "***"
   },
   "H": {
     "statistic": 1218.0,
     "p_value": 4.442647585982693e-27,
-    "sig": "***"
+    "sig": "***",
+    "levenshtein_statistic": 1266.5,
+    "levenshtein_p": 8.437118711394288e-27,
+    "levenshtein_sig": "***",
+    "bertscore_statistic": 2324.0,
+    "bertscore_p": 4.2184345237064765e-21,
+    "bertscore_sig": "***"
   },
   "I": {
     "statistic": 2475.5,
     "p_value": 6.534642327916335e-20,
-    "sig": "***"
+    "sig": "***",
+    "levenshtein_statistic": 2613.0,
+    "levenshtein_p": 1.1429782477793217e-19,
+    "levenshtein_sig": "***",
+    "bertscore_statistic": 2293.0,
+    "bertscore_p": 2.9395466537302227e-21,
+    "bertscore_sig": "***"
   }
 }
