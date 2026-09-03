@@ -8,8 +8,7 @@
 All four evaluation methods (causal ablation, sink-corrected attention mass, LLM-as-judge,
 downstream InstructPix2Pix/ArtFID) are **complete** for both Mistral-7B-Instruct and
 Llama-3.1-8B-Instruct, on corrected instructions, across the base model and all three LoRA
-variants (A, C, H), all 9 templates. Dissertation and accompanying WACV 2027 Applications
-Track paper submission (#1260) both complete.
+variants (A, C, H), all 9 templates.
 
 Two significant methodological issues were found and fixed in the attention-extraction
 pipeline, both through deliberate cross-checking rather than trusting a single pipeline's
@@ -58,7 +57,22 @@ output at face value:
 ---
 
 ## Setup
+```bash
+## Environment Setup (from scratch)
 
+# Create a new virtual environment
+python3 -m venv benchmark_env
+source benchmark_env/bin/activate
+
+pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 \
+    --index-url https://download.pytorch.org/whl/cu121
+
+# Install everything else
+pip install -r requirements.txt
+
+# Verify torch picked up the correct CUDA build before running anything
+python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
+```
 ```bash
 
 # Activate environment
