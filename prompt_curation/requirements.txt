@@ -1,0 +1,44 @@
+# requirements.txt
+# Exact versions confirmed via `pip freeze` against the actual benchmark_env
+# on; see requirements_full.txt for the complete transitive dependency list.
+
+# --- Core model loading, generation, fine-tuning ---
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+transformers==4.49.0
+accelerate==1.14.0
+bitsandbytes==0.49.2
+peft==0.5.0
+safetensors==0.8.0
+huggingface_hub==0.36.2
+tokenizers==0.21.4
+
+# --- Downstream image editing / generation ---
+diffusers==0.39.0
+
+# --- CLIP (Region CLIP / NonRegion CLIP scoring) ---
+clip @ git+https://github.com/openai/CLIP.git@d05afc436d78f1c48dc0dbf8e5980a9d471f35f6
+
+# --- Divergence and style metrics ---
+scipy==1.17.1            # Wilcoxon signed-rank tests
+numpy==2.5.0
+bert-score==0.3.13       # BERTScore-F1
+Levenshtein==0.27.3      # Levenshtein ratio
+lpips==0.1.4             # LPIPS
+pytorch-fid==0.3.0       # FID component of ArtFID
+nltk==3.10.0             # BLEU-4
+statsmodels==0.14.6      # confound regression, VIF
+
+# --- Image and data handling ---
+pillow==12.2.0
+opencv-python==4.11.0.86
+scikit-image==0.26.0
+pandas==3.0.3
+datasets==4.8.5
+pyarrow==24.0.0
+pycocotools==2.0.11      # COCO/COCONut-PanCap annotation handling
+
+# --- Utilities ---
+tqdm==4.67.3
+matplotlib==3.11.0
+PyYAML==6.0.3
