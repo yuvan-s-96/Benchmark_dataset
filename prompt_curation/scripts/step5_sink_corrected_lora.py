@@ -37,7 +37,7 @@ def get_structural_indices(tokenizer, prompt):
     structural.add(0)
     for i, tok in enumerate(decoded):
         stripped = tok.strip()
-        if stripped in {".", ",", ":", ";", "!", "?", "[", "]",
+        if stripped in {".", ",", ":", ";", "!", "?", "[", "]", "/",
                         "[INST]", "[/INST]", "INST", "/INST"}:
             structural.add(i)
         if len(stripped) == 0:
