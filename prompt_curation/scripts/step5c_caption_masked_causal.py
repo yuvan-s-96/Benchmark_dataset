@@ -1,7 +1,7 @@
 """
 Step 5c — Caption-masked causal test
 =====================================
-Addresses Deblina's confound concern:
+Addresses confound concern:
 - Template A: short/empty captions, label token is main region signal
 - Template C/H/G: rich captions that mention the object
 
