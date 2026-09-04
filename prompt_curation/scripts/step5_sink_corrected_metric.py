@@ -1,7 +1,7 @@
 """
 Step 5a — Sink-corrected attention metric
 ==========================================
-Deblina's concern: raw attention mass is confounded by:
+concern: raw attention mass is confounded by:
   1. BOS attention sink (~55%)
   2. Structural tokens ([INST], boilerplate, task suffix)
   3. Prompt length dilution
