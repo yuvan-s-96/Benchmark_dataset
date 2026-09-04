@@ -1,9 +1,7 @@
 # Prompt Curation for Regional Style Transfer
-**MSc Data Science Dissertation — University of Bath 2026**
+
 
 ---
-
-## Current Status — Full Pipeline Complete, Both Model Families
 
 All four evaluation methods (causal ablation, sink-corrected attention mass, LLM-as-judge,
 downstream InstructPix2Pix/ArtFID) are **complete** for both Mistral-7B-Instruct and
@@ -76,10 +74,10 @@ python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_availabl
 ```bash
 
 # Activate environment
-source /mnt/fast1/yvs23/benchmark_env/bin/activate
+source /benchmark_env/bin/activate
 
 # Set environment variables
-export HF_HOME=/mnt/fast1/yvs23/hf_cache
+export HF_HOME={path}/hf_cache
 export HF_HUB_DISABLE_XET=1
 export CUDA_VISIBLE_DEVICES=1  # change per GPU (0-5)
 
@@ -157,7 +155,7 @@ python3 step5_sink_corrected_lora.py \
     --output         ../results/sink_corrected_base_v3_FIXED.json
 ```
 Repeat for `lora_A_v3_ALL9_v2_FINAL.json`, `lora_C_v3_ALL9_v2_FINAL.json`,
-`lora_H_v3_ALL9_v2_FINAL.json`. The `_v3_FIXED` files are the authoritative, fully-corrected
+`lora_H_v3_ALL9_v2_FINAL.json`. The `_v3_FIXED` files are the authoritative, fully corrected
 versions (both the renormalisation-consistency fix and the standalone `/`-token fix
 applied) — see `DATA_FILES_REFERENCE.md` for superseded predecessors.
 
@@ -192,11 +190,10 @@ substitution reproduced the region-scrambling effect closely (61.5pp Mistral, 71
 87.5%/90.0% adoption of the substituted region).
 
 ### Step 6 — LLM-as-Judge (DONE ✓ — Claude + Gemini, 30 regions × 7 sources, plus full confound analysis)
-Conducted manually through the Claude and Gemini chat interfaces directly, not via API
+Conducted manually through the Claude and Gemini chat interfaces directly, not via an API
 script — no command-line invocation applies to this step. Confound analysis (three rounds:
 confident-language hypothesis, label-position/step-count discovery, direct judge
-elicitation) documented in `prompt_curation_progress_v12.docx` Section 14.5.7 and
-`chapter2_methodology.tex` Section 2.6.6.
+elicitation).
 
 ### Step 7 — InstructPix2Pix Downstream, 9×4 (DONE ✓ — base + 3 LoRA, all 9 templates)
 ```bash
@@ -311,86 +308,19 @@ tail -20 ../logs/<jobname>.log
 │   ├── coconut_subset/images/           COCO images
 │   ├── coconut_subset/annotations/      COCONut annotations
 │   └── style_references/                WikiArt reference images
-/mnt/fast1/yvs23/
-├── coconut_panoptic/                    Full COCONut panoptic data (611MB, not in git)
+/mnt/fast1/
+├── coconut_panoptic/                    Full COCONut panoptic data (611MB, not in git) (https://www.kaggle.com/datasets/xueqingdeng/coconut)
 └── hf_cache/                            Mistral-7B, Llama-3.1-8B, InstructPix2Pix
 ```
 
 ---
 
-## Headline Results Summary
-
-### Causal Grounding — Mistral (base + 3 LoRA, never affected by either attention bug)
-
-| Template | Base | LoRA-A | LoRA-C | LoRA-H |
-|---|---|---|---|---|
-| A | **66.0pp** | **65.0pp** | **56.5pp** | **65.0pp** |
-| E | 24.0pp | 25.0pp | 24.0pp | 25.0pp |
-| B, C, D, F, G, H, I | -0.5–1.0pp | -0.5–1.0pp | -0.5–0.0pp | -0.5–2.0pp |
-
-### Causal Grounding — Llama (base + 3 LoRA)
-
-| Template | Base | LoRA-A | LoRA-C | LoRA-H |
-|---|---|---|---|---|
-| A | **76.5pp** | **59.5pp** | **50.0pp** | **75.5pp** |
-| E | 23.5pp | 25.0pp | 25.0pp | 24.0pp |
-
-Combined: 256 predefined Wilcoxon signed-rank tests across both model families, base and
-LoRA; 253/256 significant (98.8%). All three exceptions involve Levenshtein on Llama (one
-base, two LoRA-H); none involve Template E.
-
-### Sink-Corrected Attention Mass — Mistral (final, all fixes applied)
-
-| Template | Base | LoRA-A | LoRA-C | LoRA-H |
-|---|---|---|---|---|
-| A | **9.86%** | **9.36%** | **11.07%** | **9.36%** |
-| E | 3.37% | 3.39% | 3.66% | 3.56% |
-| H | 3.01% | 2.77% | 3.05% | 2.51% |
-| D | 2.33% | 2.30% | 2.64% | 2.01% |
-| B | 2.22% | 2.32% | 2.45% | 2.07% |
-| G | 2.05% | 1.97% | 2.28% | 1.73% |
-| F | 1.64% | 1.75% | 1.89% | 1.90% |
-| C | 1.43% | 1.59% | 1.69% | 1.59% |
-| I | 1.35% | 1.46% | 1.53% | 1.48% |
-
-Attention-grounding correlation (final): base r=0.804**, LoRA-A r=0.621 ns, LoRA-C
-r=0.842**, LoRA-H r=0.571 ns.
-
-### Sink-Corrected Attention Mass — Llama-3.1-8B-Instruct (base + 3 LoRA, complete)
-
-| Template | Base | LoRA-A | LoRA-C | LoRA-H |
-|---|---|---|---|---|
-| A | **9.83%** | **7.70%** | **9.83%** | **7.77%** |
-| E | 3.03% | 3.06% | 3.04% | 2.53% |
-
-Attention-grounding correlation (final): base r=0.460 ns, LoRA-A r=0.749*, LoRA-C
-r=0.723*, LoRA-H r=0.428 ns. Template A's dominance replicates on Llama across all four
-model variants.
-
-### LLM-as-Judge (Claude + Gemini, 30 regions, 7 sources, Mistral)
-
-Template C and its LoRA variant win decisively (4.46–4.93/5), well ahead of every other
-source (3.63–3.95/5). Inter-rater reliability: Pearson r=0.741, 96.9% agreement within ±1
-point.
-
-**Judge-grounding inversion:** judge grounding score is significantly negatively
-correlated with causal grounding (Claude r=−0.993, p<0.0001; Gemini r=−0.794, p=0.033,
-n=7). Confound analysis found two real, partial predictors — position of first region
-mention and instruction step-count — together explaining 9–13% of variance. The
-originally hypothesised "confident language" explanation was tested and not confirmed.
-
-**Human evaluation** (15 regions, 2 raters, blind, source identity removed) corroborates
-the inversion from an independent angle: human-rated grounding varied negligibly across
-sources (3.40–3.50/5, versus a causal label-drop range of 0–66pp) and did not correlate
-significantly with causal grounding (r=0.197, p=0.67).
-
----
 
 ## Dataset
 
 - 200 COCO images from COCONut-PanCap (`xdeng77/coconut_pancap` on HuggingFace)
 - 979 segmented regions across 20 WikiArt styles
-- COCONut panoptic masks from Kaggle (`xueqingdeng/coconut`)
+- COCONut panoptic masks from Kaggle (`xueqingdeng/coconut`)(https://www.kaggle.com/datasets/xueqingdeng/coconut)
 - `region_label` is a natural-language referring expression (e.g. "the white clock has
   black hands and numbers"), not a simple category label — constructed to uniquely
   identify a region even when multiple instances of the same object class appear in one
@@ -399,18 +329,3 @@ significantly with causal grounding (r=0.197, p=0.67).
   potentially confounding caption source tested in the caption-masked causal ablation
 
 ---
-
-## Known Limitations
-
-- Judge-grounding-vs-causal-grounding correlation (n=7 sources) — striking effect size
-  but small sample, suggestive not definitive
-- Confound model explains only 9–13% of variance in judge grounding scores
-- InstructPix2Pix downstream evaluation uses only the first ~60 words of each instruction
-  (CLIP's 77-token text encoder limit) — inherent architectural constraint; a
-  length-controlled re-analysis found a downstream advantage for the causally grounded
-  template that the unadjusted comparison did not show
-- Human evaluation (15 regions, 2 raters) provides corroborative rather than definitive
-  evidence about human sensitivity to causal grounding, given the small sample
-- LoRA fine-tuning covers only 3 of 9 templates (A, C, H) in both model families
-- Reward-model training implications (the practical motivation for this work) remain
-  prospective — no reinforcement-learning or reward-model training loop was directly tested
