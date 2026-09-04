@@ -259,6 +259,3 @@ Behavioural Observations" section):
    Consistent with Template D's more literal, command-oriented framing.
 
 ---
-Llama cross-model check (attention, causal ablation, and LoRA fine-tuning all complete),
-the intervention-specificity controls, and submission of the accompanying WACV 2027 paper
-(#1260).*
